@@ -6,7 +6,8 @@ backend/logs
 backend/logDirectory_IS_UNDEFINED/*
 backend/awazone.properties
 backend/node-templates
-backend/mongotemp/*
+scripts/mongotemp/*
+scripts/node_modules/*
 */.DS_Store
 
 frontend/node_modules/*
