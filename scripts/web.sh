@@ -1,5 +1,5 @@
 #/bin/bash
-
+cd ../backend
 PROPERTIES="$(pwd)/awazone.properties"
 
 if [ ! -f $PROPERTIES ]
@@ -8,5 +8,4 @@ then
     exit 1
 fi
 
-cd awazone-web
 mvn exec:java -DpropertyFile=$PROPERTIES

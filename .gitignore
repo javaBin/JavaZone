@@ -2,8 +2,8 @@ backend/target
 backend/.classpath
 backend/.project
 backend/.settings
-backend/awazone-web/logs
-backend/awazone-web/logDirectory_IS_UNDEFINED/*
+backend/logs
+backend/logDirectory_IS_UNDEFINED/*
 backend/awazone.properties
 backend/node-templates
 backend/mongotemp/*
