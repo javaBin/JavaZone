@@ -1,0 +1,46 @@
+/* Firstlast */
+.first { padding-top:0; margin-top:0; }
+.last { padding-bottom:0; margin-bottom:0; }
+.last-stop { margin-bottom:0; }
+
+/* Hide completely */
+html body .hide {
+    display:none;
+}
+
+/* Hide visually (but read by screen readers) */
+html body .hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/* Force show */
+html body .show {
+    display:block;
+}
+
+/* Clear floats */
+html body .clear {
+    clear:both;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}

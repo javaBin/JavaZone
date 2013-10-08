@@ -1,0 +1,6 @@
+http://test.jz13.java.no/
+http://test.jz13.java.no/assets/packed/all.css
+http://test.jz13.java.no/assets/packed/all.js
+http://test.jz13.java.no/img/robots/bg1.png
+http://test.jz13.java.no/font/fontawesome-webfont.woff?v=3.0.1
+http://test.jz13.java.no/img/pics/topdown.jpg

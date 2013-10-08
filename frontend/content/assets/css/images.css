@@ -1,0 +1,72 @@
+.img {
+    background-size:100% 100%;
+    display:inline-block;
+    text-indent:-999em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width:128px;
+    height:128px;
+    position: relative;
+}
+
+.img-inner {
+    display: none;
+    width:100%;
+    height:100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    border:1em solid rgba(0,0,0,0.1);
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+a:hover .img-inner {
+    display: block;
+}
+
+.img-logo { background-image:url("/assets/img/logos/javazone.horizontal.png"); width:19.444em; height:4.889em; }
+.page-invert .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.light.png"); }
+
+.img-map { background-image:url("/assets/img/maps/spektrum.gif"); }
+.img-intro { background-image:url("/assets/img/tiles/topdown.jpg"); }
+.img-video { background-image:url("/assets/img/tiles/stand.jpg"); }
+.img-stand2 { background-image:url("/assets/img/tiles/stand2.jpg"); }
+.img-agir { background-image:url("/assets/img/tiles/agir.jpg"); }
+.img-awezone { background-image:url("/assets/img/tiles/awezone2.jpg"); }
+.img-awezone5 { background-image:url("/assets/img/tiles/awezone5.jpg"); }
+.img-workshop { background-image:url("/assets/img/tiles/workshop.jpg"); }
+.img-crowd { background-image:url("/assets/img/tiles/crowd.jpg"); }
+.img-bags { background-image:url("/assets/img/tiles/bags.jpg"); }
+.img-flam { background-image:url("/assets/img/tiles/flam.jpg"); }
+.img-view { background-image:url("/assets/img/tiles/view.jpg"); }
+.img-spektrum { background-image:url("/assets/img/tiles/spektrum.jpg"); }
+.img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+    .img-logo { background-image:url("/assets/img/logos/javazone.horizontal@2x.png"); }
+    .page-invert .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.light@2x.png"); }
+
+    .img-map { background-image:url("/assets/img/maps/spektrum@2x.gif"); }
+    .img-intro { background-image:url("/assets/img/tiles/topdown@2x.jpg"); }
+    .img-video { background-image:url("/assets/img/tiles/stand@2x.jpg"); }
+    .img-stand2 { background-image:url("/assets/img/tiles/stand2@2x.jpg"); }
+    .img-agir { background-image:url("/assets/img/tiles/agir@2x.jpg"); }
+    .img-awezone { background-image:url("/assets/img/tiles/awezone2@2x.jpg"); }
+    .img-awezone5 { background-image:url("/assets/img/tiles/awezone5@2x.jpg"); }
+    .img-workshop { background-image:url("/assets/img/tiles/workshop@2x.jpg"); }
+    .img-crowd { background-image:url("/assets/img/tiles/crowd@2x.jpg"); }
+    .img-bags { background-image:url("/assets/img/tiles/bags@2x.jpg"); }
+    .img-flam { background-image:url("/assets/img/tiles/flam@2x.jpg"); }
+    .img-view { background-image:url("/assets/img/tiles/view@2x.jpg"); }
+    .img-spektrum { background-image:url("/assets/img/tiles/spektrum@2x.jpg"); }
+    .img-awezone-poster { background-image:url("/assets/img/awezone/poster@2x.jpg"); }
+
+}

@@ -1,0 +1,51 @@
+<h2 class="program-header">Filter talks</h2>
+
+<ul>
+    <% _.each(data.formats, function(format) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(format) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= _.str.capitalize(format) %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.langs, function(language) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(language) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= language %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.tags, function(t) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(t) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= _.str.truncate(t, 23) %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.levels, function(level) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(level) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= _.str.capitalize(level) %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.rooms, function(room) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(room) %>">
+            <i class="icon-circle-blank"></i>
+            <i class="icon-circle hide"></i>
+            <%= _.str.capitalize(room) %>
+        </a></li>
+    <% }) %>
+</ul>

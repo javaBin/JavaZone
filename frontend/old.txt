@@ -1,0 +1,4 @@
+//["Evry", "evry_2012.jpg", "http://www.evry.com/"],
+//["Iterate", "iterate_2012.jpg", "http://www.iterate.no/"],
+//["Norgesgruppen", "norgesgruppen_2012.jpg", "http://www.norgesgruppen.no/"],
+//["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],

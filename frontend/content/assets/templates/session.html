@@ -1,0 +1,61 @@
+<div class="tiles" id="when">
+    <% if (jz.api.link({ links: links }, 'video')) { %>
+        <div class="talkvideo">
+            <iframe src="<%= jz.api.link({ links: links }, 'video').replace("http://vimeo.com/", "//player.vimeo.com/video/") %>?title=0&amp;byline=0&amp;portrait=0&amp;color=A10735" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    <% } %>
+    <div class="tile tile-med tile-session tile-txt"><div class="tile-inner">
+        <div class="top">
+            <h2 class="first last"><%= title %></h2>
+            <h3 class="first">
+                <%= jz.date.weekday(start) %>,
+                <%= jz.date.day(start) %> at
+                <%= jz.date.time(start) %> in
+                <%= room %>
+            </h3>
+        </div>
+        <div class="body">
+            <div class="intro"><%= jz.utils.paragraphs(summary) %></div>
+            <%= jz.utils.paragraphs(body) %>
+
+            <h3>Intended audience</h3>
+            <p><%= audience %></p>
+
+            <h3>Details</h3>
+            <ul class="meta">
+                <li><strong>Keywords:</strong> <%- keywords.join(', ') %></li>
+                <li><strong>Location:</strong> <%- room %></li>
+                <li><strong>Language:</strong> <%- language %></li>
+                <li><strong>Level:</strong> <%- _.str.capitalize(level) %></li>
+                <li><strong>Duration:</strong> <%- sessionlength %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<% if (jz.api.link({ links: links }, 'feedback')) { %>
+    <div class="tile tile-small tile-txt tile-speaker tile-rating"><div class="tile-inner">
+        <h4>Rate this talk</h4>
+        <div class="rate rate-talk <%= rating > 0 ? 'rate-inactive' : 'rate-active' %>">
+            <i class="rate-icon <%= rating > 0 ? 'icon-star' : 'icon-star-empty' %>" data-rate="1"></i>
+            <i class="rate-icon <%= rating > 1 ? 'icon-star' : 'icon-star-empty' %>" data-rate="2"></i>
+            <i class="rate-icon <%= rating > 2 ? 'icon-star' : 'icon-star-empty' %>" data-rate="3"></i>
+        </div>
+        <div class="feedback <%= rating == 0 ? 'hide' : '' %> feedback-talk">
+            <textarea placeholder="Provide additional feedback..."></textarea>
+            <p><a href="#">Submit feedback</a></p>
+        </div>
+    </div></div>
+<% } %>
+
+<% _.each(speakers, function(speaker) { %>
+    <div class="tile tile-small tile-txt tile-speaker"><div class="tile-inner">
+        <div>
+            <img src="<%= speaker.gravatarUrl %>?s=200&amp;d=identicon">
+            <h4><%= speaker.name %></h4>
+            <%= jz.utils.paragraphs(speaker.bio) %>
+        </div>
+    </div></div>
+<% }) %>
+
+<div class="clear"></div>
