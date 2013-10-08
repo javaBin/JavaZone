@@ -7,10 +7,16 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class FeedbackSummaryForSpeakers {
 
 	@JsonProperty
-	public final List<Feedback> details;
+	private final int numRatings;
+	@JsonProperty
+	private final double avgRating;
+	@JsonProperty
+	private final List<String> comments;
 
-	public FeedbackSummaryForSpeakers(final List<Feedback> details) {
-		this.details = details;
+	public FeedbackSummaryForSpeakers(final int numRatings, final double avgRating, final List<String> comments) {
+		this.numRatings = numRatings;
+		this.avgRating = avgRating;
+		this.comments = comments;
 	}
 
 }

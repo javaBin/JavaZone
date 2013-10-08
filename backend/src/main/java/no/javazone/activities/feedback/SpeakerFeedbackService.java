@@ -164,7 +164,12 @@ public class SpeakerFeedbackService {
 
 		try {
 			System.out.println("Fant " + cursor.size() + " feedbacks som matcher talkid " + talkId);
-			return new FeedbackSummaryForSpeakers(Feedback.convertFromMongo(cursor.toArray()));
+
+			// TODO: sjekke secret!!
+
+			FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
+
+			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
 		} finally {
 			cursor.close();
 		}
