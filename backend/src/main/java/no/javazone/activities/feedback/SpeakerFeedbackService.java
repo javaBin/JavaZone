@@ -16,6 +16,7 @@ import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.representations.feedback.AdminFeedback;
 import no.javazone.representations.feedback.Feedback;
 import no.javazone.representations.feedback.FeedbackSummary;
+import no.javazone.representations.feedback.FeedbackSummaryForSpeakers;
 import no.javazone.server.PropertiesLoader;
 
 import org.slf4j.Logger;
@@ -155,6 +156,17 @@ public class SpeakerFeedbackService {
 		} catch (Exception e) {
 			LOG.warn("Feil ved ping av mongo", e);
 			return false;
+		}
+	}
+
+	public FeedbackSummaryForSpeakers getSpeakersOwnFeedbackSummary(final String talkId, final String secret) {
+		DBCursor cursor = talkFeedbackMongoCollection.find(new BasicDBObject("talkId", talkId));
+
+		try {
+			System.out.println("Fant " + cursor.size() + " feedbacks som matcher talkid " + talkId);
+			return new FeedbackSummaryForSpeakers(Feedback.convertFromMongo(cursor.toArray()));
+		} finally {
+			cursor.close();
 		}
 	}
 }
