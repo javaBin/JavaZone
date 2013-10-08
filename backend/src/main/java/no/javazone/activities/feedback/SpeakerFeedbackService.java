@@ -160,18 +160,8 @@ public class SpeakerFeedbackService {
 	}
 
 	public FeedbackSummaryForSpeakers getSpeakersOwnFeedbackSummary(final String talkId, final String secret) {
-		DBCursor cursor = talkFeedbackMongoCollection.find(new BasicDBObject("talkId", talkId));
-
-		try {
-			System.out.println("Fant " + cursor.size() + " feedbacks som matcher talkid " + talkId);
-
-			// TODO: sjekke secret!!
-
-			FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
-
-			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
-		} finally {
-			cursor.close();
-		}
+		// TODO: sjekke secret!!
+		FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
+		return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
 	}
 }
