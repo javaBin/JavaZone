@@ -1,0 +1,109 @@
+#!/usr/bin/env node
+
+/*global require, process */
+
+/*
+ * Digipost Proxy (localhost:9090):
+ *
+ * - WebServer (localhost:8080)
+ * - WepApp    (localhost:3000)
+ * - PostIT    (localhost:1337)
+ *
+ * Setup:
+ *
+ * $ cd digipost/scripts
+ * $ npm install http-proxy colors
+ */
+
+var fs        = require("fs"),
+    util      = require("util"),
+    path      = require("path"),
+    https     = require("https"),
+    http      = require("http"),
+    colors    = require("colors"),
+    httpProxy = require("http-proxy");
+
+/* ----------------------------------- */
+
+var getNetworkIP = (function () {
+    var ignoreRE = /^(127\.0\.0\.1|::1|fe80(:1)?::1(%.*)?)$/i;
+    var exec = require('child_process').exec;
+    var cached, command, filter;
+
+    switch (process.platform) {
+        case 'win32':
+            command = 'ipconfig';
+            filter = /\bIP(v[46])?-?[^:\r\n]+:\s*([^\s]+)/g;
+            break;
+        case 'darwin':
+            command = 'ifconfig';
+            filter = /\binet\s+([^\s]+)/g;
+            break;
+        default:
+            command = 'ifconfig';
+            filter = /\binet\b[^:]+:\s*([^\s]+)/g;
+            break;
+    }
+
+    return function(callback) {
+        exec(command, function(error, stdout, sterr) {
+            cached = [];
+            var ip;
+            var matches = stdout.match(filter) || [];
+            for (var i = 0; i < matches.length; i++) {
+                ip = matches[i].replace(filter, '$1');
+                if (!ignoreRE.test(ip) && (/^10\./).test(ip)) {
+                    cached.push(ip);
+                }
+            }
+            callback(error, cached.slice(-1)[0]);
+        });
+    };
+})();
+
+/* ----------------------------------- */
+
+var proxyConfig = function(ip) {
+    var r = {};
+
+    r['localhost/api/'] = 'localhost:12345';
+    r['localhost'] = 'localhost:3000';
+
+    r[ip + '/api/'] = 'localhost:12345';
+    r[ip] = 'localhost:3000';
+
+    return r;
+};
+
+var startProxy = function(ip) {
+
+    var config = {
+        router: proxyConfig(ip)
+    };
+    httpProxy.createServer(config, function(req, res, proxy) {
+        proxy.proxyRequest(req, res);
+    }).listen(8080);
+
+
+    showLinks(ip);
+};
+
+var showLinks = function(ip) {
+    util.puts("");
+    util.puts(("JavaZone Proxy listening!").rainbow.bold);
+    util.puts(("http://localhost:8080/").blue);
+    util.puts(("https://localhost:8080/api").blue);
+    util.puts(("https://" + ip + ":8080/").blue);
+    util.puts(("https://" + ip + ":8080/api").blue);
+    util.puts("");
+};
+
+/* ----------------------------------- */
+
+getNetworkIP(function(err, ip) {
+    if(err) {
+        util.puts("Proxy could not find client network IP:".red, err);
+    } else {
+        startProxy(ip);
+    }
+});
