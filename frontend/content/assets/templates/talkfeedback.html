@@ -1,22 +1,27 @@
-<h3>Numeric ratings</h3>
-<p class="small">The number of ratings you got.</p>
-<p><%= numRatings %></p>
+<h2>Feedback and stats</h2>
+<p>This page contains a summary of the feedback you got on your talk <strong><%= session.title %></strong> at JavaZone 2013.</p>
 
-<h3>Average ratings</h3>
-<p class="small">Your average ratings.</p>
+<h3>Rating from participants</h3>
+<p class="small">The participants were asked to rate your talk on a scale from 1 to 3 start. This is your talks average rating.</p>
 <canvas id="average-rating-gauge" width="200" height="100"></canvas>
 <span><%= avgRating.toFixed(2) %></span>
 
-<h3>All talks</h3>
-<p class="small">Average ratings for all talks.</p>
+<h3>Average conference rating</h3>
+<p class="small">This is the average rating of all talks at JavaZone 2013.</p>
 <canvas id="avg-all-talks-gauge" width="200" height="100"></canvas>
 <span><%= avgRatingForAllTalks.toFixed(2) %></span>
 
-<h3>Comments</h3>
-<p class="small">The comments you got from your audience.</p>
+<% if(comments.length > 0) { %>
+	<h3>Comments on your talk</h3>
+	<p class="small">The participants were asked to comment on your talk. This is all the comments that were submitted.</p>
 
-<ul>
-    <% _.each(comments, function(text) { %>
-    <li><%= text %></li>
-    <% }); %>
-</ul>
+	<div class="talkcomments">
+	    <% _.each(comments, function(text) { %>
+	    	<div class="talkcomment">
+		    	<div class="icon"><i class="icon-gift"></i></div>
+		    	<div class="comment"><span><%= text %></span></div>
+	    	</div>
+	    <% }); %>
+	    <div class="clear"></div>
+	</div>
+<% } %>
