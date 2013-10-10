@@ -18,6 +18,7 @@ exports.config = {
         "components/jquery/jquery.js",
         "components/jquery.cookie/jquery.cookie.js",
         "assets/js/vendor/moment.min.js",
+        "assets/js/vendor/gauge.js",
         "assets/js/namespace.js",
         "assets/js"
       ]
