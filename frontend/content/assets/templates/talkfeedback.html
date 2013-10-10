@@ -1,0 +1,11 @@
+<h3>Numeric ratings</h3>
+<p class="small">The number of ratings you got.</p>
+
+<h3>Comments</h3>
+<p class="small">The comments you got from your audience.</p>
+
+<ul>
+    <% _.each(comments, function(text) { %>
+    <li><%= text %></li>
+    <% }); %>
+</ul>

@@ -236,6 +236,8 @@ jz.routes.sessions = function() {
 jz.routes.talkfeedback = function() {
     var talkid = jz.utils.param("id");
     jz.api.get("/api/restricted/feedback/" + talkid).then(function(data) {
-        console.log(data)
+        jz.api.template("talkfeedback", data).then(function(html) {
+            $('.talkfeedback').html(html);
+        });
     });
 };
