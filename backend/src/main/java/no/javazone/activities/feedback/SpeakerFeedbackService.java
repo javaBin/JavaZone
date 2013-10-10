@@ -11,6 +11,7 @@ import java.util.UUID;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.model.EmsSession;
@@ -167,9 +168,13 @@ public class SpeakerFeedbackService {
 	}
 
 	public FeedbackSummaryForSpeakers getSpeakersOwnFeedbackSummary(final String talkId, final String secret) {
-		// TODO: sjekke secret!!
-		FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
-		return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
+		String realSecret = getOrGenerateSecretForTalk(talkId);
+		if (realSecret.equals(secret)) {
+			FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
+			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
+		} else {
+			throw new WebApplicationException(Status.FORBIDDEN);
+		}
 	}
 
 	public String getFeedbackUrlsForAllSessions() {
