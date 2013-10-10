@@ -14,13 +14,16 @@ public class FeedbackSummaryForSpeakers {
 	private final double avgRatingForAllTalks;
 	@JsonProperty
 	private final List<String> comments;
+	@JsonProperty
+	private final String pageViews;
 
 	public FeedbackSummaryForSpeakers(final int numRatings, final double avgRating, final List<String> comments,
-			final double avgRatingForAllTalks) {
+			final double avgRatingForAllTalks, final String pageViews) {
 		this.numRatings = numRatings;
 		this.avgRating = avgRating;
 		this.comments = comments;
 		this.avgRatingForAllTalks = avgRatingForAllTalks;
+		this.pageViews = pageViews;
 	}
 
 }

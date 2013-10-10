@@ -13,9 +13,12 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import net.hamnaberg.json.util.Optional;
 import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.activities.ems.model.EmsSpeaker;
+import no.javazone.activities.feedback.AnalyticsStats.AnalyticsStat;
+import no.javazone.activities.feedback.VimeoStats.VimeoStat;
 import no.javazone.representations.feedback.AdminFeedback;
 import no.javazone.representations.feedback.Feedback;
 import no.javazone.representations.feedback.FeedbackSummary;
@@ -44,6 +47,9 @@ public class SpeakerFeedbackService {
 	private DBCollection talkFeedbackMongoCollection;
 	private DBCollection feedbacksecretsMongoCollection;
 
+	private VimeoStats vimeoStats;
+	private AnalyticsStats analyticsStats;
+
 	private static final String FRONTEND_URL = PropertiesLoader.getProperty("server.proxy").replace("/api", "");;
 
 	public SpeakerFeedbackService() {
@@ -54,6 +60,8 @@ public class SpeakerFeedbackService {
 			DB db = mongoClient.getDB(namespace);
 			talkFeedbackMongoCollection = db.getCollection("feedback");
 			feedbacksecretsMongoCollection = db.getCollection("feedbacksecrets");
+			vimeoStats = new VimeoStats();
+			analyticsStats = new AnalyticsStats();
 		} catch (UnknownHostException e) {
 			LOG.warn("Kunne ikke starte MongoDB-klient!", e);
 		}
@@ -168,13 +176,32 @@ public class SpeakerFeedbackService {
 	}
 
 	public FeedbackSummaryForSpeakers getSpeakersOwnFeedbackSummary(final String talkId, final String secret) {
-		String realSecret = getOrGenerateSecretForTalk(talkId);
+		EmsSession session = emsService.getSession(talkId);
+		String realSecret = getOrGenerateSecretForTalk(session.getId());
 		if (realSecret.equals(secret)) {
-			FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
+			FeedbackSummary f = getFeedbackSummaryForTalk(session.getId());
+			VimeoStat videoStats = getVimeoStatsForTalk(session);
+			AnalyticsStat analyticsStat = getAnalyticsStatsForTalk(session.getId());
+			String pageViews = analyticsStat == null ? "unknown" : analyticsStat.pageviews;
 			double avgRatingForAllTalks = getAvgRatingForAllTalks();
-			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks);
+			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks, pageViews);
 		} else {
 			throw new WebApplicationException(Status.FORBIDDEN);
+		}
+	}
+
+	private AnalyticsStat getAnalyticsStatsForTalk(final String id) {
+		return analyticsStats.getStatsForTalkId(id.substring(0, 8));
+	}
+
+	private VimeoStat getVimeoStatsForTalk(final EmsSession session) {
+		Optional<Integer> videoIdOpt = session.getVideoId();
+		if (videoIdOpt.isSome()) {
+			Integer videoId = videoIdOpt.get();
+			System.out.println("video: " + videoId);
+			return vimeoStats.getStatsForVideoId(videoId);
+		} else {
+			return null;
 		}
 	}
 
@@ -203,7 +230,6 @@ public class SpeakerFeedbackService {
 
 		AggregationOutput output = talkFeedbackMongoCollection.aggregate(group);
 		Iterable<DBObject> results = output.results();
-		System.out.println(results);
 		double total = 0;
 		double i = 0;
 		for (DBObject dbObject : results) {

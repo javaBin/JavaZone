@@ -4,6 +4,8 @@ import static com.google.common.collect.Collections2.transform;
 import static com.google.common.collect.Lists.newArrayList;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import net.hamnaberg.json.Item;
 import net.hamnaberg.json.Link;
@@ -40,6 +42,8 @@ public class EmsSession {
 	private final Optional<Link> speakerLink;
 	private List<EmsSpeaker> speakerDetails;
 	private final Optional<Link> videoLink;
+
+	private static final Pattern NUMBER = Pattern.compile("[0-9]+");;
 
 	public EmsSession(final String id, final String title, final String summary, final String outline, final String body,
 			final String format, final String audience, final String level, final String lang, final String room, final String start,
@@ -126,6 +130,16 @@ public class EmsSession {
 
 	public Optional<Link> getVideoLink() {
 		return videoLink;
+	}
+
+	public Optional<Integer> getVideoId() {
+		if (getVideoLink().isSome()) {
+			Matcher matcher = NUMBER.matcher(getVideoLink().get().getHref().toString());
+			if (matcher.find()) {
+				return Optional.some(Integer.parseInt(matcher.group()));
+			}
+		}
+		return Optional.none();
 	}
 
 	public List<EmsSpeaker> getSpeakerDetails() {
