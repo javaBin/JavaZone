@@ -3,6 +3,7 @@
 
 <h3>Rating from participants</h3>
 <p class="small">The participants were asked to rate your talk on a scale from 1 to 3 start. This is your talks average rating.</p>
+
 <canvas id="average-rating-gauge" width="200" height="100"></canvas>
 <span><%= avgRating.toFixed(2) %></span>
 
@@ -10,6 +11,10 @@
 <p class="small">This is the average rating of all talks at JavaZone 2013.</p>
 <canvas id="avg-all-talks-gauge" width="200" height="100"></canvas>
 <span><%= avgRatingForAllTalks.toFixed(2) %></span>
+
+<h3>Page views</h3>
+<p class="small">The number of page views your presentation got.</p>
+<p><%= pageViews %></p>
 
 <% if(comments.length > 0) { %>
 	<h3>Comments on your talk</h3>
