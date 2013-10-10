@@ -23,6 +23,7 @@ import no.javazone.representations.feedback.AdminFeedback;
 import no.javazone.representations.feedback.Feedback;
 import no.javazone.representations.feedback.FeedbackSummary;
 import no.javazone.representations.feedback.FeedbackSummaryForSpeakers;
+import no.javazone.representations.sessions.Session;
 import no.javazone.server.PropertiesLoader;
 
 import org.apache.commons.lang3.StringUtils;
@@ -176,15 +177,16 @@ public class SpeakerFeedbackService {
 	}
 
 	public FeedbackSummaryForSpeakers getSpeakersOwnFeedbackSummary(final String talkId, final String secret) {
-		EmsSession session = emsService.getSession(talkId);
-		String realSecret = getOrGenerateSecretForTalk(session.getId());
+		EmsSession emsSession = emsService.getSession(talkId);
+		String realSecret = getOrGenerateSecretForTalk(emsSession.getId());
 		if (realSecret.equals(secret)) {
-			FeedbackSummary f = getFeedbackSummaryForTalk(session.getId());
-			VimeoStat videoStats = getVimeoStatsForTalk(session);
-			AnalyticsStat analyticsStat = getAnalyticsStatsForTalk(session.getId());
+			FeedbackSummary f = getFeedbackSummaryForTalk(emsSession.getId());
+			VimeoStat videoStats = getVimeoStatsForTalk(emsSession);
+			AnalyticsStat analyticsStat = getAnalyticsStatsForTalk(emsSession.getId());
 			String pageViews = analyticsStat == null ? "unknown" : analyticsStat.pageviews;
 			double avgRatingForAllTalks = getAvgRatingForAllTalks();
-			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks, pageViews);
+			Session session = Session.createSession(emsSession);
+			return new FeedbackSummaryForSpeakers(session, f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks, pageViews);
 		} else {
 			throw new WebApplicationException(Status.FORBIDDEN);
 		}
