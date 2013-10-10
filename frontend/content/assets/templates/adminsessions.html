@@ -69,6 +69,9 @@
                         <% }) %>
                     </ul>
 
+                    <h2>Link:</h2>
+                    <p><%= jz.api.link(pres, "details") %></p>
+
                     <h2>Details:</h2>
                     <ul class="details">
                         <table>
@@ -79,6 +82,7 @@
                                     <th>comment</th>
                                     <th>ip</th>
                                     <th>userAgent</th>
+                                    <th>ID</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -89,6 +93,7 @@
                                         <td><%= _.str.truncate(detail.comment, 15) %></td>
                                         <td><%= detail.ip %></td>
                                         <td><%= detail.userAgent %></td>
+                                        <td><%= detail.id %></td>
                                     </tr>
                                 <% }) %>
                             </tbody>
