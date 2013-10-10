@@ -1,4 +1,20 @@
 #!/bin/bash
+
+BASEDIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+
+# resolve symlinks
+while [ -h "$BASEDIR/$0" ]; do
+    DIR=$(dirname -- "$BASEDIR/$0")
+    SYM=$(readlink $BASEDIR/$0)
+    BASEDIR=$(cd $DIR && cd $(dirname -- "$SYM") && pwd)
+done
+cd ${BASEDIR}
+
+cd ../frontend
+
+# --------------------------------------
+
+
 echo -e "\033[33m"
 echo "                                                                                              "
 echo "                _/                                  _/_/_/_/_/                                "
@@ -13,9 +29,6 @@ function fancymessage {
 	echo ""
 	echo -e "\033[32m-->" $1 "\033[0m"
 }
-
-BASEDIR=$(dirname $0)
-cd $BASEDIR/..
 
 ## Sjekk riktig parametere
 EXPECTED_ARGS=1

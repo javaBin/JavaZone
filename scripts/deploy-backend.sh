@@ -1,4 +1,19 @@
 #!/bin/bash
+
+BASEDIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+
+# resolve symlinks
+while [ -h "$BASEDIR/$0" ]; do
+    DIR=$(dirname -- "$BASEDIR/$0")
+    SYM=$(readlink $BASEDIR/$0)
+    BASEDIR=$(cd $DIR && cd $(dirname -- "$SYM") && pwd)
+done
+cd ${BASEDIR}
+
+cd ../backend
+
+# --------------------------------------
+
 set -e
 
 yellow() { echo -e "\033[33m$1\033[0m"; }
@@ -25,9 +40,7 @@ _readWithDefault() {
 }
 
 info "BYGGER"
-cd awazone-web
 mvn package
-cd ..
 
 yellow ""
 yellow "  deployer"
