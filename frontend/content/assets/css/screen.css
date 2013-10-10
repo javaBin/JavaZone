@@ -332,9 +332,9 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .form .button:hover { background: #117972; }
 .form .button i { display: inline-block; margin: 0 .3em 0 0; }
 .form .small { font-size: 0.8em; margin: -1em 2em 1em 0; color: #666;}
-.form .talkcomment { margin: 1em 0; position: relative; }
-.form .talkcomment .icon { display: inline; left: -1.2em; top: .2em; position: absolute;}
-.form .talkcomment .comment { display: inline; line-height: 1.5em;}
+.form .talkcomments { list-style: circle; margin-left: 1em;}
+.form .talkcomments li { margin: .5em 0; font-size: .8em; line-height: 1.3em; }
+.form strong { font-weight: 400; }
 
 .thanks h2 { margin-top: 1em; }
 .thanks p.last { margin-bottom: 2em; }
