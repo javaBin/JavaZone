@@ -197,7 +197,7 @@ jz.api.gauge = function(id, value) {
 
         strokeColor: '#ddd',
         generateGradient: false,
-        percentColors: [[0.0, "#A10735"], [0.50, "#FCAF2A"], [1.0, "#148f87"]]
+        percentColors: [[0.0, "#FF0000"], [0.50, "#FFFF00"], [1.0, "#00FF00"]]
     };
 
     var target = document.getElementById(id);
