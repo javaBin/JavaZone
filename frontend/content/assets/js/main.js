@@ -234,37 +234,14 @@ jz.routes.sessions = function() {
 };
 
 jz.routes.talkfeedback = function() {
-    var opts = {
-        lines: 12, // The number of lines to draw
-        angle: 0, // The length of each line
-        lineWidth: 0.44, // The line thickness
-        pointer: {
-            length: 0.9, // The radius of the inner circle
-            strokeWidth: 0.035, // The rotation offset
-            color: '#000000' // Fill color
-        },
-        limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
-
-        strokeColor: '#148f87',   // to see which ones work best for you
-        generateGradient: false,
-        percentColors: [[0.0, "#148f87"], [0.50, "#FCAF2A"], [1.0, "#A10735"]]
-    };
-
     var talkid = jz.utils.param("id");
     var secret = jz.utils.param("secret");
     jz.api.get("/api/restricted/feedback/" + talkid + "?secret=" + secret).then(function(data) {
         jz.api.template("talkfeedback", data).then(function(html) {
             $('.talkfeedback').html(html);
 
-            var talkAverageTarget = document.getElementById('average-rating-gauge');
-            var talkAverageGauge = new Gauge(talkAverageTarget).setOptions(opts);
-            talkAverageGauge.maxValue = 3;
-            talkAverageGauge.set(data.avgRating);
-
-            var talkAverageTarget = document.getElementById('avg-all-talks-gauge');
-            var talkAverageGauge = new Gauge(talkAverageTarget).setOptions(opts);
-            talkAverageGauge.maxValue = 3;
-            talkAverageGauge.set(data.avgRatingForAllTalks);
+            jz.api.gauge('average-rating-gauge', data.avgRating);
+            jz.api.gauge('avg-all-talks-gauge', data.avgRatingForAllTalks);
         });
     });
 };

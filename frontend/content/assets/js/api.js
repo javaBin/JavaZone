@@ -175,3 +175,30 @@ jz.api.string_comparator = function(param_name, compare_depth) {
         };
     }
 };
+
+jz.api.gauge = function(id, value) {
+    if (value == 0) {
+        value = 0.01;  // Because gauge.js can't handle '0'
+    }
+
+    var opts = {
+        lines: 12,
+        angle: 0,
+        lineWidth: 0.44,
+        pointer: {
+            length: 0.9,
+            strokeWidth: 0.035,
+            color: '#000000'
+        },
+        limitMax: 'false',
+
+        strokeColor: '#148f87',
+        generateGradient: false,
+        percentColors: [[0.0, "#148f87"], [0.50, "#FCAF2A"], [1.0, "#A10735"]]
+    };
+
+    var target = document.getElementById(id);
+    var gauge = new Gauge(target).setOptions(opts);
+    gauge.maxValue = 3;
+    gauge.set(value);
+};
