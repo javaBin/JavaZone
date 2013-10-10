@@ -1,6 +1,7 @@
 package no.javazone.api.resources.admin;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,15 @@ public class AdminFeedbackResource {
 		checkSecret(secret);
 		Map<String, List<Feedback>> feedbacks = feedbackService.getAllFeedbacks();
 		return Response.ok(feedbacks).build();
+	}
+
+	@GET
+	@Path("/links")
+	@Produces(TEXT_PLAIN)
+	public Response getFeedbackUrls(@HeaderParam("X-Jz-Secret") final String secret) {
+		checkSecret(secret);
+		String feedbackUrls = feedbackService.getFeedbackUrlsForAllSessions();
+		return Response.ok(feedbackUrls).build();
 	}
 
 	@GET

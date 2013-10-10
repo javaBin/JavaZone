@@ -15,15 +15,18 @@ public class EmsSpeaker {
 	private final String name;
 	private final String bio;
 	private final Optional<Link> emsPhotoUrl;
+	private final String email;
 	private final String gravatarUrl;
 	private byte[] smallPhoto;
 	private byte[] largePhoto;
 
-	public EmsSpeaker(final String id, final String name, final String bio, final Optional<Link> emsPhotoUrl, final String gravatarUrl) {
+	public EmsSpeaker(final String id, final String name, final String bio, final Optional<Link> emsPhotoUrl, final String email,
+			final String gravatarUrl) {
 		this.id = id;
 		this.name = name;
 		this.bio = bio;
 		this.emsPhotoUrl = emsPhotoUrl;
+		this.email = email;
 		this.gravatarUrl = gravatarUrl;
 	}
 
@@ -41,6 +44,10 @@ public class EmsSpeaker {
 
 	public Optional<Link> getEmsPhotoUrl() {
 		return emsPhotoUrl;
+	}
+
+	public String getEmail() {
+		return email;
 	}
 
 	public String getGravatarUrl() {
@@ -70,7 +77,7 @@ public class EmsSpeaker {
 				String email = ItemHelper.getStringValue(item, "email");
 				String gravatarUrl = GravatarUtil.emailToGravatarUrl(email);
 
-				return new EmsSpeaker(id, name, bio, emsPhotoUrl, gravatarUrl);
+				return new EmsSpeaker(id, name, bio, emsPhotoUrl, email, gravatarUrl);
 			}
 		};
 	}

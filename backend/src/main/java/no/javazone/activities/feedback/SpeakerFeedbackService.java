@@ -7,18 +7,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
 import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.model.EmsSession;
+import no.javazone.activities.ems.model.EmsSpeaker;
 import no.javazone.representations.feedback.AdminFeedback;
 import no.javazone.representations.feedback.Feedback;
 import no.javazone.representations.feedback.FeedbackSummary;
 import no.javazone.representations.feedback.FeedbackSummaryForSpeakers;
 import no.javazone.server.PropertiesLoader;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +41,9 @@ public class SpeakerFeedbackService {
 
 	public static SpeakerFeedbackService instance;
 	private DBCollection talkFeedbackMongoCollection;
+	private DBCollection feedbacksecretsMongoCollection;
+
+	private static final String FRONTEND_URL = PropertiesLoader.getProperty("server.proxy").replace("/api", "");;
 
 	public SpeakerFeedbackService() {
 		MongoClient mongoClient;
@@ -46,6 +52,7 @@ public class SpeakerFeedbackService {
 			String namespace = PropertiesLoader.getProperty("mongodb.namespace");
 			DB db = mongoClient.getDB(namespace);
 			talkFeedbackMongoCollection = db.getCollection("feedback");
+			feedbacksecretsMongoCollection = db.getCollection("feedbacksecrets");
 		} catch (UnknownHostException e) {
 			LOG.warn("Kunne ikke starte MongoDB-klient!", e);
 		}
@@ -163,5 +170,40 @@ public class SpeakerFeedbackService {
 		// TODO: sjekke secret!!
 		FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
 		return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
+	}
+
+	public String getFeedbackUrlsForAllSessions() {
+		StringBuilder b = new StringBuilder();
+		List<EmsSession> sessions = emsService.getConferenceYear().getSessions();
+		for (EmsSession emsSession : sessions) {
+			String talkId = emsSession.getId();
+			String secret = getOrGenerateSecretForTalk(talkId);
+			List<EmsSpeaker> speakers = emsSession.getSpeakerDetails();
+			for (EmsSpeaker emsSpeaker : speakers) {
+				String name = emsSpeaker.getName();
+				String email = emsSpeaker.getEmail();
+				String url = FRONTEND_URL + String.format("/talkfeedback.html?id=%s&secret=%s", talkId, secret);
+				Object[] array = { name, email, url };
+				b.append(StringUtils.join(array, ",") + "\n");
+			}
+		}
+		return b.toString();
+	}
+
+	private String getOrGenerateSecretForTalk(final String talkId) {
+		DBCursor cursor = null;
+		try {
+			cursor = feedbacksecretsMongoCollection.find(new BasicDBObject("talkId", talkId));
+			List<DBObject> dbObjects = cursor.toArray();
+			if (dbObjects.size() == 0) {
+				String secret = UUID.randomUUID().toString();
+				feedbacksecretsMongoCollection.insert(new BasicDBObject().append("talkId", talkId).append("secret", secret));
+				return secret;
+			} else {
+				return (String) dbObjects.get(0).get("secret");
+			}
+		} finally {
+			cursor.close();
+		}
 	}
 }
