@@ -245,10 +245,9 @@ jz.routes.talkfeedback = function() {
         },
         limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
 
-        colorStart: '#FFFFFF',   // Colors
-        colorStop: '#000000',    // just experiment with them
         strokeColor: '#148f87',   // to see which ones work best for you
-        generateGradient: false
+        generateGradient: false,
+        percentColors: [[0.0, "#148f87"], [0.50, "#FCAF2A"], [1.0, "#A10735"]]
     };
 
     var talkid = jz.utils.param("id");
