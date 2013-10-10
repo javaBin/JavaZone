@@ -2,6 +2,16 @@
 <p class="small">The number of ratings you got.</p>
 <p><%= numRatings %></p>
 
+<h3>Average ratings</h3>
+<p class="small">Your average ratings.</p>
+<canvas id="average-rating-gauge" width="200" height="100"></canvas>
+<span><%= avgRating.toFixed(2) %></span>
+
+<h3>All talks</h3>
+<p class="small">Average ratings for all talks.</p>
+<canvas id="avg-all-talks-gauge" width="200" height="100"></canvas>
+<span><%= avgRatingForAllTalks.toFixed(2) %></span>
+
 <h3>Comments</h3>
 <p class="small">The comments you got from your audience.</p>
 
