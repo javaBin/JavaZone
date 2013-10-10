@@ -28,7 +28,6 @@ public class VimeoStats {
 				VimeoStat value = new VimeoStat(parts[16], parts[13], parts[19]);
 				stats.put(key, value);
 			}
-			System.out.println(stats);
 		} catch (Exception e) {
 			LOG.warn("Kunne ikke laste vimeo-statistikk!");
 		}

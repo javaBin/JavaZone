@@ -70,7 +70,6 @@ public class SpeakerFeedbackService {
 		DBCursor cursor = talkFeedbackMongoCollection.find(new BasicDBObject("talkId", talkId));
 
 		try {
-			System.out.println("Fant " + cursor.size() + " feedbacks som matcher talkid " + talkId);
 			return Feedback.convertFromMongo(cursor.toArray());
 		} finally {
 			cursor.close();
@@ -92,7 +91,6 @@ public class SpeakerFeedbackService {
 		AggregationOutput output = talkFeedbackMongoCollection.aggregate(match, group);
 
 		Iterable<DBObject> results = output.results();
-		System.out.println(results);
 
 		return results.toString();
 	}
@@ -199,7 +197,6 @@ public class SpeakerFeedbackService {
 		Optional<Integer> videoIdOpt = session.getVideoId();
 		if (videoIdOpt.isSome()) {
 			Integer videoId = videoIdOpt.get();
-			System.out.println("video: " + videoId);
 			return new VimeoStatsSingle().getStatsForVideoId(videoId);
 		} else {
 			return null;

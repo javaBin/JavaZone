@@ -29,7 +29,6 @@ public class AnalyticsStats {
 				AnalyticsStat value = new AnalyticsStat(parts[1]);
 				stats.put(key, value);
 			}
-			System.out.println(stats);
 		} catch (Exception e) {
 			LOG.warn("Kunne ikke laste analytics-statistikk!", e);
 		}
