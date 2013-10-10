@@ -11,9 +11,17 @@
 <canvas id="avg-all-talks-gauge" width="200" height="100"></canvas>
 
 
-<h3><i class="icon-laptop"></i>Page views on the web page</h3>
-<p class="small">Your presentation has been viewed <strong><%= pageViews %> times</strong> on our web pages until now.</p>
-<p></p>
+<h3><i class="icon-signal"></i> Statistics and stuff</h3>
+<p class="small">
+	We have collected some statistics from various systems about your talk. These numbers are counting stuff up until the 10th of October 2013.
+	<ul class="talkcomments">
+		<li>On our web pages, the page of your presentation has been viewed a total of <strong><%= pageViews %> times</strong>.</li>
+		<li>While your talk has been on Vimeo, there have been <strong><%= videoStats.loads %> people</strong> who have started viewing it. </li>
+		<li>Of these views, a total of <strong><%= videoStats.plays %> people</strong> has viewed the whole thing from start to finish. </li>
+		<li><strong><%= videoStats.downloads %> cool people</strong> have even downloaded your talk from Vimeo to their machine. </li>
+		<% if(videoStats.likes) { %> <li><strong><%= videoStats.likes %> brave souls</strong> have pushed the like-button on Vimeo as well.</li><% } %>
+	</ul>
+</p>
 
 <% if(comments.length > 0) { %>
 	<h3><i class="icon-comments-alt"></i>Comments on your talk</h3>

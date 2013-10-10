@@ -18,7 +18,7 @@ import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.activities.ems.model.EmsSpeaker;
 import no.javazone.activities.feedback.AnalyticsStats.AnalyticsStat;
-import no.javazone.activities.feedback.VimeoStats.VimeoStat;
+import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
 import no.javazone.representations.feedback.AdminFeedback;
 import no.javazone.representations.feedback.Feedback;
 import no.javazone.representations.feedback.FeedbackSummary;
@@ -48,7 +48,6 @@ public class SpeakerFeedbackService {
 	private DBCollection talkFeedbackMongoCollection;
 	private DBCollection feedbacksecretsMongoCollection;
 
-	private VimeoStats vimeoStats;
 	private AnalyticsStats analyticsStats;
 
 	private static final String FRONTEND_URL = PropertiesLoader.getProperty("server.proxy").replace("/api", "");;
@@ -61,7 +60,6 @@ public class SpeakerFeedbackService {
 			DB db = mongoClient.getDB(namespace);
 			talkFeedbackMongoCollection = db.getCollection("feedback");
 			feedbacksecretsMongoCollection = db.getCollection("feedbacksecrets");
-			vimeoStats = new VimeoStats();
 			analyticsStats = new AnalyticsStats();
 		} catch (UnknownHostException e) {
 			LOG.warn("Kunne ikke starte MongoDB-klient!", e);
@@ -186,7 +184,8 @@ public class SpeakerFeedbackService {
 			String pageViews = analyticsStat == null ? "unknown" : analyticsStat.pageviews;
 			double avgRatingForAllTalks = getAvgRatingForAllTalks();
 			Session session = Session.createSession(emsSession);
-			return new FeedbackSummaryForSpeakers(session, f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks, pageViews);
+			return new FeedbackSummaryForSpeakers(session, f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks, pageViews,
+					videoStats);
 		} else {
 			throw new WebApplicationException(Status.FORBIDDEN);
 		}
@@ -201,7 +200,7 @@ public class SpeakerFeedbackService {
 		if (videoIdOpt.isSome()) {
 			Integer videoId = videoIdOpt.get();
 			System.out.println("video: " + videoId);
-			return vimeoStats.getStatsForVideoId(videoId);
+			return new VimeoStatsSingle().getStatsForVideoId(videoId);
 		} else {
 			return null;
 		}
