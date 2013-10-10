@@ -189,7 +189,7 @@ jz.api.gauge = function(id, value) {
         angle: 0,
         lineWidth: 0.44,
         pointer: {
-            length: 0.9,
+            length: 0.7,
             strokeWidth: 0.035,
             color: '#000000'
         },

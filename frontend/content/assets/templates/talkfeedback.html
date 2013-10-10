@@ -1,5 +1,5 @@
-<h2 class="first">Feedback and stats</h2>
-<p>Thank you for doing a kick ass job at JavaZone 2013! We have asked the participants to rate all the talks, and the following is a a summary of the stats we have for your talk:<br><%= session.title %></p>
+<h2 class="first"><%= _.pluck(session.speakers, "name").join("and ") %>, you rock!</h2>
+<p>Thank you for doing an awesome job presenting <%= session.title %> at JavaZone 2013! We have asked the participants to rate all the talks, and the following is a a summary of the stats we have for yours.</p>
 
 <h3><i class="icon-star"></i>Rating from participants</h3>
 <p class="small">The participants were asked to rate talks on a scale from 1 to 3. Your talk received an average rating of <strong><%= avgRating.toFixed(2) %></strong>.</p>
@@ -25,3 +25,11 @@
 	    <% }); %>
 	</ul>
 <% } %>
+
+<h3><i class="icon-heart"></i>Share the love!</h3>
+<p class="small">Even though JavaZone 2013 is over, people from all over the world can still see your talk. We guess you already know this, but your talk is availiable on Vimeo. Share it with everyone: <a href="<%= jz.api.link(session, "video") %>"><%= jz.api.link(session, "video") %></a></p>
+
+<p>&nbsp;</p>
+
+<p>Thanks again! We hope to see you again next year. Follow us on <a href="https://twitter.com/JavaZone">Twitter</a> to be the first to know about next years Call for Speakers.</p>
+<p>Best regards,<br>The JavaZone committee!</p>
