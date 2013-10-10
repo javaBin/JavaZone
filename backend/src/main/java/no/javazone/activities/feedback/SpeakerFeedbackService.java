@@ -253,4 +253,18 @@ public class SpeakerFeedbackService {
 			cursor.close();
 		}
 	}
+
+	public int deleteFeedback(final String talkId, final String feedbackId) {
+		LOG.info(String.format("Forsøker å slette feedback %s for talk %s", feedbackId, talkId));
+
+		DBCursor cursor = talkFeedbackMongoCollection.find();
+		for (DBObject dbObject : cursor) {
+			if (dbObject.get("_id").toString().equals(feedbackId) && dbObject.get("talkId").toString().equals(talkId)) {
+				talkFeedbackMongoCollection.remove(dbObject);
+				LOG.info("Slettet: " + dbObject.toString());
+				return 1;
+			}
+		}
+		return 0;
+	}
 }

@@ -6,12 +6,14 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 import java.util.List;
 import java.util.Map;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
@@ -52,6 +54,16 @@ public class AdminFeedbackResource {
 		checkSecret(secret);
 		List<Feedback> feedbacks = feedbackService.getFeedbacksForTalk(talkId);
 		return Response.ok(feedbacks).build();
+	}
+
+	@DELETE
+	@Path("/{talkId}/feedbacks/{feedbackId}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response deleteFeedback(@HeaderParam("X-Jz-Secret") final String secret, @PathParam("talkId") final String talkId,
+			@PathParam("feedbackId") final String feedbackId) {
+		checkSecret(secret);
+		int numDeleted = feedbackService.deleteFeedback(talkId, feedbackId);
+		return Response.ok("Antall slettet: " + numDeleted).build();
 	}
 
 	@GET

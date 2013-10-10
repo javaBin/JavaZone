@@ -17,12 +17,19 @@ import com.mongodb.DBObject;
 public class Feedback {
 
 	@JsonProperty
+	private final String id;
+	@JsonProperty
 	public final Integer rating;
 	@JsonProperty
 	public final String comment;
 
 	@JsonCreator
 	public Feedback(@JsonProperty("rating") final Integer rating, @JsonProperty("comment") final String comment) {
+		this(null, rating, comment);
+	}
+
+	public Feedback(final String id, final Integer rating, final String comment) {
+		this.id = id;
 		this.rating = rating;
 		this.comment = comment;
 	}
@@ -58,7 +65,10 @@ public class Feedback {
 
 				Object commentObj = dbObject.get("comment");
 				String comment = commentObj != null ? commentObj.toString() : null;
-				return new Feedback(rating, comment);
+				Object objectId = dbObject.get("_id");
+				System.out.println(objectId);
+				String id = objectId.toString();
+				return new Feedback(id, rating, comment);
 			}
 		}));
 	}
