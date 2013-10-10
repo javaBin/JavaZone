@@ -1,22 +1,22 @@
-<h2>Feedback and stats</h2>
-<p>This page contains a summary of the feedback you got on your talk <strong><%= session.title %></strong> at JavaZone 2013.</p>
+<h2 class="first">Feedback and stats</h2>
+<p>Thank you for doing a kick ass job at JavaZone 2013! We have asked the participants to rate all the talks, and the following is a a summary of the stats we have for your talk:<br><%= session.title %></p>
 
-<h3>Rating from participants</h3>
-<p class="small">The participants were asked to rate your talk on a scale from 1 to 3. Your talk received an average rating of <strong><%= avgRating.toFixed(2) %></strong>.</p>
+<h3><i class="icon-star"></i>Rating from participants</h3>
+<p class="small">The participants were asked to rate talks on a scale from 1 to 3. Your talk received an average rating of <strong><%= avgRating.toFixed(2) %></strong>.</p>
 
 <canvas id="average-rating-gauge" width="200" height="100"></canvas>
 
-<h3>Average conference rating</h3>
-<p class="small">You can compare your talk to the rest of the talks. The average ratings of all talks at JavaZone 2013 was <strong><%= avgRatingForAllTalks.toFixed(2) %></strong></p>
+<h3><i class="icon-bullhorn"></i>Average conference rating</h3>
+<p class="small">You can compare your talk to the rest. The average rating of all talks at JavaZone 2013 was <strong><%= avgRatingForAllTalks.toFixed(2) %></strong></p>
 <canvas id="avg-all-talks-gauge" width="200" height="100"></canvas>
 
 
-<h3>Page views on the web page</h3>
+<h3><i class="icon-laptop"></i>Page views on the web page</h3>
 <p class="small">Your presentation has been viewed <strong><%= pageViews %> times</strong> on our web pages until now.</p>
 <p></p>
 
 <% if(comments.length > 0) { %>
-	<h3>Comments on your talk</h3>
+	<h3><i class="icon-comments-alt"></i>Comments on your talk</h3>
 	<p class="small">The participants were asked to comment on your talk. This is all the comments that were submitted.</p>
 
 	<ul class="talkcomments">
