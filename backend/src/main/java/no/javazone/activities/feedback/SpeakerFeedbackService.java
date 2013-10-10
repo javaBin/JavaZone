@@ -171,7 +171,8 @@ public class SpeakerFeedbackService {
 		String realSecret = getOrGenerateSecretForTalk(talkId);
 		if (realSecret.equals(secret)) {
 			FeedbackSummary f = getFeedbackSummaryForTalk(talkId);
-			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments);
+			double avgRatingForAllTalks = getAvgRatingForAllTalks();
+			return new FeedbackSummaryForSpeakers(f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks);
 		} else {
 			throw new WebApplicationException(Status.FORBIDDEN);
 		}
@@ -193,6 +194,23 @@ public class SpeakerFeedbackService {
 			}
 		}
 		return b.toString();
+	}
+
+	private double getAvgRatingForAllTalks() {
+		DBObject groupFields = new BasicDBObject("_id", "$talkId");
+		groupFields.put("average_rating", new BasicDBObject("$avg", "$rating"));
+		DBObject group = new BasicDBObject("$group", groupFields);
+
+		AggregationOutput output = talkFeedbackMongoCollection.aggregate(group);
+		Iterable<DBObject> results = output.results();
+		System.out.println(results);
+		double total = 0;
+		double i = 0;
+		for (DBObject dbObject : results) {
+			total += (Double) dbObject.get("average_rating");
+			i++;
+		}
+		return total / i;
 	}
 
 	private String getOrGenerateSecretForTalk(final String talkId) {
