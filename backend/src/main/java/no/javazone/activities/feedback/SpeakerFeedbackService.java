@@ -180,10 +180,9 @@ public class SpeakerFeedbackService {
 			VimeoStat videoStats = getVimeoStatsForTalk(emsSession);
 			AnalyticsStat analyticsStat = getAnalyticsStatsForTalk(emsSession.getId());
 			String pageViews = analyticsStat == null ? "unknown" : analyticsStat.pageviews;
-			double avgRatingForAllTalks = getAvgRatingForAllTalks();
+			TotalTalkRatings totalTalkRatings = getAvgRatingForAllTalks();
 			Session session = Session.createSession(emsSession);
-			return new FeedbackSummaryForSpeakers(session, f.numRatings, f.avgRating, f.comments, avgRatingForAllTalks, pageViews,
-					videoStats);
+			return new FeedbackSummaryForSpeakers(session, f.numRatings, f.avgRating, f.comments, totalTalkRatings, pageViews, videoStats);
 		} else {
 			throw new WebApplicationException(Status.FORBIDDEN);
 		}
@@ -208,33 +207,65 @@ public class SpeakerFeedbackService {
 		List<EmsSession> sessions = emsService.getConferenceYear().getSessions();
 		for (EmsSession emsSession : sessions) {
 			String talkId = emsSession.getId();
+			String talkTitle = emsSession.getTitle();
 			String secret = getOrGenerateSecretForTalk(talkId);
 			List<EmsSpeaker> speakers = emsSession.getSpeakerDetails();
 			for (EmsSpeaker emsSpeaker : speakers) {
 				String name = emsSpeaker.getName();
 				String email = emsSpeaker.getEmail();
 				String url = FRONTEND_URL + String.format("/talkfeedback.html?id=%s&secret=%s", talkId, secret);
-				Object[] array = { name, email, url };
+				Object[] array = { talkTitle, name, email, url };
 				b.append(StringUtils.join(array, ",") + "\n");
 			}
 		}
 		return b.toString();
 	}
 
-	private double getAvgRatingForAllTalks() {
+	private TotalTalkRatings getAvgRatingForAllTalks() {
 		DBObject groupFields = new BasicDBObject("_id", "$talkId");
 		groupFields.put("average_rating", new BasicDBObject("$avg", "$rating"));
 		DBObject group = new BasicDBObject("$group", groupFields);
 
 		AggregationOutput output = talkFeedbackMongoCollection.aggregate(group);
 		Iterable<DBObject> results = output.results();
-		double total = 0;
-		double i = 0;
+		double totalPresentation = 0;
+		double numberOfPresentations = 0;
+		double totalLightning = 0;
+		double numberOfLightnings = 0;
 		for (DBObject dbObject : results) {
-			total += (Double) dbObject.get("average_rating");
-			i++;
+			String talkId = (String) dbObject.get("_id");
+			Double avgForTalk = (Double) dbObject.get("average_rating");
+			EmsSession session = emsService.getSession(talkId);
+			if (session.getFormat().equals("presentation")) {
+				totalPresentation += avgForTalk;
+				numberOfPresentations++;
+			} else if (session.getFormat().equals("lightning-talk")) {
+				totalLightning += avgForTalk;
+				numberOfLightnings++;
+			} else {
+				LOG.warn("Fant en talk som ikke var lightning eller presentation!" + session.getTitle());
+			}
 		}
-		return total / i;
+		double avgPresentation = totalPresentation / numberOfPresentations;
+		double avgLightning = totalLightning / numberOfLightnings;
+		return new TotalTalkRatings(avgPresentation, avgLightning, numberOfPresentations, numberOfLightnings);
+	}
+
+	public class TotalTalkRatings {
+
+		public final double avgPresentation;
+		public final double avgLightning;
+		public final double numberOfPresentations;
+		public final double numberOfLightnings;
+
+		public TotalTalkRatings(final double avgPresentation, final double avgLightning, final double numberOfPresentations,
+				final double numberOfLightnings) {
+			this.avgPresentation = avgPresentation;
+			this.avgLightning = avgLightning;
+			this.numberOfPresentations = numberOfPresentations;
+			this.numberOfLightnings = numberOfLightnings;
+		}
+
 	}
 
 	private String getOrGenerateSecretForTalk(final String talkId) {

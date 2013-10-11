@@ -241,7 +241,8 @@ jz.routes.talkfeedback = function() {
             $('.talkfeedback').html(html);
 
             jz.api.gauge('average-rating-gauge', data.avgRating);
-            jz.api.gauge('avg-all-talks-gauge', data.avgRatingForAllTalks);
+            jz.api.gauge('avg-presentations-gauge', data.totalTalkRatings.avgPresentation);
+            jz.api.gauge('avg-lightning-gauge', data.totalTalkRatings.avgLightning);
         });
     });
 };

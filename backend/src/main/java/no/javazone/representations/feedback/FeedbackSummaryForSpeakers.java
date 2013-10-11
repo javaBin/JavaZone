@@ -2,6 +2,7 @@ package no.javazone.representations.feedback;
 
 import java.util.List;
 
+import no.javazone.activities.feedback.SpeakerFeedbackService.TotalTalkRatings;
 import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
 import no.javazone.representations.sessions.Session;
 
@@ -16,7 +17,7 @@ public class FeedbackSummaryForSpeakers {
 	@JsonProperty
 	private final double avgRating;
 	@JsonProperty
-	private final double avgRatingForAllTalks;
+	private final TotalTalkRatings totalTalkRatings;
 	@JsonProperty
 	private final List<String> comments;
 	@JsonProperty
@@ -25,12 +26,12 @@ public class FeedbackSummaryForSpeakers {
 	private final VimeoStat videoStats;
 
 	public FeedbackSummaryForSpeakers(final Session session, final int numRatings, final double avgRating, final List<String> comments,
-			final double avgRatingForAllTalks, final String pageViews, final VimeoStat videoStats) {
+			final TotalTalkRatings totalTalkRatings, final String pageViews, final VimeoStat videoStats) {
 		this.session = session;
 		this.numRatings = numRatings;
 		this.avgRating = avgRating;
 		this.comments = comments;
-		this.avgRatingForAllTalks = avgRatingForAllTalks;
+		this.totalTalkRatings = totalTalkRatings;
 		this.pageViews = pageViews;
 		this.videoStats = videoStats;
 	}
