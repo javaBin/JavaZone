@@ -73,11 +73,20 @@ if [ $ENV != "test" -a $ENV != "prod" ]; then
 	fail "Miljø må være enten 'test' eller 'prod'"
 fi
 
-info "Deployer til $ENV med versjon $VERSION med jar $JAR"
+if [ $ENV == "prod" ]; then
+	HOST="212.71.237.26"
+	BASE="/home/javabin/web/jz-api"
+elif [ $ENV == "test" ]; then
+	HOST="212.71.237.26"
+	BASE="/home/javabin/web/jz-api"
+else
+	fail "Det du sa gav null mening!"
+fi
 
-BASE="~/web/api-app/$ENV"
-ssh javabin@javazone.espenhh.com "mkdir -p $BASE/$VERSION"
-scp $JAR javabin@javazone.espenhh.com:$BASE/$VERSION/awazone.jar
-ssh javabin@javazone.espenhh.com "ln -s -f $VERSION -T $BASE/current"
-ssh javabin@javazone.espenhh.com "~/web/api-app/app.sh stop $ENV"
-ssh javabin@javazone.espenhh.com "~/web/api-app/app.sh start $ENV"
+info "Deployer til $EVN på $HOST:$BASE med versjon $VERSION med jar $JAR"
+
+ssh javabin@$HOST "mkdir -p $BASE/$VERSION"
+scp $JAR javabin@$HOST:$BASE/$VERSION/awazone.jar
+ssh javabin@$HOST "ln -s -f $VERSION -T $BASE/current"
+ssh javabin@$HOST "$BASE/app.sh stop"
+ssh javabin@$HOST "$BASE/app.sh start"

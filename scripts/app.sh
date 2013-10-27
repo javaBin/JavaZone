@@ -10,14 +10,9 @@ fail() {
 	exit 1
 }
 
-if [ ! $# -eq 2 ]; then
-	info "Bruk: ./app.sh [start|stop|status] [test|prod]"
+if [ ! $# -eq 1 ]; then
+	info "Bruk: ./app.sh [start|stop|status]"
 	exit 1
-fi
-
-env=$2
-if [[ $env != "prod" && $env != "test" ]]; then
-	fail "Kjenner ikke mijøet '$env'. mente du 'test' eller 'prod'?"
 fi
 
 cmd=$1
@@ -26,32 +21,32 @@ if [[ $cmd != "start" && $cmd != "stop" && $cmd != "status" ]]; then
 fi
 
 if [ $cmd = "status" ]; then
-	pidfile=$env/pid
+	pidfile=pid
 	if [ -f $pidfile ]; then
 		pid=`cat $pidfile`
-		info "$env kjører (med PID $pid)"
+		info "Kjører (med PID $pid)"
 	else
-		warn "Det ser ikke ut til at $env kjører"
+		warn "Det ser ikke ut til at appen kjører"
 	fi
 fi
 
 if [ $cmd = "start" ]; then
-	props="/home/javabin/web/api-app/$env/$env.properties"
-	logs="/home/javabin/web/api-app/$env/logs"
-	java -DpropertyFile=$props -DlogDirectory=$logs -jar $env/current/awazone.jar 2>> $env/logs/error.log >> $env/logs/server.log &
+	props="/home/javabin/web/api-app/jz-api.properties"
+	logs="/home/javabin/web/api-app/logs"
+	java -DpropertyFile=$props -DlogDirectory=$logs -jar current/awazone.jar 2>> logs/error.log >> logs/server.log &
 	PID=$!
-	echo $PID > $env/pid
-	info "Startet app med PID $PID i $env"
-	tail -n 0 -f $env/logs/server.log
+	echo $PID > pid
+	info "Startet app med PID $PID"
+	tail -n 0 -f logs/server.log
 fi
 
 if [ $cmd = "stop" ]; then
-	pidfile=$env/pid
+	pidfile=pid
 	if [ -f $pidfile ]; then
 		PID=`cat $pidfile`
 		kill $PID
 		rm $pidfile
-		info "Stoppet app med PID $PID i $env"
+		info "Stoppet app med PID $PID"
 	else
 		warn "Fant ikke PID-fil. Ser ikke ut til at appen kjører."
 	fi
