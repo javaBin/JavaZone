@@ -31,7 +31,7 @@ a:hover .img-inner {
 
 .img-map { background-image:url("/assets/img/maps/spektrum.gif"); }
 .img-intro { background-image:url("/assets/img/tiles/topdown.jpg"); }
-.img-video { background-image:url("/assets/img/tiles/stand.jpg"); }
+.img-stand { background-image:url("/assets/img/tiles/stand.jpg"); }
 .img-stand2 { background-image:url("/assets/img/tiles/stand2.jpg"); }
 .img-agir { background-image:url("/assets/img/tiles/agir.jpg"); }
 .img-awezone { background-image:url("/assets/img/tiles/awezone2.jpg"); }
@@ -42,6 +42,11 @@ a:hover .img-inner {
 .img-flam { background-image:url("/assets/img/tiles/flam.jpg"); }
 .img-view { background-image:url("/assets/img/tiles/view.jpg"); }
 .img-spektrum { background-image:url("/assets/img/tiles/spektrum.jpg"); }
+.img-crazy1 { background-image:url("/assets/img/tiles/crazy1.jpg"); }
+.img-crazy2 { background-image:url("/assets/img/tiles/crazy2.jpg"); }
+.img-crazy3 { background-image:url("/assets/img/tiles/crazy3.jpg"); }
+.img-crazy4 { background-image:url("/assets/img/tiles/crazy4.jpg"); }
+
 .img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -56,7 +61,7 @@ only screen and (                min-resolution: 2dppx) {
 
     .img-map { background-image:url("/assets/img/maps/spektrum@2x.gif"); }
     .img-intro { background-image:url("/assets/img/tiles/topdown@2x.jpg"); }
-    .img-video { background-image:url("/assets/img/tiles/stand@2x.jpg"); }
+    .img-stand { background-image:url("/assets/img/tiles/stand@2x.jpg"); }
     .img-stand2 { background-image:url("/assets/img/tiles/stand2@2x.jpg"); }
     .img-agir { background-image:url("/assets/img/tiles/agir@2x.jpg"); }
     .img-awezone { background-image:url("/assets/img/tiles/awezone2@2x.jpg"); }
@@ -67,6 +72,11 @@ only screen and (                min-resolution: 2dppx) {
     .img-flam { background-image:url("/assets/img/tiles/flam@2x.jpg"); }
     .img-view { background-image:url("/assets/img/tiles/view@2x.jpg"); }
     .img-spektrum { background-image:url("/assets/img/tiles/spektrum@2x.jpg"); }
+    .img-crazy1 { background-image:url("/assets/img/tiles/crazy1@2x.jpg"); }
+    .img-crazy2 { background-image:url("/assets/img/tiles/crazy2@2x.jpg"); }
+    .img-crazy3 { background-image:url("/assets/img/tiles/crazy3@2x.jpg"); }
+    .img-crazy4 { background-image:url("/assets/img/tiles/crazy4@2x.jpg"); }
+
     .img-awezone-poster { background-image:url("/assets/img/awezone/poster@2x.jpg"); }
 
 }

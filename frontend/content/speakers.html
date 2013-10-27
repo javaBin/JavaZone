@@ -1,1 +1,20 @@
-<%= redirect("/participants.html#speakers") %>
+<% set('page', 'page-invert') %>
+<%= partial("_partials/menu.html") %>
+
+<div class="tile tile-med tile-tall not-min"><div class="tile-inner img-spektrum">
+    <div class="img-inner"></div>
+    <span class="extra">
+    	Want to present at JavaZone 2014? That's awesome! <br>We will open up the call for speakers <strong>7th February 2014</strong>.
+    </span>
+</div></div>
+
+<div class="tile tile-small tile-tall tile-tall-text tile-invert"><div class="tile-inner">
+    <h3 class="first">
+        JavaZone has a wide variety of talks and workshops
+    </h3>
+    <p>To get a feel for what content our speakers have talked about, have a look at <a href="http://jz13.java.no/program.html">the program of JavaZone 2013</a>.</p>
+    <p>You can <a href="https://twitter.com/javazone">follow us on Twitter</a> to be the first to know everything about the upcoming Call for Speakers. </p>
+    <p>Thank you for being a supporter of JavaZone! See you in 2014!</p>
+</div></div>
+
+<%= partial("_partials/footer.html") %>

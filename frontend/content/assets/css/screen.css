@@ -118,6 +118,7 @@ a:hover { color:#000; border-color:#000; }
 .tile-partners a { border:none; }
 .tile-partners img { width:150px; height: 68px; display: inline-block; border:.5em solid #303030; }
 .tile-partners img:hover { border-color:#222; }
+.tile-partners h2 { color: #fff; padding: 0; margin: 0 0 1em 0; }
 
 .tile-credits .tile-inner { background:#303030; height:auto; text-align: center; min-height:280px; padding:2em 1em; }
 .tile-credits img { width:200px; height:200px; display: inline-block; border:.5em solid #222; float: left; margin: 0.5em; }
@@ -211,6 +212,7 @@ ul.list i { margin:0 .5em 0 0; }
 .page-invert .tile .extra { background:#101010;  color:#fff; }
 .page-invert .tile-invert .tile-inner,
 .page-invert .tile-facts .tile-inner { background:#282828; }
+.page-invert a:hover { color:#A10735; border-color:#A10735; }
 
 .filters ul { padding:0 0 2em 1.25em; }
 .filters li { padding:.51em 0; }
@@ -343,6 +345,8 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .thanks p.last { margin-bottom: 2em; }
 
 .community h3 { margin:0; }
+
+
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
