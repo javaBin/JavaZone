@@ -46,6 +46,7 @@ a:hover .img-inner {
 .img-crazy2 { background-image:url("/assets/img/tiles/crazy2.jpg"); }
 .img-crazy3 { background-image:url("/assets/img/tiles/crazy3.jpg"); }
 .img-crazy4 { background-image:url("/assets/img/tiles/crazy4.jpg"); }
+.img-standcomic { background-image:url("/assets/img/tiles/standcomic.jpg"); }
 
 .img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
 
@@ -76,6 +77,7 @@ only screen and (                min-resolution: 2dppx) {
     .img-crazy2 { background-image:url("/assets/img/tiles/crazy2@2x.jpg"); }
     .img-crazy3 { background-image:url("/assets/img/tiles/crazy3@2x.jpg"); }
     .img-crazy4 { background-image:url("/assets/img/tiles/crazy4@2x.jpg"); }
+    .img-standcomic { background-image:url("/assets/img/tiles/standcomic@2x.jpg"); }
 
     .img-awezone-poster { background-image:url("/assets/img/awezone/poster@2x.jpg"); }
 
