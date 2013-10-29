@@ -88,5 +88,5 @@ info "Deployer til $EVN på $HOST:$BASE med versjon $VERSION med jar $JAR"
 ssh javabin@$HOST "mkdir -p $BASE/$VERSION"
 scp $JAR javabin@$HOST:$BASE/$VERSION/awazone.jar
 ssh javabin@$HOST "ln -s -f $VERSION -T $BASE/current"
-ssh javabin@$HOST "$BASE/app.sh stop"
-ssh javabin@$HOST "$BASE/app.sh start"
+ssh javabin@$HOST "$BASE/jz-backend.sh stop"
+ssh javabin@$HOST "$BASE/jz-backend.sh start"
