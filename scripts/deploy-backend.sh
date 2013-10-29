@@ -75,10 +75,10 @@ fi
 
 if [ $ENV == "prod" ]; then
 	HOST="212.71.237.26"
-	BASE="/home/javabin/web/jz-api"
+	BASE="/home/javabin/web/jz-backend"
 elif [ $ENV == "test" ]; then
 	HOST="212.71.237.26"
-	BASE="/home/javabin/web/jz-api"
+	BASE="/home/javabin/web/jz-backend"
 else
 	fail "Det du sa gav null mening!"
 fi
