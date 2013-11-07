@@ -43,7 +43,10 @@ h3 { font-size:1.2em; color:#000; margin:2em 0 1em 0; line-height: 1.5; max-widt
 h4 { font-size:.8em; text-transform: uppercase; font-weight: bold; color:#000; margin:0 0 .5em 0; }
 h2 i, h3 i { margin:0 .3em 0 0; }
 
+.space { height: 2em; }
+
 p { margin:0 0 1em 0; line-height: 1.5; max-width: 40em; }
+p.ingress { font-weight: 700; }
 
 a { color:#F15B40; text-decoration: none; border-bottom:1px solid rgba(0,0,0,0.1); }
 a:hover { color:#000; border-color:#000; }
@@ -84,6 +87,7 @@ a:hover { color:#000; border-color:#000; }
 .tile-three { width:75%; }
 .tile-one { width:25%; }
 .tile-tall .tile-inner { height:19.7em; }
+.tile-taller .tile-inner { height:30em; }
 .tile-low  .tile-inner { height:8em; }
 .tile-auto .tile-inner { height: auto; }
 
@@ -331,9 +335,6 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .form textarea { width: 22.5em; height: 14em; font-size: .8em; padding:1em; border:1px solid #ccc; margin: 0 0 1em 0; }
 .form textarea { line-height: 1.4em; border-radius: .2em; }
 .form textarea:focus { outline: none; border-color:#999; }
-.form .button { background: #148f87; color:#fff; padding:.5em 1em; border-radius: .2em; }
-.form .button:hover { background: #117972; }
-.form .button i { display: inline-block; margin: 0 .3em 0 0; }
 .form .small { font-size: 0.8em; margin: -1em 2em 1em 0; color: #666;}
 .form .talkcomments { list-style: circle; margin-left: 1em;}
 .form .talkcomments li { margin: .5em 0; font-size: .8em; line-height: 1.3em; }
@@ -345,6 +346,10 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .thanks p.last { margin-bottom: 2em; }
 
 .community h3 { margin:0; }
+
+.button { background: #148f87; color:#fff; padding:.5em 1em; border-radius: .2em; }
+.button:hover { background: #117972; color:#fff !important; border-color: transparent !important; }
+.button i { display: inline-block; margin: 0 .3em 0 0; }
 
 
 
