@@ -344,6 +344,11 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 .community h3 { margin:0; }
 
+.nextyear { display: block; color: #fff; background: #1B1B1B; text-align: center; font-size: 2em; padding: .5em; line-height: 1.2em; }
+.nextyear:hover { color: #fff; }
+.nextyear span { color: #FCAF2A; }
+.nextyear:hover span { color: #fd8640; }
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
@@ -354,6 +359,7 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 @media only screen and (max-width: 500px) {
     br { display: none; }
+    .nextyear br { display: block;}
     #container { width:auto; padding:0; }
     .tiles-main { width:100%; float:none; }
     .tiles-side { width:100%; float:none; }
