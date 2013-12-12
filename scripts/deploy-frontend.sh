@@ -41,7 +41,7 @@ fi
 
 ## Sett opp variabler for riktig miljø
 if [ $1 == "test" ]; then
-	JZ_SERVER="javabin@212.71.237.26"
+	JZ_SERVER="javabin@212.71.238.251"
 	JZ_SERVER_ROOT="/home/javabin/web/jz-frontend"
 	JZ_KEEP_OLD_PACKAGES_FOR_MINUTES=86400 # 60 dager
 	JZ_CHECK_PACBOT=false
