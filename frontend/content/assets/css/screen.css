@@ -165,6 +165,7 @@ ul.links li a { border-bottom: none; }
 ul.links li i { padding: 0 0.5em 0 0; }
 
 ul.list { line-height: 1.8; }
+ul.list li { margin: 0.8em 0; }
 ul.list i { margin:0 .5em 0 0; }
 
 .numbers { width:100%; margin:3em -50px 3em -50px; padding:20px 50px; background:#A10735; color:#fff; }
@@ -352,6 +353,8 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .button i { display: inline-block; margin: 0 .3em 0 0; }
 
 
+.slide { width: 70em; margin: 2em 0; }
+
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
@@ -441,4 +444,6 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
     .form { background:none; padding:0; }
     .form-inner { padding:2em 4em; max-width: none; }
+
+    .slide { width: 100%; margin: .5em 0; }
 }
