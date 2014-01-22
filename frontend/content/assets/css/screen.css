@@ -326,6 +326,11 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .tile-speaker p { font-size: .9em; font-weight: 200; }
 
 
+.tile-submit .tile-inner { padding: 1em; background: #8A0035; transition: all 0.5s ease; }
+.tile-submit .tile-inner p { color: #fff; text-align: center; margin: 0; font-size: 1.4em; text-transform: uppercase; font-weight: bold; }
+.tile-submit .tile-inner p i { position: absolute; top: 1em; left: 1em; transition: all 0.5s ease; }
+.tile-submit:hover .tile-inner p i { left: 14em; transition: all 0.5s ease; }
+.tile-submit:hover .tile-inner { background: #EAAF0E; transition: all 0.5s ease; }
 
 /* Tile colors */
 
@@ -515,4 +520,9 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     .form-inner { padding:2em 4em; max-width: none; }
 
     .slide { width: 100%; margin: .5em 0; }
+
+    div.space-elegant { margin: 4em 0; }
+
+    .dates .date { float: none; width: 100%; }
+    .dates .date br { display: block; }
 }
