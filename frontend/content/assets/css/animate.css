@@ -2742,3 +2742,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
+
+
+/*   CUSTOM JAVAZONE TING */
+
+@media only screen and (max-width: 500px) {
+  .animated {
+    -webkit-animation-duration: 0;
+    -moz-animation-duration: 0;
+    -ms-animation-duration: 0;
+    -o-animation-duration: 0;
+    animation-duration: 0;
+  }
+}
