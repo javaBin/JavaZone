@@ -48,6 +48,8 @@ only screen and (                min-resolution: 2dppx) {
     padding:0 0 100px 1.5em;
 }
 
+i.fa { width: 1em; }
+
 h2 { font-size:1.2em; margin:2em 0 1.5em 0; line-height: 1.2; color:#000; font-weight: normal; }
 h3 { font-size:1.2em; color:#000; margin:2em 0 1em 0; line-height: 1.5; max-width: 30em; }
 h4 { font-size:.8em; text-transform: uppercase; font-weight: bold; color:#000; margin:2em 0 .5em 0; }
