@@ -325,12 +325,21 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     padding:0; margin: 0 0 1em 0; color:#148f87; }
 .tile-speaker p { font-size: .9em; font-weight: 200; }
 
-
 .tile-submit .tile-inner { padding: 1em; background: #8A0035; transition: all 0.5s ease; }
 .tile-submit .tile-inner p { color: #fff; text-align: center; margin: 0; font-size: 1.4em; text-transform: uppercase; font-weight: bold; }
 .tile-submit .tile-inner p i { position: absolute; top: 1em; left: 1em; transition: all 0.5s ease; }
 .tile-submit:hover .tile-inner p i { left: 14em; transition: all 0.5s ease; }
 .tile-submit:hover .tile-inner { background: #EAAF0E; transition: all 0.5s ease; }
+
+.tile-animated .tile-inner { transition: all 0.5s ease; }
+.tile-animated:hover .tile-inner { transition: all 0.5s ease; }
+.tile-animated .tile-inner p i { transition: all 0.5s ease; }
+.tile-animated:hover .tile-inner p i { transition: all 0.5s ease; }
+
+.tile-link .tile-inner { padding: 1em; }
+.tile-link .tile-inner p { text-align: center; margin: 0; font-size: 1.4em; text-transform: uppercase; font-weight: bold; }
+.tile-link .tile-inner p i { position: absolute; top: 1em; left: 1em; }
+.tile-link:hover .tile-inner p i { left: 14em; }
 
 /* Tile colors */
 
@@ -348,30 +357,37 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .tile-color1 .tile-inner { background: #8A0035; color: #fff; }
 .tile-color1 .tile-inner a { color: #EAAF0E; font-weight: bolder; }
 .tile-color1 .tile-inner h2 { color: #fff; }
+.tile-color1.tile-hover:hover .tile-inner { background: #EAAF0E; }
 
 .tile-color2 .tile-inner { background: #E04E48; color: #000; }
 .tile-color2 .tile-inner a { color: #000; font-weight: bolder; }
 .tile-color2 .tile-inner h2 { color: #000; }
+.tile-color2.tile-hover:hover .tile-inner { background: #EAAF0E; }
 
 .tile-color3 .tile-inner { background: #E6853E; color: #000; }
 .tile-color3 .tile-inner a { color: #8A0035; font-weight: bolder; }
 .tile-color3 .tile-inner h2 { color: #000; }
+.tile-color3.tile-hover:hover .tile-inner { background: #8A0035; }
 
 .tile-color4 .tile-inner { background: #EAAF0E; color: #000; }
 .tile-color4 .tile-inner a { color: #8A0035; font-weight: bolder; }
 .tile-color4 .tile-inner h2 { color: #000; }
+.tile-color4.tile-hover:hover .tile-inner { background: #8A0035; }
 
 .tile-color5 .tile-inner { background: #518F89; color: #000; }
 .tile-color5 .tile-inner a { color: #1C0000; font-weight: bolder; }
 .tile-color5 .tile-inner h2 { color: #000; }
+.tile-color5.tile-hover:hover .tile-inner { background: #446A65; }
 
 .tile-color6 .tile-inner { background: #446A65; color: #fff; }
 .tile-color6 .tile-inner a { color: #E6853E; font-weight: bolder; }
 .tile-color6 .tile-inner h2 { color: #fff; }
+.tile-color6.tile-hover:hover .tile-inner { background: #518F89; }
 
 .tile-color7 .tile-inner { background: #1C0000; color: #fff; }
 .tile-color7 .tile-inner a { color: #8A0035; font-weight: bolder; }
 .tile-color7 .tile-inner h2 { color: #fff; }
+.tile-color7.tile-hover:hover .tile-inner { background: #E04E48; }
 
 .program-disclaimer { text-align: center; max-width: 100%; font-size: .9em; margin: 0 0 3em 0; color: #999; }
 
