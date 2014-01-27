@@ -105,6 +105,10 @@ ol.numberedlist li { list-style: decimal; margin: 1em 0 1em 3em; }
 .tile-one { width:25%; }
 .tile-tall .tile-inner { height:19.7em; }
 .tile-taller .tile-inner { height:30em; }
+.tile-tallerx .tile-inner { height:40em; }
+.tile-tallerxx .tile-inner { height:50em; }
+.tile-tallerxxx .tile-inner { height:60em; }
+.tile-supertall .tile-inner { height:120em; }
 .tile-low  .tile-inner { height:8em; }
 .tile-auto .tile-inner { height: auto; }
 
@@ -113,9 +117,10 @@ ol.numberedlist li { list-style: decimal; margin: 1em 0 1em 3em; }
 .tile .extra i { margin:0 .4em 0 0; }
 .tile .extra strong { font-weight: bold; }
 .tile .extra-top { top: 60px; bottom: auto; }
+.tile .extra-right { right: 0; left: auto;}
 
 .tile-video { }
-.tile-video .tile-inner { padding:0; height:25.2em; }
+.tile-video .tile-inner { padding:0; height:47.4em; }
 .tile-video iframe { width:100%; height:100%; }
 
 .talkvideo { height: 25em; margin: 0 1.5em 3em 0; }
