@@ -98,9 +98,11 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-inner { margin:0 1.5em 1.5em 0; padding:2.8em; height:10em; overflow: hidden; display: block; }
 .tile-inner { border:none; color:#394549; position: relative; }
 .tile-inner { background-color:#f9f9f9; background-size:cover; background-position: center center; }
+.tile-inner.tile-inner-background-top { background-position: center top; }
 .tile-last .tile-inner { padding-bottom:1.5em; }
 .tile-big { width:100%; }
 .tile-med { width:66.666%; }
+.tile-half { width:50%; }
 .tile-small { width:33.333%; }
 .tile-three { width:75%; }
 .tile-one { width:25%; }
@@ -350,6 +352,17 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     transform: scale(1.05);
 }
 
+.tile-nomargin .tile-inner { padding: 0; }
+
+
+
+
+
+
+
+
+
+
 /* Tile colors */
 
 /*    
@@ -362,6 +375,15 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     Lysegrønn:  518F89;
     Mørkegrønn: 446A65;
     Svart:      1C0000;*/
+
+.tile-color0 .tile-inner { background: #fff; color: #000; }
+.tile-color0 .tile-inner h2 { background: #fff; color: #000; }
+.tile-color0 .tile-inner a { color: #8A0035; font-weight: bolder; }
+.tile-color0 .tile-inner a:hover { color: #000; }
+.page-invert .tile-color0 .tile-inner { background: #101010; color: #fff; }
+.page-invert .tile-color0 .tile-inner h2 { background: #101010; color: #fff; }
+.page-invert .tile-color0 .tile-inner a { color: #E6853E; }
+.page-invert .tile-color0 .tile-inner a:hover { color: #E04E48; }
 
 .tile-color1 .tile-inner { background: #8A0035; color: #fff; }
 .tile-color1 .tile-inner a { color: #EAAF0E; font-weight: bolder; }

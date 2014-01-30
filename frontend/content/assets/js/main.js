@@ -217,6 +217,17 @@ jz.routes.feedback = function() {
     });
 };
 
+// jz.routes.tickets = function() {
+//     //$("#ticket1").addClass("hide");
+//     $("#ticket2").addClass("hide");
+//     setTimeout(function() {
+//         $("#ticket1").removeClass("hide").addClass("swing");
+//         setTimeout(function() {
+//             $("#ticket2").removeClass("hide").addClass("swing");
+//         }, 500);
+//     }, 500);
+// };
+
 // Disse ligger under /admin, burde kanskje indikeres på noen måte? :P
 jz.routes.sessions = function() {
     var lineClick = function() {
