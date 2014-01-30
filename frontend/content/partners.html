@@ -1,12 +1,17 @@
 <% set('page', 'page-invert') %>
 <%= partial("_partials/menu.html") %>
 
-<div class="tile tile-taller tile-big not-min  animated fadeInDown"><div class="tile-inner img-standcomic">
+<div class="tile tile-big tile-partners"><div class="tile-inner">
+    <div class="partners img-list"></div>
+    <div class="clear"></div>
+</div></div>
+
+<!-- <div class="tile tile-taller tile-big not-min  animated fadeInDown"><div class="tile-inner img-standcomic">
     <div class="img-inner"></div>
     <span class="extra">
         In 2013 we had 42 amazing partners at the conference.<br> <a href="mailto:partner@java.no">Contact us</a> if you are interested in being a partner of JavaZone 2014.
     </span>
-</div></div>
+</div></div> -->
 
 <div class="tile tile-txt tile-med" id="become"><div class="tile-inner">
 
@@ -30,7 +35,13 @@
 
 </div></div>
 
-<div class="tile tile-txt tile-small tile-invert"><div class="tile-inner">
+<a href="mailto:partner@java.no" class="tile tile-txt tile-small tile-link tile-hover tile-color4 tile-scale-hover"><div class="tile-inner">
+
+    <p>Sign up as a partner</p>
+
+</div></a>
+
+<div class="tile tile-txt tile-small tile-color6"><div class="tile-inner">
 
     <div class="topics">
       <h2 class="first"><i class="fa fa-puzzle-piece"></i> Partner meetings</h2>
@@ -39,9 +50,9 @@
       <ul class="list">
         <li><strong><i class="icon-comment"></i> 12. December 2013</strong>: <br>Meeting #1 (<a href="/partner/dec2013.html">norwegian slides</a>) (<a href="/partner/eng.html">english</a>)</li>
         <li><strong><i class="icon-comment"></i> 13. February 2014</strong>: <br>Meeting about JavaZone Academy</li>
-        <li><strong><i class="icon-comment"></i> March 2014</strong>: <br>Meeting #2</li>
-        <li><strong><i class="icon-comment"></i> June 2014</strong>: <br>Meeting #3</li>
-        <li><strong><i class="icon-comment"></i> August 2014</strong>: <br>Meeting #4</li>
+        <li><strong><i class="icon-comment"></i> March 2014</strong>: Meeting #2</li>
+        <li><strong><i class="icon-comment"></i> June 2014</strong>: Meeting #3</li>
+        <li><strong><i class="icon-comment"></i> August 2014</strong>: Meeting #4</li>
       </ul>
     </div>
 
@@ -144,11 +155,5 @@
     </div>
 
 </div></div> -->
-
-<div class="tile tile-big tile-partners"><div class="tile-inner">
-    <h2>Partners of JavaZone 2013</h2>
-    <div class="partners img-list"></div>
-    <div class="clear"></div>
-</div></div>
 
 <%= partial("_partials/footer.html") %>

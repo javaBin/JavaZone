@@ -66,6 +66,8 @@ p.ingress { font-weight: 700; }
 a { color:#F15B40; text-decoration: none; }
 a:hover { color:#000; }
 
+.list strong { font-weight: 700; }
+
 ol.numberedlist li { list-style: decimal; margin: 1em 0 1em 3em; }
 ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 
