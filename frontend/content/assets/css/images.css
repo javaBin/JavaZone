@@ -9,6 +9,11 @@
     position: relative;
 }
 
+.img-half {
+    width: 19em;
+    height: 19em;
+}
+
 .img-inner {
     display: none;
     width:100%;
@@ -103,3 +108,12 @@ only screen and (                min-resolution: 2dppx) {
 .img-journeyzone14 { background-image: url("/journeyzone/14.jpg")} 
 .img-journeyzone15 { background-image: url("/journeyzone/15.jpg")} 
 .img-journeyzone16 { background-image: url("/journeyzone/16.jpg")} 
+
+.img-jzfact1 { background-image: url("/assets/img/jzfacts/jzfacts-stor.001.jpg")} 
+.img-jzfact2 { background-image: url("/assets/img/jzfacts/jzfacts-stor.002.jpg")} 
+.img-jzfact3 { background-image: url("/assets/img/jzfacts/jzfacts-stor.003.jpg")} 
+.img-jzfact4 { background-image: url("/assets/img/jzfacts/jzfacts-stor.004.jpg")} 
+.img-jzfact5 { background-image: url("/assets/img/jzfacts/jzfacts-stor.005.jpg")} 
+.img-jzfact6 { background-image: url("/assets/img/jzfacts/jzfacts-stor.006.jpg")} 
+.img-jzfact7 { background-image: url("/assets/img/jzfacts/jzfacts-stor.007.jpg")} 
+.img-jzfact8 { background-image: url("/assets/img/jzfacts/jzfacts-stor.008.jpg")} 
