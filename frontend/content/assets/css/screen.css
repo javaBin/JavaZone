@@ -588,4 +588,13 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
     .dates .date { float: none; width: 100%; }
     .dates .date br { display: block; }
+
+    .tile-ticket { margin: .5em 0; }
+    .tile-ticket .ticket { height: 11em; }
+    .tile-ticket .ticket a { height: 96.5%; }
+    .tile-ticket .ticket-header { font-size: .9em; }
+    .tile-ticket .ticket-info { font-size: .7em; }
+
+    .tile-partners img { width: 75px; height: 34px;}
+    .img-half { width: 17em; height: 17em; }
 }
