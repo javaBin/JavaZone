@@ -24,7 +24,9 @@
             <h3>Details</h3>
             <ul class="meta">
                 <li><strong>Keywords:</strong> <%- keywords.join(', ') %></li>
-                <li><strong>Location:</strong> <%- room %></li>
+                <% if (room) { %>
+                    <li><strong>Location:</strong> <%- room %></li>
+                <% } %>
                 <li><strong>Language:</strong> <%- language %></li>
                 <li><strong>Level:</strong> <%- _.str.capitalize(level) %></li>
                 <li><strong>Duration:</strong> <%- sessionlength %></li>
