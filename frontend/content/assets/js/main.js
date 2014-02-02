@@ -2,6 +2,7 @@
 
 $(function() {
     jz.utils.addSupportClasses();
+    jz.utils.removeAnimationClasses();
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
     var file = _.last(path.split("/")) || "program";
     var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "program" : file;
