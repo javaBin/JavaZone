@@ -132,6 +132,103 @@ jz.routes.program = function() {
     });
 };
 
+jz.routes.archive = function() {
+    jz.routes.index(); // Litt hacky, dra ut tweets-rendring i funksjon :)
+
+    var show = function(event) {
+        event.preventDefault();
+        $(this).toggleClass("active");
+        jz.api.details($(this).attr("data-url")).then(_.bind(function(html) {
+            $(this).find(".details").html(html).slideToggle(200);
+        }, this));
+    };
+    var filter = function(event) {
+        event.preventDefault();
+        if($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        } else {
+            $(this).parents('ul').find('.active').removeClass('active');
+            $(this).addClass("active");
+        }
+        var filters = $(".filters").find("a.active[rel]").map(function() {
+            return $(this).attr("rel");
+        });
+        $("html").toggleClass("ui-filter", !!filters.length);
+        $(".session").removeClass('hide');
+        _.each(filters, function(name) {
+            $(".session").not("." + name).addClass('hide');
+        });
+        $(".day").hide().each(function() {
+            if ($(this).find('.session').not('.hide').size()) $(this).show();
+        });
+    };
+
+    var stop = function() {
+        return false;
+    };
+    var rateIn = function() {
+        $(this).addClass("icon-star").removeClass("icon-star-empty");
+        $(this).prevAll().addClass("icon-star").removeClass("icon-star-empty");
+    };
+    var rateOut = function() {
+        $(this).addClass("icon-star-empty").removeClass("icon-star");
+        $(this).prevAll().removeClass("icon-star").addClass("icon-star-empty");
+    };
+    var rateClick = function() {
+        $(this).parents(".rate").find(".rate-icon").off();
+        $(this).add($(this).prevAll()).removeClass("icon-star-empty").addClass("icon-star");
+        $(this).parents(".rate").off().removeClass("rate-active").addClass("rate-inactive");
+        var uri = $(this).parents("a").attr("data-feedback");
+        var id = $(this).parents("a").attr("data-id");
+        var rating = $(this).attr("data-rate");
+        jz.api.rate(id, uri, rating);
+        jz.utils.notify("Thanks for your feedback! You can add a comment as well.", 4000);
+        return false;
+    };
+
+    var commentIn = function() {
+        $(this).addClass("icon-comment").removeClass("icon-comment-alt");
+    };
+    var commentOut = function() {
+        $(this).removeClass("icon-comment").addClass("icon-comment-alt");
+    };
+    var commentClick = function() {
+        if ($(this).hasClass("active")) $(".feedback").addClass("hide");
+        else $(".feedback").insertAfter($(this).parents('a')).removeClass('hide');
+        $(this).toggleClass("active");
+        $(".feedback").attr("data-id", $(this).parents('a').attr("data-id"));
+        $(".feedback").attr("data-uri", $(this).parents('a').attr("data-feedback"));
+        $(".feedback a").off().on("click", commentSubmit);
+        $(".feedback textarea").focus();
+        return false;
+    };
+    var commentSubmit = function() {
+        $(".feedback").addClass("hide");
+        var id = $(".feedback").attr("data-id");
+        var uri = $(".feedback").attr("data-uri");
+        jz.api.rate(id, uri, null, $(".feedback textarea").val());
+        $(".feedback textarea").val("");
+        $(".feedback").attr("data-id", "");
+        $(".feedback").attr("data-uri", "");
+        jz.utils.notify("Thanks for your feedback!");
+        return false;
+    };
+
+    jz.api.sessionsByYear(jz.utils.param("year")).then(function(data) {
+        jz.api.template("filters", { data: data }).then(function(html) {
+            $(".filters").html(html);
+            $(".filters a").on("click", filter);
+        });
+        jz.api.template("sessions", { sessions: data.sessions }).then(function(html) {
+            $(".program").html(html);
+            $(".program li").on("click", show);
+            $(".program .rate-inactive .rate-icon").on("click", stop);
+            $(".program .rate-active .rate-icon").hover(rateIn, rateOut).on("click", rateClick);
+            $(".program .comment-icon").hover(commentIn, commentOut).on("click", commentClick);
+        });
+    });
+};
+
 jz.routes.presentation = function() {
     jz.api.session(jz.utils.param("id")).then(function(data) {
 
