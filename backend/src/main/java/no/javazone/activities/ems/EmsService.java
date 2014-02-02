@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
@@ -54,6 +56,15 @@ public class EmsService {
 
 	private ConferenceYear conferenceYear = null;
 
+    private final Map<String, String> conferenceYearUrls = new HashMap<String, String>() {{
+        put("2010", "http://www.javazone.no/ems/server/events/28a1c5c2-b61e-4d2f-a67e-b60f9efdc2a8/sessions");
+        put("2011", "http://www.javazone.no/ems/server/events/1307dbcc-048e-4f80-9faa-ffa1bef40fda/sessions");
+        put("2012", "http://www.javazone.no/ems/server/events/4c18f45a-054a-4699-a2bc-6a59a9dd8382/sessions");
+        put("2013", "http://www.javazone.no/ems/server/events/cee37cc1-5399-47ef-9418-21f9b6444bfa/sessions");
+    }};
+
+	private final Map<String, ConferenceYear> conferenceYearArchive = new HashMap<String, ConferenceYear>();
+
 	private EmsService() {
 		ClientConfig config = new DefaultClientConfig();
 		jerseyClient = Client.create(config);
@@ -89,7 +100,11 @@ public class EmsService {
 
 			long bruktTid = s.getTime();
 			LOG.info("Lastet session for 2013 fra EMS på {} ms.", bruktTid);
-			return bruktTid;
+
+            LOG.info("Populating conferenceArchive");
+            populateConferenceArchive();
+
+            return bruktTid;
 
 		} catch (IOException e) {
 			LOG.warn("Kunne ikke refreshe sessions fra EMS – fikk feil...", e);
@@ -108,6 +123,13 @@ public class EmsService {
 		return conferenceYear;
 	}
 
+	public ConferenceYear getConferenceByYear(String year) {
+		if (conferenceYearArchive == null || !conferenceYearArchive.containsKey(year)) {
+			throw new WebApplicationException(Status.SERVICE_UNAVAILABLE);
+		}
+		return conferenceYearArchive.get(year);
+	}
+
 	public static EmsService getInstance() {
 		if (instance == null) {
 			instance = new EmsService();
@@ -121,7 +143,14 @@ public class EmsService {
 				return session;
 			}
 		}
-		return null;
+        for (ConferenceYear year : conferenceYearArchive.values()) {
+            for (EmsSession session : year.getSessions()) {
+                if (session.getId().startsWith(id)) {
+                    return session;
+                }
+            }
+        }
+        return null;
 	}
 
 	public List<EmsSpeaker> getSpeakersForSession(final EmsSession emsSession) {
@@ -148,5 +177,54 @@ public class EmsService {
 			throw new WebApplicationException(Status.INTERNAL_SERVER_ERROR);
 		}
 	}
+
+    private void populateConferenceArchive(){
+        for (Map.Entry<String, String> year : conferenceYearUrls.entrySet()) {
+            if(conferenceYearArchive.containsKey(year.getKey())) {  // no refresh required for archive
+                LOG.info("Year " + year.getKey() + " already exist in archive. No need to refresh.");
+                continue;
+            }
+            LOG.info("Starter innlasting av sessions for " + year.getKey() + " fra EMS");
+            StopWatch s = new StopWatch();
+            s.start();
+
+            InputStream stream = jerseyClient.resource(year.getValue()).get(InputStream.class);
+            Collection collection = null;
+            try {
+                collection = new CollectionParser().parse(stream);
+            } catch (IOException e) {
+                LOG.warn("Kunne ikke parse sessions fra EMS for " + year.getKey() + " – fikk feil...", e);
+                continue;
+            }
+            ArrayList<EmsSession> sessions = newArrayList(transform(collection.getItems(), EmsSession.collectionItemToSession()));
+
+            LOG.info("Henter speakerinfo for sessions");
+            int i = 0;
+            // Litt hackish :P
+            for (EmsSession emsSession : sessions) {
+                try {
+                    LOG.info(String.format("Henter speakerinfo for session %s av %s", ++i, sessions.size()));
+                    List<EmsSpeaker> speakersForSession = getSpeakersForSession(emsSession);
+                    emsSession.addDetailedSpeakerInfo(speakersForSession);
+                } catch (Exception e) {
+                    emsSession.addDetailedSpeakerInfo(new ArrayList<EmsSpeaker>());
+                    LOG.warn("Feilet under uthenting av speakerinfo for en session. Går videre...", e);
+                }
+            }
+            LOG.info("Ferdig med å hente speakerinfo for sessions");
+
+            long bruktTid = s.getTime();
+            LOG.info("Lastet session for " + year.getKey() + " fra EMS på {} ms.", bruktTid);
+
+            conferenceYearArchive.put(year.getKey(), new ConferenceYear(sessions, new DateTime()));
+        }
+
+        // dumping values
+        for (Map.Entry<String, ConferenceYear> entry : conferenceYearArchive.entrySet()) {
+            List<EmsSession> sessions = entry.getValue().getSessions();
+            System.out.println(entry.getKey() + "\t-> #Sessions - > " + sessions.size());
+        }
+
+    }
 
 }
