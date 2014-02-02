@@ -1,5 +1,5 @@
 jz.data.partners = [
-    // Scienta mangler!
+    ["Scienta", "scienta_2014.jpg", "http://www.scienta.no/"],
     ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
     ["DIPS", "dips_2013.jpg", "http://www.dips.no"],
     ["NETS", "nets_2012.jpg", "http://www.nets.no/"],
