@@ -192,7 +192,7 @@ ul.list { line-height: 1.8; }
 ul.list li { margin: 0.8em 0; }
 ul.list i { margin:0 .5em 0 0; }
 
-ul.topiclist { line-height: 1.6; font-size: 0.8em; border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2); padding: 0 1em; }
+ul.topiclist { line-height: 1.6; font-size: 0.8em; padding: 0 1em; }
 ul.topiclist li { margin: 1em 0; }
 ul.topiclist i { margin-right: 5px; }
 ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
