@@ -48,6 +48,8 @@ only screen and (                min-resolution: 2dppx) {
     padding:0 0 100px 1.5em;
 }
 
+.only-min { display: none; }
+
 i.fa { width: 1em; }
 
 h2 { font-size:1.2em; margin:2em 0 1.5em 0; line-height: 1.2; color:#000; font-weight: normal; }
@@ -542,6 +544,8 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
     .not-min,
     .img-inner,
     a:hover .img-inner { display: none; }
+
+    .only-min { display: block; }
 
     h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
     h2.program-header br { display: block; }
