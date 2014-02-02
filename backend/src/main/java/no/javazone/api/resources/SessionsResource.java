@@ -38,6 +38,14 @@ public class SessionsResource {
 	}
 
 	@GET
+	@Path("/year/{year}")
+	@Produces(APPLICATION_JSON)
+	public Response getSimpleSessions(@PathParam("year") final String year) {
+		List<SimpleSession> simpleSessions = sessionsActivity.getSimpleSessions(year);
+		return Response.ok(simpleSessions).build();
+	}
+
+	@GET
 	@Path("/{id}")
 	@Produces(APPLICATION_JSON)
 	public Response getSession(@PathParam("id") final String id) {

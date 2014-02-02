@@ -30,6 +30,11 @@ public class SessionsActivity {
 		return newArrayList(transform(conferenceYear.getSessions(), SimpleSession.emsSessionToSimpleSession()));
 	}
 
+	public List<SimpleSession> getSimpleSessions(String year) {
+		ConferenceYear conferenceYear = emsService.getConferenceByYear(year);
+        return newArrayList(transform(conferenceYear.getSessions(), SimpleSession.emsSessionToSimpleSession()));
+    }
+
 	public static SessionsActivity getInstance() {
 		if (instance == null) {
 			instance = new SessionsActivity();
