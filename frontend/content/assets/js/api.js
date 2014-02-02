@@ -77,6 +77,10 @@ jz.api.sessions = function() {
     return jz.api.sessionsByUrl("/api/sessions");
 };
 
+jz.api.sessionsByYear = function(year) {
+    return jz.api.sessionsByUrl("/api/sessions/year/" + year);
+};
+
 jz.api.adminsessions = function() {
     if(!$.cookie("jz.secret")) {
         var secret = prompt('Passord:');
@@ -92,7 +96,7 @@ jz.api.sessionsByUrl = function(url) {
 
         // Remove invalid sessions
         data = _.reject(data, function(d) {
-            return !d.start || !d.title || !d.room;
+            return !d.start || !d.title;
         });
 
         var c = _.chain(data), parsed = {
