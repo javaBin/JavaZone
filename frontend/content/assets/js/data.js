@@ -16,7 +16,7 @@ jz.data.partners = [
     ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],
     ["Kodemaker", "kodemaker_2012.jpg", "http://www.kodemaker.no/"],
     ["Mesan", "mesan_2012.jpg", "http://www.mesan.no/"],
-    // ["Evry", "evry_2013.jpg", "http://www.evry.no"],
+    ["Evry", "evry_2013.jpg", "http://www.evry.no"],
     ["Finn.no", "finn_2012.jpg", "http://www.finn.no"],
     ["NITH", "nith_2012.jpg", "http://nith.no/"],
     ["CapGemini", "capgemini_2012.jpg", "http://www.capgemini.no/"],
