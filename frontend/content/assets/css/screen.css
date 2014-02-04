@@ -490,6 +490,10 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .goodbye { font-size: 1.4em; text-align: center; color: #444; }
 .goodbye-small { font-size: 1em; color: #8A0035; }
 
+a.quotes { margin: 4em 2em; font-family: 'Iceland', cursive; display: block; }
+a.quotes .quote { text-align: left; color: #ccc; font-size: 1.1em; line-height: 1.1; margin: 0 0 .8em 0; font-style: italic; }
+a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
+
 .fa-ul { margin: 1em 0 1em 1.5em; line-height: 1.3; }
 .fa-ul li { margin: .7em 0; }
 .fa-ul li i { left: -1.5em; top: .2em; }
