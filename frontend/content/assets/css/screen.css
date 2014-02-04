@@ -2,13 +2,13 @@
     Main Text #394549
     Light Text #ccc
 
-    Burgunder:  8A0035;
-    Lyserød:    E04E48;
-    Oransje:    E6853E;
-    Gul:        EAAF0E;
-    Lysegrønn:  518F89;
-    Mørkegrønn: 446A65;
-    Svart:      1C0000;
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;
 */
 
 html {
@@ -372,64 +372,64 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 /*    
     Main Text   394549
     Light Text  ccc
-    Burgunder:  8A0035;
-    Lyserød:    E04E48;
-    Oransje:    E6853E;
-    Gul:        EAAF0E;
-    Lysegrønn:  518F89;
-    Mørkegrønn: 446A65;
-    Svart:      1C0000;*/
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;*/
 
 .tile-color0 .tile-inner { background: #fff; color: #000; }
 .tile-color0 .tile-inner h2 { background: #fff; color: #000; }
-.tile-color0 .tile-inner a { color: #8A0035; font-weight: bolder; }
+.tile-color0 .tile-inner a { color: #a10035; font-weight: bolder; }
 .tile-color0 .tile-inner a:hover { color: #000; }
 .page-invert .tile-color0 .tile-inner { background: #101010; color: #fff; }
 .page-invert .tile-color0 .tile-inner h2 { background: #101010; color: #fff; }
-.page-invert .tile-color0 .tile-inner a { color: #E6853E; }
-.page-invert .tile-color0 .tile-inner a:hover { color: #E04E48; }
+.page-invert .tile-color0 .tile-inner a { color: #ff8641; }
+.page-invert .tile-color0 .tile-inner a:hover { color: #ff4f4c; }
 
-.tile-color1 .tile-inner { background: #8A0035; color: #fff; }
-.tile-color1 .tile-inner a { color: #EAAF0E; font-weight: bolder; }
+.tile-color1 .tile-inner { background: #a10035; color: #fff; }
+.tile-color1 .tile-inner a { color: #fcaf17; font-weight: bolder; }
 .tile-color1 .tile-inner a:hover { color: #fff; }
 .tile-color1 .tile-inner h2, .tile-color1 .tile-inner h3, .tile-color1 .tile-inner h4 { color: #fff; }
-/*.tile-color1.tile-hover:hover .tile-inner { background: #EAAF0E; }*/
+/*.tile-color1.tile-hover:hover .tile-inner { background: #fcaf17; }*/
 
-.tile-color2 .tile-inner { background: #E04E48; color: #000; }
+.tile-color2 .tile-inner { background: #ff4f4c; color: #000; }
 .tile-color2 .tile-inner a { color: #000; font-weight: bolder; }
 .tile-color2 .tile-inner a:hover { color: #000; }
 .tile-color2 .tile-inner h2, .tile-color2 .tile-inner h3, .tile-color2 .tile-inner h4 { color: #000; }
-/*.tile-color2.tile-hover:hover .tile-inner { background: #EAAF0E; }*/
+/*.tile-color2.tile-hover:hover .tile-inner { background: #fcaf17; }*/
 
-.tile-color3 .tile-inner { background: #E6853E; color: #000; }
-.tile-color3 .tile-inner a { color: #8A0035; font-weight: bolder; }
+.tile-color3 .tile-inner { background: #ff8641; color: #000; }
+.tile-color3 .tile-inner a { color: #a10035; font-weight: bolder; }
 .tile-color3 .tile-inner a:hover { color: #000; }
 .tile-color3 .tile-inner h2, .tile-color3 .tile-inner h3, .tile-color3 .tile-inner h4 { color: #000; }
-/*.tile-color3.tile-hover:hover .tile-inner { background: #8A0035; }*/
+/*.tile-color3.tile-hover:hover .tile-inner { background: #a10035; }*/
 
-.tile-color4 .tile-inner { background: #EAAF0E; color: #000; }
-.tile-color4 .tile-inner a { color: #8A0035; font-weight: bolder; }
+.tile-color4 .tile-inner { background: #fcaf17; color: #000; }
+.tile-color4 .tile-inner a { color: #a10035; font-weight: bolder; }
 .tile-color4 .tile-inner a:hover { color: #000; }
 .tile-color4 .tile-inner h2, .tile-color4 .tile-inner h3, .tile-color4 .tile-inner h4 { color: #000; }
-/*.tile-color4.tile-hover:hover .tile-inner { background: #8A0035; }*/
+/*.tile-color4.tile-hover:hover .tile-inner { background: #a10035; }*/
 
-.tile-color5 .tile-inner { background: #518F89; color: #000; }
-.tile-color5 .tile-inner a { color: #1C0000; font-weight: bolder; }
+.tile-color5 .tile-inner { background: #149089; color: #000; }
+.tile-color5 .tile-inner a { color: #101010; font-weight: bolder; }
 .tile-color5 .tile-inner a:hover { color: #000; }
 .tile-color5 .tile-inner h2, .tile-color5 .tile-inner h3, .tile-color5 .tile-inner h4 { color: #000; }
-/*.tile-color5.tile-hover:hover .tile-inner { background: #446A65; }*/
+/*.tile-color5.tile-hover:hover .tile-inner { background: #286a65; }*/
 
-.tile-color6 .tile-inner { background: #446A65; color: #fff; }
-.tile-color6 .tile-inner a { color: #E6853E; font-weight: bolder; }
+.tile-color6 .tile-inner { background: #286a65; color: #fff; }
+.tile-color6 .tile-inner a { color: #ff8641; font-weight: bolder; }
 .tile-color6 .tile-inner a:hover { color: #fff; }
 .tile-color6 .tile-inner h2, .tile-color6 .tile-inner h3, .tile-color6 .tile-inner h4 { color: #fff; }
-/*.tile-color6.tile-hover:hover .tile-inner { background: #518F89; }*/
+/*.tile-color6.tile-hover:hover .tile-inner { background: #149089; }*/
 
-.tile-color7 .tile-inner { background: #1C0000; color: #fff; }
-.tile-color7 .tile-inner a { color: #8A0035; font-weight: bolder; }
+.tile-color7 .tile-inner { background: #101010; color: #fff; }
+.tile-color7 .tile-inner a { color: #a10035; font-weight: bolder; }
 .tile-color7 .tile-inner a:hover { color: #fff; }
 .tile-color7 .tile-inner h2, .tile-color7 .tile-inner h3, .tile-color7 .tile-inner h4 { color: #fff; }
-/*.tile-color7.tile-hover:hover .tile-inner { background: #E04E48; }*/
+/*.tile-color7.tile-hover:hover .tile-inner { background: #ff4f4c; }*/
 
 .tile-white-color .tile-inner { color: #fff; }
 
@@ -483,12 +483,12 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 .slide { width: 70em; margin: 2em 0; }
 
 
-.dates .date { box-sizing: border-box; color: #888; font-size: 0.8em; width: 32%; margin: 3px; border: 1px solid #1C0000; padding: 2em 1em; text-align: center; line-height: 1.7; float: left; }
-.dates .date span { font-weight: bolder; text-transform: uppercase; color: #8A0035; }
+.dates .date { box-sizing: border-box; color: #888; font-size: 0.8em; width: 32%; margin: 3px; border: 1px solid #101010; padding: 2em 1em; text-align: center; line-height: 1.7; float: left; }
+.dates .date span { font-weight: bolder; text-transform: uppercase; color: #a10035; }
 
 
 .goodbye { font-size: 1.4em; text-align: center; color: #444; }
-.goodbye-small { font-size: 1em; color: #8A0035; }
+.goodbye-small { font-size: 1em; color: #a10035; }
 
 a.quotes { margin: 4em 2em; font-family: 'Iceland', cursive; display: block; }
 a.quotes .quote { text-align: left; color: #ccc; font-size: 1.1em; line-height: 1.1; margin: 0 0 .8em 0; font-style: italic; }
