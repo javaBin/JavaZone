@@ -2,29 +2,12 @@
     height: 100%;
 }
 
-.tile-ticket {
-    transition: all 1s ease;
+.ticket1:hover {
+    background: #99002D;
 }
 
-.tile-ticket:hover {
-    transition: all 1s ease;
-/*    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);*/
-}
-
-.ticket-tile1.tile-ticket:hover {
-    -webkit-transform-origin: left bottom;
-    transform-origin: left bottom;
-    -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-}
-
-.ticket-tile2.tile-ticket:hover {
-    -webkit-transform-origin: right bottom;
-    transform-origin: right bottom;
-    -webkit-transform: rotate(2deg);
-    transform: rotate(2deg);
+.ticket2:hover {
+    background: #F4A70F;
 }
 
 .ticket {
