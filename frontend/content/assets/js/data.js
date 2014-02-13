@@ -27,13 +27,13 @@ jz.data.partners = [
     ["Microsoft", "Microsoft.jpg", "http://www.microsoft.no/"],
     ["Acando", "acando_2012.jpg", "http://www.acando.com/no/"],
     ["Schlumberger", "schlumberger_2012.jpg", "http://www.slb.com"],
-    ["Visma", "visma_2012.jpg", "http://www.visma.no/"]
+    ["Visma", "visma_2012.jpg", "http://www.visma.no/"],
+    ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"]
     // ["Ciber", "ciber_2012.jpg", "http://www.ciber.no/"],
     // ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
     // ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"],
     // ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     // ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
-    // ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
     // ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
     // ["Iterate", "stolt_partner_iterate.jpg", "http://www.iterate.no/"],
     // ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
