@@ -74,10 +74,10 @@ if [ $ENV != "test" -a $ENV != "prod" ]; then
 fi
 
 if [ $ENV == "prod" ]; then
-	HOST="212.71.237.26"
+	HOST="2014.javazone.no"
 	BASE="/home/javabin/web/jz-backend"
 elif [ $ENV == "test" ]; then
-	HOST="212.71.237.26"
+	HOST="test.2014.javazone.no"
 	BASE="/home/javabin/web/jz-backend"
 else
 	fail "Det du sa gav null mening!"
