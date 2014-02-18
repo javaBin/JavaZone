@@ -28,9 +28,11 @@ exports.config = {
       all: [
         "assets/css/reset.css",
         "assets/css/font-awesome.css",
+        "assets/css/animate.css",
         "assets/css/images.css",
         "assets/css/helpers.css",
         "assets/css/screen.css",
+        "assets/css/tickets.css",
         "assets/css/admin.css"
       ]
     }

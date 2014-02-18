@@ -2,6 +2,7 @@
 
 $(function() {
     jz.utils.addSupportClasses();
+    jz.utils.removeAnimationClasses();
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
     var file = _.last(path.split("/")) || "program";
     var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "program" : file;
@@ -216,6 +217,17 @@ jz.routes.feedback = function() {
         return false;
     });
 };
+
+// jz.routes.tickets = function() {
+//     //$("#ticket1").addClass("hide");
+//     $("#ticket2").addClass("hide");
+//     setTimeout(function() {
+//         $("#ticket1").removeClass("hide").addClass("swing");
+//         setTimeout(function() {
+//             $("#ticket2").removeClass("hide").addClass("swing");
+//         }, 500);
+//     }, 500);
+// };
 
 // Disse ligger under /admin, burde kanskje indikeres på noen måte? :P
 jz.routes.sessions = function() {

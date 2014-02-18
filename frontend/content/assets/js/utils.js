@@ -25,6 +25,12 @@ jz.utils.addSupportClasses = function() {
     $("html").addClass("loaded");
 };
 
+jz.utils.removeAnimationClasses = function() {
+    setTimeout(function() {
+        $(".animated").removeClass("animated fadeInLeft fadeInUp fadeInRight bounceInRight");
+    }, 2000);
+};
+
 jz.utils.agent = function() {
     return _.any(_.toArray(arguments), function(s) {
         return !!navigator.userAgent.match(s);

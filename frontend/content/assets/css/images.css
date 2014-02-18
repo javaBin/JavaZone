@@ -9,6 +9,11 @@
     position: relative;
 }
 
+.img-half {
+    width: 19em;
+    height: 19em;
+}
+
 .img-inner {
     display: none;
     width:100%;
@@ -47,6 +52,7 @@ a:hover .img-inner {
 .img-crazy3 { background-image:url("/assets/img/tiles/crazy3.jpg"); }
 .img-crazy4 { background-image:url("/assets/img/tiles/crazy4.jpg"); }
 .img-standcomic { background-image:url("/assets/img/tiles/standcomic.jpg"); }
+.img-standcomic-cramped { background-image:url("/assets/img/tiles/standcomic-cramped.jpg"); }
 
 .img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
 
@@ -78,7 +84,36 @@ only screen and (                min-resolution: 2dppx) {
     .img-crazy3 { background-image:url("/assets/img/tiles/crazy3@2x.jpg"); }
     .img-crazy4 { background-image:url("/assets/img/tiles/crazy4@2x.jpg"); }
     .img-standcomic { background-image:url("/assets/img/tiles/standcomic@2x.jpg"); }
+    .img-standcomic-cramped { background-image:url("/assets/img/tiles/standcomic-cramped@2x.jpg"); }
 
     .img-awezone-poster { background-image:url("/assets/img/awezone/poster@2x.jpg"); }
 
 }
+
+
+
+.img-journeyzone1 { background-image: url("/journeyzone/01.jpg")} 
+.img-journeyzone2 { background-image: url("/journeyzone/02.jpg")} 
+.img-journeyzone3 { background-image: url("/journeyzone/03.jpg")} 
+.img-journeyzone4 { background-image: url("/journeyzone/04.jpg")} 
+.img-journeyzone5 { background-image: url("/journeyzone/05.jpg")} 
+.img-journeyzone6 { background-image: url("/journeyzone/06.jpg")} 
+.img-journeyzone7 { background-image: url("/journeyzone/07.jpg")} 
+.img-journeyzone8 { background-image: url("/journeyzone/08.jpg")} 
+.img-journeyzone9 { background-image: url("/journeyzone/09.jpg")} 
+.img-journeyzone10 { background-image: url("/journeyzone/10.jpg")} 
+.img-journeyzone11 { background-image: url("/journeyzone/11.jpg")} 
+.img-journeyzone12 { background-image: url("/journeyzone/12.jpg")} 
+.img-journeyzone13 { background-image: url("/journeyzone/13.jpg")} 
+.img-journeyzone14 { background-image: url("/journeyzone/14.jpg")} 
+.img-journeyzone15 { background-image: url("/journeyzone/15.jpg")} 
+.img-journeyzone16 { background-image: url("/journeyzone/16.jpg")} 
+
+.img-jzfact1 { background-image: url("/assets/img/jzfacts/jzfacts-stor.001.jpg")} 
+.img-jzfact2 { background-image: url("/assets/img/jzfacts/jzfacts-stor.002.jpg")} 
+.img-jzfact3 { background-image: url("/assets/img/jzfacts/jzfacts-stor.003.jpg")} 
+.img-jzfact4 { background-image: url("/assets/img/jzfacts/jzfacts-stor.004.jpg")} 
+.img-jzfact5 { background-image: url("/assets/img/jzfacts/jzfacts-stor.005.jpg")} 
+.img-jzfact6 { background-image: url("/assets/img/jzfacts/jzfacts-stor.006.jpg")} 
+.img-jzfact7 { background-image: url("/assets/img/jzfacts/jzfacts-stor.007.jpg")} 
+.img-jzfact8 { background-image: url("/assets/img/jzfacts/jzfacts-stor.008.jpg")} 
