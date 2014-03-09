@@ -117,6 +117,8 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-tallerxxx .tile-inner { height:60em; }
 .tile-supertall .tile-inner { height:120em; }
 .tile-low  .tile-inner { height:8em; }
+.tile-lowx  .tile-inner { height:10em; }
+.tile-lowxx  .tile-inner { height:12em; }
 .tile-auto .tile-inner { height: auto; }
 
 .tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em;
@@ -361,11 +363,21 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 
 
+.tile-ill {  }
+.tile-ill .tile-inner { height:auto; }
+.tile-ill .tile-inner h2 { width: 60%; font-size: 2em; margin-bottom: .5em; color: #fcaf17 !important; }
+.tile-ill .tile-inner p { width: 60%; font-size: 1.2em; color: #eee !important }
 
 
+.tile-ill .illustration { padding: 8em 6em; border: 1px dotted #bbb; text-align: center; text-transform: uppercase; font-weight: bold; }
+.tile-ill-right .illustration { float: right;  margin: 0 0 0 5em;}
+.tile-ill-right p, .tile-ill-right h2 { float: left; }
 
+.tile-ill-left .illustration { float: left;  margin: 0 5em 0 0;}
+.tile-ill-left p, .tile-ill-left h2 { float: right; }
 
-
+.tile-ill-full .illustration { margin: 0 0 3em 0; padding: 5em; }
+.tile-ill.tile-ill-full .tile-inner p, .tile-ill.tile-ill-full .tile-inner h2 { width: 100%; }
 
 /* Tile colors */
 
