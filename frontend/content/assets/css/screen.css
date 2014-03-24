@@ -362,23 +362,6 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 
 
-
-.tile-ill {  }
-.tile-ill .tile-inner { height:auto; }
-.tile-ill .tile-inner h2 { width: 60%; font-size: 2em; margin-bottom: .5em; color: #fcaf17 !important; font-weight: 200; }
-.tile-ill .tile-inner p { width: 60%; font-size: 1.1em; color: #eee !important; font-weight: 200; }
-
-
-.tile-ill .illustration { }
-.tile-ill-right .illustration { float: right;}
-.tile-ill-right p, .tile-ill-right h2 { float: left; }
-
-.tile-ill-left .illustration { float: left; }
-.tile-ill-left p, .tile-ill-left h2 { float: right; }
-
-.tile-ill-full .illustration { }
-.tile-ill.tile-ill-full .tile-inner p, .tile-ill.tile-ill-full .tile-inner h2 { }
-
 /* Tile colors */
 
 /*    
