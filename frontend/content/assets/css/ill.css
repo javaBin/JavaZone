@@ -22,7 +22,7 @@
 .tile-ill {  }
 .tile-ill .tile-inner { height:auto; }
 .tile-ill .tile-inner h2 { width: 60%; font-size: 2.5em; margin-bottom: .5em; line-height: 1.2; font-weight: 400; font-family: 'Londrina Solid', cursive; }
-.tile-ill .tile-inner p { width: 60%; font-size: 1.1em; color: #eee !important; font-weight: 200; }
+.tile-ill .tile-inner p { width: 60%; font-size: 1.1em; color: #eee !important; font-weight: 300; line-height: 1.4; }
 
 .tile-ill .tile-inner .color1 { color: #fcaf17 !important; }
 .tile-ill .tile-inner .color2 { color: #149089 !important; }
