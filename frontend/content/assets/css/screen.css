@@ -503,6 +503,10 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .spacexxxxx { height: 10em; }
 
 
+.tile-pullupx { margin-top: -2em; }
+.tile-pullupxx { margin-top: -4em; }
+.tile-pullupxxx { margin-top: -6em; }
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }

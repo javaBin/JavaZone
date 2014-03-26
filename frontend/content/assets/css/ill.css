@@ -4,7 +4,7 @@
 .ill-4 { background-image:url("/assets/img/ill/ill4.png"); width:17.22222em; height:28.38888em; background-size: 17.22222em 28.38888em; }
 .ill-5 { background-image:url("/assets/img/ill/ill5.png"); width:65.27777em; height:20.22222em; background-size: 65.27777em 20.22222em; }
 .ill-6 { background-image:url("/assets/img/ill/ill6.png"); width:34.22222em; height:25.05555em; background-size: 34.22222em 25.05555em; }
-.ill-7 { background-image:url("/assets/img/ill/ill7.png"); width:68.50000em; height:30.77777em; background-size: 68.50000em 30.77777em; }
+.ill-7 { background-image:url("/assets/img/ill/ill7.png"); width:65.11111em; height:29.27777em; background-size: 65.11111em 29.27777em; }
 .ill-8 { background-image:url("/assets/img/ill/ill8.png"); width:63.00000em; height:24.50000em; background-size: 63.00000em 24.50000em; }
 
 
@@ -22,7 +22,9 @@
 
 .tile-ill {  }
 .tile-ill .tile-inner { height:auto; }
-.tile-ill .tile-inner h2 {  font-size: 2.5em; margin-bottom: .5em; line-height: 1.2; font-weight: 400; font-family: 'Londrina Solid', cursive; }
+.tile-ill .tile-inner h2, .tile-ill .tile-inner h3 { line-height: 1.2; font-weight: 400; font-family: 'Londrina Solid', cursive; }
+.tile-ill .tile-inner h2 {  font-size: 2.5em; margin: 0 0 .5em 0;  }
+.tile-ill .tile-inner h3 {  font-size: 1.2em; margin: 0 0 .5em 0;  }
 .tile-ill .tile-inner p { font-size: 1.1em; color: #eee !important; font-weight: 300; line-height: 1.4; }
 
 .tile-ill .tile-inner .color1 { color: #fcaf17 !important; }
@@ -43,7 +45,12 @@
     Mørkegrønn: 286a65;
     Svart:      101010;*/
 
-.salesbubbles {
+.crazyheader {
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg);
+	-webkit-transform:rotate(-2.5deg);
+	margin: -2.4em 0 0 1em !important;
+	background: transparent !important;
 }
 
 .salesbubbles .salesbubble {
@@ -51,7 +58,7 @@
 	float: left;
 	width: 6em;
 	height: 6em;
-	margin: 2em 1.6em;
+	margin: 2em 1.5em;
 	padding: 1em;
 	text-align: center;
 	border: 3px solid #fcaf17;
@@ -73,7 +80,35 @@
 	line-height: 1.5;
 }
 
+.infoboxes .infobox {
+	float: left;
+	padding: 1.5em;
+	margin: 0 0 1em 0;
 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.infoboxes .infobox h3 {
+	text-align: center;
+}
+.infoboxes .infobox p {
+	font-size: .9em;
+}
+
+.infoboxes .infobox .infobox-icon {
+	text-align: center;
+	margin: 0 0 .6em 0;
+}
+.infoboxes .infobox .infobox-icon i {
+	background: #149089;
+	border-radius: 200px;
+	font-size: 2em;
+	padding: .4em;
+}
+
+.infoboxes .infobox-small { width: 30%; }
+.infoboxes .infobox-med { width: 40%; }
 
 
 
