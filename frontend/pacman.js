@@ -34,7 +34,8 @@ exports.config = {
         "assets/css/screen.css",
         "assets/css/tickets.css",
         "assets/css/admin.css",
-        "assets/css/ill.css"
+        "assets/css/ill.css",
+        "assets/css/buttons.css"
       ]
     }
 

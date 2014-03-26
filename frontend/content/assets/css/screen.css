@@ -474,10 +474,6 @@ h2.program-header .duration { position: absolute; top:2em; right:2em; }
 
 .community h3 { margin:0; }
 
-.button { background: #148f87; color:#fff; padding:.5em 1em; border-radius: .2em; }
-.button:hover { background: #117972; color:#fff !important; border-color: transparent !important; }
-.button i { display: inline-block; margin: 0 .3em 0 0; }
-
 
 .slide { width: 68.5em; margin: 2em 0; }
 
@@ -497,6 +493,15 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .fa-ul li { margin: .7em 0; }
 .fa-ul li i { left: -1.5em; top: .2em; }
 .fa-ul strong { font-weight: 700; }
+
+
+
+.spacex { height: 2em; }
+.spacexx { height: 4em; }
+.spacexxx { height: 6em; }
+.spacexxxx { height: 8em; }
+.spacexxxxx { height: 10em; }
+
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }

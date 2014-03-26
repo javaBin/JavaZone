@@ -1,0 +1,49 @@
+.button { 
+	font-size: 1.2em;
+	color:#fff !important; 
+	padding: .5em 1em; 
+
+background-color: #a10035;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(161, 0, 53)), to(rgb(146, 0, 38)));
+background-image: -webkit-linear-gradient(top, rgb(161, 0, 53), rgb(146, 0, 38));
+background-image: -moz-linear-gradient(top, rgb(161, 0, 53), rgb(146, 0, 38));
+background-image: -o-linear-gradient(top, rgb(161, 0, 53), rgb(146, 0, 38));
+background-image: -ms-linear-gradient(top, rgb(161, 0, 53), rgb(146, 0, 38));
+background-image: linear-gradient(top, rgb(161, 0, 53), rgb(146, 0, 38));
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#a10035', EndColorStr='#920026');
+
+}
+.button:hover { 
+	background: #a10035; 
+	color:#fff !important; 
+
+background-color: #9c0030;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(156, 0, 48)), to(rgb(141, 0, 38)));
+background-image: -webkit-linear-gradient(top, rgb(156, 0, 48), rgb(141, 0, 38));
+background-image: -moz-linear-gradient(top, rgb(156, 0, 48), rgb(141, 0, 38));
+background-image: -o-linear-gradient(top, rgb(156, 0, 48), rgb(141, 0, 38));
+background-image: -ms-linear-gradient(top, rgb(156, 0, 48), rgb(141, 0, 38));
+background-image: linear-gradient(top, rgb(156, 0, 48), rgb(141, 0, 38));
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9c0030', EndColorStr='#8d0026');
+
+}
+
+.button:active { 
+	background: #a10035; 
+	color:#fff !important; 
+
+background-color: #97002b;
+background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(151, 0, 43)), to(rgb(136, 0, 33)));
+background-image: -webkit-linear-gradient(top, rgb(151, 0, 43), rgb(136, 0, 33));
+background-image: -moz-linear-gradient(top, rgb(151, 0, 43), rgb(136, 0, 33));
+background-image: -o-linear-gradient(top, rgb(151, 0, 43), rgb(136, 0, 33));
+background-image: -ms-linear-gradient(top, rgb(151, 0, 43), rgb(136, 0, 33));
+background-image: linear-gradient(top, rgb(151, 0, 43), rgb(136, 0, 33));
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#97002b', EndColorStr='#880021');
+
+}
+
+.button i { 
+	display: inline-block; 
+	margin: 0 .3em 0 0; 
+}
