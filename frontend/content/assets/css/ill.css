@@ -1,11 +1,11 @@
-.ill-1 { background-image:url("/assets/img/ill/ill1.png"); width:444px; height:390px;  }
-.ill-2 { background-image:url("/assets/img/ill/ill2.png"); width:384px; height:382px;  }
-.ill-3 { background-image:url("/assets/img/ill/ill3.png"); width:1172px; height:538px;  }
-.ill-4 { background-image:url("/assets/img/ill/ill4.png"); width:310px; height:511px;  }
-.ill-5 { background-image:url("/assets/img/ill/ill5.png"); width:1175px; height:364px;  }
-.ill-6 { background-image:url("/assets/img/ill/ill6.png"); width:616px; height:451px;  }
-.ill-7 { background-image:url("/assets/img/ill/ill7.png"); width:1233px; height:554px;  }
-.ill-8 { background-image:url("/assets/img/ill/ill8.png"); width:1134px; height:441px;  }
+.ill-1 { background-image:url("/assets/img/ill/ill1.png"); width:24.66666em; height:21.66666em; background-size: 24.66666em 21.66666em; }
+.ill-2 { background-image:url("/assets/img/ill/ill2.png"); width:21.33333em; height:21.22222em; background-size: 21.33333em 21.22222em; }
+.ill-3 { background-image:url("/assets/img/ill/ill3.png"); width:65.11111em; height:29.88888em; background-size: 65.11111em 29.88888em; }
+.ill-4 { background-image:url("/assets/img/ill/ill4.png"); width:17.22222em; height:28.38888em; background-size: 17.22222em 28.38888em; }
+.ill-5 { background-image:url("/assets/img/ill/ill5.png"); width:65.27777em; height:20.22222em; background-size: 65.27777em 20.22222em; }
+.ill-6 { background-image:url("/assets/img/ill/ill6.png"); width:34.22222em; height:25.05555em; background-size: 34.22222em 25.05555em; }
+.ill-7 { background-image:url("/assets/img/ill/ill7.png"); width:68.50000em; height:30.77777em; background-size: 68.50000em 30.77777em; }
+.ill-8 { background-image:url("/assets/img/ill/ill8.png"); width:63.00000em; height:24.50000em; background-size: 63.00000em 24.50000em; }
 
 
 .tile-ill .illustration { }
