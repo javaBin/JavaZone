@@ -8,6 +8,10 @@
 .ill-8 { background-image:url("/assets/img/ill/ill8.png"); width:63.00000em; height:24.50000em; background-size: 63.00000em 24.50000em; }
 
 
+.page-invert .tile-ill.tile-color0 .tile-inner a {
+	color: #fff;
+}
+
 .tile-ill .illustration { }
 .tile-ill-right .illustration { float: right; }
 .tile-ill-right .floatedcontent { float: left; width: 60%;}
