@@ -67,29 +67,41 @@
 }
 
 .salesbubbles .salesbubble {
-	font-size: .9em;
 	float: left;
-	width: 6em;
-	height: 6em;
-	margin: 2em 1.5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 16.666666%;
 	padding: 1em;
+}
+
+.salesbubbles .salesbubble .salesbubble-inner {
+	font-size: .9em;
+	width: 9em;
+	height: 9em;
 	text-align: center;
 	border: 3px solid #fcaf17;
 	border-radius: 200px;
 	text-transform: uppercase;
 	color: #fcaf17 !important;
 	transition: all 0.5s ease;
+
+	/* hack for å unngå hopping ved hover */
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	backface-visibility:         hidden;
 }
-.salesbubbles .salesbubble:hover {
-	transform:rotate(7deg);
-	-ms-transform:rotate(7deg);
+.salesbubbles .salesbubble:hover .salesbubble-inner {
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
 	-webkit-transform:rotate(360deg);
 	transition: all 0.5s ease;
 }
 
-.salesbubbles .salesbubble span {
+.salesbubbles .salesbubble .salesbubble-inner span {
 	display: block;
-	margin-top: 1.6em;
+	margin-top: 3.1em;
 	line-height: 1.5;
 }
 
@@ -99,9 +111,7 @@
 	margin: 0 0 1em 0;
 	height: 17em;
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	
 }
 .infoboxes .infobox h3 {
 	text-align: center;
