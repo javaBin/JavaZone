@@ -31,6 +31,7 @@
 .tile-ill h2.center { text-align: center; width: 100% !important; }
 .tile-ill p.center { width: 40em !important; margin-left: auto; margin-right: auto; }
 
+.tile-ill p.small { width: 28em !important; }
 
 .tile-ill {  }
 .tile-ill .tile-inner { height:auto; }
