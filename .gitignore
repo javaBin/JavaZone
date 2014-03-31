@@ -13,3 +13,4 @@ scripts/node_modules/*
 frontend/node_modules/*
 resources/
 frontend/public/*
+frontend/scripts/node_modules/*
