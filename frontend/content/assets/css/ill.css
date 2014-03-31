@@ -153,6 +153,7 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
 
 .timetable {
 	width: 30em;
+	border: 1px solid #777;
 }
 
 .timetable .timetable-line {
@@ -171,10 +172,10 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
 
 .timetable .timetable-line .timetable-line-first {
 	width: 15%;
-	background: #fcaf17;
+	background: #3e3b3b;
 	color: #fff;
 	text-align: center;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #777;
 	font-size: .8em;
 	
 }
@@ -182,16 +183,16 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
 	width: 85%;
 	background: #fff;
 	color: #555;
-	border-bottom: 1px solid #fcaf17;
+	border-bottom: 1px solid #777;
 	font-size: .8em;
 }
 .timetable .timetable-line .timetable-line-header {
 	width: 100%;
-	background: #fcaf17;
+	background: #3e3b3b;
 	color: #fff;
 	text-align: center;
 	
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #777;
 	
 }
 .timetable .timetable-line .timetable-line-header span.date {
