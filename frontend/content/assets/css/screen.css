@@ -118,6 +118,7 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-supertall .tile-inner { height:120em; }
 .tile-low  .tile-inner { height:8em; }
 .tile-auto .tile-inner { height: auto; }
+.tile-bottom-img { background-position: center bottom; }
 
 .tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em;
     font-size:1.2em; background:#fff; line-height: 1.5; }
@@ -125,6 +126,7 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile .extra strong { font-weight: bold; }
 .tile .extra-top { top: 60px; bottom: auto; }
 .tile .extra-right { right: 0; left: auto;}
+.tile .extra-yellow a { color: #fcaf17; }
 
 .tile-video { }
 .tile-video .tile-inner { padding:0; height:47.4em; }
@@ -502,6 +504,71 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .fa-ul li { margin: .7em 0; }
 .fa-ul li i { left: -1.5em; top: .2em; }
 .fa-ul strong { font-weight: 700; }
+
+
+
+
+
+.iconheader-text {
+    text-align: center;
+    color: #fcaf17 !important;
+    font-size: 2em;
+    margin: 3em 0 1em 0;
+    font-weight: 200;
+}
+.tile-talk-wide .tile-inner {
+    height: 31em;
+    background: #000;
+}
+.tile-talk-wide .video-header {
+    padding: 1em 0 1em 0;
+}
+
+.tile-talk-wide iframe {
+    height: 25em;
+}
+.tile-talk-wide img {
+    float: right;
+    width: 4em;
+    height: 4em;
+    margin: 0 1em 0 0;
+    border-radius: 100px;
+}
+.tile-talk-wide h4 {
+    float: left;
+    padding: .7em 0 0 0;
+    font-size: 1.5em;
+}
+.tile-talk-wide .video-header a {
+    color: #666;
+    padding-left: .5em;
+    font-size: 1em;
+    position: absolute;
+    top: 2.6em;
+    right: 1em;
+}
+.tile-talk-wide .video-header a:hover {
+    color: #999;
+}
+.tile-talk-wide div.star {
+    float: left;
+    font-size: 4em;
+    position: relative;
+    color: #fcaf17;
+    margin: 0 .2em 0 .3em;
+}
+.tile-talk-wide div.star span {
+    position: absolute;
+    top: .5em;
+    left: .7em;
+    color: #fff;
+    font-size: .5em;
+}
+.tile-talk-wide div.star span.double {
+    left: .42em;
+}
+
+
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
