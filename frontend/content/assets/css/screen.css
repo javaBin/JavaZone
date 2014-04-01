@@ -620,6 +620,8 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     .img-inner,
     a:hover .img-inner { display: none; }
 
+    .no-bg-on-min { background: none; }
+
     .only-min { display: block; }
 
     h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
@@ -675,4 +677,27 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     .tile-ticket .ticket-info { font-size: .7em; }
 
     .tile-partners img { width: 75px; height: 34px;}
+
+    .tile-talk-wide .tile-inner {
+        height: auto;
+        margin: 0 0 3em 0;
+    }
+
+    .tile-talk-wide iframe {
+        height: 16em;
+    }
+
+    .tile-talk-wide div.star {
+        float: none;
+        width: .9em;
+        margin: 0 auto;
+    }
+    .tile-talk-wide h4 {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    .tile-talk-wide h4 span {
+        display: block;
+    }
 }
