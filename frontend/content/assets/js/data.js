@@ -33,8 +33,8 @@ jz.data.partners = [
     ["Iterate", "stolt_partner_iterate.jpg", "http://www.iterate.no/"],
     ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
     ["Ciber", "ciber_2012.jpg", "http://www.ciber.no/"],
-    ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"]
-    // ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
+    ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"],
+    ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"]
     // ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     // ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
     // ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
