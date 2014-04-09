@@ -506,7 +506,25 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .fa-ul strong { font-weight: 700; }
 
 
+.tile-stars {
+    text-align: center;
+}
 
+.tile-stars .tile-inner {
+    border: 1px solid #fcaf17;
+}
+
+.tile-stars .stars {
+    font-size: 2em;
+    padding: .5em 0 .5em 0;
+    color: #fcaf17;
+}
+.tile-stars p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fcaf17;
+    line-height: 1.1;
+}
 
 
 .iconheader-text {
