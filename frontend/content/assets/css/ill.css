@@ -107,9 +107,9 @@ only screen and (                min-resolution: 2dppx) {
 	backface-visibility:         hidden;
 }
 .salesbubbles .salesbubble:hover .salesbubble-inner {
-	transform:rotate(360deg);
-	-ms-transform:rotate(360deg);
-	-webkit-transform:rotate(360deg);
+	transform:rotate(360deg) scale(1.1);
+	-ms-transform:rotate(360deg) scale(1.1);
+	-webkit-transform:rotate(360deg) scale(1.1);
 	transition: all 0.5s ease;
 }
 
