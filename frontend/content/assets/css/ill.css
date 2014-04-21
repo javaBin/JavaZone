@@ -8,25 +8,6 @@
 .ill-8 { background-image:url("/assets/img/ill/outro.png"); width: 63.00750em; height: 20.59950em; background-size: 63.00750em 20.59950em; }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
-	.ill-1 { background-image:url("/assets/img/ill/intro@2x.png"); }
-	.ill-2 { background-image:url("/assets/img/ill/mainperson@2x.png"); }
-	.ill-3 { background-image:url("/assets/img/ill/spektrum@2x.png"); }
-	.ill-4 { background-image:url("/assets/img/ill/ticket@2x.png"); }
-	.ill-5 { background-image:url("/assets/img/ill/arrows@2x.png"); }
-	.ill-6 { background-image:url("/assets/img/ill/workshop@2x.png"); }
-	.ill-7 { background-image:url("/assets/img/ill/awezone@2x.png"); }
-	.ill-8 { background-image:url("/assets/img/ill/outro@2x.png"); }
-
-}
-
-
 .page-invert .tile-ill.tile-color0 .tile-inner a {
 	color: #fff;
 }
@@ -152,32 +133,6 @@ only screen and (                min-resolution: 2dppx) {
 .infoboxes .infobox-med { width: 40%; }
 
 
-.map {
-	width: 30em;
-	height: 15em;
-}
-#map-canvas { width: 100%; height: 100%; border-radius: 200px; }
-
-.googlemaps-modal {
-	font-size: 1em;
-	
-}
-.tile-ill .tile-inner p.googlemaps-modal {
-	color: #000 !important;
-}
-.googlemaps-modal span {
-	font-weight: bold !important;
-}
-
-img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
-    display: none;
-}
-
-
-
-
-
-
 .timetable {
 	width: 30em;
 	border: 1px solid #777;
@@ -277,6 +232,16 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
 	color: #ff8641;
 }
 
+a.map {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image:url("/assets/img/maps/2014.jpg"); 
+	background-size: 22.22222em 14.44444em;
+	border-radius: 20em;
+	border: 5px solid #149089;
+}
+
 
 .spinner {
 	text-align: center;
@@ -311,3 +276,23 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
     to {transform:rotate(360deg);}
 }
 
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+	.ill-1 { background-image:url("/assets/img/ill/intro@2x.png"); }
+	.ill-2 { background-image:url("/assets/img/ill/mainperson@2x.png"); }
+	.ill-3 { background-image:url("/assets/img/ill/spektrum@2x.png"); }
+	.ill-4 { background-image:url("/assets/img/ill/ticket@2x.png"); }
+	.ill-5 { background-image:url("/assets/img/ill/arrows@2x.png"); }
+	.ill-6 { background-image:url("/assets/img/ill/workshop@2x.png"); }
+	.ill-7 { background-image:url("/assets/img/ill/awezone@2x.png"); }
+	.ill-8 { background-image:url("/assets/img/ill/outro@2x.png"); }
+
+	a.map { background-image:url("/assets/img/maps/2014@2x.jpg");  }
+
+}

@@ -218,43 +218,6 @@ jz.routes.feedback = function() {
     });
 };
 
-jz.routes.info = function() {
-    console.log("load");
-    function initialize() {
-        var oslospektrum = new google.maps.LatLng(59.912960, 10.754704);
-        
-
-        var styles = [{"featureType":"water","stylers":[{"color":"#021019"}]},{"featureType":"landscape","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"transit","stylers":[{"color":"#146474"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]}];
-        //var styles = [{"stylers":[{"visibility":"simplified"}]},{"stylers":[{"color":"#131314"}]},{"featureType":"water","stylers":[{"color":"#131313"},{"lightness":7}]},{"elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":25}]}];
-        
-        var mapOptions = {
-            center: oslospektrum,
-            zoom: 14,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            navigationControl: false,
-            mapTypeControl: false,
-            scaleControl: false,
-            draggable: false,
-        };
-
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-        // var marker = new google.maps.Marker({
-        //     position: oslospektrum,
-        //     map: map,
-        //     title:"Oslo Spektrum"
-        // });
-
-        var infowindow = new google.maps.InfoWindow({
-            position: oslospektrum,
-          content: '<p class="googlemaps-modal"><span>JavaZone 2014</span><br>Oslo Spektrum<br>Sonja Henies plass 2<br>0185 Oslo</p>'
-        });
-        infowindow.open(map);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-};
-
 // jz.routes.tickets = function() {
 //     //$("#ticket1").addClass("hide");
 //     $("#ticket2").addClass("hide");
