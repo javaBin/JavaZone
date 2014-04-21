@@ -42,7 +42,7 @@ only screen and (                min-resolution: 2dppx) {
 .tile-ill.tile-ill-full .tile-inner .floatedcontent { }
 
 .tile-ill h2.center { text-align: center; width: 100% !important; }
-.tile-ill p.center { width: 40em !important; margin-left: auto; margin-right: auto; }
+.tile-ill p.center { width: 40em !important; max-width: 40em !important; margin-left: auto; margin-right: auto; }
 
 .tile-ill p.small { width: 28em !important; }
 
@@ -241,7 +241,6 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
 }
 .floated-timetables .timetable-right {
 	float: right;
-	margin-right: 1.1em;
 }
 
 .subjects .subject {
@@ -279,5 +278,36 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
 }
 
 
+.spinner {
+	text-align: center;
+	margin: 0 0 .1em 0;
+	font-size: 10em;
+	color: #149089;
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 6000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 6000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 6000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+}
 
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
 
