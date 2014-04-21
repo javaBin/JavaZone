@@ -504,6 +504,26 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .spacexxxxx { height: 10em; }
 
 
+.tile-stars {
+    text-align: center;
+}
+
+.tile-stars .tile-inner {
+    border: 1px solid #fcaf17;
+}
+
+.tile-stars .stars {
+    font-size: 2em;
+    padding: .5em 0 .5em 0;
+    color: #fcaf17;
+}
+.tile-stars p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fcaf17;
+    line-height: 1.1;
+}
+
 .pullupx { margin-top: -2em; }
 .pullupxx { margin-top: -4em; }
 .pullupxxx { margin-top: -6em; }
