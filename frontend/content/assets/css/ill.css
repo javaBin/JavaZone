@@ -1,17 +1,30 @@
-.ill-1 { background-image:url("/assets/img/ill/ill1.png"); width:24.66666em; height:21.66666em; background-size: 24.66666em 21.66666em; }
-.ill-2 { background-image:url("/assets/img/ill/ill2.png"); width:21.33333em; height:21.22222em; background-size: 21.33333em 21.22222em; }
-.ill-3 { background-image:url("/assets/img/ill/ill3.png"); width:65.11111em; height:29.88888em; background-size: 65.11111em 29.88888em; }
-.ill-4 { background-image:url("/assets/img/ill/ill4.png"); width:17.22222em; height:28.38888em; background-size: 17.22222em 28.38888em; }
-.ill-5 { background-image:url("/assets/img/ill/ill5.png"); width:65.27777em; height:20.22222em; background-size: 65.27777em 20.22222em; }
-.ill-6 { background-image:url("/assets/img/ill/ill6.png"); width:34.22222em; height:25.05555em; background-size: 34.22222em 25.05555em; }
-.ill-7 { background-image:url("/assets/img/ill/ill7.png"); width:65.11111em; height:29.27777em; background-size: 65.11111em 29.27777em; }
-.ill-8 { background-image:url("/assets/img/ill/ill8.png"); width:63.00000em; height:24.50000em; background-size: 63.00000em 24.50000em; }
+.ill-1 { background-image:url("/assets/img/ill/intro.png"); width: 24.60388em; height: 20.54666em; background-size: 24.60388em 20.54666em; }
+.ill-2 { background-image:url("/assets/img/ill/mainperson.png"); width: 18.98333em; height: 20.47222em; background-size: 18.98333em 20.47222em; }
+.ill-3 { background-image:url("/assets/img/ill/spektrum.png"); width: 65.12000em; height: 27.62666em; background-size: 65.12000em 27.62666em; }
+.ill-4 { background-image:url("/assets/img/ill/ticket.png"); width: 17.25666em; height: 27.55500em; background-size: 17.25666em 27.55500em; }
+.ill-5 { background-image:url("/assets/img/ill/arrows.png"); width: 65.24944em; height: 20.56500em; background-size: 65.24944em 20.56500em; }
+.ill-6 { background-image:url("/assets/img/ill/workshop.png"); width: 34.08000em; height: 23.14666em; background-size: 34.08000em 23.14666em; }
+.ill-7 { background-image:url("/assets/img/ill/awezone.png"); width: 65.16611em; height: 28.56388em; background-size: 65.16611em 28.56388em; }
+.ill-8 { background-image:url("/assets/img/ill/outro.png"); width: 63.00750em; height: 20.59950em; background-size: 63.00750em 20.59950em; }
 
-.ill-1-ver2 { background-image:url("/assets/img/ill/ill1-ver2.png"); width:24.66666em; height:21.66666em; background-size: 24.66666em 21.66666em; }
-.ill-3-ver2 { background-image:url("/assets/img/ill/ill3-ver2.png"); width:65.11111em; height:29.88888em; background-size: 65.11111em 29.88888em; }
-.ill-5-ver2 { background-image:url("/assets/img/ill/ill5-ver2.png"); width:65.27777em; height:20.22222em; background-size: 65.27777em 20.22222em; }
-.ill-7-ver2 { background-image:url("/assets/img/ill/ill7-ver2.png"); width:65.11111em; height:29.27777em; background-size: 65.11111em 29.27777em; }
-.ill-8-ver2 { background-image:url("/assets/img/ill/ill8-ver2.png"); width:63.00000em; height:24.50000em; background-size: 63.00000em 24.50000em; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+	.ill-1 { background-image:url("/assets/img/ill/intro@2x.png"); }
+	.ill-2 { background-image:url("/assets/img/ill/mainperson@2x.png"); }
+	.ill-3 { background-image:url("/assets/img/ill/spektrum@2x.png"); }
+	.ill-4 { background-image:url("/assets/img/ill/ticket@2x.png"); }
+	.ill-5 { background-image:url("/assets/img/ill/arrows@2x.png"); }
+	.ill-6 { background-image:url("/assets/img/ill/workshop@2x.png"); }
+	.ill-7 { background-image:url("/assets/img/ill/awezone@2x.png"); }
+	.ill-8 { background-image:url("/assets/img/ill/outro@2x.png"); }
+
+}
 
 
 .page-invert .tile-ill.tile-color0 .tile-inner a {
