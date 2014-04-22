@@ -246,9 +246,10 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .page-invert .tweet .next { border:none; }
 .page-invert .tweet .next i { color:#3b3b3b; }
 .page-invert .tweet .next:hover i { color:#fff; }
-.page-invert .menu a { color:#fff; }
+.page-invert .menu a { color:#fff; border-bottom: 1px solid #555; padding-bottom: 3px; }
+.page-invert .menu h1 a { border: none; }
 .page-invert .footer a { color:#8b8b8b; }
-.page-invert .footer a:hover, .page-invert .menu a:hover { border-color:#fff; color:#fff; }
+.page-invert .footer a:hover, .page-invert .menu a:hover { border-color:#aaa; color:#fff; }
 .page-invert .tile .extra { background:#101010;  color:#fff; }
 .page-invert .tile-invert .tile-inner,
 .page-invert .tile-facts .tile-inner { background:#282828; }
