@@ -54,8 +54,8 @@
     Svart:      101010;*/
 
 .crazyheader {
-	transform:rotate(7deg);
-	-ms-transform:rotate(7deg);
+	transform:rotate(-2.5deg);
+	-ms-transform:rotate(-2.5deg);
 	-webkit-transform:rotate(-2.5deg);
 	margin: -1.9em 0 0 1em !important;
 	background: transparent !important;
