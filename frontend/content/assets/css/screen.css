@@ -638,7 +638,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 
     .not-min,
     .img-inner,
-    a:hover .img-inner { display: none; }
+    a:hover .img-inner { display: none !important; }
 
     .no-bg-on-min { background: none; }
 
@@ -720,4 +720,8 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     .tile-talk-wide h4 span {
         display: block;
     }
+
+    .pullupx { margin-top: 0; }
+    .pullupxx { margin-top: 0; }
+    .pullupxxx { margin-top: 0; }
 }

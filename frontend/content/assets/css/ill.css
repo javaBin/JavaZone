@@ -351,3 +351,63 @@ only screen and (                min-resolution: 2dppx) {
 	a.map { background-image:url("/assets/img/maps/2014@2x.jpg");  }
 
 }
+
+
+@media only screen and (max-width: 500px) {
+	.ill-1 { width: 26.14285em; height: 21.83185em; background-size: 26.14285em 21.83185em; }
+	.ill-2 { width: 26.14285em; height: 28.19327em; background-size: 26.14285em 28.19327em; }
+	.ill-3 { width: 26.14285em; height: 11.09090em; background-size: 26.14285em 11.09090em; }
+	.ill-4 { width: 26.14285em; height: 41.74425em; background-size: 26.14285em 41.74425em; }
+	.ill-5 { width: 26.14285em; height: 8.23957em; background-size: 26.14285em 8.23957em; }
+	.ill-6 { width: 26.14285em; height: 17.75586em; background-size: 26.14285em 17.75586em; }
+	.ill-7 { width: 26.14285em; height: 11.45904em; background-size: 26.14285em 11.45904em; }
+	.ill-8 { width: 26.14285em; height: 8.54707em; background-size: 26.14285em 8.54707em; }
+
+
+
+
+	.tile-ill-right .illustration { float: none; }
+	.tile-ill-right .floatedcontent { float: none; width: 100%;}
+
+	.tile-ill-left .illustration { float: none; }
+	.tile-ill-left .floatedcontent { float: none; width: 100%;}
+
+	.crazyheader {
+		transform: none;
+		-ms-transform: none;
+		-webkit-transform: none;
+		margin: 0 !important;
+	}
+	.infoboxes .infobox {
+		float: none;
+		padding: 1em 0;
+		height: auto;
+	}
+	.infoboxes .infobox-small { width: 100%; }
+	.infoboxes .infobox-med { width: 100%; }
+
+	a.map {
+		height: 15em;
+	}
+
+	.timetable { width: 100%; margin: 1em 0; }
+
+	.topics .topic {
+		width: 50%;
+	}
+
+	.tile-ill h2.center {
+		text-align: left;
+	}
+	.tile-ill p.center { 
+		width: auto !important; 
+		max-width: auto;
+	}
+
+	.subjects .subject {
+		float: none;
+		width: 100%;
+	}
+}
+
+
