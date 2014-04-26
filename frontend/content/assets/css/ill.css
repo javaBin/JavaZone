@@ -153,7 +153,7 @@
 
 .timetable .timetable-line .timetable-line-first {
 	width: 15%;
-	background: #3e3b3b;
+	background: #222;
 	color: #fff;
 	text-align: center;
 	border-bottom: 1px solid #777;
@@ -169,7 +169,7 @@
 }
 .timetable .timetable-line .timetable-line-header {
 	width: 100%;
-	background: #3e3b3b;
+	background: #222;
 	color: #fff;
 	text-align: center;
 	
@@ -207,10 +207,11 @@
 }
 
 .subjects .subject .subject-inner {
+	height: 6.5em;
 	border: 2px solid #444;
 	color: #fff;
 	padding: 2em;
-	border-radius: 2em;
+	border-radius: 1em;
 	font-size: .8em;
 	line-height: 1.3;
 }
@@ -225,10 +226,10 @@
 }
 
 .subjects-alt .subject .subject-inner {
-	border-color: #444;
+	border-color: #a10035;
 }
 .subjects-alt .subject .subject-inner span {
-	color: #ff8641;
+	color: #a10035;
 }
 
 a.map {
@@ -237,9 +238,59 @@ a.map {
 	height: 100%;
 	background-image:url("/assets/img/maps/2014.jpg"); 
 	background-size: 22.22222em 14.44444em;
-	border-radius: 20em;
+	border-radius: 1em;
 	border: 5px solid #149089;
 }
+
+.topics .topic {
+	float: left;
+	width: 12.5%;
+	padding: .5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*    
+    Main Text   394549
+    Light Text  ccc
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;*/
+
+.topics .topic .topic-inner {
+	text-align: center;
+	border-radius: 10em;
+	background: #a10035;
+	padding-top: 2em;
+	width: 7em;
+	height: 5em;
+	margin: 0 auto;
+	transition: all 0.5s ease;
+
+
+}
+.topics .topic:hover .topic-inner {
+	transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transition: all 0.5s ease;
+}
+
+.topics .topic .topic-inner .topic-icon {
+	padding-bottom: .2em;
+	font-size: 2em;
+}
+.topics .topic .topic-inner .topic-title {
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
 
 .centerbutton {
 	text-align: center;
