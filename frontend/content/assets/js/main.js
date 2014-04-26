@@ -10,15 +10,16 @@ $(function() {
 });
 
 jz.routes.index = function() {
-    jz.api.tweets().then(function(tweets) {
-        var tweetsDiv = $(".tweets");
-        var tweet = tweets.tweets[0];
-        var text = jz.utils.urlify(tweet.tweet);
-        var icon = $("<i>").addClass("icon-twitter");
-        var play = $("<i>").addClass("icon-play-sign");
-        var next = $("<a>").addClass("next").attr("href", "https://twitter.com/javazone").html(play);
-        if(tweet) $(".tweet").html($("<p>").append(icon, text, next));
-    });
+    jz.routes.partners();
+    // jz.api.tweets().then(function(tweets) {
+    //     var tweetsDiv = $(".tweets");
+    //     var tweet = tweets.tweets[0];
+    //     var text = jz.utils.urlify(tweet.tweet);
+    //     var icon = $("<i>").addClass("icon-twitter");
+    //     var play = $("<i>").addClass("icon-play-sign");
+    //     var next = $("<a>").addClass("next").attr("href", "https://twitter.com/javazone").html(play);
+    //     if(tweet) $(".tweet").html($("<p>").append(icon, text, next));
+    // });
 };
 
 jz.routes.credits = function() {
