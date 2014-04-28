@@ -433,6 +433,18 @@ only screen and (                min-resolution: 2dppx) {
 	box-sizing: border-box;
 }
 
+.filmlaunch .shareinfo {
+	background: #fff;
+	color: #222;
+	padding: .5em 0;
+}
+.filmlaunch .shareinfo p span.url {
+	font-family: 'Courier New', monospace;
+}
+.filmlaunch .shareinfo p span.votedescription {
+	font-size: .7em;
+}
+
 .filmlaunch h2 {
 	text-align: center;
 	color: #fcaf17;

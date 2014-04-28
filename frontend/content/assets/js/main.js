@@ -4,11 +4,33 @@ $(function() {
     jz.utils.addSupportClasses();
     jz.utils.removeAnimationClasses();
     jz.utils.animateScrollTo(".scroll");
+    jz.utils.initVoting();
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
     var file = _.last(path.split("/")) || "program";
     var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "program" : file;
     if(jz.routes[name]) jz.routes[name]();
 });
+
+jz.routes['hell-yeah-breaking-code'] = function() {
+    $(".regular-intro").addClass("hide");
+    $(".breaking-code-intro").removeClass("hide");
+    $(".shareinfo p span.url").text("http://www.javazone.no/hell-yeah-breaking-code.html");
+    jz.utils.shareheader();
+};
+
+jz.routes['i-will-vote-for-house-of-codes'] = function() {
+    $(".regular-intro").addClass("hide");
+    $(".house-of-codes-intro").removeClass("hide");
+    $(".shareinfo p span.url").text("http://www.javazone.no/i-will-vote-for-house-of-codes.html");
+    jz.utils.shareheader();
+};
+
+jz.routes['i-would-kill-for-game-of-codes'] = function() {
+    $(".regular-intro").addClass("hide");
+    $(".game-of-codes-intro").removeClass("hide");
+    $(".shareinfo p span.url").text("http://www.javazone.no/i-would-kill-for-game-of-codes.html");
+    jz.utils.shareheader();
+};
 
 jz.routes.index = function() {
     jz.routes.partners();

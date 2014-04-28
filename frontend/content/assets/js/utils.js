@@ -117,3 +117,27 @@ jz.utils.animateScrollTo = function(selector) {
         $('html, body').animate({ scrollTop: $(to).offset().top }, 500, 'swing');
     });
 };
+
+
+jz.utils.initVoting = function() {
+    $(".vote-for-game-of-codes").click(function(event) {
+        event.preventDefault();
+        window.location = "/i-would-kill-for-game-of-codes.html#share";
+    });
+    $(".vote-for-house-of-codes").click(function(event) {
+        event.preventDefault();
+        window.location = "/i-will-vote-for-house-of-codes.html#share";
+    });
+    $(".vote-for-breaking-code").click(function(event) {
+        event.preventDefault();
+        window.location = "/hell-yeah-breaking-code.html#share";
+    });
+};
+
+jz.utils.shareheader = function() {
+    if(window.location.hash === '#share') {
+        window.location.hash = "";
+        $(".shareinfo").removeClass("hide");
+        $(".vote").addClass("hide");
+    }
+};
