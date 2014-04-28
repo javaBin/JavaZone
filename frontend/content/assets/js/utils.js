@@ -98,3 +98,22 @@ jz.utils.randomColor = function() {
     ];
     return colors[_.random(colors.length-1)];
 };
+
+
+jz.utils.animateScrollTo = function(selector) {
+    $('body').on('click', selector, function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        var target = $(this).attr('href');
+        if(target.substring(0,1) !== '#') return;
+
+        var href = target.substring(1,target.length);
+        var id = $('#' + href);
+        var link = $('a[name=' + href + ']');
+        var to = id.size() ? id : link;
+
+        // headeren er 56px høy og fixed...
+        $('html, body').animate({ scrollTop: $(to).offset().top }, 500, 'swing');
+    });
+};
