@@ -12,7 +12,7 @@ var _ = require('underscore'),
 deploy.environments = {
 
   jzweb: {
-    //prod: { server: 'javabin@2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
+    prod: { server: 'javabin@2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
     test: { server: 'javabin@test.2014.javazone.no', dir: '/home/javabin/web/jz-frontend' }
   }
 
