@@ -86,12 +86,12 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tweet a { border:none; }
 .tweet .next { position: absolute; top:1.2em; right:1em; color:#394549; }
 
-.footer { padding:1em 0; margin:0 1em 0 0; opacity: .5; }
+.footer { padding:1em 0; margin:0 1em 0 0; opacity: .5; font-size: .7em; }
 .footer ul { display: inline; }
 .footer ul.first { float: left;}
 .footer ul.second { float: right; }
 .footer li { display: inline; margin:0 2em 0 0; }
-.footer ul.second li { margin:0 0.5em 0 0; }
+.footer ul.second li { margin:0 2em 0 0; }
 .footer a { color:#394549; font-size:1.4em; }
 .footer p { font-size:1.4em; float: right; }
 
