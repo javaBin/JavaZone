@@ -7,8 +7,8 @@ public class VideoActivityTest {
 
 	@Test
 	public void skal() {
-		VideoInfo info = VideoActivity.getInstance().getInfo();
-		System.out.println(info);
+		VideoInfo info = VideoActivity.getInstance().getInfoCached();
+		System.out.println(info.videos.size());
 	}
 
 }
