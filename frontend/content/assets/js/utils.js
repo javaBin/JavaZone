@@ -132,6 +132,12 @@ jz.utils.initVoting = function() {
         window.location = "/hell-yeah-breaking-code.html#share";
     });
 
+    $(".close-shareinfo").click(function() {
+        event.preventDefault();
+        $(".shareinfo").addClass("hide");
+        $(".shareinfo-backdrop").addClass("hide");
+    });
+
     jz.api.videos().then(function(result) {
         var formatNumber = function(number) {
             if (!number) return 0;
@@ -156,6 +162,7 @@ jz.utils.shareheader = function() {
     if(window.location.hash === '#share') {
         window.location.hash = "";
         $(".shareinfo").removeClass("hide");
+        $(".shareinfo-backdrop").removeClass("hide");
         $(".vote").addClass("hide");
     }
 };
