@@ -455,6 +455,10 @@ only screen and (                min-resolution: 2dppx) {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.filmlaunch .shareinfo h2 {
+	font-size: 2em;
+	padding: 0 0 .5em 0;
+}
 .filmlaunch .shareinfo-backdrop {
 	position: fixed;
 	top: 0;
