@@ -436,7 +436,6 @@ only screen and (                min-resolution: 2dppx) {
 
 	width: 100%;
 	min-height: 100%;
-	z-index: 10000;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -452,6 +451,9 @@ only screen and (                min-resolution: 2dppx) {
 	left: 20%;
 	width: 60%;
 	z-index: 2000;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .filmlaunch .shareinfo-backdrop {
 	position: fixed;
@@ -530,7 +532,6 @@ only screen and (                min-resolution: 2dppx) {
 .filmlaunch .movies .movie-inner {
 	width: 100%;
 	height: 100%;
-	background: #fff;
 }
 .filmlaunch .movies .movie-inner .stats {
 	margin: 1em 0 3em 0;
@@ -596,7 +597,44 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 
-
+@media only screen and (max-width: 500px) {
+	.filmlaunch {
+		min-height: auto;
+	}
+	.filmlaunch h2 {
+		font-size: 2em;
+		margin: 0 .5em;
+	}
+	.filmlaunch p {
+		margin: .5em 2em;
+	}
+	.filmlaunch .scrolldown {
+		display: none;
+	}
+	.filmlaunch .movies .movie {
+		width: 100%;
+		float: none;
+		height: auto;
+		padding: 1em 1em 3em 1em;
+	}
+	.filmlaunch .movies .movie .movie-inner {
+		height: auto;
+	}
+	.filmlaunch .movies .movie .movie-inner iframe {
+		height: 15em;
+	}
+	.filmlaunch .shareinfo {
+		padding: 1em;
+		position: fixed;
+		top: 20%;
+		left: 5%;
+		width: 90%;
+		z-index: 2000;
+	}
+	.filmlaunch .shareinfo br {
+		display: block;
+	}
+}
 
 
 
