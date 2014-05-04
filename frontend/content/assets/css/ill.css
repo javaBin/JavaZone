@@ -492,9 +492,12 @@ only screen and (                min-resolution: 2dppx) {
 	
 }
 .filmlaunch .shareinfo .shareicons a {
-	color: #666;
+	color: #999;
 	font-size: 2em;
 	padding: 0 .1em;
+}
+.filmlaunch .shareinfo .shareicons a:hover {
+	color: #333;
 }
 
 .filmlaunch h2 {
