@@ -122,14 +122,17 @@ jz.utils.initVoting = function(voteFor) {
     $(".vote-for-game-of-codes").click(function(event) {
         event.preventDefault();
         window.location = "/i-would-kill-for-game-of-codes.html#share";
+        jz.utils.shareheader();
     });
     $(".vote-for-house-of-codes").click(function(event) {
         event.preventDefault();
         window.location = "/i-will-vote-for-house-of-codes.html#share";
+        jz.utils.shareheader();
     });
     $(".vote-for-breaking-code").click(function(event) {
         event.preventDefault();
         window.location = "/hell-yeah-breaking-code.html#share";
+        jz.utils.shareheader();
     });
 
     $(".close-shareinfo").click(function(event) {
