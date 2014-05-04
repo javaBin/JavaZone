@@ -18,6 +18,7 @@ jz.routes['hell-yeah-breaking-code'] = function() {
     $(".shareinfo span.movietitle").text(" for Breaking Code");
     $(".shareicons .sharetext").text("I voted for Breaking Code as this years JavaZone movie!")
     jz.utils.shareheader();
+    jz.routes.partners();
 };
 
 jz.routes['i-will-vote-for-house-of-codes'] = function() {
@@ -28,6 +29,7 @@ jz.routes['i-will-vote-for-house-of-codes'] = function() {
     $(".shareinfo span.movietitle").text(" for House of Codes");
     $(".shareicons .sharetext").text("I voted for House of Codes as this years JavaZone movie!")
     jz.utils.shareheader();
+    jz.routes.partners();
 };
 
 jz.routes['i-would-kill-for-game-of-codes'] = function() {
@@ -38,6 +40,7 @@ jz.routes['i-would-kill-for-game-of-codes'] = function() {
     $(".shareinfo span.movietitle").text(" for Game of Codes");
     $(".shareicons .sharetext").text("I voted for Game of Codes as this years JavaZone movie!")
     jz.utils.shareheader();
+    jz.routes.partners();
 };
 
 jz.routes.index = function() {
