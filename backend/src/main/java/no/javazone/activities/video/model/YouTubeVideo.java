@@ -48,6 +48,6 @@ public class YouTubeVideo {
 	}
 
 	public long getInteractions() {
-		return data.viewCount + data.ratingCount + data.commentCount + data.likeCount;
+		return data.ratingCount + data.commentCount + data.likeCount;
 	}
 }

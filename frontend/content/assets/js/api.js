@@ -23,8 +23,8 @@ jz.api.tweets = function() {
     return jz.api.get("/api/tweets");
 };
 
-jz.api.videos = function() {
-    return jz.api.get("/api/videos");
+jz.api.videos = function(voteFor) {
+    return jz.api.get("/api/videos?vote=" + voteFor);
 };
 
 jz.api.parseSession = function(d) {

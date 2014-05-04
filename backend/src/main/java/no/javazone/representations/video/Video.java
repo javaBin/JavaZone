@@ -5,13 +5,17 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class Video {
 
 	@JsonProperty
-	public long views;
+	public long youtubeViews;
 
 	@JsonProperty
-	public long interactions;
+	public long youtubeInteractions;
 
-	public Video(final long views, final long interactions) {
-		this.views = views;
-		this.interactions = interactions;
+	@JsonProperty
+	private final int webpageViews;
+
+	public Video(final long youtubeViews, final long youtubeInteractions, final int webpageViews) {
+		this.youtubeViews = youtubeViews;
+		this.youtubeInteractions = youtubeInteractions;
+		this.webpageViews = webpageViews;
 	}
 }

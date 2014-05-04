@@ -118,7 +118,7 @@ jz.utils.animateScrollTo = function(selector) {
 };
 
 
-jz.utils.initVoting = function() {
+jz.utils.initVoting = function(voteFor) {
     $(".vote-for-game-of-codes").click(function(event) {
         event.preventDefault();
         window.location = "/i-would-kill-for-game-of-codes.html#share";
@@ -147,7 +147,7 @@ jz.utils.initVoting = function() {
         jz.share.twitter(window.location, $(".shareicons .sharetext").text());
     });
 
-    jz.api.videos().then(function(result) {
+    jz.api.videos(voteFor).then(function(result) {
         var formatNumber = function(number) {
             if (!number) return 0;
             return parseInt(number, 10)
@@ -155,8 +155,8 @@ jz.utils.initVoting = function() {
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
         };
         var renderNumbers = function(videos, id) {
-            $("." + id + " .stat-views span").text(formatNumber(videos[id].views));
-            $("." + id + " .stat-votes span").text(formatNumber(videos[id].interactions));
+            $("." + id + " .stat-views span").text(formatNumber(videos[id].youtubeViews));
+            $("." + id + " .stat-votes span").text(formatNumber(videos[id].youtubeViews + videos[id].youtubeInteractions + videos[id].webpageViews));
         };
 
         if(result && result.videos) {

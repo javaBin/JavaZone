@@ -4,7 +4,6 @@ $(function() {
     jz.utils.addSupportClasses();
     jz.utils.removeAnimationClasses();
     jz.utils.animateScrollTo(".scroll");
-    jz.utils.initVoting();
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
     var file = _.last(path.split("/")) || "program";
     var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "program" : file;
@@ -12,6 +11,7 @@ $(function() {
 });
 
 jz.routes['hell-yeah-breaking-code'] = function() {
+    jz.utils.initVoting("breakingcode");
     $(".regular-intro").addClass("hide");
     $(".breaking-code-intro").removeClass("hide");
     $(".shareinfo p span.url").text("http://2014.javazone.no/hell-yeah-breaking-code.html");
@@ -20,6 +20,7 @@ jz.routes['hell-yeah-breaking-code'] = function() {
 };
 
 jz.routes['i-will-vote-for-house-of-codes'] = function() {
+    jz.utils.initVoting("houseofcodes");
     $(".regular-intro").addClass("hide");
     $(".house-of-codes-intro").removeClass("hide");
     $(".shareinfo p span.url").text("http://2014.javazone.no/i-will-vote-for-house-of-codes.html");
@@ -28,6 +29,7 @@ jz.routes['i-will-vote-for-house-of-codes'] = function() {
 };
 
 jz.routes['i-would-kill-for-game-of-codes'] = function() {
+    jz.utils.initVoting("gameofcodes");
     $(".regular-intro").addClass("hide");
     $(".game-of-codes-intro").removeClass("hide");
     $(".shareinfo p span.url").text("http://2014.javazone.no/i-would-kill-for-game-of-codes.html");
@@ -36,6 +38,7 @@ jz.routes['i-would-kill-for-game-of-codes'] = function() {
 };
 
 jz.routes.index = function() {
+    jz.utils.initVoting("");
     jz.routes.partners();
     // jz.api.tweets().then(function(tweets) {
     //     var tweetsDiv = $(".tweets");
