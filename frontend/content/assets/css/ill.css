@@ -596,8 +596,33 @@ only screen and (                min-resolution: 2dppx) {
 	display: block;
 }
 
+@media only screen and (max-height: 900px) and (min-width: 1000px) {
+	.filmlaunch h2 {
+		font-size: 2em;
+	}
+	.filmlaunch p {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-height: 850px) and (min-width: 1000px) {
+	.filmlaunch .movies {
+		margin: .5em 0 0 0;
+	}
+	.filmlaunch .movies .movie {
+		padding: 0 1em;
+	}
+	.filmlaunch .movies .movie-inner .stats {
+		margin: .5em 0 1.5em 0;
+	}
+}
+@media only screen and (max-height: 770px) and (min-width: 1200px) {
+	.filmlaunch .scrolldown {
+		display: none;
+	}
+}
 
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 850px) {
 	.filmlaunch {
 		min-height: auto;
 	}
