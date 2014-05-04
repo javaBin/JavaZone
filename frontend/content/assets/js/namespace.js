@@ -4,5 +4,6 @@ window.jz = {
     data: {},
     view: {},
     api: {},
-    date: {}
+    date: {},
+    share: {}
 };
