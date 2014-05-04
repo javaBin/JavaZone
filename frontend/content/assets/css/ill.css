@@ -412,7 +412,16 @@ only screen and (                min-resolution: 2dppx) {
 
 
 
-
+/*    
+    Main Text   394549
+    Light Text  ccc
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;*/
 
 
 
@@ -437,12 +446,39 @@ only screen and (                min-resolution: 2dppx) {
 	background: #fff;
 	color: #222;
 	padding: .5em 0;
+	border-radius: .5em;
+	margin: 2em 0 0 0;
+	position: fixed;
+	top: 30%;
+	left: 15%;
+	width: 70%;
+	z-index: 2000;
+}
+.filmlaunch .shareinfo-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	z-index: 1000;
 }
 .filmlaunch .shareinfo p span.url {
 	font-family: 'Courier New', monospace;
 }
 .filmlaunch .shareinfo p span.votedescription {
 	font-size: .7em;
+}
+.filmlaunch .shareinfo .shareicons {
+	margin: .5em 0 0 0;
+	text-align: center;
+	
+}
+.filmlaunch .shareinfo .shareicons a {
+	color: #666;
+	font-size: 2em;
+	padding: 0 .1em;
 }
 
 .filmlaunch h2 {
@@ -549,16 +585,7 @@ only screen and (                min-resolution: 2dppx) {
 	display: block;
 }
 
-/*    
-    Main Text   394549
-    Light Text  ccc
-    Burgunder:  a10035;
-    Lyserød:    ff4f4c;
-    Oransje:    ff8641;
-    Gul:        fcaf17;
-    Lysegrønn:  149089;
-    Mørkegrønn: 286a65;
-    Svart:      101010;*/
+
 
 
 
