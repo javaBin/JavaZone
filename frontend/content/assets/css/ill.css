@@ -491,7 +491,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 .filmlaunch .movies .movie-inner .stats .stat {
 	float: left;
-	width: 33.33333%;
+	width: 50%;
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 1.1;

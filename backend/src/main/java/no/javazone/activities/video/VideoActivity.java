@@ -19,8 +19,8 @@ public class VideoActivity {
 
 	private static final int CACHE_TIME_MINUTES = 1;
 
-	private static final VideoToCheck[] VIDEOS = { new VideoToCheck("javapocalypse", "E3418SeWZfQ"),
-			new VideoToCheck("javaheist", "HXvm76e2X1Q"), new VideoToCheck("thestreaming", "5U1_KW6ww7Y") };
+	private static final VideoToCheck[] VIDEOS = { new VideoToCheck("gameofcodes", "E3418SeWZfQ"),
+			new VideoToCheck("houseofcodes", "HXvm76e2X1Q"), new VideoToCheck("breakingcode", "5U1_KW6ww7Y") };
 
 	private static final String YOUTUBE_URL = "http://gdata.youtube.com/feeds/api/videos/%s?v=2&alt=jsonc";
 

@@ -14,21 +14,21 @@ $(function() {
 jz.routes['hell-yeah-breaking-code'] = function() {
     $(".regular-intro").addClass("hide");
     $(".breaking-code-intro").removeClass("hide");
-    $(".shareinfo p span.url").text("http://www.javazone.no/hell-yeah-breaking-code.html");
+    $(".shareinfo p span.url").text("http://2014.javazone.no/hell-yeah-breaking-code.html");
     jz.utils.shareheader();
 };
 
 jz.routes['i-will-vote-for-house-of-codes'] = function() {
     $(".regular-intro").addClass("hide");
     $(".house-of-codes-intro").removeClass("hide");
-    $(".shareinfo p span.url").text("http://www.javazone.no/i-will-vote-for-house-of-codes.html");
+    $(".shareinfo p span.url").text("http://2014.javazone.no/i-will-vote-for-house-of-codes.html");
     jz.utils.shareheader();
 };
 
 jz.routes['i-would-kill-for-game-of-codes'] = function() {
     $(".regular-intro").addClass("hide");
     $(".game-of-codes-intro").removeClass("hide");
-    $(".shareinfo p span.url").text("http://www.javazone.no/i-would-kill-for-game-of-codes.html");
+    $(".shareinfo p span.url").text("http://2014.javazone.no/i-would-kill-for-game-of-codes.html");
     jz.utils.shareheader();
 };
 

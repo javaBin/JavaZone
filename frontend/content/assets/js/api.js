@@ -23,6 +23,10 @@ jz.api.tweets = function() {
     return jz.api.get("/api/tweets");
 };
 
+jz.api.videos = function() {
+    return jz.api.get("/api/videos");
+};
+
 jz.api.parseSession = function(d) {
     d.uri   = jz.api.link(d, 'details');
     d.id    = d.uri ? _.last(d.uri.split("/")).substr(0, 8) : 1;

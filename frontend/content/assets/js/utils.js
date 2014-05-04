@@ -113,7 +113,6 @@ jz.utils.animateScrollTo = function(selector) {
         var link = $('a[name=' + href + ']');
         var to = id.size() ? id : link;
 
-        // headeren er 56px høy og fixed...
         $('html, body').animate({ scrollTop: $(to).offset().top }, 500, 'swing');
     });
 };
@@ -131,6 +130,25 @@ jz.utils.initVoting = function() {
     $(".vote-for-breaking-code").click(function(event) {
         event.preventDefault();
         window.location = "/hell-yeah-breaking-code.html#share";
+    });
+
+    jz.api.videos().then(function(result) {
+        var formatNumber = function(number) {
+            if (!number) return 0;
+            return parseInt(number, 10)
+                .toString(10)
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        };
+        var renderNumbers = function(videos, id) {
+            $("." + id + " .stat-views span").text(formatNumber(videos[id].views));
+            $("." + id + " .stat-votes span").text(formatNumber(videos[id].interactions));
+        };
+
+        if(result && result.videos) {
+            renderNumbers(result.videos, "breakingcode");
+            renderNumbers(result.videos, "houseofcodes");
+            renderNumbers(result.videos, "gameofcodes");
+        }
     });
 };
 
