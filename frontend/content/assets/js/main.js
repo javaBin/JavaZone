@@ -15,7 +15,7 @@ jz.routes['hell-yeah-breaking-code'] = function() {
     $(".regular-intro").addClass("hide");
     $(".breaking-code-intro").removeClass("hide");
     $(".shareinfo p span.url").text("http://2014.javazone.no/hell-yeah-breaking-code.html");
-    $(".shareicons .sharetext").text("I vote for Breaking Code as this years JavaZone movie!")
+    $(".shareicons .sharetext").text("I voted for Breaking Code as this years JavaZone movie!")
     jz.utils.shareheader();
 };
 
@@ -24,7 +24,7 @@ jz.routes['i-will-vote-for-house-of-codes'] = function() {
     $(".regular-intro").addClass("hide");
     $(".house-of-codes-intro").removeClass("hide");
     $(".shareinfo p span.url").text("http://2014.javazone.no/i-will-vote-for-house-of-codes.html");
-    $(".shareicons .sharetext").text("I vote for House of Codes as this years JavaZone movie!")
+    $(".shareicons .sharetext").text("I voted for House of Codes as this years JavaZone movie!")
     jz.utils.shareheader();
 };
 
@@ -33,7 +33,7 @@ jz.routes['i-would-kill-for-game-of-codes'] = function() {
     $(".regular-intro").addClass("hide");
     $(".game-of-codes-intro").removeClass("hide");
     $(".shareinfo p span.url").text("http://2014.javazone.no/i-would-kill-for-game-of-codes.html");
-    $(".shareicons .sharetext").text("I vote for Game of Codes as this years JavaZone movie!")
+    $(".shareicons .sharetext").text("I voted for Game of Codes as this years JavaZone movie!")
     jz.utils.shareheader();
 };
 
