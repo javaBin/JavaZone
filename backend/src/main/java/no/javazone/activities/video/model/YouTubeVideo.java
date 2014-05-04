@@ -38,7 +38,7 @@ public class YouTubeVideo {
 		@Override
 		public String toString() {
 			return "Data [title=" + title + ", viewCount=" + viewCount + ", ratingCount=" + ratingCount + ", commentCount=" + commentCount
-					+ ", likeCount=" + likeCount + ", rating=" + rating + "]";
+					+ ", likeCount=" + likeCount + ", rating=" + rating + "]  ";
 		}
 
 	}
