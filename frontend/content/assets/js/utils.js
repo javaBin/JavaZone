@@ -129,9 +129,9 @@ jz.utils.initVoting = function(voteFor) {
         window.location = "/i-will-vote-for-house-of-codes.html#share";
         jz.utils.shareheader();
     });
-    $(".vote-for-breaking-code").click(function(event) {
+    $(".vote-for-writing-bad").click(function(event) {
         event.preventDefault();
-        window.location = "/hell-yeah-breaking-code.html#share";
+        window.location = "/i-am-writing-bad.html#share";
         jz.utils.shareheader();
     });
 
@@ -163,7 +163,7 @@ jz.utils.initVoting = function(voteFor) {
         };
 
         if(result && result.videos) {
-            renderNumbers(result.videos, "breakingcode");
+            renderNumbers(result.videos, "writingbad");
             renderNumbers(result.videos, "houseofcodes");
             renderNumbers(result.videos, "gameofcodes");
         }

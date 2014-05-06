@@ -46,7 +46,7 @@ public class VideoActivity {
 
 		videos.add(new VideoHolder("gameofcodes", "E3418SeWZfQ", loadVotes("gameofcodes")));
 		videos.add(new VideoHolder("houseofcodes", "HXvm76e2X1Q", loadVotes("houseofcodes")));
-		videos.add(new VideoHolder("breakingcode", "5U1_KW6ww7Y", loadVotes("breakingcode")));
+		videos.add(new VideoHolder("writingbad", "5U1_KW6ww7Y", loadVotes("writingbad")));
 	}
 
 	private int loadVotes(final String film) {

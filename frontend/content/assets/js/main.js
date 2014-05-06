@@ -10,13 +10,13 @@ $(function() {
     if(jz.routes[name]) jz.routes[name]();
 });
 
-jz.routes['hell-yeah-breaking-code'] = function() {
-    jz.utils.initVoting("breakingcode");
+jz.routes['i-am-writing-bad'] = function() {
+    jz.utils.initVoting("writingbad");
     $(".regular-intro").addClass("hide");
-    $(".breaking-code-intro").removeClass("hide");
-    $(".shareinfo p span.url").text("http://2014.javazone.no/hell-yeah-breaking-code.html");
-    $(".shareinfo span.movietitle").text(" for Breaking Code");
-    $(".shareicons .sharetext").text("I voted for Breaking Code as this years JavaZone movie!")
+    $(".writing-bad-intro").removeClass("hide");
+    $(".shareinfo p span.url").text("http://2014.javazone.no/i-am-writing-bad.html");
+    $(".shareinfo span.movietitle").text(" for Writing Bad");
+    $(".shareicons .sharetext").text("I voted for Writing Bad as this years JavaZone movie!")
     jz.utils.shareheader();
     jz.routes.partners();
 };
