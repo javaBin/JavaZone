@@ -609,6 +609,15 @@ only screen and (                min-resolution: 2dppx) {
 	margin: 1em auto 0 auto;
 }
 
+@media only screen and (max-height: 900px) and (min-width: 1000px) {
+	.filmlaunch h2.smaller {
+		font-size: 2em;
+	}
+	.filmlaunch p.smaller {
+		font-size: 1em;
+	}
+}
+
 @media only screen and (max-height: 800px) and (min-width: 1000px) {
 	.filmlaunch h2 {
 		font-size: 2em;
@@ -617,8 +626,11 @@ only screen and (                min-resolution: 2dppx) {
 	.filmlaunch p {
 		font-size: 1em;
 	}
+	.headerbreak {
+		display: none;
+	}
 }
-@media only screen and (max-height: 750px) and (min-width: 1000px) {
+@media only screen and (max-height: 700px) and (min-width: 1000px) {
 	.filmlaunch .movies {
 		margin: .5em 0 0 0;
 	}
