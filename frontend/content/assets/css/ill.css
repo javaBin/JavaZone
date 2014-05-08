@@ -653,11 +653,14 @@ only screen and (                min-resolution: 2dppx) {
 		min-height: auto;
 	}
 	.filmlaunch h2 {
-		font-size: 2em;
+		font-size: 3em;
 		margin: 0 .5em;
 	}
 	.filmlaunch p {
 		margin: .5em 2em;
+	}
+	.filmlaunch p.small {
+		font-size: .9em;
 	}
 	.filmlaunch .scrolldown {
 		display: none;
@@ -684,6 +687,12 @@ only screen and (                min-resolution: 2dppx) {
 	}
 	.filmlaunch .shareinfo br {
 		display: block;
+	}
+
+	.filmlaunch .handpoint {
+		background-image:url("/assets/img/point3.png"); width: 8.69444em; height: 9.05555em; background-size: 8.69444em 9.05555em; 
+		width: 8.69444em;
+		margin: 1em auto 1em auto;
 	}
 }
 
