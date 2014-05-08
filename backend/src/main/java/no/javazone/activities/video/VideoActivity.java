@@ -44,9 +44,9 @@ public class VideoActivity {
 		config.getClasses().add(JacksonJsonProvider.class);
 		jerseyClient = Client.create(config);
 
-		videos.add(new VideoHolder("gameofcodes", "E3418SeWZfQ", loadVotes("gameofcodes")));
-		videos.add(new VideoHolder("houseofcodes", "HXvm76e2X1Q", loadVotes("houseofcodes")));
-		videos.add(new VideoHolder("writingbad", "5U1_KW6ww7Y", loadVotes("writingbad")));
+		videos.add(new VideoHolder("gameofcodes", "UvyTf5xvaXM", loadVotes("gameofcodes")));
+		videos.add(new VideoHolder("houseofcodes", "WUAzr-3DVP8", loadVotes("houseofcodes")));
+		videos.add(new VideoHolder("writingbad", "DGa6MAibjzA", loadVotes("writingbad")));
 	}
 
 	private int loadVotes(final String film) {
