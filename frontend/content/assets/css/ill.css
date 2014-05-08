@@ -504,7 +504,7 @@ only screen and (                min-resolution: 2dppx) {
 	text-align: center;
 	color: #fcaf17;
 	margin: 0;
-	padding: 1em 0 .5em 0;
+	padding: 0em 0 .5em 0;
 	font-size: 3em;
 	font-weight: 400; 
 	font-family: 'Londrina Solid', cursive;
@@ -603,15 +603,22 @@ only screen and (                min-resolution: 2dppx) {
 	display: block;
 }
 
-@media only screen and (max-height: 900px) and (min-width: 1000px) {
+.filmlaunch .handpoint {
+	background-image:url("/assets/img/point3.png"); width: 4.34722em; height: 4.52777em; background-size: 4.34722em 4.52777em; 
+	width: 4.34722em;
+	margin: 1em auto 0 auto;
+}
+
+@media only screen and (max-height: 800px) and (min-width: 1000px) {
 	.filmlaunch h2 {
 		font-size: 2em;
+		padding-bottom: .2em;
 	}
 	.filmlaunch p {
 		font-size: 1em;
 	}
 }
-@media only screen and (max-height: 850px) and (min-width: 1000px) {
+@media only screen and (max-height: 750px) and (min-width: 1000px) {
 	.filmlaunch .movies {
 		margin: .5em 0 0 0;
 	}
@@ -622,7 +629,7 @@ only screen and (                min-resolution: 2dppx) {
 		margin: .5em 0 1.5em 0;
 	}
 }
-@media only screen and (max-height: 770px) and (min-width: 1200px) {
+@media only screen and (max-height: 900px) and (min-width: 1200px) {
 	.filmlaunch .scrolldown {
 		display: none;
 	}
