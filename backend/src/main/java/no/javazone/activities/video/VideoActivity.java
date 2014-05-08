@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class VideoActivity {
@@ -37,6 +38,8 @@ public class VideoActivity {
 	private DateTime lastFetched;
 	private DateTime lastSaved;
 
+	Random random = new Random();
+
 	private final List<VideoHolder> videos = new ArrayList<VideoActivity.VideoHolder>();
 
 	private VideoActivity() {
@@ -54,9 +57,9 @@ public class VideoActivity {
 		String filePath = resourcesPath + "/" + film + "-votes.txt";
 		try {
 			String fileToString = FileUtils.readFileToString(new File(filePath));
-			return Integer.parseInt(fileToString);
+			return Integer.parseInt(fileToString.trim());
 		} catch (Exception e) {
-			LOG.warn("Kunne ikke parse fila " + filePath + ". Returnerer 0 votes");
+			LOG.warn("Kunne ikke parse fila " + filePath + ". Returnerer 0 votes", e);
 			return 0;
 		}
 	}
@@ -79,10 +82,15 @@ public class VideoActivity {
 	}
 
 	private void registerVote(final String vote) {
+		boolean voted = false;
 		for (VideoHolder video : videos) {
 			if (video.outId.equals(vote)) {
+				voted = true;
 				video.registerVote();
 			}
+		}
+		if (!voted) {
+			videos.get(random.nextInt(videos.size())).registerVote();
 		}
 		saveVotes();
 	}
