@@ -141,11 +141,11 @@ jz.utils.initVoting = function(voteFor) {
         $(".shareinfo-backdrop").addClass("hide");
     });
 
-    $(".shareicons .facebook").click(function() {
+    $(".shareicons .facebook").click(function(event) {
         event.preventDefault();
         jz.share.facebook(window.location, $(".shareicons .sharetext").text());
     });
-    $(".shareicons .twitter").click(function() {
+    $(".shareicons .twitter").click(function(event) {
         event.preventDefault();
         jz.share.twitter(window.location, $(".shareicons .sharetext").text());
     });
