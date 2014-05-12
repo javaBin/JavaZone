@@ -36,7 +36,8 @@ jz.data.partners = [
     ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"],
     ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
     ["embriq", "embriq_2014.png", "http://www.embriq.no/"],
-    ["GitHub", "github_2014.png", "https://github.com/"]
+    ["GitHub", "github_2014.png", "https://github.com/"],
+    ["Greenbird", "stolt_partner_greenbird.jpg", "http://www.greenbird.com"]
     // ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     // ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
     // ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
@@ -44,7 +45,6 @@ jz.data.partners = [
     // ["Esito", "stolt_partner_esito.jpg", "http://www.esito.no/"],
     // ["Antares", "antares_2013.jpg", "http://www.antares.no"],
     // ["Pluralsight", "pluralsight_2013.jpg", "http://www.pluralsight.com"],
-    // ["Greenbird", "stolt_partner_greenbird.jpg", "http://www.greenbird.com"],
     // ["Oracle", "oracle_2012.jpg", "http://www.oracle.com/no/index.html"],
     // ["Atlassian", "stolt_partner_atlassian.jpg", "https://www.atlassian.com"]
 ];
