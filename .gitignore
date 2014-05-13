@@ -9,6 +9,7 @@ backend/node-templates
 scripts/mongotemp/*
 scripts/node_modules/*
 */.DS_Store
+.DS_Store
 
 frontend/node_modules/*
 resources/
