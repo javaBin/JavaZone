@@ -13,14 +13,11 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import no.javazone.activities.feedback.GeneralFeedbackService;
-import no.javazone.api.filters.NoCacheResponseFilter;
 import no.javazone.representations.feedback.AdminGeneralFeedback;
 import no.javazone.server.PropertiesLoader;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/admin/generalfeedback")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class AdminGeneralFeedbackResource {
 
 	private final GeneralFeedbackService feedbackService = GeneralFeedbackService.getInstance();

@@ -7,12 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import no.javazone.api.filters.NoCacheResponseFilter;
-
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class RootResource {
 
 	@GET

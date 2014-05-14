@@ -10,14 +10,11 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import no.javazone.activities.ems.SpeakerService;
-import no.javazone.api.filters.FiveMinutesCacheResponseFilter;
 
 import org.joda.time.DateTime;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/speakers")
-@ResourceFilters(FiveMinutesCacheResponseFilter.class)
+//@ResourceFilters(FiveMinutesCacheResponseFilter.class)
 public class SpeakersResource {
 
 	private final SpeakerService speakerService = SpeakerService.getInstance();

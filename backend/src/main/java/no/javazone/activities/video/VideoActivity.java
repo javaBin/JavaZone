@@ -1,16 +1,11 @@
 package no.javazone.activities.video;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.ClientResponse.Status;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 import no.javazone.activities.video.model.YouTubeVideo;
 import no.javazone.representations.video.Video;
 import no.javazone.representations.video.VideoInfo;
 import no.javazone.server.PropertiesLoader;
+
 import org.apache.commons.io.FileUtils;
-import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 public class VideoActivity {
 
@@ -43,9 +43,7 @@ public class VideoActivity {
 	private final List<VideoHolder> videos = new ArrayList<VideoActivity.VideoHolder>();
 
 	private VideoActivity() {
-		ClientConfig config = new DefaultClientConfig();
-		config.getClasses().add(JacksonJsonProvider.class);
-		jerseyClient = Client.create(config);
+		jerseyClient = ClientBuilder.newClient();
 
 		videos.add(new VideoHolder("gameofcodes", "UvyTf5xvaXM", loadVotes("gameofcodes")));
 		videos.add(new VideoHolder("houseofcodes", "WUAzr-3DVP8", loadVotes("houseofcodes")));
@@ -115,9 +113,11 @@ public class VideoActivity {
 		LOG.info("Henter videoinfo fra youtube");
 		VideoInfo videoInfo = new VideoInfo();
 		for (VideoHolder video : videos) {
-			ClientResponse response = jerseyClient.resource(String.format(YOUTUBE_URL, video.youtubeId)).get(ClientResponse.class);
+			
+			Response response = jerseyClient.target(String.format(YOUTUBE_URL, video.youtubeId)).request().get();
+			
 			if (response.getStatus() == Status.OK.getStatusCode()) {
-				YouTubeVideo youTubeVideo = response.getEntity(YouTubeVideo.class);
+				YouTubeVideo youTubeVideo = response.readEntity(YouTubeVideo.class);
 				videoInfo.videos.put(video.outId, new Video(youTubeVideo.getViews(), youTubeVideo.getInteractions(), video.getVotes()));
 			}
 		}

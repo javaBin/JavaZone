@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
@@ -16,9 +18,6 @@ import no.javazone.activities.ems.model.SpeakerPhotos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 public class SpeakerService {
 
@@ -33,8 +32,7 @@ public class SpeakerService {
 	private static SpeakerService instance;
 
 	private SpeakerService() {
-		ClientConfig config = new DefaultClientConfig();
-		jerseyClient = Client.create(config);
+		jerseyClient = ClientBuilder.newClient();
 	}
 
 	public static SpeakerService getInstance() {
@@ -75,7 +73,7 @@ public class SpeakerService {
 		try {
 			Optional<Link> url = speaker.getEmsPhotoUrl();
 			if (url.isSome() && (skalRefresheSpeakerBilde(speaker) || force)) {
-				byte[] bilde = jerseyClient.resource(url.get().getHref()).get(byte[].class);
+				byte[] bilde = jerseyClient.target(url.get().getHref()).request().get(byte[].class);
 				cachedSpeakerPhotos.put(speaker.getId(), new SpeakerPhotos(bilde));
 			} else {
 				LOG.info("--> Skipper henting av bilde for speaker med id " + speaker.getId());

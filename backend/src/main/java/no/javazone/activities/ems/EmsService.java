@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
@@ -25,10 +27,6 @@ import org.apache.commons.lang3.time.StopWatch;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 public class EmsService {
 
@@ -55,8 +53,7 @@ public class EmsService {
 	private ConferenceYear conferenceYear = null;
 
 	private EmsService() {
-		ClientConfig config = new DefaultClientConfig();
-		jerseyClient = Client.create(config);
+		jerseyClient = ClientBuilder.newClient();
 	}
 
 	public long refresh() {
@@ -65,7 +62,7 @@ public class EmsService {
 			StopWatch s = new StopWatch();
 			s.start();
 
-			InputStream stream = jerseyClient.resource(SESSION_LINK_2013).get(InputStream.class);
+			InputStream stream = jerseyClient.target(SESSION_LINK_2013).request().get(InputStream.class);
 			Collection collection = new CollectionParser().parse(stream);
 
 			ArrayList<EmsSession> sessions = newArrayList(transform(collection.getItems(), EmsSession.collectionItemToSession()));
@@ -130,10 +127,7 @@ public class EmsService {
 			if (speakerLinkOptional.isSome()) {
 				Link speakerLink = speakerLinkOptional.get();
 
-				InputStream stream = jerseyClient
-						.resource(speakerLink.getHref())
-						.header("Authorization", "Basic " + PropertiesLoader.getProperty("ems.basicauth"))
-						.get(InputStream.class);
+				InputStream stream = jerseyClient.target(speakerLink.getHref()).request().header("Authorization", "Basic " + PropertiesLoader.getProperty("ems.basicauth")).get(InputStream.class);
 				Collection collection = new CollectionParser().parse(stream);
 				List<EmsSpeaker> speakers = newArrayList(transform(collection.getItems(), EmsSpeaker.collectionItemToSpeaker()));
 

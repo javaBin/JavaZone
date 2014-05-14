@@ -10,13 +10,10 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import no.javazone.activities.feedback.SpeakerFeedbackService;
-import no.javazone.api.filters.NoCacheResponseFilter;
 import no.javazone.representations.feedback.FeedbackSummaryForSpeakers;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/restricted/feedback")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class RestrictedSpeakerFeedbackResource {
 
 	private final SpeakerFeedbackService feedbackService = SpeakerFeedbackService.getInstance();

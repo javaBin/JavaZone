@@ -10,13 +10,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import no.javazone.activities.feedback.GeneralFeedbackService;
-import no.javazone.api.filters.NoCacheResponseFilter;
 import no.javazone.representations.feedback.GeneralFeedback;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/generalfeedback")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class GeneralFeedbackResource {
 
 	private final GeneralFeedbackService feedbackService = GeneralFeedbackService.getInstance();

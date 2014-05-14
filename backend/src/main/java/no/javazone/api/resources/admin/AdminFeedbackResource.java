@@ -18,14 +18,11 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import no.javazone.activities.feedback.SpeakerFeedbackService;
-import no.javazone.api.filters.NoCacheResponseFilter;
 import no.javazone.representations.feedback.Feedback;
 import no.javazone.server.PropertiesLoader;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/admin/feedback")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class AdminFeedbackResource {
 
 	private final SpeakerFeedbackService feedbackService = SpeakerFeedbackService.getInstance();

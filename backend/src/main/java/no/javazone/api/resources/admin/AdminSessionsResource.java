@@ -13,14 +13,11 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import no.javazone.activities.ems.SessionsActivity;
-import no.javazone.api.filters.NoCacheResponseFilter;
 import no.javazone.representations.sessions.AdminSimpleSession;
 import no.javazone.server.PropertiesLoader;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/admin/sessions")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class AdminSessionsResource {
 
 	private final SessionsActivity sessionsActivity = SessionsActivity.getInstance();

@@ -14,16 +14,13 @@ import javax.ws.rs.core.Response;
 import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.SessionsActivity;
 import no.javazone.activities.ems.SpeakerService;
-import no.javazone.api.filters.NoCacheResponseFilter;
 import no.javazone.representations.sessions.Session;
 import no.javazone.representations.sessions.SimpleSession;
 
 import org.joda.time.DateTime;
 
-import com.sun.jersey.spi.container.ResourceFilters;
-
 @Path("/sessions")
-@ResourceFilters(NoCacheResponseFilter.class)
+//@ResourceFilters(NoCacheResponseFilter.class)
 public class SessionsResource {
 
 	private final EmsService emsService = EmsService.getInstance();
