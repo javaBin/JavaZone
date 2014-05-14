@@ -73,7 +73,7 @@ a:hover { color:#000; }
 ol.numberedlist li { list-style: decimal; margin: 1em 0 1em 3em; }
 ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 
-.menu { padding:2.8em 0 1.7em 0; margin:0 1.2em 0 0; font-weight: 300; position: relative; }
+.menu { padding:2.8em 0 1.7em 0; margin:0 1.2em 0 0; font-weight: 300; position: relative; z-index: 2000; }
 .menu h1 a { border:none; }
 .menu ul { position: absolute; bottom:1.6em; right:5px; width:60%; text-align: right; }
 .menu li { line-height: 2.5; display: inline; margin:0 0 0 2em; }
@@ -102,6 +102,7 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-inner { margin:0 1.5em 1.5em 0; padding:2.8em; height:10em; overflow: hidden; display: block; }
 .tile-inner { border:none; color:#394549; position: relative; }
 .tile-inner { background-color:#f9f9f9; background-size:cover; background-position: center center; }
+.tile-inner-tighttop { padding-top: 0; }
 .tile-inner.tile-inner-background-top { background-position: center top; }
 .tile-last .tile-inner { padding-bottom:1.5em; }
 .tile-big { width:100%; }
