@@ -686,7 +686,7 @@ only screen and (                min-resolution: 2dppx) {
 		top: 20%;
 		left: 5%;
 		width: 90%;
-		z-index: 2000;
+		z-index: 500;
 	}
 	.filmlaunch .shareinfo br {
 		display: block;
