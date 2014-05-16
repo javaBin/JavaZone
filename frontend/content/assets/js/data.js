@@ -25,7 +25,7 @@ jz.data.partners = [
     ["Jetbrains", "Jetbrains.jpg", "http://www.jetbrains.com"],
     ["Cisco", "cisco_2012.jpg", "http://www.cisco.com/"],
     ["Microsoft", "Microsoft.jpg", "http://www.microsoft.no/"],
-    ["Acando", "acando_2012.jpg", "http://www.acando.com/no/"],
+    ["Acando", "acando_2012.jpg", "http://www.acando.no/"],
     ["Schlumberger", "schlumberger_2012.jpg", "http://www.slb.com"],
     ["Visma", "visma_2012.jpg", "http://www.visma.no/"],
     ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
