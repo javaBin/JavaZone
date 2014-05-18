@@ -292,6 +292,16 @@ a.map {
 	font-weight: 700;
 }
 
+.tile-ill .tile-inner p.be-a-volunteer {
+	font-size: .8em;
+	color: #ccc;
+	padding-top: 1em;
+	font-weight: 300;
+}
+.tile-ill .tile-inner p.be-a-volunteer span {
+	border-bottom: 1px solid #888;
+}
+
 
 .centerbutton {
 	text-align: center;
