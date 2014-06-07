@@ -1,6 +1,6 @@
 #/bin/bash
 
-npm install pacbot -g
+sudo npm install pacbot -g
 
-cd scripts
-npm install http-proxy colors
+cd frontend/scripts
+npm install http-proxy colors underscore shelljs semver
