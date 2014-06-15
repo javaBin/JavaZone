@@ -45,16 +45,7 @@
                         <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
                     </span>
 
-                    <% if (jz.api.link(pres, 'feedback')) { %>
-                        <span class="rate <%= pres.rating > 0 ? 'rate-inactive' : 'rate-active' %>">
-                            <i class="rate-icon <%= pres.rating > 0 ? 'fa fa-star' : 'fa fa-star-empty' %>" data-rate="1"></i>
-                            <i class="rate-icon <%= pres.rating > 1 ? 'fa fa-star' : 'fa fa-star-empty' %>" data-rate="2"></i>
-                            <i class="rate-icon <%= pres.rating > 2 ? 'fa fa-star' : 'fa fa-star-empty' %>" data-rate="3"></i>
-                            <i class="comment-icon fa fa-comment-alt"></i>
-                        </span>
-                    <% } else { %>
-                        <span class="room"><%= pres.room %></span>
-                    <% } %>
+                    <span class="room"><%= pres.room %></span>
                 </a>
 
             <% }) %>
