@@ -12,7 +12,6 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
-import com.mongodb.WriteResult;
 
 public class MongoTest {
 
@@ -35,7 +34,7 @@ public class MongoTest {
 			BasicDBObject dbObject = new BasicDBObject("talkId", System.currentTimeMillis())
 					.append("rating", new Random().nextInt(6))
 					.append("comment", "Bra talk :)");
-			WriteResult result = coll.insert(dbObject);
+			coll.insert(dbObject);
 			System.out.println(i);
 		}
 
