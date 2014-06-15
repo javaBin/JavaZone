@@ -18,7 +18,7 @@ jz.routes['i-will-vote-for-house-of-codes'] = function() {
     jz.routes.partners();
 };
 
-jz.routes['i-would-kill-for-game-of-codes'] = function() 
+jz.routes['i-would-kill-for-game-of-codes'] = function() {
     jz.routes.partners();
 };
 
@@ -127,7 +127,7 @@ jz.routes.program = function() {
             $(".filters").html(html);
             $(".filters a").on("click", filter);
         });
-        jz.api.template("sessions", { sessions: data.sessions }).then(function(html) {
+        jz.api.template("sessions", { sessions: data.sessions, notScheduledSessions: data.notScheduledSessions }).then(function(html) {
             $(".program").html(html);
             $(".program li").on("click", show);
             $(".program .rate-inactive .rate-icon").on("click", stop);

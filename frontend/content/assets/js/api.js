@@ -94,18 +94,24 @@ jz.api.sessionsByUrl = function(url) {
     jz.api.get(url).then(function(data) {
         _.each(data, jz.api.parseSession);
 
-        // Remove invalid sessions
-        data = _.reject(data, function(d) {
-            return !d.start || !d.title || !d.room;
+        // List of sessions without room or timeslot
+        var notScheduledSessions = _.filter(data, function(d) {
+            return !d.start || !d.room;
+        });
+
+        // Only keep sessions with room or timeslot
+        var scheduledSessions = _.reject(data, function(d) {
+            return !d.start || !d.room;
         });
 
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value().sort(),
-            rooms: c.pluck("room").uniq().value().sort(),
+            //rooms: c.pluck("room").uniq().value().sort(),
             langs: c.pluck("language").uniq().value().sort(),
             levels: c.pluck("level").uniq().value(),
             formats: c.pluck("format").uniq().value().reverse(),
-            sessions: jz.api.groupSessions(data)
+            sessions: jz.api.groupSessions(scheduledSessions),
+            notScheduledSessions: notScheduledSessions
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
         def.resolve(parsed);
