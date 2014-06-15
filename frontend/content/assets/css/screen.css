@@ -266,8 +266,7 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .filters .active .fa-circle-o { display: none; }
 .filters .active .fa-circle { display: inline-block; color: #148f87; }
 
-.tiles-program { min-height: 50em; }
-.tiles-program .tile { background: #fff; }
+.tiles-program { min-height: 50em; background: #fff; }
 h2.program-header { border-bottom:1px solid #f0f0f0; padding:2em 0 1.5em 3.4em; margin:0 0 1.5em 0; position: relative; }
 h2.program-header br { display: none; }
 h2.program-header .date { display: block; padding:.5em 0 0 0; color: #148f87; }
