@@ -11,50 +11,19 @@ $(function() {
 });
 
 jz.routes['i-am-writing-bad'] = function() {
-    // jz.utils.initVoting("writingbad");
-    // $(".regular-intro").addClass("hide");
-    // $(".writing-bad-intro").removeClass("hide");
-    // $(".shareinfo p span.url").text("http://2014.javazone.no/i-am-writing-bad.html");
-    // $(".shareinfo span.movietitle").text(" for Writing Bad");
-    // $(".shareicons .sharetext").text("I voted for Writing Bad as this years JavaZone movie!")
-    // jz.utils.shareheader();
     jz.routes.partners();
 };
 
 jz.routes['i-will-vote-for-house-of-codes'] = function() {
-    // jz.utils.initVoting("houseofcodes");
-    // $(".regular-intro").addClass("hide");
-    // $(".house-of-codes-intro").removeClass("hide");
-    // $(".shareinfo p span.url").text("http://2014.javazone.no/i-will-vote-for-house-of-codes.html");
-    // $(".shareinfo span.movietitle").text(" for House of Codes");
-    // $(".shareicons .sharetext").text("I voted for House of Codes as this years JavaZone movie!")
-    // jz.utils.shareheader();
     jz.routes.partners();
 };
 
-jz.routes['i-would-kill-for-game-of-codes'] = function() {
-    // jz.utils.initVoting("gameofcodes");
-    // $(".regular-intro").addClass("hide");
-    // $(".game-of-codes-intro").removeClass("hide");
-    // $(".shareinfo p span.url").text("http://2014.javazone.no/i-would-kill-for-game-of-codes.html");
-    // $(".shareinfo span.movietitle").text(" for Game of Codes");
-    // $(".shareicons .sharetext").text("I voted for Game of Codes as this years JavaZone movie!")
-    // jz.utils.shareheader();
+jz.routes['i-would-kill-for-game-of-codes'] = function() 
     jz.routes.partners();
 };
 
 jz.routes.index = function() {
-    // jz.utils.initVoting("");
     jz.routes.partners();
-    // jz.api.tweets().then(function(tweets) {
-    //     var tweetsDiv = $(".tweets");
-    //     var tweet = tweets.tweets[0];
-    //     var text = jz.utils.urlify(tweet.tweet);
-    //     var icon = $("<i>").addClass("icon-twitter");
-    //     var play = $("<i>").addClass("icon-play-sign");
-    //     var next = $("<a>").addClass("next").attr("href", "https://twitter.com/javazone").html(play);
-    //     if(tweet) $(".tweet").html($("<p>").append(icon, text, next));
-    // });
 };
 
 jz.routes.credits = function() {
