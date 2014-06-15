@@ -2,6 +2,8 @@ backend/target
 backend/.classpath
 backend/.project
 backend/.settings
+backend/.idea
+backend/*.iml
 backend/logs
 backend/logDirectory_IS_UNDEFINED/*
 backend/awazone.properties
