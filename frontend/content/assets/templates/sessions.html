@@ -33,7 +33,7 @@
                         session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
 
                     <div class="time"><%= jz.date.time(pres.start) %></div>
-                    <div class="badge"><i class="icon-bolt" title="Lightning talk"></i></div>
+                    <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
 
                     <span class="title">
                         <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
@@ -47,10 +47,10 @@
 
                     <% if (jz.api.link(pres, 'feedback')) { %>
                         <span class="rate <%= pres.rating > 0 ? 'rate-inactive' : 'rate-active' %>">
-                            <i class="rate-icon <%= pres.rating > 0 ? 'icon-star' : 'icon-star-empty' %>" data-rate="1"></i>
-                            <i class="rate-icon <%= pres.rating > 1 ? 'icon-star' : 'icon-star-empty' %>" data-rate="2"></i>
-                            <i class="rate-icon <%= pres.rating > 2 ? 'icon-star' : 'icon-star-empty' %>" data-rate="3"></i>
-                            <i class="comment-icon icon-comment-alt"></i>
+                            <i class="rate-icon <%= pres.rating > 0 ? 'fa fa-star' : 'fa fa-star-empty' %>" data-rate="1"></i>
+                            <i class="rate-icon <%= pres.rating > 1 ? 'fa fa-star' : 'fa fa-star-empty' %>" data-rate="2"></i>
+                            <i class="rate-icon <%= pres.rating > 2 ? 'fa fa-star' : 'fa fa-star-empty' %>" data-rate="3"></i>
+                            <i class="comment-icon fa fa-comment-alt"></i>
                         </span>
                     <% } else { %>
                         <span class="room"><%= pres.room %></span>
