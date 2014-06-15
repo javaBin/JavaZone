@@ -73,7 +73,7 @@ a:hover { color:#000; }
 ol.numberedlist li { list-style: decimal; margin: 1em 0 1em 3em; }
 ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 
-.menu { padding:2.8em 0 1.7em 0; margin:0 1.2em 0 0; font-weight: 300; position: relative; z-index: 2000; }
+.menu { padding:2.8em 0 1.7em 0; font-weight: 300; position: relative; z-index: 2000; }
 .menu h1 a { border:none; }
 .menu ul { position: absolute; bottom:1.6em; right:5px; width:60%; text-align: right; }
 .menu li { line-height: 2.5; display: inline; margin:0 0 0 2em; }
@@ -263,8 +263,8 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .filters a { border: none; color:#394549; }
 .filters a:hover, .filters a:hover i { color:#148f87; }
 .filters i { font-size: .9em; display: inline-block; margin: 0 .3em 0 0; color:#ddd; }
-.filters .active .icon-circle-blank { display: none; }
-.filters .active .icon-circle { display: inline-block; color: #148f87; }
+.filters .active .fa-circle-o { display: none; }
+.filters .active .fa-circle { display: inline-block; color: #148f87; }
 
 .tiles-program { min-height: 50em; }
 .tiles-program .tile { background: #fff; }
