@@ -3,7 +3,7 @@ jz.data.partners = [
     ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
     ["DIPS", "dips_2013.jpg", "http://www.dips.no"],
     ["NETS", "nets_2012.jpg", "http://www.nets.no/"],
-    ["Miles", "miles_2012.jpg", "http://www.miles.no/"],
+    ["Miles", "miles_2014.png", "http://www.miles.no/"],
     ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"],
     ["Conax", "stolt_partner_conax.jpg", "http://www.conax.no/"],
     ["Skatteetaten", "skatteetaten_2012.jpg", "http://www.skatteetaten.no/"],
