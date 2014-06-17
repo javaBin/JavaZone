@@ -9,12 +9,14 @@
     <div class="tile tile-med tile-session tile-txt"><div class="tile-inner">
         <div class="top">
             <h2 class="first last"><%= title %></h2>
-            <h3 class="first">
-                <%= jz.date.weekday(start) %>,
-                <%= jz.date.day(start) %> at
-                <%= jz.date.time(start) %> in
-                <%= room %>
-            </h3>
+            <% if(start && room) { %>
+                <h3 class="first">
+                    <%= jz.date.weekday(start) %>,
+                    <%= jz.date.day(start) %> at
+                    <%= jz.date.time(start) %> in
+                    <%= room %>
+                </h3>
+            <% } %>
         </div>
         <div class="body">
             <div class="intro"><%= jz.utils.paragraphs(summary) %></div>
@@ -26,7 +28,7 @@
             <h3>Details</h3>
             <ul class="meta">
                 <li><strong>Keywords:</strong> <%- keywords.join(', ') %></li>
-                <li><strong>Location:</strong> <%- room %></li>
+                <% if(room) { %> <li><strong>Location:</strong> <%- room %></li><% } %>
                 <li><strong>Language:</strong> <%- language %></li>
                 <li><strong>Level:</strong> <%- _.str.capitalize(level) %></li>
                 <li><strong>Duration:</strong> <%- sessionlength %></li>
