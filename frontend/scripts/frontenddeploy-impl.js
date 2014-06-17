@@ -13,7 +13,8 @@ deploy.environments = {
 
   jzweb: {
     prod: { server: 'javabin@2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
-    test: { server: 'javabin@test.2014.javazone.no', dir: '/home/javabin/web/jz-frontend' }
+    test: { server: 'javabin@test.2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
+    dev: { server: 'javabin@192.168.111.222', dir: '/home/javabin/web/jz-frontend' }
   }
 
 };
@@ -195,7 +196,7 @@ deploy.perform = function() {
 utils.log();
 config.start   = utils.timestamp();
 config.target  = process.argv.length === 3 ? process.argv[2] : process.argv[3];
-config.project = process.argv.length === 4 ? process.argv[2] : utils.fatal('error', 'Ugyldig antall parametre! Bruk [test|prod] som parameter...' , process.argv.slice(3)); 
+config.project = process.argv.length === 4 ? process.argv[2] : utils.fatal('error', 'Ugyldig antall parametre! Bruk [dev|test|prod] som parameter...' , process.argv.slice(3)); 
 config.pacbot  = shell.exec('pacbot -V', { silent: true }).output.replace(/\n/, '');
 
 // Check pacbot version
