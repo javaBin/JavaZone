@@ -56,6 +56,9 @@ a:hover .img-inner {
 
 .img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
 
+.img-journeyzonebaat1 { background-image:url("/assets/img/tiles/journeyzone1.jpg"); }
+.img-journeyzonebaat2 { background-image:url("/assets/img/tiles/journeyzone2.jpg"); }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
