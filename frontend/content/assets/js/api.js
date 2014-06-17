@@ -95,9 +95,10 @@ jz.api.sessionsByUrl = function(url) {
         _.each(data, jz.api.parseSession);
 
         // List of sessions without room or timeslot
-        var notScheduledSessions = _.filter(data, function(d) {
-            return !d.start || !d.room;
-        });
+        var notScheduledSessions = _.filter(data, function(d) { return !d.start || !d.room; });
+        var notScheduledPresentations = _.filter(notScheduledSessions, function(d) { return d.format === 'presentation'; });
+        var notScheduledLightning = _.filter(notScheduledSessions, function(d) { return d.format === 'lightning-talk'; });
+        var notScheduledWorkshops = _.filter(notScheduledSessions, function(d) { return d.format === 'workshop'; });
 
         // Only keep sessions with room or timeslot
         var scheduledSessions = _.reject(data, function(d) {
@@ -111,7 +112,10 @@ jz.api.sessionsByUrl = function(url) {
             levels: c.pluck("level").uniq().value(),
             formats: c.pluck("format").uniq().value().reverse(),
             sessions: jz.api.groupSessions(scheduledSessions),
-            notScheduledSessions: notScheduledSessions
+            notScheduledSessions: notScheduledSessions,
+            notScheduledPresentations: notScheduledPresentations,
+            notScheduledLightning: notScheduledLightning, 
+            notScheduledWorkshops: notScheduledWorkshops
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
         def.resolve(parsed);

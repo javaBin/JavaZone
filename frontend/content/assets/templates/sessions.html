@@ -5,99 +5,181 @@
 
 
 
-<!-- UNGROUPED SESSIONS -->
-<div class="day">
-
-    <h2 class="program-header">
-        Sessions without an assigned timeslot
-    </h2>
-    <p class="program-info">These sessions are selected for inclusion in the JavaZone program, but hasn't been assigned a room or timeslot yet. They will be scheduled before the conference starts</p>
-    <% _.each(notScheduledSessions, function(pres, i) { %>
-        
-        <a href="/presentation.html?id=<%= pres.id %>"
-            data-id="<%= pres.id %>"
-            data-feedback="<%= jz.api.link(pres, 'feedback') %>"
-            class="session session-<%= i %>
-                <%= pres.slugs.join(' ') %>
-                <%= jz.utils.slug(pres.language) %>
-                <%= jz.utils.slug(pres.level) %>
-                <%= jz.utils.slug(pres.format) %>
-                <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
-                session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
-
-            <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
-
-            <span class="title">
-                <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
-                <%= _.str.truncate(pres.title, 55) %>
-            </span>
-
-            <span class="person">
-                <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
-                <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
-            </span>
-        </a>
-
-    <% }) %>
-
-</div>
-
-
-
-
 <!-- GROUPED SESSIONS -->
-<div class="sessions">
-<% _.each(sessions, function(day) { %>
-<div class="day">
+<% if(sessions.length > 0) { %>
+    <div class="sessions">
+    <% _.each(sessions, function(day) { %>
+    <div class="day">
 
-    <h2 class="program-header">
-        <%= jz.date.weekday(day[0][0].start) %>,<br>
-        <%= jz.date.day(day[0][0].start) %>
-    </h2>
-    <% _.each(day, function(slot) { %>
-        <div class="slot">
+        <h2 class="program-header">
+            <%= jz.date.weekday(day[0][0].start) %>,<br>
+            <%= jz.date.day(day[0][0].start) %>
+        </h2>
+        <% _.each(day, function(slot) { %>
+            <div class="slot">
 
-            <div class="slot-time">
-                <%= jz.date.time(slot[0].start) %>
+                <div class="slot-time">
+                    <%= jz.date.time(slot[0].start) %>
+                </div>
+
+                <% _.each(slot, function(pres, i) { %>
+                    
+                    <a href="/presentation.html?id=<%= pres.id %>"
+                        data-id="<%= pres.id %>"
+                        data-feedback="<%= jz.api.link(pres, 'feedback') %>"
+                        class="session session-<%= i %>
+                            <%= pres.slugs.join(' ') %>
+                            <%= jz.utils.slug(pres.language) %>
+                            <%= jz.utils.slug(pres.level) %>
+                            <%= jz.utils.slug(pres.room) %>
+                            <%= jz.utils.slug(pres.format) %>
+                            <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
+                            session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
+
+                        <div class="time"><%= jz.date.time(pres.start) %></div>
+                        <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
+
+                        <span class="title">
+                            <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                            <%= _.str.truncate(pres.title, 55) %>
+                        </span>
+
+                        <span class="person">
+                            <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
+                            <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                        </span>
+
+                        <span class="room"><%= pres.room %></span>
+                    </a>
+
+                <% }) %>
+
+
             </div>
 
-            <% _.each(slot, function(pres, i) { %>
-                
-                <a href="/presentation.html?id=<%= pres.id %>"
-                    data-id="<%= pres.id %>"
-                    data-feedback="<%= jz.api.link(pres, 'feedback') %>"
-                    class="session session-<%= i %>
-                        <%= pres.slugs.join(' ') %>
-                        <%= jz.utils.slug(pres.language) %>
-                        <%= jz.utils.slug(pres.level) %>
-                        <%= jz.utils.slug(pres.room) %>
-                        <%= jz.utils.slug(pres.format) %>
-                        <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
-                        session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
+        <% }) %>
 
-                    <div class="time"><%= jz.date.time(pres.start) %></div>
-                    <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
-
-                    <span class="title">
-                        <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
-                        <%= _.str.truncate(pres.title, 55) %>
-                    </span>
-
-                    <span class="person">
-                        <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
-                        <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
-                    </span>
-
-                    <span class="room"><%= pres.room %></span>
-                </a>
-
-            <% }) %>
-
-
-        </div>
-
+    </div>
     <% }) %>
+    </div>
+<% } %>
 
-</div>
-<% }) %>
-</div>
+
+<!-- UNGROUPED PRESENTATIONS -->
+<% if(notScheduledPresentations.length > 0) { %>
+    <div class="day">
+
+        <h2 class="program-header">
+            Presentations
+        </h2>
+        <p class="program-info">These presentations are selected for inclusion in the JavaZone program, but hasn't been assigned a room or timeslot yet. They will be scheduled before the conference starts</p>
+        <% _.each(notScheduledPresentations, function(pres, i) { %>
+            
+            <a href="/presentation.html?id=<%= pres.id %>"
+                data-id="<%= pres.id %>"
+                data-feedback="<%= jz.api.link(pres, 'feedback') %>"
+                class="session session-<%= i %>
+                    <%= pres.slugs.join(' ') %>
+                    <%= jz.utils.slug(pres.language) %>
+                    <%= jz.utils.slug(pres.level) %>
+                    <%= jz.utils.slug(pres.format) %>
+                    <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
+                    session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
+
+                <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
+
+                <span class="title">
+                    <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                    <%= _.str.truncate(pres.title, 55) %>
+                </span>
+
+                <span class="person">
+                    <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
+                    <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                </span>
+            </a>
+
+        <% }) %>
+
+    </div>
+<% } %>
+
+
+<!-- UNGROUPED LIGHTNING TALKS -->
+<% if(notScheduledLightning.length > 0) { %>
+    <div class="day">
+
+        <h2 class="program-header">
+            Lightning Talks
+        </h2>
+        <p class="program-info">These lightning talks are selected for inclusion in the JavaZone program, but hasn't been assigned a room or timeslot yet. They will be scheduled before the conference starts</p>
+        <% _.each(notScheduledLightning, function(pres, i) { %>
+            
+            <a href="/presentation.html?id=<%= pres.id %>"
+                data-id="<%= pres.id %>"
+                data-feedback="<%= jz.api.link(pres, 'feedback') %>"
+                class="session session-<%= i %>
+                    <%= pres.slugs.join(' ') %>
+                    <%= jz.utils.slug(pres.language) %>
+                    <%= jz.utils.slug(pres.level) %>
+                    <%= jz.utils.slug(pres.format) %>
+                    <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
+                    session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
+
+                <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
+
+                <span class="title">
+                    <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                    <%= _.str.truncate(pres.title, 55) %>
+                </span>
+
+                <span class="person">
+                    <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
+                    <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                </span>
+            </a>
+
+        <% }) %>
+
+    </div>
+<% } %>
+
+
+<!-- UNGROUPED WORKSHOPS -->
+<% if(notScheduledWorkshops.length > 0) { %>
+    <div class="day">
+
+        <h2 class="program-header">
+            Workshops
+        </h2>
+        <p class="program-info">These workshops are selected for inclusion in the JavaZone program, but hasn't been assigned a room or timeslot yet. They will be scheduled before the conference starts</p>
+        <% _.each(notScheduledWorkshops, function(pres, i) { %>
+            
+            <a href="/presentation.html?id=<%= pres.id %>"
+                data-id="<%= pres.id %>"
+                data-feedback="<%= jz.api.link(pres, 'feedback') %>"
+                class="session session-<%= i %>
+                    <%= pres.slugs.join(' ') %>
+                    <%= jz.utils.slug(pres.language) %>
+                    <%= jz.utils.slug(pres.level) %>
+                    <%= jz.utils.slug(pres.format) %>
+                    <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
+                    session-<%= pres.format === 'presentation' ? 'long' : 'short' %>">
+
+                <div class="badge"><i class="fa fa-bolt" title="Lightning talk"></i></div>
+
+                <span class="title">
+                    <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                    <%= _.str.truncate(pres.title, 55) %>
+                </span>
+
+                <span class="person">
+                    <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
+                    <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                </span>
+            </a>
+
+        <% }) %>
+
+    </div>
+<% } %>

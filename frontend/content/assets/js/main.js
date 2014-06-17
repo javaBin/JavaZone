@@ -127,7 +127,13 @@ jz.routes.program = function() {
             $(".filters").html(html);
             $(".filters a").on("click", filter);
         });
-        jz.api.template("sessions", { sessions: data.sessions, notScheduledSessions: data.notScheduledSessions }).then(function(html) {
+        jz.api.template("sessions", { 
+            sessions: data.sessions, 
+            notScheduledSessions: data.notScheduledSessions,
+            notScheduledPresentations: data.notScheduledPresentations,
+            notScheduledLightning: data.notScheduledLightning, 
+            notScheduledWorkshops: data.notScheduledWorkshops
+        }).then(function(html) {
             $(".program").html(html);
             $(".program li").on("click", show);
             $(".program .rate-inactive .rate-icon").on("click", stop);
