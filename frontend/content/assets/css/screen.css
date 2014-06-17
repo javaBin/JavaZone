@@ -653,6 +653,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     h2.program-header { padding:1em 1em 0 1em; margin:0; border: none; font-weight: 200; font-size: 2em; text-align: center; }
     h2.program-header br { display: block; }
     h2.program-header-alone { font-size:1.4em; padding:2em; }
+    p.program-info { margin: 1em 0; padding: 0; text-align: center; }
     .slot { border: none; padding-bottom: 1em; margin-bottom: 0; font-size: 1.3em; }
     .slot-time { display: block; }
     .session { padding: .3em 0 .3em 1.8em; overflow:visible; height: auto; line-height: 1.5; position: relative; }
