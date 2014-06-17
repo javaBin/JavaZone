@@ -168,26 +168,26 @@ public class EmsSession {
 
 				List<String> keywords = ItemHelper.getArrayValue(item, "keywords");
 				List<String> speakerNames = extractSpeakerNames(item);
-				String room = null; //extractRoom(item);
+				String room = extractRoom(item);
 
 				// TODO: refaktorere, detta var støgt :P
 				String start = null;
 				String stop = null;
-//				String slotString = extractSlotString(item);
-//				if (slotString != null) {
-//					String[] strings = slotString.split("\\+");
-//					if (strings.length == 2) {
-//						start = strings[0];
-//						stop = strings[1];
-//					}
-//				}
+				String slotString = extractSlotString(item);
+				if (slotString != null) {
+					String[] strings = slotString.split("\\+");
+					if (strings.length == 2) {
+						start = strings[0];
+						stop = strings[1];
+					}
+				}
 
 				LocalDateTime startDateTime = null;
-//				try {
-//					startDateTime = DateTime.parse(start).toLocalDateTime();
-//				} catch (Exception e) {
-//					LOG.warn("Kunne ikke parse start-tidspunkt for talk med id=" + id + ". start=" + start);
-//				}
+				try {
+					startDateTime = DateTime.parse(start).toLocalDateTime();
+				} catch (Exception e) {
+					LOG.warn("Kunne ikke parse start-tidspunkt for talk med id=" + id + ". start=" + start);
+				}
 
 				Optional<Link> speakerLink = ItemHelper.getLink(item, "speaker collection");
 
