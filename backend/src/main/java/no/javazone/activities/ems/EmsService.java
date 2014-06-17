@@ -41,7 +41,10 @@ public class EmsService {
 //	private static final String SESSION_LINK_2013 = "http://www.javazone.no/ems/server/events/4c18f45a-054a-4699-a2bc-6a59a9dd8382/sessions";
 
 	// Prod 2013
-	private static final String SESSION_LINK_2013 = "http://www.javazone.no/ems/server/events/cee37cc1-5399-47ef-9418-21f9b6444bfa/sessions";
+//	private static final String SESSION_LINK_2013 = "http://www.javazone.no/ems/server/events/cee37cc1-5399-47ef-9418-21f9b6444bfa/sessions";
+	
+	// Prod 2014
+	private static final String SESSION_LINK_2014 = "http://www.javazone.no/ems/server/events/9f40063a-5f20-4d7b-b1e8-ed0c6cc18a5f/sessions";
 
 	// Test: http://test.java.no/ems-redux/server
 	// Prod: http://www.javazone.no/ems/server
@@ -65,7 +68,7 @@ public class EmsService {
 			StopWatch s = new StopWatch();
 			s.start();
 
-			InputStream stream = jerseyClient.resource(SESSION_LINK_2013).get(InputStream.class);
+			InputStream stream = jerseyClient.resource(SESSION_LINK_2014).get(InputStream.class);
 			Collection collection = new CollectionParser().parse(stream);
 
 			ArrayList<EmsSession> sessions = newArrayList(transform(collection.getItems(), EmsSession.collectionItemToSession()));
