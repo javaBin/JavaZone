@@ -2,19 +2,6 @@
 
 /*global require, process */
 
-/*
- * Digipost Proxy (localhost:9090):
- *
- * - WebServer (localhost:8080)
- * - WepApp    (localhost:3000)
- * - PostIT    (localhost:1337)
- *
- * Setup:
- *
- * $ cd digipost/scripts
- * $ npm install http-proxy colors
- */
-
 var fs        = require("fs"),
     util      = require("util"),
     path      = require("path"),
@@ -92,9 +79,9 @@ var showLinks = function(ip) {
     util.puts("");
     util.puts(("JavaZone Proxy listening!").rainbow.bold);
     util.puts(("http://localhost:8080/").blue);
-    util.puts(("https://localhost:8080/api").blue);
-    util.puts(("https://" + ip + ":8080/").blue);
-    util.puts(("https://" + ip + ":8080/api").blue);
+    util.puts(("http://localhost:8080/api").blue);
+    util.puts(("http://" + ip + ":8080/").blue);
+    util.puts(("http://" + ip + ":8080/api").blue);
     util.puts("");
 };
 
