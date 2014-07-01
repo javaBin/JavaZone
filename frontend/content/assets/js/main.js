@@ -181,6 +181,7 @@ jz.routes.presentation = function() {
             $(".presentation .rate-inactive .rate-icon").on("click", stop);
             $(".presentation .rate-active .rate-icon").hover(rateIn, rateOut).on("click", rateClick);
             $(".presentation .feedback a").off().on("click", commentSubmit);
+            jz.utils.initSharing();
         });
     });
 };

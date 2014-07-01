@@ -11,6 +11,17 @@ jz.utils.shuffle = function(array) {
     return array;
 };
 
+jz.utils.initSharing = function() {
+    $(".facebookshare").click(function(event) {
+        event.preventDefault();
+        jz.share.facebook(window.location, $(this).data('sharetext'));
+    });
+    $(".twittershare").click(function(event) {
+        event.preventDefault();
+        jz.share.twitter(window.location, $(this).data('sharetext'));
+    });
+};
+
 jz.utils.notify = function(text, displayMs) {
     clearTimeout(jz.utils.notify.timer);
     $(".notification").hide().text(text).fadeIn(200);
