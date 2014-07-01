@@ -366,7 +366,7 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; }
 .tile-session .meta strong { display: inline-block; font-weight: normal; width: 6em; position: absolute; left: 0; text-align: right; }
 
 .tile-speaker { float: right;  }
-.tile-speaker .tile-inner { margin-right: 0; margin-bottom: 0; background: #fcaf17; }
+.tile-speaker .tile-inner { margin-right: 0; margin-bottom: .2em; background: #fcaf17; }
 .tile-speaker img { width: 200px; height: 200px; border-radius: 200px; display: block; margin: 0 auto 1em auto; border:1px solid #000; background: #fff; }
 .tile-speaker h4 { text-transform: none; font-weight: 200; font-size: 1.5em; text-align: center;
     padding:0; margin: 0 0 1em 0; color:#000; }
