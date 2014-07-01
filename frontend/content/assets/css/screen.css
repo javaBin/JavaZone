@@ -109,8 +109,10 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-med { width:66.666%; }
 .tile-half { width:50%; }
 .tile-small { width:33.333%; }
+.tile-four { width:100%; }
 .tile-three { width:75%; }
 .tile-one { width:25%; }
+.tile-four .tile-inner { margin-right: 0; }
 .tile-tall .tile-inner { height:19.7em; }
 .tile-taller .tile-inner { height:30em; }
 .tile-tallerx .tile-inner { height:40em; }
@@ -122,6 +124,25 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-lowxx  .tile-inner { height:12em; }
 .tile-auto .tile-inner { height: auto; }
 .tile-bottom-img { background-position: center bottom; }
+
+/*
+    Main Text #394549
+    Light Text #ccc
+
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;
+*/
+
+
+
+.tile-programheader .tile-inner { padding: 1em; height: 100%; background: #fcaf17; }
+.tile-programheader .tile-inner h2 { text-align: center; margin: 1em; font-size: 1.5em; }
+.tile-programheader .tile-inner p { text-align: center; max-width: 100%; font-size: .9em; }
 
 .tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em;
     font-size:1.2em; background:#fff; line-height: 1.5; }
@@ -263,8 +284,8 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .filters a { border: none; color:#394549; }
 .filters a:hover, .filters a:hover i { color:#148f87; }
 .filters i { font-size: .9em; display: inline-block; margin: 0 .3em 0 0; color:#ddd; }
-.filters .active .fa-circle-o { display: none; }
-.filters .active .fa-circle { display: inline-block; color: #148f87; }
+.filters .active .fa-square-o { display: none; }
+.filters .active .fa-check-square { display: inline-block; color: #148f87; }
 
 .tiles-program { min-height: 50em; background: #fff; }
 h2.program-header { border-bottom:1px solid #f0f0f0; padding:2em 0 1.5em 3.4em; margin:0 0 1.5em 0; position: relative; }
