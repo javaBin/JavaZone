@@ -272,7 +272,7 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .filters a { border: none; color:#394549; }
 .filters a:hover, .filters a:hover i { color:#148f87; }
 .filters i { font-size: .9em; display: inline-block; margin: 0 .3em 0 0; color:#ddd; }
-.filters .active .fa-square-o { display: none; }
+.filters .active .fa-plus-square-o { display: none; }
 .filters .active .fa-check-square { display: inline-block; color: #148f87; }
 
 .tiles-program { min-height: 50em; background: #fff; }

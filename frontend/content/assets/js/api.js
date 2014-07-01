@@ -35,9 +35,11 @@ jz.api.parseSession = function(d) {
     d.imgs  = _.pluck(d.speakers, "gravatarUrl");
     d.date  = jz.date.parse(d.start);
     d.day   = parseInt(d.date.day, 10);
-    d.sessionlength = d.format === "presentation" ? "60 min" : "10 min";
+    d.sessionlength = "60 minutes";
+    if(d.format === "lightning-talk") d.sessionlength = "10 minutes";
+    if(d.format === "workshop") d.sessionlength = "Workshop";
     d.language = d.lang === "no" ? "Norwegian" : "English";
-    d.level = d.level === 'intermediate-advanced' ? 'advanced' : d.level;
+    d.level = d.level === 'hardcore' ? 'advanced' : d.level;
     d.rating = parseInt(jz.api.rating(d.id), 10);
     return d;
 };
