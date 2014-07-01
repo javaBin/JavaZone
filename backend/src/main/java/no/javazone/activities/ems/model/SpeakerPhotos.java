@@ -9,7 +9,7 @@ public class SpeakerPhotos {
 	private static final int CACHELEVETID_MINUTTER = 60;
 
 	public static final int SMALL = 36;
-	public static final int LARGE = 200;
+	public static final int LARGE = 400;
 
 	private final byte[] liteBildes;
 	private final byte[] stortBildes;

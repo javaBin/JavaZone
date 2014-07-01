@@ -95,6 +95,8 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .footer a { color:#394549; font-size:1.4em; }
 .footer p { font-size:1.4em; float: right; }
 
+.tiles-marginbottom { margin-bottom: 3em; }
+
 .tiles-main { width:66.666%; float:left; }
 .tiles-side { width:33.333%; float:right; margin:0; }
 
@@ -124,20 +126,6 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-lowxx  .tile-inner { height:12em; }
 .tile-auto .tile-inner { height: auto; }
 .tile-bottom-img { background-position: center bottom; }
-
-/*
-    Main Text #394549
-    Light Text #ccc
-
-    Burgunder:  a10035;
-    Lyserød:    ff4f4c;
-    Oransje:    ff8641;
-    Gul:        fcaf17;
-    Lysegrønn:  149089;
-    Mørkegrønn: 286a65;
-    Svart:      101010;
-*/
-
 
 
 .tile-programheader .tile-inner { padding: 1em; height: 100%; background: #fcaf17; }
@@ -352,10 +340,24 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; }
 .level-intermediate { background: #f9ad29; }
 .level-beginner { background: #148f87; }
 
-.tile-session .tile-inner { background:#fff; padding:0 2em 2em 0; }
-.tile-session .top { padding:2em; border-bottom:1px solid #f0f0f0; }
+/*
+    Main Text #394549
+    Light Text #ccc
+
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;
+*/
+
+.tile-session .tile-inner { background:#fff; }
+.tile-session .top { padding:1em 0 1em 2em; }
 .tile-session .body { padding:2em; font-weight: 200; }
-.tile-session h3 { padding:.5em 0 0 0; margin: 0; color: #148f87; }
+.tile-session h2 { font-size: 1.5em; }
+.tile-session h3 { padding:.5em 0 0 0; margin: 0; color: #a10035; }
 .tile-session .intro { font-weight: normal; color:#000; }
 .tile-session .body h3 { padding: 1em 0 1em 0; }
 
@@ -363,9 +365,11 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; }
 .tile-session .meta li { padding:.2em 0 .2em 7em; position: relative; line-height: 1.4; }
 .tile-session .meta strong { display: inline-block; font-weight: normal; width: 6em; position: absolute; left: 0; text-align: right; }
 
-.tile-speaker img { width: 100px; height: 100px; border-radius: 200px; display: block; margin: 0 auto 1em auto; border:2px solid #fff; }
-.tile-speaker h4 { text-transform: none; font-weight: 200; font-size: 1.2em; text-align: center;
-    padding:0; margin: 0 0 1em 0; color:#148f87; }
+.tile-speaker { float: right;  }
+.tile-speaker .tile-inner { margin-right: 0; margin-bottom: 0; background: #fcaf17; }
+.tile-speaker img { width: 200px; height: 200px; border-radius: 200px; display: block; margin: 0 auto 1em auto; border:1px solid #000; background: #fff; }
+.tile-speaker h4 { text-transform: none; font-weight: 200; font-size: 1.5em; text-align: center;
+    padding:0; margin: 0 0 1em 0; color:#000; }
 .tile-speaker p { font-size: .9em; font-weight: 200; }
 
 .tile-animated .tile-inner { transition: all 0.5s ease; }
