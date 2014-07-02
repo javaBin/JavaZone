@@ -175,7 +175,7 @@ jz.routes.presentation = function() {
             return false;
         };
 
-        $('title').text(data.title + ' - JavaZone 2013');
+        $('title').text(data.title + ' - JavaZone 2014');
         jz.api.template("session", data).then(function(html) {
             $('.presentation').html(html);
             $(".presentation .rate-inactive .rate-icon").on("click", stop);
