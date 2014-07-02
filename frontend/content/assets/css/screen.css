@@ -280,7 +280,7 @@ h2.program-header { border-bottom:1px solid #f0f0f0; padding:2em 0 1.5em 3.4em; 
 h2.program-header br { display: none; }
 h2.program-header .date { display: block; padding:.5em 0 0 0; color: #148f87; }
 h2.program-header .duration { position: absolute; top:2em; right:2em; }
-p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; }
+p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; color: #888; }
 .filters h2.program-header { padding-left:1em; }
 
 .program { margin-bottom:1em; padding-left: 1em; }

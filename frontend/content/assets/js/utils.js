@@ -189,3 +189,14 @@ jz.utils.shareheader = function() {
         $(".vote").addClass("hide");
     }
 };
+
+jz.utils.isLongWorkshop = function(title) {
+    var longworkshoptitles = ['Neo4j','event sourced applications', 'Docker', 'Angular', 'Akka', 'elasticsearch'];
+    var i = longworkshoptitles.length;
+    while(i--) {
+       if (title.toLowerCase().indexOf(longworkshoptitles[i].toLowerCase())!=-1) {
+            return true;
+       }
+    }
+    return false;
+};

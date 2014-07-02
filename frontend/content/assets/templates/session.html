@@ -32,6 +32,15 @@
                 <li><strong>Language:</strong> <%- language %></li>
                 <li><strong>Level:</strong> <%- _.str.capitalize(level) %></li>
                 <li><strong>Duration:</strong> <%- sessionlength %></li>
+                <% if(format === 'workshop') { %>
+                    <% if(jz.utils.isLongWorkshop(title)) { %>
+                        <li><strong>Time:</strong> September 9th (exact time will be announced later)</li>
+                    <% } else { %>
+                        <li><strong>Time:</strong> September 10th or 11th (exact time will be announced later)</li>
+                    <% } %>
+                <% } else { %>
+                    <li><strong>Time:</strong> The timeslot will be announced later</li>
+                <% } %>
             </ul>
 
             <h3>Take some action!</h3>
@@ -44,6 +53,11 @@
             <p>
                 <a href="/tickets.html" class="sharer"><i class="fa fa-tag"></i> <span>Attend the <%- format %> live: buy your ticket now</span></a>
             </p>
+
+            <% if(format === 'workshop') { %>
+                <h3>Register to attend the workshop</h3>
+                <p>Registration for workshops will be opened closer to the conference. All ticket holders will be informed by e-mail before the registration starts. The workshops are included in the regular JavaZone ticket, but registration is on a first-come first-served basis, as the seating is limited.</p>
+            <% } %>
         </div>
     </div>
 </div>
