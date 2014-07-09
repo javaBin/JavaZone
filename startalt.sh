@@ -10,6 +10,8 @@ while [ -h "$BASEDIR/$0" ]; do
 done
 cd ${BASEDIR}
 
+cd scripts
+
 export JZ_BASEDIR=$(pwd)
 
 printf "\e]0;SCREEN\a"
