@@ -17,7 +17,7 @@ How to get started
 
 3. Set up node dependencies: `./setup.sh` (will ask for your sudo password. Also requires you to have npm installed, but who hasn't? :P)
 
-4. Run the whole shebang: `./startalt`/ (will start a screen session with the frontend, the backend, a proxy to connect them, and mongodb if it is installed – not required for basic operations)
+4. Run the whole shebang: `./startalt.sh` (will start a screen session with the frontend, the backend, a proxy to connect them, and mongodb if it is installed – not required for basic operations)
 
 5. Access it in your web browser of choice: `http://localhost:9090`
 
