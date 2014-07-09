@@ -28,3 +28,9 @@ Ports
 - Backend: port 12345
 - Frontend: port 3000
 - Proxy: port 9090 (maps frontend to `http://localhost/*`, backend to `http://localhost/api/*`)
+
+Deployment:
+------------
+
+- Frontend: deploy using `./scripts/frontend-deploy.sh [test|prod]`
+- Backend: deploy using `./scripts/deploy-backend.sh` (will ask for test/prod while running)
