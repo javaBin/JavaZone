@@ -19,7 +19,7 @@ How to get started
 
 4. Run the whole shebang: `./startalt.sh` (will start a screen session with the frontend, the backend, a proxy to connect them, and mongodb if it is installed – not required for basic operations)
 
-5. Access it in your web browser of choice: `http://localhost:9090`
+5. Access it in your web browser of choice: `http://localhost:8080`
 
 
 Ports
@@ -27,7 +27,7 @@ Ports
 
 - Backend: port 12345
 - Frontend: port 3000
-- Proxy: port 9090 (maps frontend to `http://localhost/*`, backend to `http://localhost/api/*`)
+- Proxy: port 8080 (maps frontend to `http://localhost/*`, backend to `http://localhost/api/*`)
 
 Deployment:
 ------------
