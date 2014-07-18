@@ -39,7 +39,8 @@ jz.data.partners = [
     ["GitHub", "github_2014.png", "https://github.com/"],
     ["Greenbird", "greenbird_2014.png", "http://www.greenbird.com"],
     ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
-    ["NAV IKT", "nav_2014.png", "http://www.nav.no/"]
+    ["NAV IKT", "nav_2014.png", "http://www.nav.no/"],
+    ["Atlassian", "stolt_partner_atlassian.jpg", "https://www.atlassian.com"]
     // ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     // ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
     // ["Decisive", "stolt_partner_decisive.jpg", "http://www.decisive.no/"],
@@ -47,7 +48,7 @@ jz.data.partners = [
     // ["Antares", "antares_2013.jpg", "http://www.antares.no"],
     // ["Pluralsight", "pluralsight_2013.jpg", "http://www.pluralsight.com"],
     // ["Oracle", "oracle_2012.jpg", "http://www.oracle.com/no/index.html"],
-    // ["Atlassian", "stolt_partner_atlassian.jpg", "https://www.atlassian.com"]
+
 ];
 
 // TODODODODODOD!!11one
