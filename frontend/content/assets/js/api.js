@@ -113,7 +113,7 @@ jz.api.sessionsByUrl = function(url) {
 
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value().sort(),
-            rooms: c.pluck("room").uniq().value().sort(),
+            //rooms: c.pluck("room").uniq().value().sort(),
             langs: c.pluck("language").uniq().value().sort(),
             levels: c.pluck("level").uniq().value(),
             formats: c.pluck("format").uniq().value().reverse(),
