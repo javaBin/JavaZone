@@ -833,4 +833,8 @@ only screen and (                min-resolution: 2dppx) {
 	color: #fff;
 }
 
-
+@media only screen and (max-width: 850px) {
+	.speakerimages {
+		display: none;
+	}
+}
