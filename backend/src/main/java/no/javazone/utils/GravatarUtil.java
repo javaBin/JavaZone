@@ -43,13 +43,9 @@ public class GravatarUtil {
 		});
 		
 		if(link.isSome()) {
-			String url1 = link.get().getHref().toString();
-			String url2 = url1.replaceAll("\\?.*", "");
-			System.out.println("UUUUURL1: " + url1);
-			System.out.println("UUUUURL2: " + url2);
-			return url2;
+			return link.get().getHref().toString().replaceAll("\\?.*", "");
 		} else {
-			System.out.println("NOOOO URL");
+			// Ikke bilde i EMS, ikke gravatar.. Skal aldri skje...
 			return "http://www.gravatar.com/avatar/tulle-url";
 		}
 	}
