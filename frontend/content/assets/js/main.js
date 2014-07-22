@@ -5,8 +5,8 @@ $(function() {
     jz.utils.removeAnimationClasses();
     jz.utils.animateScrollTo(".scroll");
     var path = window.location.pathname.replace(/\/$/, "").split(".")[0];
-    var file = _.last(path.split("/")) || "program";
-    var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "program" : file;
+    var file = _.last(path.split("/")) || "index";
+    var name = !(/^[a-z0-9_\-]+$/i).test(file) ? "index" : file;
     if(jz.routes[name]) jz.routes[name]();
 });
 
@@ -24,6 +24,7 @@ jz.routes['i-would-kill-for-game-of-codes'] = function() {
 
 jz.routes.index = function() {
     jz.routes.partners();
+    jz.utils.speakerPhotos();
 };
 
 jz.routes.credits = function() {

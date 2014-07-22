@@ -200,3 +200,25 @@ jz.utils.isLongWorkshop = function(title) {
     }
     return false;
 };
+
+jz.utils.speakerPhotos = function() {
+    jz.api.sessions().then(function(data) {
+
+        var allspeakers = [];
+
+        _.each(data.raw, function(talk) {
+            _.each(talk.speakers, function(speaker) {
+                allspeakers.push(speaker);
+            });
+        });
+
+        var selected = _.chain(allspeakers).shuffle().first(9).value();
+
+        jz.api.template("speakerimages", { 
+            speakers: selected
+        }).then(function(html) {
+            $(".speakerimages").html(html);
+        });
+
+    });
+};

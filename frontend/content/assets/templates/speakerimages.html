@@ -1,0 +1,16 @@
+<% _.each(speakers, function(speaker) { %>
+	<a href="/program.html" class="speakerimage">
+		<div class="speakerimage-inner">
+			<div class="image-inner"><img src="<%= speaker.gravatarUrl %>?s=200&amp;d=identicon"></div>
+			<span><%= speaker.name %></span>
+		</div>
+	</a>
+<% }); %>
+<a href="/program.html" class="speakerimage">
+	<div class="speakerimage-inner">
+		<div class="image-inner">
+			<i class="fa fa-plus"></i>
+		</div>
+		<span>and more</span>
+	</div>
+</a>

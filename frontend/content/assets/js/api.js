@@ -121,7 +121,8 @@ jz.api.sessionsByUrl = function(url) {
             notScheduledSessions: notScheduledSessions,
             notScheduledPresentations: notScheduledPresentations,
             notScheduledLightning: notScheduledLightning, 
-            notScheduledWorkshops: notScheduledWorkshops
+            notScheduledWorkshops: notScheduledWorkshops,
+            raw: data
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
         def.resolve(parsed);
