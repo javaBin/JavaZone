@@ -1,17 +1,13 @@
 package no.javazone.server;
 
-import java.io.IOException;
-
-import no.javazone.activities.ems.EmsService;
-import no.javazone.activities.ems.SpeakerService;
-
+import com.sun.jersey.spi.container.servlet.ServletContainer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.sun.jersey.spi.container.servlet.ServletContainer;
+import java.io.IOException;
 
 public class WebServerMain {
 
@@ -39,13 +35,6 @@ public class WebServerMain {
 	}
 
 	private static void doStartupTasks() {
-		EmsService.getInstance().refresh();
-
-		String property = System.getProperty("loadSessionsOnStartup", "true");
-		if (property.equals("true")) {
-			SpeakerService.getInstance().forceRefresh();
-		} else {
-			LOG.warn("Laster IKKE sessionbilder pga propertyen loadSessionsOnStartup != true");
-		}
+		Cron.getInstance().init();
 	}
 }
