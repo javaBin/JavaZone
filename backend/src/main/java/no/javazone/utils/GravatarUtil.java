@@ -1,5 +1,10 @@
 package no.javazone.utils;
 
+import net.hamnaberg.json.util.Optional;
+import net.hamnaberg.json.Link;
+import net.hamnaberg.json.util.Predicate;
+import net.hamnaberg.json.Item;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -26,6 +31,27 @@ public class GravatarUtil {
 		} catch (UnsupportedEncodingException e) {
 		}
 		return null;
+	}
+
+	public static String getLink(Item item) {
+		Optional<Link> link = item.findLink(new Predicate<Link>() {
+
+			@Override
+			public boolean apply(final Link link) {
+				return link.getRel().equals("thumbnail") && link.getHref().toString().contains("gravatar");
+			}
+		});
+		
+		if(link.isSome()) {
+			String url1 = link.get().getHref().toString();
+			String url2 = url1.replaceAll("\\?.*", "");
+			System.out.println("UUUUURL1: " + url1);
+			System.out.println("UUUUURL2: " + url2);
+			return url2;
+		} else {
+			System.out.println("NOOOO URL");
+			return "http://www.gravatar.com/avatar/tulle-url";
+		}
 	}
 
 }

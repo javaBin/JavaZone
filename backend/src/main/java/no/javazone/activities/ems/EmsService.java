@@ -34,20 +34,11 @@ public class EmsService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(EmsService.class);
 
-	// private static final String SESSION_LINK_2012 =
-	// "http://test.java.no/ems-redux/server/events/4c18f45a-054a-4699-a2bc-6a59a9dd8382/sessions";
-
-	// Prod 2012
-//	private static final String SESSION_LINK_2013 = "http://www.javazone.no/ems/server/events/4c18f45a-054a-4699-a2bc-6a59a9dd8382/sessions";
-
-	// Prod 2013
-//	private static final String SESSION_LINK_2013 = "http://www.javazone.no/ems/server/events/cee37cc1-5399-47ef-9418-21f9b6444bfa/sessions";
-	
 	// Prod 2014
 	private static final String SESSION_LINK_2014 = "http://www.javazone.no/ems/server/events/9f40063a-5f20-4d7b-b1e8-ed0c6cc18a5f/sessions";
-
-	// Test: http://test.java.no/ems-redux/server
-	// Prod: http://www.javazone.no/ems/server
+	
+	// Test 2014
+	//private static final String SESSION_LINK_2014 = "http://test.javazone.no/ems/server/events/9f40063a-5f20-4d7b-b1e8-ed0c6cc18a5f/sessions";
 
 	private static EmsService instance;
 
@@ -135,7 +126,7 @@ public class EmsService {
 
 				InputStream stream = jerseyClient
 						.resource(speakerLink.getHref())
-						.header("Authorization", "Basic " + PropertiesLoader.getProperty("ems.basicauth"))
+						//.header("Authorization", "Basic " + PropertiesLoader.getProperty("ems.basicauth"))
 						.get(InputStream.class);
 				Collection collection = new CollectionParser().parse(stream);
 				List<EmsSpeaker> speakers = newArrayList(transform(collection.getItems(), EmsSpeaker.collectionItemToSpeaker()));
