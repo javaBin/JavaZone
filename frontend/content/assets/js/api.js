@@ -41,6 +41,10 @@ jz.api.parseSession = function(d) {
     d.language = d.lang === "no" ? "Norwegian" : "English";
     d.level = d.level === 'hardcore' ? 'advanced' : d.level;
     d.rating = parseInt(jz.api.rating(d.id), 10);
+    d.room = d.room.replace("Workshop Room 1", "Room A")
+                   .replace("Workshop Room 2", "Room B")
+                   .replace("Workshop Room 3", "Room C")
+                   .replace("Workshop Room 4", "Room D");
     return d;
 };
 
@@ -109,7 +113,7 @@ jz.api.sessionsByUrl = function(url) {
 
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value().sort(),
-            //rooms: c.pluck("room").uniq().value().sort(),
+            rooms: c.pluck("room").uniq().value().sort(),
             langs: c.pluck("language").uniq().value().sort(),
             levels: c.pluck("level").uniq().value(),
             formats: c.pluck("format").uniq().value().reverse(),

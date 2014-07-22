@@ -294,7 +294,7 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; co
 .session .time { position: absolute; left: 0; font-weight: bold; display: none; text-align: right; }
 .session .time-show { display: block; }
 .session-0 .time { display: block; }
-.session .badge-lightning, .session .badge-workshop { position: absolute; left: 2em; opacity: .5; display: none; }
+.session .badge-lightning, .session .badge-workshop { position: absolute; left: 2.8em; opacity: .5; display: none; }
 .session-lightning .badge-lightning { display: block; }
 .session-workshop .badge-workshop { display: block; }
 .session .person { position: absolute; left:33em; }
@@ -354,10 +354,11 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; co
 */
 
 .tile-session .tile-inner { background:#fff; }
-.tile-session .top { padding:1em 0 1em 2em; }
+.tile-session .top { padding:1em 0 0 2em; }
 .tile-session .body { padding:2em; font-weight: 200; }
 .tile-session h2 { font-size: 1.5em; }
 .tile-session h3 { padding:.5em 0 0 0; margin: 0; color: #a10035; }
+.tile-session h3.whenandwhere { font-size: .9em; text-transform: uppercase; color: #999; }
 .tile-session .intro { font-weight: normal; color:#000; }
 .tile-session .body h3 { padding: 1em 0 1em 0; }
 

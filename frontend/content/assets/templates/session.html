@@ -10,10 +10,10 @@
         <div class="top">
             <h2 class="first last"><%= title %></h2>
             <% if(start && room) { %>
-                <h3 class="first">
+                <h3 class="first whenandwhere">
                     <%= jz.date.weekday(start) %>,
                     <%= jz.date.day(start) %> at
-                    <%= jz.date.time(start) %> in
+                    <%= jz.date.time(start) %>–<%= jz.date.time(stop) %> in
                     <%= room %>
                 </h3>
             <% } %>
@@ -32,10 +32,14 @@
                 <li><strong>Language:</strong> <%- language %></li>
                 <li><strong>Level:</strong> <%- _.str.capitalize(level) %></li>
                 <li><strong>Duration:</strong> <%- sessionlength %></li>
-                <% if(format === 'workshop' && jz.utils.isLongWorkshop(title)) { %>
-                        <li><strong>Time:</strong> September 9th (exact time will be announced later)</li>
+                <% if(start && stop) { %>
+                    <li><strong>Time:</strong> <%= jz.date.weekday(start) %>, <%= jz.date.day(start) %> at <%= jz.date.time(start) %>–<%= jz.date.time(stop) %></li>
                 <% } else { %>
-                    <li><strong>Time:</strong> September 10th or 11th (exact time will be announced later)</li>
+                    <% if(format === 'workshop' && jz.utils.isLongWorkshop(title)) { %>
+                            <li><strong>Time:</strong> September 9th (exact time will be announced later)</li>
+                    <% } else { %>
+                        <li><strong>Time:</strong> September 10th or 11th (exact time will be announced later)</li>
+                    <% } %>
                 <% } %>
             </ul>
 
