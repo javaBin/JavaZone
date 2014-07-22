@@ -809,9 +809,9 @@ only screen and (                min-resolution: 2dppx) {
 	width: 5em;
 	height: 5em;
 	border-radius: 200px;
-	-webkit-filter: grayscale(100%);
+/*	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
-	filter: grayscale(100%);
+	filter: grayscale(100%);*/
 }
 .speakerimages .speakerimage .speakerimage-inner .image-inner i {
 	display: block;
