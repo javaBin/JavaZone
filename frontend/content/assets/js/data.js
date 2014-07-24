@@ -39,8 +39,8 @@ jz.data.partners = [
     ["GitHub", "github_2014.png", "https://github.com/"],
     ["Greenbird", "greenbird_2014.png", "http://www.greenbird.com"],
     ["Altran", "stolt_partner_altran.jpg", "http://www.altran.no/"],
-    ["NAV IKT", "nav_2014.png", "http://www.nav.no/"],
-    ["Atlassian", "stolt_partner_atlassian.jpg", "https://www.atlassian.com"]
+    ["NAV IKT", "nav_2014.png", "http://www.nav.no/"]
+    //["Atlassian", "stolt_partner_atlassian.jpg", "https://www.atlassian.com"]
     // ["Marcello", "marcello_2013.jpg", "http://www.marcello.no/"],
     // ["ViaNett", "vianett_2013ny.jpg", "http://www.vianett.no"],
     // ["Decisive", "stolt_partner_decisive.jpg", "http://www.decisive.no/"],
