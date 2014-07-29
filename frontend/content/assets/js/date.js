@@ -35,3 +35,9 @@ jz.date.duration = function(start, stop) {
     var stopDate = Date.parse(stop);
     return stopDate - startDate;
 };
+
+jz.date.sortable = function(date) {
+    var m = jz.date.parse(date);
+    var sep = '.';
+    return !m ? '' : m.year + '-' + m.month + '-' + m.day + ', kl.' + m.hour + sep + m.min;
+};

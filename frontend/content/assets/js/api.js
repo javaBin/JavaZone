@@ -104,11 +104,14 @@ jz.api.sessionsByUrl = function(url) {
         var notScheduledSessions = _.filter(data, function(d) { return !d.start || !d.room; });
         var notScheduledPresentations = _.filter(notScheduledSessions, function(d) { return d.format === 'presentation'; });
         var notScheduledLightning = _.filter(notScheduledSessions, function(d) { return d.format === 'lightning-talk'; });
-        var notScheduledWorkshops = _.filter(notScheduledSessions, function(d) { return d.format === 'workshop'; });
+        //var notScheduledWorkshops = _.filter(notScheduledSessions, function(d) { return d.format === 'workshop'; });
+
+        var workshops = _.filter(data, function(d) { return d.format === 'workshop'; });
+        workshops = _.sortBy(workshops, function(d) { return jz.date.sortable(d.start); });
 
         // Only keep sessions with room or timeslot
         var scheduledSessions = _.reject(data, function(d) {
-            return !d.start || !d.room;
+            return !d.start || !d.room || d.format === 'workshop';
         });
 
         var c = _.chain(data), parsed = {
@@ -121,7 +124,8 @@ jz.api.sessionsByUrl = function(url) {
             notScheduledSessions: notScheduledSessions,
             notScheduledPresentations: notScheduledPresentations,
             notScheduledLightning: notScheduledLightning, 
-            notScheduledWorkshops: notScheduledWorkshops,
+            //notScheduledWorkshops: notScheduledWorkshops,
+            workshops: workshops,
             raw: data
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);

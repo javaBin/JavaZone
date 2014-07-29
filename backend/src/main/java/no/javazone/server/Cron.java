@@ -36,10 +36,14 @@ public class Cron {
 		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				LOG.info("Kjører Cron-jobb – refresh av talks og speakerbilder...");
-				emsService.refresh();
-				speakerService.softRefresh();
-				LOG.info("Ferdig med Cron-jobb – refresh av talks og speakerbilder...");
+				try {
+					LOG.info("Kjører Cron-jobb – refresh av talks og speakerbilder...");
+					emsService.refresh();
+					speakerService.softRefresh();
+					LOG.info("Ferdig med Cron-jobb – refresh av talks og speakerbilder...");
+				} catch (Exception e) {
+					LOG.warn("Ferdig med Cron-jobb, men feilet – noe galt skjedde...", e);
+				}
 			}
 		}, TEN_MINUTES_IN_MS, TEN_MINUTES_IN_MS);
 	}

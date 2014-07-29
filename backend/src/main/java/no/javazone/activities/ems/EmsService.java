@@ -19,7 +19,6 @@ import net.hamnaberg.json.util.Optional;
 import no.javazone.activities.ems.model.ConferenceYear;
 import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.activities.ems.model.EmsSpeaker;
-import no.javazone.server.PropertiesLoader;
 
 import org.apache.commons.lang3.time.StopWatch;
 import org.joda.time.DateTime;

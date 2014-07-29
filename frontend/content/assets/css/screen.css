@@ -294,6 +294,7 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; co
 .session .time { position: absolute; left: 0; font-weight: bold; display: none; text-align: right; }
 .session .time-show { display: block; }
 .session-0 .time { display: block; }
+.session .time-small { font-size: .6em; padding-top: .6em; text-transform: uppercase; }
 .session .badge-lightning, .session .badge-workshop { position: absolute; left: 2.8em; opacity: .5; display: none; }
 .session-lightning .badge-lightning { display: block; }
 .session-workshop .badge-workshop { display: block; }

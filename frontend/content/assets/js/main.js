@@ -133,7 +133,8 @@ jz.routes.program = function() {
             notScheduledSessions: data.notScheduledSessions,
             notScheduledPresentations: data.notScheduledPresentations,
             notScheduledLightning: data.notScheduledLightning, 
-            notScheduledWorkshops: data.notScheduledWorkshops
+            //notScheduledWorkshops: data.notScheduledWorkshops,
+            workshops: data.workshops
         }).then(function(html) {
             $(".program").html(html);
             $(".program li").on("click", show);
