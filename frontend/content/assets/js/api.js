@@ -15,6 +15,8 @@ jz.api.get = function(url) {
     }).done(function(data) {
         jz.api.cache[url] = data;
         def.resolve(data);
+    }).fail(function() {
+        def.reject();
     });
     return def;
 };
@@ -36,6 +38,8 @@ jz.api.workshop = function(slug) {
         } else {
             def.resolve({status: 'UNKNOWN'});
         }
+    }).fail(function() {
+        def.resolve({status: 'UNKNOWN'});
     });
     return def;
 };
