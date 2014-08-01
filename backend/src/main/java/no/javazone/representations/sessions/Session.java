@@ -6,10 +6,12 @@ import java.util.List;
 import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.representations.Link;
 import no.javazone.server.PropertiesLoader;
-
 import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Session {
+	
+	@JsonProperty("slug")
+	private String slug;
 	@JsonProperty("title")
 	private final String title;
 	@JsonProperty("format")
@@ -39,9 +41,10 @@ public class Session {
 	@JsonProperty("links")
 	private final List<Link> links;
 
-	public Session(final String title, final String format, final String level, final String lang, final String audience,
+	public Session(final String slug, final String title, final String format, final String level, final String lang, final String audience,
 			final String room, final String start, final String stop, final String body, final String summary, final String outline,
 			final List<String> keywords, final List<Speaker> speakers, final List<Link> links) {
+		this.slug = slug;
 		this.title = title;
 		this.format = format;
 		this.level = level;
@@ -59,7 +62,7 @@ public class Session {
 	}
 
 	public static Session createSession(final EmsSession emsSession) {
-		return new Session(emsSession.getTitle(), emsSession.getFormat(), emsSession.getLevel(), emsSession.getLang(),
+		return new Session(emsSession.getSlug(), emsSession.getTitle(), emsSession.getFormat(), emsSession.getLevel(), emsSession.getLang(),
 				emsSession.getAudience(), emsSession.getRoom(), emsSession.getStart(), emsSession.getStop(), emsSession.getBody(),
 				emsSession.getSummary(), emsSession.getOutline(), emsSession.getKeywords(), Speaker.createSpeakers(emsSession
 						.getSpeakerDetails()), createLinks(emsSession));

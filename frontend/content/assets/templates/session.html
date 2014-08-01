@@ -53,11 +53,6 @@
             <p>
                 <a href="/tickets.html" class="sharer"><i class="fa fa-tag"></i> <span>Attend the <%- format %> live: buy your ticket now</span></a>
             </p>
-
-            <% if(format === 'workshop') { %>
-                <h3>Register to attend the workshop</h3>
-                <p>Registration for workshops will be opened closer to the conference. All ticket holders will be informed by e-mail before the registration starts. The workshops are included in the regular JavaZone ticket, but registration is on a first-come first-served basis, as the seating is limited.</p>
-            <% } %>
         </div>
     </div>
 </div>
@@ -78,6 +73,10 @@
     </div></div>
 <% } %>
 -->
+
+<div class="tile tile-small tile-txt tile-workshopinfo hide workshopinfo"><div class="tile-inner">
+    
+</div></div>
 
 <% _.each(speakers, function(speaker) { %>
     <div class="tile tile-small tile-txt tile-speaker"><div class="tile-inner">

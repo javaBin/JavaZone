@@ -49,10 +49,11 @@ var getNetworkIP = (function () {
 })();
 
 /* ----------------------------------- */
-
+    
 var proxyConfig = function(ip) {
     var r = {};
 
+    r['localhost/moosehead/'] = 'http://test.2014.javazone.no/moosehead/'
     r['localhost/api/'] = 'localhost:12345';
     r['localhost'] = 'localhost:3000';
 

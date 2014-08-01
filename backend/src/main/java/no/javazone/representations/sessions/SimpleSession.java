@@ -6,13 +6,13 @@ import java.util.List;
 import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.representations.Link;
 import no.javazone.server.PropertiesLoader;
-
 import org.codehaus.jackson.annotate.JsonProperty;
-
 import com.google.common.base.Function;
 
 public class SimpleSession {
 
+	@JsonProperty("slug")
+	private String slug;
 	@JsonProperty("title")
 	private final String title;
 	@JsonProperty("format")
@@ -34,8 +34,9 @@ public class SimpleSession {
 	@JsonProperty("links")
 	private final List<Link> links;
 
-	public SimpleSession(final String title, final String format, final String level, final String lang, final String room,
+	public SimpleSession(final String slug, final String title, final String format, final String level, final String lang, final String room,
 			final String start, final String stop, final List<String> keywords, final List<SimpleSpeaker> speakers, final List<Link> links) {
+		this.slug = slug;
 		this.title = title;
 		this.format = format;
 		this.level = level;
@@ -52,7 +53,7 @@ public class SimpleSession {
 		return new Function<EmsSession, SimpleSession>() {
 			@Override
 			public SimpleSession apply(final EmsSession emsSession) {
-				return new SimpleSession(emsSession.getTitle(), emsSession.getFormat(), emsSession.getLevel(), emsSession.getLang(),
+				return new SimpleSession(emsSession.getSlug(), emsSession.getTitle(), emsSession.getFormat(), emsSession.getLevel(), emsSession.getLang(),
 						emsSession.getRoom(), emsSession.getStart(), emsSession.getStop(), emsSession.getKeywords(),
 						SimpleSpeaker.createSpeakers(emsSession.getSpeakerDetails()), createLinks(emsSession));
 			}

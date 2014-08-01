@@ -27,6 +27,19 @@ jz.api.videos = function(voteFor) {
     return jz.api.get("/api/videos?vote=" + voteFor);
 };
 
+jz.api.workshop = function(slug) {
+    var def = new $.Deferred();
+    jz.api.get('/moosehead/data/workshopList').then(function(data) {
+        var info = _.find(data, function(w) { return w.id === slug; });
+        if(info) {
+            def.resolve(info);
+        } else {
+            def.resolve({status: 'UNKNOWN'});
+        }
+    });
+    return def;
+};
+
 jz.api.parseSession = function(d) {
     d.uri   = jz.api.link(d, 'details');
     d.id    = d.uri ? _.last(d.uri.split("/")).substr(0, 8) : 1;

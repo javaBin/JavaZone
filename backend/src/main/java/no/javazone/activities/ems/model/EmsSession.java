@@ -12,12 +12,10 @@ import net.hamnaberg.json.Link;
 import net.hamnaberg.json.util.Optional;
 import no.javazone.activities.ems.ItemHelper;
 import no.javazone.server.PropertiesLoader;
-
 import org.joda.time.DateTime;
 import org.joda.time.LocalDateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.google.common.base.Function;
 
 public class EmsSession {
@@ -25,6 +23,7 @@ public class EmsSession {
 	private static final Logger LOG = LoggerFactory.getLogger(EmsSession.class);
 
 	private final String id;
+	private final String slug;
 	private final String title;
 	private final String summary;
 	private final String outline;
@@ -43,13 +42,15 @@ public class EmsSession {
 	private List<EmsSpeaker> speakerDetails;
 	private final Optional<Link> videoLink;
 
-	private static final Pattern NUMBER = Pattern.compile("[0-9]+");;
+	private static final Pattern NUMBER = Pattern.compile("[0-9]+");
 
-	public EmsSession(final String id, final String title, final String summary, final String outline, final String body,
+
+	public EmsSession(final String id, final String slug, final String title, final String summary, final String outline, final String body,
 			final String format, final String audience, final String level, final String lang, final String room, final String start,
 			final LocalDateTime startDateTime, final String stop, final List<String> keywords, final List<String> speakerNames,
 			final Optional<Link> speakerLink, final Optional<Link> videoLink) {
 		this.id = id;
+		this.slug = slug;
 		this.title = title;
 		this.summary = summary;
 		this.outline = outline;
@@ -70,6 +71,10 @@ public class EmsSession {
 
 	public String getId() {
 		return id;
+	}
+	
+	public String getSlug() {
+		return slug;
 	}
 
 	public String getTitle() {
@@ -157,6 +162,8 @@ public class EmsSession {
 			public EmsSession apply(final Item item) {
 				String id = ItemHelper.generateId(item);
 
+				String slug = ItemHelper.getStringValue(item, "slug");
+				
 				String title = ItemHelper.getStringValue(item, "title");
 				String summary = ItemHelper.getStringValue(item, "summary");
 				String outline = ItemHelper.getStringValue(item, "outline");
@@ -193,7 +200,7 @@ public class EmsSession {
 
 				Optional<Link> videoLink = ItemHelper.getLink(item, "alternate video");
 
-				return new EmsSession(id, title, summary, outline, body, format, audience, level, lang, room, start, startDateTime, stop,
+				return new EmsSession(id, slug, title, summary, outline, body, format, audience, level, lang, room, start, startDateTime, stop,
 						keywords, speakerNames, speakerLink, videoLink);
 			}
 

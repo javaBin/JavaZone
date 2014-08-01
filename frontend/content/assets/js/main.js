@@ -176,6 +176,16 @@ jz.routes.presentation = function() {
             $('.feedback').slideUp();
             return false;
         };
+        var workshopRegister = function() {
+            if(data.format === 'workshop') {
+                jz.api.workshop(data.slug).then(function(workshopdata) {
+                    jz.api.template("workshop", workshopdata).then(function(html) {
+                        $(".presentation .workshopinfo .tile-inner").html(html);
+                        $(".presentation .workshopinfo").removeClass('hide');
+                    });
+                });
+            }
+        };
 
         $('title').text(data.title + ' - JavaZone 2014');
         jz.api.template("session", data).then(function(html) {
@@ -184,6 +194,7 @@ jz.routes.presentation = function() {
             $(".presentation .rate-active .rate-icon").hover(rateIn, rateOut).on("click", rateClick);
             $(".presentation .feedback a").off().on("click", commentSubmit);
             jz.utils.initSharing();
+            workshopRegister();
         });
     });
 };
