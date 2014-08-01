@@ -730,7 +730,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     .tile-session { font-size:1.2em; }
     .tile-session .tile-inner { padding: 0; }
     .tile-speaker { margin:0; font-size:1.2em; }
-    .tile-session .top { border:none; padding:0 2em; }
+    .tile-session .top { border:none; padding:0 2em; margin-top: 2em; }
 
     .workshop .time { display: block; font-weight: 200; }
     .workshop strong { display: block; padding-left: 3em; }
