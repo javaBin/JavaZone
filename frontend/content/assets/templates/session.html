@@ -27,11 +27,13 @@
 
             <h3>Details</h3>
             <ul class="meta">
-                <li><strong>Keywords:</strong> <%- keywords.join(', ') %></li>
+                <!-- <li><strong>Keywords:</strong> <%- keywords.join(', ') %></li> -->
+                <li><strong>Topics:</strong> <%- topics.join(', ') %></li>
+                <li><strong>Type:</strong> <%- types.join(', ') %></li>
                 <% if(room) { %> <li><strong>Location:</strong> <%- room %></li><% } %>
                 <li><strong>Language:</strong> <%- language %></li>
                 <li><strong>Level:</strong> <%- _.str.capitalize(level) %></li>
-                <li><strong>Duration:</strong> <%- sessionlength %></li>
+                <li><strong>Format:</strong> <%- _.str.capitalize(format) %></li>
                 <% if(start && stop) { %>
                     <li><strong>Time:</strong> <%= jz.date.weekday(start) %>, <%= jz.date.day(start) %> at <%= jz.date.time(start) %>–<%= jz.date.time(stop) %></li>
                 <% } else { %>

@@ -1,6 +1,6 @@
 <h2 class="program-header">Filter sessions</h2>
 
-<ul>
+<!-- <ul>
     <% _.each(data.formats, function(format) { %>
         <li><a href="#" rel="<%= jz.utils.slug(format) %>">
             <i class="fa fa-plus-square-o"></i>
@@ -8,7 +8,7 @@
             <%= _.str.capitalize(format) %>
         </a></li>
     <% }) %>
-</ul>
+</ul> -->
 
 <ul>
     <% _.each(data.langs, function(language) { %>
@@ -20,8 +20,28 @@
     <% }) %>
 </ul>
 
-<ul>
+<!-- <ul>
     <% _.each(data.tags, function(t) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(t) %>">
+            <i class="fa fa-plus-square-o"></i>
+            <i class="fa fa-check-square hide"></i>
+            <%= _.str.truncate(t, 23) %>
+        </a></li>
+    <% }) %>
+</ul> -->
+
+<ul>
+    <% _.each(data.topics, function(t) { %>
+        <li><a href="#" rel="<%= jz.utils.slug(t) %>">
+            <i class="fa fa-plus-square-o"></i>
+            <i class="fa fa-check-square hide"></i>
+            <%= _.str.truncate(t, 23) %>
+        </a></li>
+    <% }) %>
+</ul>
+
+<ul>
+    <% _.each(data.types, function(t) { %>
         <li><a href="#" rel="<%= jz.utils.slug(t) %>">
             <i class="fa fa-plus-square-o"></i>
             <i class="fa fa-check-square hide"></i>

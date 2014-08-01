@@ -52,9 +52,6 @@ jz.api.parseSession = function(d) {
     d.imgs  = _.pluck(d.speakers, "gravatarUrl");
     d.date  = jz.date.parse(d.start);
     d.day   = parseInt(d.date.day, 10);
-    d.sessionlength = "60 minutes";
-    if(d.format === "lightning-talk") d.sessionlength = "10 minutes";
-    if(d.format === "workshop") d.sessionlength = "Workshop";
     d.language = d.lang === "no" ? "Norwegian" : "English";
     d.level = d.level === 'hardcore' ? 'advanced' : d.level;
     d.rating = parseInt(jz.api.rating(d.id), 10);
@@ -62,6 +59,8 @@ jz.api.parseSession = function(d) {
                    .replace("Workshop Room 2", "Room B")
                    .replace("Workshop Room 3", "Room C")
                    .replace("Workshop Room 4", "Room D");
+    d.topics = _.intersection(d.keywords, ['Security', 'Core', 'Backend', 'Frontend', 'Concepts', 'Craftmanship', 'Architecture', 'Teamwork']);
+    d.types = _.intersection(d.keywords, ['Experience reports', 'Research Innovation', 'Knowledge Practice', 'Wisdom']);
     return d;
 };
 
@@ -133,6 +132,8 @@ jz.api.sessionsByUrl = function(url) {
 
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value().sort(),
+            topics: c.pluck("topics").flatten().uniq().value().sort(),
+            types: c.pluck("types").flatten().uniq().value().sort(),
             //rooms: c.pluck("room").uniq().value().sort(),
             langs: c.pluck("language").uniq().value().sort(),
             levels: c.pluck("level").uniq().value(),
