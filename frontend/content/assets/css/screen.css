@@ -75,9 +75,9 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 
 .menu { padding:2.8em 0 1.7em 0; font-weight: 300; position: relative; z-index: 2000; }
 .menu h1 a { border:none; }
-.menu ul { position: absolute; bottom:1.6em; right:5px; width:60%; text-align: right; }
-.menu li { line-height: 2.5; display: inline; margin:0 0 0 2em; }
-.menu ul a { color:#394549; font-size:2em; }
+.menu ul { position: absolute; bottom:2.5em; right:5px; width:60%; text-align: right; }
+.menu li { line-height: 2.5; display: inline; margin:0 0 0 1.3em; }
+.menu ul a { color:#394549; font-size:1.5em; }
 .menu ul a:hover { color:#000; }
 
 .tweet i { display: inline-block; width: 1.5em; }
@@ -537,6 +537,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .fa-ul strong { font-weight: 700; }
 
 
+.space { height: 1em; }
 .spacex { height: 2em; }
 .spacexx { height: 4em; }
 .spacexxx { height: 6em; }

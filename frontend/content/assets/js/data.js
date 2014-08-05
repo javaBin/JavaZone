@@ -52,6 +52,12 @@ jz.data.partners = [
 
 ];
 
+jz.data.academypartners = [
+    ["Accenture", "accenture_2012.jpg", "http://www.accenture.no/"],
+    ["NETS", "nets_2012.jpg", "http://www.nets.no/"],
+    ["Finn.no", "finn_2012.jpg", "http://www.finn.no"]
+];
+
 // TODODODODODOD!!11one
 jz.data.credits = [
     ["Navn", "http://distilleryimage4.s3.amazonaws.com/07fa19b2d14a11e2866d22000a9f137d_7.jpg", "https://twitter.com/Espenhh"],

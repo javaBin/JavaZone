@@ -8,6 +8,8 @@
 .ill-8 { background-image:url("/assets/img/ill/outro.png"); width: 63.00750em; height: 20.59950em; background-size: 63.00750em 20.59950em; }
 
 .ill-infostand { background-image:url("/assets/img/ill/infostand.png"); width: 28.00000em; height: 34.0555em; background-size: 28.00000em 34.0555em; }
+.ill-academy { background-image:url("/assets/img/ill/academy.png"); width: 16.00000em; height: 19.68888em; background-size: 16.00000em 19.68888em; }
+
 
 .page-invert .tile-ill.tile-color0 .tile-inner a {
 	color: #fff;
@@ -838,3 +840,91 @@ only screen and (                min-resolution: 2dppx) {
 		display: none;
 	}
 }
+
+
+/* ACADEMY-TING */
+.ill-academy-center {
+	margin: 0 auto;
+}
+
+.academy-boxes .academy-box {
+	float: left;
+	width: 33.333%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+.academy-boxes .academy-box-first {
+	padding: 0 1em 0 0;
+}
+.academy-boxes .academy-box-second {
+	padding: 0 .5em 0 .5em;
+}
+.academy-boxes .academy-box-last {
+	padding: 0 0 0 1em;
+}
+.academy-boxes .academy-box .academy-box-inner {
+	background: #fff;
+	padding: 2em;
+	color: #000;
+	min-height: 13em;
+}
+.academy-boxes .academy-box h3 {
+	text-align: center;
+	font-size: 1.5em;
+	margin: 0 0 .1em 0;
+}
+.academy-boxes .academy-box h4 {
+	color: #fff;
+	text-align: center;
+	margin: 0 0 1em 0
+}
+.academy-boxes .academy-box .academy-pic {
+	width: 100%;
+	height: 8em;
+}
+.academy-boxes .academy-box .academy-box-inner p {
+	font-size: .8em;
+	color: #000 !important;
+}
+.academy-boxes .academy-box .academy-box-inner p.intro {
+	font-weight: bold;
+}
+.academy-boxes .academy-box a {
+	color: #fff !important;
+	font-size: .9em;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	padding: 1em;
+	text-align: center;
+	background: #a10035;
+}
+.academy-boxes .academy-box a:hover {
+	background: #ff4f4c;
+}
+
+.tile-academypartners img {
+	margin: 0 1em;
+}
+
+@media only screen and (max-width: 850px) {
+	.academy-boxes .academy-box {
+		float: none;
+		width: 100%;
+	}
+	.academy-boxes .academy-box-first {
+		padding: 0 0 3em 0;
+	}
+	.academy-boxes .academy-box-second {
+		padding: 0 0 3em 0;
+	}
+	.academy-boxes .academy-box-last {
+		padding: 0 0 3em 0;
+	}
+}
+
+.ill-spektrum { background-image:url("/assets/img/academy/spektrum.jpg"); background-size: cover; background-position: center center; }
+.ill-samfundet { background-image:url("/assets/img/academy/samfundet.jpg"); background-size: cover; background-position: center bottom; }
+.ill-kvarteret { background-image:url("/assets/img/academy/kvarteret.jpg"); background-size: cover; background-position: center center; }
