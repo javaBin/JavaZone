@@ -519,7 +519,7 @@ only screen and (                min-resolution: 2dppx) {
 	text-align: center;
 	color: #fcaf17;
 	margin: 0;
-	padding: 0em 0 .5em 0;
+	padding: .5em 0 .5em 0;
 	font-size: 3em;
 	font-weight: 400; 
 	font-family: 'Londrina Solid', cursive;
@@ -532,7 +532,7 @@ only screen and (                min-resolution: 2dppx) {
 	margin: 0 0 .2em 0;
 }
 .filmlaunch p.small {
-	font-size: .7em;
+	font-size: 1em;
 	margin-top: 1em;
 	color: #bbb;
 }
@@ -604,10 +604,10 @@ only screen and (                min-resolution: 2dppx) {
 	text-align: center;
 	width: 100%;
 	cursor: pointer;
-	color: #ccc;
+	color: #fcaf17;
 }
 .filmlaunch .scrolldown:hover {
-	color: #a10035;
+	color: #ff8641;
 }
 .filmlaunch .scrolldown i {
 	font-size: 5em;
@@ -615,6 +615,7 @@ only screen and (                min-resolution: 2dppx) {
 .filmlaunch .scrolldown span {
 	margin-bottom: -2em;
 	display: block;
+	line-height: 1.3;
 }
 
 .filmlaunch .handpoint {
@@ -623,7 +624,17 @@ only screen and (                min-resolution: 2dppx) {
 	margin: 1em auto 0 auto;
 }
 
-@media only screen and (max-height: 900px) and (min-width: 1000px) {
+
+.filmlaunch .video-big {
+	width: 60em;
+	margin: 2em auto;
+	height: 25em;
+}
+
+
+
+
+@media only screen and (max-height: 900px) and (min-width: 850px) {
 	.filmlaunch h2.smaller {
 		font-size: 2em;
 	}
@@ -632,7 +643,7 @@ only screen and (                min-resolution: 2dppx) {
 	}
 }
 
-@media only screen and (max-height: 800px) and (min-width: 1000px) {
+@media only screen and (max-height: 800px) and (min-width: 850px) {
 	.filmlaunch h2 {
 		font-size: 2em;
 		padding-bottom: .2em;
@@ -644,7 +655,7 @@ only screen and (                min-resolution: 2dppx) {
 		display: none;
 	}
 }
-@media only screen and (max-height: 700px) and (min-width: 1000px) {
+@media only screen and (max-height: 700px) and (min-width: 850px) {
 	.filmlaunch .movies {
 		margin: .5em 0 0 0;
 	}
@@ -655,8 +666,13 @@ only screen and (                min-resolution: 2dppx) {
 		margin: .5em 0 1.5em 0;
 	}
 }
-@media only screen and (max-height: 900px) and (min-width: 1200px) {
+@media only screen and (max-height: 720px) and (min-width: 850px) {
 	.filmlaunch .scrolldown {
+		display: none;
+	}
+}
+@media only screen and (max-height: 920px) and (min-width: 850px) {
+	.filmlaunch .extrainfo {
 		display: none;
 	}
 }
@@ -664,7 +680,7 @@ only screen and (                min-resolution: 2dppx) {
 
 @media only screen and (max-width: 850px) {
 	.filmlaunch {
-		min-height: auto;
+		min-height: inherit;
 	}
 	.filmlaunch h2 {
 		font-size: 3em;
@@ -677,7 +693,15 @@ only screen and (                min-resolution: 2dppx) {
 		font-size: .9em;
 	}
 	.filmlaunch .scrolldown {
-		display: none;
+		position: relative;
+		bottom: auto;
+		margin-top: 3em;
+		display: block;
+	}
+	.filmlaunch .scrolldown i {
+		margin: 0 auto;
+		display: block;
+		padding-top: .2em;
 	}
 	.filmlaunch .movies .movie {
 		width: 100%;
@@ -707,6 +731,9 @@ only screen and (                min-resolution: 2dppx) {
 		background-image:url("/assets/img/point3.png"); width: 8.69444em; height: 9.05555em; background-size: 8.69444em 9.05555em; 
 		width: 8.69444em;
 		margin: 1em auto 1em auto;
+	}
+	.filmlaunch .video-big {
+		width: 100%;
 	}
 }
 
