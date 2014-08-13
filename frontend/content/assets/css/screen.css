@@ -340,7 +340,7 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; co
 .level-advanced { background: #fb4e4b; }
 .level-intermediate { background: #f9ad29; }
 .level-beginner { background: #148f87; }
-
+.level-hide { background: #fff; }
 /*
     Main Text #394549
     Light Text #ccc

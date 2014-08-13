@@ -6,47 +6,50 @@
 
 <!-- WORKSHOPS -->
 <% if(workshops.length > 0) { %>
-    <div class="day">
+    <div class="sessions">
+        <div class="day">
+            <h2 class="program-header">
+                Workshops <br class="only-min">(registration required)
+            </h2>
 
-        <h2 class="program-header">
-            Workshops at JavaZone 2014
-        </h2>
-        <p class="program-info">Registration for workshops will be opened August 14th. The workshops are included in the regular JavaZone ticket, but registration is on a first-come first-served basis, as the seating is limited.</p>
-        <% _.each(workshops, function(pres, i) { %>
-            
-            <a href="/presentation.html?id=<%= pres.id %>"
-                data-id="<%= pres.id %>"
-                data-feedback="<%= jz.api.link(pres, 'feedback') %>"
-                class="session session-<%= i %>
-                    <%= pres.slugs.join(' ') %>
-                    <%= jz.utils.slug(pres.language) %>
-                    <%= jz.utils.slug(pres.level) %>
-                    <%= jz.utils.slug(pres.format) %>
-                    <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
-                    <% if (pres.format === 'presentation') { %>session-presentation<% } %>
-                    <% if (pres.format === 'lightning-talk') { %>session-lightning<% } %>
-                    <% if (pres.format === 'workshop') { %>session-workshop<% } %>
-                    ">
+            <div class="slot">
+                <% _.each(workshops, function(pres, i) { %>
+                    
+                    <a href="/presentation.html?id=<%= pres.id %>"
+                        data-id="<%= pres.id %>"
+                        data-feedback="<%= jz.api.link(pres, 'feedback') %>"
+                        class="session session-<%= i %>
+                            <%= pres.slugs.join(' ') %>
+                            <%= jz.utils.slug(pres.language) %>
+                            <%= jz.utils.slug(pres.level) %>
+                            <%= jz.utils.slug(pres.format) %>
+                            <% if (jz.api.link(pres, 'feedback')) { %>session-rateable<% } %>
+                            <% if (pres.format === 'presentation') { %>session-presentation<% } %>
+                            <% if (pres.format === 'lightning-talk') { %>session-lightning<% } %>
+                            <% if (pres.format === 'workshop') { %>session-workshop<% } %>
+                            ">
 
-                <% if(pres.start) { %>
-                    <div class="time time-show time-small"><%= jz.date.weekday(pres.start) %></div>
-                <% } %>
+                        <% if(pres.start) { %>
+                            <div class="time time-show time-small"><%= jz.date.weekdayhour(pres.start) %></div>
+                        <% } %>
 
-                <span class="title">
-                    <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
-                    <%= _.str.truncate(pres.title, 55) %>
-                </span>
+                        <span class="title">
+                            <span class="level level-<%= pres.level %>" title="<%= _.str.capitalize(pres.level) %>"></span>
+                            <%= _.str.truncate(pres.title, 55) %>
+                        </span>
 
-                <span class="person">
-                    <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
-                    <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
-                </span>
+                        <span class="person">
+                            <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
+                            <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                        </span>
 
-                 <span class="room"><%= pres.room %></span>
-            </a>
+                         <span class="room"><%= pres.room %></span>
+                    </a>
 
-        <% }) %>
+                <% }) %>
 
+            </div>
+        </div>
     </div>
 <% } %>
 
@@ -144,6 +147,7 @@
     <div class="day">
 
         <h2 class="program-header">
+            Sessions for 
             <%= jz.date.weekday(day[0][0].start) %>,<br>
             <%= jz.date.day(day[0][0].start) %>
         </h2>

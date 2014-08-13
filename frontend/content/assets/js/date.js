@@ -23,11 +23,19 @@ jz.date.weekday = function(date) {
     return ds[d.getDay()];
 };
 
+jz.date.weekdayhour = function(date) {
+    var d  = (new Date(date));
+    var m = jz.date.parse(date);
+    var ds = ['Sun.','Mon.','Tues.','Wed.','Thurs.','Fri.','Satur.'];
+    var hour = m.hour.length === 1 ? '0' + m.hour : m.hour;
+    return ds[d.getDay()] + ' ' + hour + '.' + m.min;
+};
+
 jz.date.day = function(date) {
     var d  = (new Date(date));
     var ms = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     var month = ms[d.getMonth()];
-    return d.getDate() + ' ' + month + ' ' + d.getFullYear();
+    return month + ' ' + d.getDate() + 'th ' + d.getFullYear();
 };
 
 jz.date.duration = function(start, stop) {
@@ -38,6 +46,6 @@ jz.date.duration = function(start, stop) {
 
 jz.date.sortable = function(date) {
     var m = jz.date.parse(date);
-    var sep = '.';
-    return !m ? '' : m.year + '-' + m.month + '-' + m.day + ', kl.' + m.hour + sep + m.min;
+    var hour = m.hour.length === 1 ? '0' + m.hour : m.hour;
+    return !m ? '' : m.year + '-' + m.month + '-' + m.day + ', kl.' + hour + '.' + m.min;
 };

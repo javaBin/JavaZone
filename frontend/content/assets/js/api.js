@@ -123,6 +123,7 @@ jz.api.sessionsByUrl = function(url) {
         //var notScheduledWorkshops = _.filter(notScheduledSessions, function(d) { return d.format === 'workshop'; });
 
         var workshops = _.filter(data, function(d) { return d.format === 'workshop'; });
+        workshops = _.sortBy(workshops, function(d) { return d.room; });
         workshops = _.sortBy(workshops, function(d) { return jz.date.sortable(d.start); });
 
         // Only keep sessions with room or timeslot
