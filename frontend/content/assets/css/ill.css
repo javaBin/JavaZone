@@ -631,6 +631,10 @@ only screen and (                min-resolution: 2dppx) {
 	height: 25em;
 }
 
+.extrainfo a {
+	color: inherit;
+	border-bottom: 1px solid #444;
+}
 
 
 
