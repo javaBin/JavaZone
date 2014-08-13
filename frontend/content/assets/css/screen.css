@@ -245,7 +245,7 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .tile-talk span { color:#FCAF2A; }
 .tile-talk h4 { text-transform: none; color:#fff; padding:.5em 5em .5em 1em; margin: 0;
     text-transform: none; font-size:1.2em; line-height: 1.4; font-weight: inherit; }
-.tile-talk-more { text-align: center; }
+.tile-talk-more { width: 100%; text-align: center; }
 .tile-talk-more i { color:#fff; font-size:10em; padding:.6em 0 .1em 0; display: inline-block; }
 .tile-talk-more span { display: block; font-size:1.2em; color:#fff; }
 .tile-talk-more a:hover i, .tile-talk-more a:hover span { color:#fcaf2a; }
