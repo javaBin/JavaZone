@@ -626,7 +626,7 @@ only screen and (                min-resolution: 2dppx) {
 
 
 .filmlaunch .video-big {
-	width: 60em;
+	width: 44.444em;
 	margin: 2em auto;
 	height: 25em;
 }
