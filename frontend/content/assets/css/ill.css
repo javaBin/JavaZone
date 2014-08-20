@@ -10,6 +10,13 @@
 .ill-infostand { background-image:url("/assets/img/ill/infostand.png"); width: 28.00000em; height: 34.0555em; background-size: 28.00000em 34.0555em; }
 .ill-academy { background-image:url("/assets/img/ill/academy.png"); width: 16.00000em; height: 19.68888em; background-size: 16.00000em 19.68888em; }
 
+.ill-filmpil { background-image:url("/assets/img/filmpil.png"); width: 12.72222em; height: 6.11111em; background-size: 12.72222em 6.11111em; }
+.filmpil {
+	position: absolute;
+	top: -2em;
+	right: 14.5em;
+	border: none !important;
+}
 
 .page-invert .tile-ill.tile-color0 .tile-inner a {
 	color: #fff;
@@ -379,6 +386,7 @@ only screen and (                min-resolution: 2dppx) {
 	.ill-8 { width: 26.14285em; height: 8.54707em; background-size: 26.14285em 8.54707em; }
 
 
+	.filmpil { display: none; }
 
 
 	.tile-ill-right .illustration { float: none; }
