@@ -2,12 +2,12 @@
 
 <% if(status == 'FULL') { %>
 	<p class="status">The workshops are included in the regular JavaZone ticket, but registration is on a first-come first-served basis, as the seating is limited.</p>
-	<p class="status">This workshop is fully booked. You can sign up for the waiting list, meaning you will get a spot if someone else unregisters.</p>
-	<a href="/moosehead/#/register/<%= id %>" class="sharer"><i class="fa fa-pencil"></i> <span>Sign up for waiting list</span></a>
+	<p class="status">This workshop is fully booked. You can sign up for the waiting list, list, which means that you will get a spot if a space becomes available.</p>
+	<a href="/moosehead/#/register/<%= id %>" class="sharer"><i class="fa fa-pencil"></i> <span>Sign up for the waiting list</span></a>
 <% } else if(status == 'VERY_FULL') { %>
 	<p class="status">The workshops are included in the regular JavaZone ticket, but registration is on a first-come first-served basis, as the seating is limited.</p>
-	<p class="status">This workshop is unfortunately fully booked and have a long waiting list. This means registration for this workshop is now closed.</p>
-	<p class="status">We have noted the interest, and will try to get our speakers to provide more workshops like this next year.</p>
+	<p class="status">This workshop is unfortunately fully booked and has a long waiting list. This means registration for this workshop is now closed.</p>
+	<p class="status">We have noted the interest, and will try to have more workshops like this next year.</p>
 <% } else if(status == 'FREE_SPOTS' || status == 'FEW_SPOTS') { %>
 	<p class="status">The workshops are included in the regular JavaZone ticket, but registration is on a first-come first-served basis, as the seating is limited.</p>
 	<a href="/moosehead/#/register/<%= id %>" class="sharer"><i class="fa fa-pencil"></i> <span>Sign up for the workshop</span></a>
