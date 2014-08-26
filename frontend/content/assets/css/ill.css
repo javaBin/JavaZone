@@ -18,6 +18,9 @@
 	border: none !important;
 }
 
+.ill-awezone { background-image:url("/assets/img/awezone/awezone.jpg"); width: 58.97222em; height: 14.44444em; background-size: 58.97222em 14.44444em; margin: 0 auto; }
+
+
 .page-invert .tile-ill.tile-color0 .tile-inner a {
 	color: #fff;
 }
