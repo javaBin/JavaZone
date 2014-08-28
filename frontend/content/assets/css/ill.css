@@ -912,7 +912,7 @@ only screen and (                min-resolution: 2dppx) {
 	background: #fff;
 	padding: 2em;
 	color: #000;
-	min-height: 20em;
+	min-height: 25em;
 }
 .academy-boxes .academy-box h3 {
 	text-align: center;
@@ -944,7 +944,7 @@ only screen and (                min-resolution: 2dppx) {
     	font-size: .8em;
     }
     .academy-boxes .academy-box .academy-box-inner {
-    	min-height: 13em;
+    	min-height: 16em;
     }
 }
 
