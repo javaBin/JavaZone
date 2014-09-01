@@ -745,7 +745,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     .form { background:none; padding:0; }
     .form-inner { padding:2em 4em; max-width: none; }
 
-    .slide { width: 100%; margin: .5em 0; }
+    .slide { width: 100%; height: auto; margin: .5em 0; }
 
     div.space-elegant { margin: 4em 0; }
 
