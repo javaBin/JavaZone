@@ -135,6 +135,7 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-programheader .tile-inner .daylinks h4 { margin: 0 0 2em 0; }
 .tile-programheader .tile-inner .daylinks p { margin: 2.5em 0 2em 0; }
 .tile-programheader .tile-inner .daylinks p a { color: #000; border: 1px solid #222; border-radius: .5em; padding: .7em 1.5em; margin: 0 .2em; font-weight: bold; text-transform: uppercase; }
+.tile-programheader .tile-inner .daylinks p a:hover { color: #a10035; border-color: #a10035; }
 
 .tile .extra { display: block; position: absolute; bottom:30px; left:0; padding:1em 2em 1em 1em;
     font-size:1.2em; background:#fff; line-height: 1.5; }

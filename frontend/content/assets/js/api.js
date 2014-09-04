@@ -55,10 +55,10 @@ jz.api.parseSession = function(d) {
     d.language = d.lang === "no" ? "Norwegian" : "English";
     d.level = d.level === 'hardcore' ? 'advanced' : d.level;
     d.rating = parseInt(jz.api.rating(d.id), 10);
-    d.room = d.room.replace("Workshop Room 1", "Room A")
-                   .replace("Workshop Room 2", "Room B")
-                   .replace("Workshop Room 3", "Room C")
-                   .replace("Workshop Room 4", "Room D");
+    d.room = d.room.replace("Workshop Room 1", "Area 1")
+                   .replace("Workshop Room 2", "Area 2")
+                   .replace("Workshop Room 3", "Area 3")
+                   .replace("Workshop Room 4", "Area 4");
     d.topics = _.intersection(d.keywords, ['Security', 'Core', 'Backend', 'Frontend', 'Concepts', 'Craftmanship', 'Architecture', 'Teamwork']);
     d.types = _.intersection(d.keywords, ['Experience reports', 'Research Innovation', 'Knowledge Practice', 'Wisdom']);
     return d;
