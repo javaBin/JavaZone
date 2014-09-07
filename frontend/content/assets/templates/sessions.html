@@ -19,17 +19,13 @@
         <% _.each(day, function(slot) { %>
             <div class="slot">
 
-                <strong><%= jz.date.time(slot[0].start) %></strong>
+                <div class="slot-time">
+                    <%= jz.date.time(slot[0].start) %>
+                </div>
 
-                <table>
                 <% _.each(slot, function(pres, i) { %>
-                    <tr>
-                        <td><%= pres.room %></td>
-                        <td><%= jz.date.time(pres.start) %></td>
-                        <td> <%= pres.names %>: <%= pres.title %></td>
-                    </tr>
                     
-                   <!--  <a href="/presentation.html?id=<%= pres.id %>"
+                    <a href="/presentation.html?id=<%= pres.id %>"
                         data-id="<%= pres.id %>"
                         data-feedback="<%= jz.api.link(pres, 'feedback') %>"
                         class="session session-<%= i %>
@@ -59,10 +55,9 @@
                         </span>
 
                         <span class="room"><%= pres.room %></span>
-                    </a> -->
+                    </a>
 
                 <% }) %>
-                </table>
 
 
             </div>
