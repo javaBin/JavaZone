@@ -2,11 +2,40 @@
 <%= partial("_partials/menu.html") %>
 
 
+
+
+
+
+
 <a href="https://docs.google.com/forms/d/1929DeUeY8ZNHdvslbzXLBhXhgq6v9T08zx2dmB6zMc8/viewform?usp=send_form" class="tile tile-big tile-tall animated fadeInDown"><div class="tile-inner img-journeyzonebaat1">
     <span class="extra">
-	<strong>JourneyZone 2014: Join us for an adventure at sea!</strong> <br> We'll go on a 3 day sailing trip the weekend after JavaZone.
+	<strong>JourneyZone 2014: Join us for an adventure at sea!</strong> <br> We'll go on a 3 day sailing trip the weekend after JavaZone. <br>Follow the trip live at the map below! :)
     </span>
 </div></a>
+
+
+<script type="text/javascript">
+// Map Size
+var width='1233';  // width of the embedded map in pixels (min. 600 px) or percentage (default=600px)
+var height='600'; // height of the embedded map in pixels (min. 400 px) (default=400px)
+
+var zoom='2';        // map zoom level (between 2 and 17)
+// Ship selection
+// IMPORTANT: USE ONLY ONE OF THE FOLLOWING OPTIONS
+// Option 1 – by MMSI
+var mmsi='257165000';      // center map over selected vessel specified by MMSI
+var show_track=true;       // show track of the selected ship
+// Auxiliary parameters
+var names=true; // always display ship names (default is false)
+var click_to_activate=true; // user has to click on the map before zooming with mouse wheel
+var store_position=false; // store the last position of the map (default is false, does not work when ship selection is used
+var map_style=[ // use this tool for custom map styling 
+{"featureType": "landscape.natural.landcover", "stylers": [{ "hue": "#ffaa00" }]},
+{"featureType": "water", "stylers": [{ "hue": "#00a1ff" },{ "saturation": 91 },{ "lightness": -18 }]}];
+</script>
+<script type="text/javascript" src="http://www.vesselfinder.com/aismap.js"></script>
+
+<div class="spacex"></div>
 
 <div class="tile tile-txt tile-med animated fadeInUp"><div class="tile-inner">
 
