@@ -18,6 +18,11 @@
 	border: none !important;
 }
 
+.ill-javacode { background-image:url("/assets/img/javacode.png"); width: 25.01587em; height: 14.47619em; background-size: 25.01587em 14.47619em; border: 3px solid #555; border-radius: 1em; margin: 1em auto; }
+.ill-standkonkurranse { background-image:url("/assets/img/standkonkurranse.jpg"); width: 34.40860em; height: 19.35483em; background-size: 34.40860em 19.35483em; border: 3px solid #555; border-radius: 1em; margin: 1em auto; }
+
+
+
 .ill-awezone { background-image:url("/assets/img/awezone/awezone.jpg"); width: 58.97222em; height: 14.44444em; background-size: 58.97222em 14.44444em; margin: 0 auto; }
 
 
