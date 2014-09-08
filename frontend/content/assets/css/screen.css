@@ -655,6 +655,48 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     left: .42em;
 }
 
+.competitionprices {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    background: #fff;
+    color: #333;
+}
+
+.competitionprices table {
+    width: 100%;
+}
+.competitionprices table tr {
+    border-bottom: 1px solid #eee;
+}
+.competitionprices table tr.last {
+    border-bottom: none;
+}
+.competitionprices table tr.last td {
+    text-align: center;
+    font-size: .8em;
+    color: #999;
+    padding-top: 2em;
+}
+
+.competitionprices table thead tr {
+    border-bottom: 1px solid #286a65;
+}
+.competitionprices table thead td  {
+    color: #286a65;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .9em;
+}
+.competitionprices table td {
+    padding: .5em;
+}
+
+
+
+
+
+
 
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
