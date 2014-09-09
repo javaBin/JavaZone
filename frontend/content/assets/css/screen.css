@@ -836,4 +836,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     .pullupx { margin-top: 0; }
     .pullupxx { margin-top: 0; }
     .pullupxxx { margin-top: 0; }
+
+
+    .tile-programheader .tile-inner .daylinks p a { font-size: .8em; }
 }
