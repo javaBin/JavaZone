@@ -54,7 +54,13 @@
                             <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
                         </span>
 
-                        <span class="room"><%= pres.room %></span>
+                        <span class="room">
+                            <% if (jz.api.link({ links: pres.links }, 'video')) { %>
+                                <span class="videolink"><i class="fa fa-play"></i> Watch</span>
+                            <% } else { %>
+                                <%= pres.room %>
+                            <% } %>
+                        </span>
                     </a>
 
                 <% }) %>
@@ -109,7 +115,13 @@
                             <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
                         </span>
 
-                         <span class="room"><%= pres.room %></span>
+                         <span class="room">
+                            <% if (jz.api.link({ links: pres.links }, 'video')) { %>
+                                <span class="videolink"><i class="fa fa-play"></i> Watch</span>
+                            <% } else { %>
+                                <%= pres.room %>
+                            <% } %>
+                        </span>
                     </a>
 
                 <% }) %>
@@ -153,7 +165,13 @@
 
                 <span class="person">
                     <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
-                    <%= _.str.truncate(pres.names, 30).replace(/[ ]+/g, "&nbsp;") %>
+                    <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                </span>
+
+                <span class="room">
+                    <% if (jz.api.link({ links: pres.links }, 'video')) { %>
+                        <span class="videolink"><i class="fa fa-play"></i> Watch</span>
+                    <% } %>
                 </span>
             </a>
 
@@ -196,7 +214,13 @@
 
                 <span class="person">
                     <img src="<%= pres.imgs[0] %>?s=36&amp;d=identicon"> 
-                    <%= _.str.truncate(pres.names, 30).replace(/[ ]+/g, "&nbsp;") %>
+                    <%= _.str.truncate(pres.names, 20).replace(/[ ]+/g, "&nbsp;") %>
+                </span>
+
+                <span class="room">
+                    <% if (jz.api.link({ links: pres.links }, 'video')) { %>
+                        <span class="videolink"><i class="fa fa-play"></i> Watch</span>
+                    <% } %>
                 </span>
             </a>
 
