@@ -29,25 +29,4 @@ public class NewFeedback {
 		return true;
 	}
 
-//	public boolean validate() {
-//		for (Entry<String, String> entry : feedback.entrySet()) {
-//			if (entry.getKey().length() > 1000 || entry.getValue().length() > 10000 || entry.getKey().contains(".")) {
-//				return false;
-//			}
-//		}
-//		return true;
-//	}
-//
-//	public static DBObject toMongoObject(final NewFeedback feedback, final String ip, final String userAgent) {
-//		BasicDBObject feedbackObject = new BasicDBObject();
-//		for (Entry<String, String> entry : feedback.feedback.entrySet()) {
-//			feedbackObject.append(entry.getKey(), entry.getValue());
-//		}
-//		return new BasicDBObject()
-//				.append("feedback", feedbackObject)
-//				.append("time", DateTime.now().toString())
-//				.append("ip", ip)
-//				.append("userAgent", userAgent);
-//	}
-
 }

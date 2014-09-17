@@ -1,6 +1,9 @@
 package no.javazone.activities.feedback;
 
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+
+import no.javazone.representations.feedback.NewFeedbackOut;
+
 import no.javazone.representations.feedback.NewFeedbackObject;
 import no.javazone.representations.feedback.NewFeedback;
 
@@ -69,7 +72,7 @@ public class NewFeedbackService {
 		}
 	}
 
-	public List<AdminGeneralFeedback> getAllFeedbacks() {
-		return AdminGeneralFeedback.convertFromMongo(feedbackMongoCollection.find().toArray());
+	public NewFeedbackOut getAllFeedbacks() {
+		return NewFeedbackOut.convertFromMongo(feedbackMongoCollection.find().toArray());
 	}
 }
