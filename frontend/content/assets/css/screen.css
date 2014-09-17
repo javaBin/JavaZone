@@ -500,18 +500,18 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; co
     background: #a10735;
 }
 
-.form { padding:4em 0; background-size: cover; background-attachment: fixed; }
-.form-inner { margin: 0 auto; max-width: 40em; padding: 3em 5em 2em 5em; background: #fff; }
+.form-inner { margin: 0 auto; max-width: 40em; padding: 1em 3em; background: #fff; }
 
-.form h2 { color: #148f87;}
+.form h2 { color: #148f87; font-size: 2em; margin: .5em 0 0 0;}
 .form h3 { font-size: 1em; color: #000; }
 .form label { display: block; margin: 0 0 .2em 0; font-weight: normal; font-weight: inherit; }
 .form label:hover { cursor: pointer; }
 .form p { margin: 0 0 2em 0; }
 .form em { display: none; }
-.form textarea { width: 40em; height: 14em; font-size: .8em; padding:1em; border:1px solid #ccc; margin: 0 0 1em 0; }
-.form textarea { line-height: 1.4em; border-radius: .2em; }
+.form textarea { width: 40em; height: 14em; font-size: .8em; padding:1em; border:1px solid #ccc; margin: 0 0 1em 0; line-height: 1.4em; border-radius: .2em; }
 .form textarea:focus { outline: none; border-color:#999; }
+.form input { width: 40em; font-size: .8em; padding:1em; border:1px solid #ccc; margin: 0 0 1em 0; line-height: 1.4em; border-radius: .2em; }
+.form input:focus { outline: none; border-color:#999; }
 .form .small { font-size: 0.8em; margin: -1em 2em 1em 0; color: #666;}
 .form .talkcomments { list-style: circle; margin-left: 1em;}
 .form .talkcomments li { margin: .5em 0; font-size: .8em; line-height: 1.3em; }
@@ -701,6 +701,71 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 
 
 
+
+
+.talkfeedback-sessions h3 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #148f87;
+}
+.talkfeedback-sessions h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: center;
+    margin: 2em 0 0 0;
+    padding: 0 0 .5em 0;
+    border-bottom: 1px solid #efefef;
+    color: #148f87;
+}
+.talkfeedback-sessions .talkfeedback-session {
+    padding: .5em 0;
+    border-bottom: 1px solid #efefef;
+}
+.talkfeedback-sessions .talkfeedback-session label {
+    float: left;
+    width: 45%;
+    font-size: .8em;
+}
+.talkfeedback-sessions .talkfeedback-session label .title {
+    display: block;
+}
+.talkfeedback-sessions .talkfeedback-session label .title i {
+    margin-right: .2em;
+}
+.talkfeedback-sessions .talkfeedback-session label .speaker {
+    display: block;
+    color: #999;
+    font-size: .8em;
+    margin: .5em 0 0 0;
+    padding-left: 1.7em;
+}
+.talkfeedback-sessions .talkfeedback-session textarea {
+    float: right;
+    width: 50%;
+    font-size: .6em;
+    height: 1.3em;
+    padding: .7em;
+    margin: 0;
+    border: 1px solid #ddd;
+    display: block;
+    resize: none;
+}
+.field-submit {
+    margin-top: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1350px) {
     body { font-size:16px; }
 }
@@ -845,3 +910,27 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 
     .talkvideo { height: 10em;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

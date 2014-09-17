@@ -1,0 +1,37 @@
+<!-- GROUPED SESSIONS -->
+<% if(sessions.length > 0) { %>
+    <div class="talkfeedback-sessions">
+        <% _.each(sessions, function(day) { %>
+            <div class="talkfeedback-sessions-day">
+                <h3>
+                    <%= jz.date.weekday(day[0][0].start) %>, 
+                    <%= jz.date.day(day[0][0].start) %>
+                </h3>
+                <% _.each(day, function(slot) { %>
+                    <h4>
+                        <%= jz.date.time(slot[0].start) %> – <%= jz.date.time(slot[0].stop) %>
+                    </h4>
+
+                    <% _.each(slot, function(pres, i) { %>
+                        <div class="talkfeedback-session">
+                            <label for="<%= pres.id %>">
+                                <span class="title">
+                                    <% if (pres.format === 'lightning-talk') { %>
+                                        <i class="fa fa-bolt" title="Lightning talk"></i>
+                                    <% } else { %>
+                                        <i class="fa fa-clock-o" title="Lightning talk"></i>
+                                    <% } %>
+                                    <%= _.str.truncate(pres.title, 45) %>
+                                </span>
+                                <span class="speaker"><%= _.str.truncate(pres.names, 60).replace(/[ ]+/g, "&nbsp;") %></span>
+                            </label>
+                            <textarea name="<%= pres.id %>" id="<%= pres.id %>" placeholder="Feedback..."></textarea>
+                            <div class="clear"></div>
+                        </div>
+                    <% }) %>
+                <% }) %>
+            </div>
+
+        <% }) %>
+    </div>
+<% } %>

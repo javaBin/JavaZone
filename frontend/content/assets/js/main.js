@@ -145,6 +145,45 @@ jz.routes.program = function() {
     });
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+jz.routes.survey = function() {
+    jz.api.sessions().then(function(data) {
+        jz.api.template("sessionsurvey", { 
+            sessions: data.sessions,
+            workshops: data.workshops
+        }).then(function(html) {
+            $(".talkfeedback").html(html);
+        });
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 jz.routes.presentation = function() {
     jz.api.session(jz.utils.param("id")).then(function(data) {
 
