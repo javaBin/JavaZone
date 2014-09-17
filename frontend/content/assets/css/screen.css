@@ -718,6 +718,9 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     border-bottom: 1px solid #efefef;
     color: #148f87;
 }
+.talkfeedback {
+    min-height: 30em;
+}
 .talkfeedback-sessions .talkfeedback-session-wrapper {
     padding: .5em 0;
     border-bottom: 1px solid #efefef;

@@ -179,8 +179,8 @@ jz.routes.survey = function() {
                         actualfeedback.push({id: id, value: value});
                     }
                 });
-                jz.api.submitfeedback({feedback: actualfeedback}).then(function() {
-                    debugger;
+                jz.api.submitfeedback({feedback: actualfeedback}).always(function() {
+                    window.location = "/surveythanks.html";
                 });
                 return false;
             });
