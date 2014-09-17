@@ -19,7 +19,7 @@
 		<tbody>
 			<% _.each(feedbackgroup, function(f) { %>
 				<tr>
-					<td><%= f.value %></td>
+					<td><%= jz.utils.paragraphs(f.value) %></td>
 					<td><%= jz.date.date(f.time) %></td>
 					<td><%= f.ip %></td>
 					<td><%= f.userAgent %></td>
