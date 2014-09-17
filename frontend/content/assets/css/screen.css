@@ -718,7 +718,7 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     border-bottom: 1px solid #efefef;
     color: #148f87;
 }
-.talkfeedback-sessions .talkfeedback-session {
+.talkfeedback-sessions .talkfeedback-session-wrapper {
     padding: .5em 0;
     border-bottom: 1px solid #efefef;
 }
@@ -732,6 +732,12 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 }
 .talkfeedback-sessions .talkfeedback-session label .title i {
     margin-right: .2em;
+}
+.talkfeedback-sessions .talkfeedback-session label .title i.short {
+    color: #fcaf17;
+}
+.talkfeedback-sessions .talkfeedback-session label .title i.long {
+    color: #a10035;
 }
 .talkfeedback-sessions .talkfeedback-session label .speaker {
     display: block;
@@ -750,13 +756,27 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     border: 1px solid #ddd;
     display: block;
     resize: none;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s; 
+    -moz-transition: height 0.5s; 
 }
 .field-submit {
     margin-top: 3em;
 }
 
 
+/*
+    Main Text #394549
+    Light Text #ccc
 
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;
+*/
 
 
 

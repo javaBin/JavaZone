@@ -165,6 +165,9 @@ jz.routes.survey = function() {
             workshops: data.workshops
         }).then(function(html) {
             $(".talkfeedback").html(html);
+            $('textarea').on('focus', function(){
+                $(this).autosize();
+            });
         });
     });
 };

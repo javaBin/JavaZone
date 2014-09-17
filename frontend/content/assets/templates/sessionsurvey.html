@@ -1,4 +1,3 @@
-<!-- GROUPED SESSIONS -->
 <% if(sessions.length > 0) { %>
     <div class="talkfeedback-sessions">
         <% _.each(sessions, function(day) { %>
@@ -13,20 +12,22 @@
                     </h4>
 
                     <% _.each(slot, function(pres, i) { %>
-                        <div class="talkfeedback-session">
-                            <label for="<%= pres.id %>">
-                                <span class="title">
-                                    <% if (pres.format === 'lightning-talk') { %>
-                                        <i class="fa fa-bolt" title="Lightning talk"></i>
-                                    <% } else { %>
-                                        <i class="fa fa-clock-o" title="Lightning talk"></i>
-                                    <% } %>
-                                    <%= _.str.truncate(pres.title, 45) %>
-                                </span>
-                                <span class="speaker"><%= _.str.truncate(pres.names, 60).replace(/[ ]+/g, "&nbsp;") %></span>
-                            </label>
-                            <textarea name="<%= pres.id %>" id="<%= pres.id %>" placeholder="Feedback..."></textarea>
-                            <div class="clear"></div>
+                        <div class="talkfeedback-session-wrapper">
+                            <div class="talkfeedback-session">
+                                <label for="<%= pres.id %>">
+                                    <span class="title">
+                                        <% if (pres.format === 'lightning-talk') { %>
+                                            <i class="fa fa-bolt short" title="Lightning talk"></i>
+                                        <% } else { %>
+                                            <i class="fa fa-clock-o long" title="Full session"></i>
+                                        <% } %>
+                                        <%= _.str.truncate(pres.title, 45) %>
+                                    </span>
+                                    <span class="speaker"><%= _.str.truncate(pres.names, 60).replace(/[ ]+/g, "&nbsp;") %></span>
+                                </label>
+                                <textarea name="<%= pres.id %>" id="<%= pres.id %>" placeholder="Fill in if you attended..."></textarea>
+                                <div class="clear"></div>
+                            </div>
                         </div>
                     <% }) %>
                 <% }) %>
