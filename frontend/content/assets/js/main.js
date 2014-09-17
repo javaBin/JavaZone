@@ -168,6 +168,22 @@ jz.routes.survey = function() {
             $('textarea').on('focus', function(){
                 $(this).autosize();
             });
+            $('.submitform').click(function(event) {
+                event.preventDefault();
+                var tosubmit = $(".tosubmit");
+                var actualfeedback = [];
+                tosubmit.each(function(i, obj) {
+                    var id = obj.id;
+                    var value = obj.value;
+                    if(value) {
+                        actualfeedback.push({id: id, value: value});
+                    }
+                });
+                jz.api.submitfeedback({feedback: actualfeedback}).then(function() {
+                    debugger;
+                });
+                return false;
+            });
         });
     });
 };

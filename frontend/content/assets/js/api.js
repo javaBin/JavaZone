@@ -249,3 +249,8 @@ jz.api.gauge = function(id, value) {
     gauge.maxValue = 2;
     gauge.set(value);
 };
+
+
+jz.api.submitfeedback = function(feedback) {
+    return jz.api.post("/api/newfeedback", feedback);
+};
