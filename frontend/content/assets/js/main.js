@@ -356,3 +356,12 @@ jz.routes.talkfeedback = function() {
         });
     });
 };
+
+jz.routes.surveyresults = function() {
+    jz.api.adminsurveyresults().then(function(data) {
+        var grouped = _.groupBy(data.feedback, 'id');
+        jz.api.template("adminsurveyresults", { feedback: grouped }).then(function(html) {
+            $(".results").html(html);
+        });
+    });
+};

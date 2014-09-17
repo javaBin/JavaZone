@@ -783,8 +783,16 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 
 
 
-
-
+.summarytable thead td {
+    font-weight: bold;
+    color: #286a65;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+.summarytable td {
+    border: 1px solid #eee;
+    padding: .5em;
+}
 
 
 

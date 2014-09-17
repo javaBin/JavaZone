@@ -254,3 +254,11 @@ jz.api.gauge = function(id, value) {
 jz.api.submitfeedback = function(feedback) {
     return jz.api.post("/api/newfeedback", feedback);
 };
+
+jz.api.adminsurveyresults = function() {
+    if(!$.cookie("jz.secret")) {
+        var secret = prompt('Passord:');
+        $.cookie("jz.secret", secret, { path: '/', expires: 1 });
+    }
+    return jz.api.get("/api/admin/newfeedback");
+};

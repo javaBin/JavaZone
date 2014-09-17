@@ -1,0 +1,30 @@
+<h2>Resultater fra survey</h2>
+<% _.each(feedback, function(feedbackgroup) { %>
+	<h4><%= feedbackgroup[0].id %> - <%= feedbackgroup[0].title %> -
+		<% if(_.isArray(feedbackgroup[0].speakers)) { %>
+			<% _.each(feedbackgroup[0].speakers, function(s) { %>
+				<%= s %>
+			<% }) %>
+		<% } %>
+		</h4>
+	<table class="summarytable">
+		<thead>
+			<tr>
+				<td width="50%">Value</td>
+				<td width="15%">Time</td>
+				<td width="15%">IP</td>
+				<td width="20%">User Agent</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(feedbackgroup, function(f) { %>
+				<tr>
+					<td><%= f.value %></td>
+					<td><%= jz.date.date(f.time) %></td>
+					<td><%= f.ip %></td>
+					<td><%= f.userAgent %></td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+<% }) %>
