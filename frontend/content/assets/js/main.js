@@ -159,22 +159,64 @@ jz.routes.program = function() {
 
 
 jz.routes.survey = function() {
+
+    var stop = function() {
+        return false;
+    };
+    var rateIn = function() {
+        $(this).parent().find('.fa').addClass("fa-star-o").removeClass("fa-star yellow");
+        $(this).addClass("fa-star yellow").removeClass("fa-star-o");
+        $(this).prevAll().addClass("fa-star yellow").removeClass("fa-star-o");
+    };
+    var rateOut = function() {
+        $(this).addClass("fa-star-o").removeClass("fa-star yellow");
+        $(this).prevAll().addClass("fa-star-o").removeClass("fa-star yellow");
+        var rating = $(this).parent().data('rating');
+        var stars = $(this).parent().find('.fa');
+        if(rating > 0) {
+            $(stars[0]).addClass("fa-star yellow").removeClass("fa-star-o");
+        }
+        if(rating > 1) {
+            $(stars[1]).addClass("fa-star yellow").removeClass("fa-star-o");
+        }
+        if(rating > 2) {
+            $(stars[2]).addClass("fa-star yellow").removeClass("fa-star-o");
+        }
+    };
+    var rateClick = function() {
+        $(this).parent().data('rating', $(this).data('value'));
+        console.log('rate');
+        return false;
+    };
+
+
     jz.api.sessions().then(function(data) {
         jz.api.template("sessionsurvey", { 
-            sessions: data.sessions,
-            workshops: data.workshops
+            sessions: data.sessions
         }).then(function(html) {
             $(".talkfeedback").html(html);
+
             $('textarea').on('focus', function(){
                 $(this).autosize();
             });
+
+
+            $(".rate-icon").hover(rateIn, rateOut).on("click", rateClick);
+
+
             $('.submitform').click(function(event) {
                 event.preventDefault();
-                var tosubmit = $(".tosubmit");
                 var actualfeedback = [];
-                tosubmit.each(function(i, obj) {
+                $(".tosubmit").each(function(i, obj) {
                     var id = obj.id;
                     var value = obj.value;
+                    if(value) {
+                        actualfeedback.push({id: id, value: value});
+                    }
+                });
+                $(".ratestars").each(function(i, obj) {
+                    var id = obj.id;
+                    var value = $(obj).data('rating');
                     if(value) {
                         actualfeedback.push({id: id, value: value});
                     }

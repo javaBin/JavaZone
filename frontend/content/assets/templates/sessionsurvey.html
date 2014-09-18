@@ -25,7 +25,14 @@
                                     </span>
                                     <span class="speaker"><%= _.str.truncate(pres.names, 60).replace(/[ ]+/g, "&nbsp;") %></span>
                                 </label>
-                                <textarea class="tosubmit" name="<%= pres.id %>" id="<%= pres.id %>" placeholder="Your feedback if you attended..."></textarea>
+                                <div class="rateright">
+                                    <div class="ratestars" id="<%= pres.id %>-rating">
+                                        <i class="rate-icon fa fa-star-o" data-value="1"></i>
+                                        <i class="rate-icon fa fa-star-o" data-value="2"></i>
+                                        <i class="rate-icon fa fa-star-o" data-value="3"></i>
+                                    </div>
+                                    <textarea class="tosubmit" name="<%= pres.id %>" id="<%= pres.id %>" placeholder="Your feedback if you attended..."></textarea>
+                                </div>
                                 <div class="clear"></div>
                             </div>
                         </div>
