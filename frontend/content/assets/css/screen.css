@@ -867,6 +867,23 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 }
 
 @media only screen and (max-width: 500px) {
+
+    .feedback-instructions {
+        width: 100%;
+    }
+    .feedback-instructions .feedback-instruction {
+        width: 100%;
+        float: none;
+    }
+    .feedback-instructions .feedback-instruction .instruction p {
+        width: 100%;
+    }
+    .talkfeedback-sessions .talkfeedback-session .rateright .ratestars {
+        display: none;
+    }
+
+
+
     br { display: none; }
     #container { width:auto; padding:0; }
     .tiles-main { width:100%; float:none; }
