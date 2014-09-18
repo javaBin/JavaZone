@@ -190,6 +190,13 @@ jz.routes.survey = function() {
     };
 
 
+    $('.startfeedback').click(function(event) {
+        $('.feedback-instructions').addClass('hide');
+        $('.feedback-form').removeClass('hide');
+        $('html, body').animate({ scrollTop: $('.feedback-form').offset().top }, 1000, 'swing');
+        return false;
+    });
+
     jz.api.sessions().then(function(data) {
         jz.api.template("sessionsurvey", { 
             sessions: data.sessions

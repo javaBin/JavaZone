@@ -784,7 +784,51 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     margin-top: 3em;
 }
 
+.feedback-instructions {
+    width: 50em;
+    margin: 1em auto 0 auto;
+}
+.feedback-instructions .feedback-instruction {
+    margin: 1em 0 0 0;
+    width: 33%;
+    padding: 1em;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.feedback-instructions .feedback-instruction .number {
+    font-size: 2em;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #fcaf17;
+    color: #fcaf17;
+    border-radius: 100em;
+    text-align: center;
+    padding: .2em;
+    margin: 0 auto .3em auto;
+}
+.feedback-instructions .feedback-instruction .instruction {
+    text-align: center;
+}
+.feedback-instructions .feedback-instruction .instruction h4 {
+    color: #fcaf17;
+    font-size: 1.1em;
+    margin: .6em 0 0 0;
+}
+.feedback-instructions .feedback-instruction .instruction p {
+    color: #ccc !important;
+    font-size: .8em;
+    margin: 1em auto;
+    max-width: 100%;
+    width: 35em;
+}
 
+.feedback-instructions .field p {
+    margin: 2em;
+    text-align: center;
+    max-width: 100% !important;
+}
 /*
     Main Text #394549
     Light Text #ccc
