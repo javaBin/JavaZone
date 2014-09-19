@@ -15,15 +15,17 @@
                         <div class="talkfeedback-session-wrapper">
                             <div class="talkfeedback-session">
                                 <label for="<%= pres.id %>">
-                                    <span class="title">
-                                        <% if (pres.format === 'lightning-talk') { %>
-                                            <i class="fa fa-bolt short" title="Lightning talk"></i>
-                                        <% } else { %>
-                                            <i class="fa fa-clock-o long" title="Full session"></i>
-                                        <% } %>
-                                        <%= _.str.truncate(pres.title, 45) %>
-                                    </span>
-                                    <span class="speaker"><%= _.str.truncate(pres.names, 60).replace(/[ ]+/g, "&nbsp;") %></span>
+                                    <a href="/presentation.html?id=<%= pres.id %>" target="_blank">
+                                        <span class="title">
+                                            <% if (pres.format === 'lightning-talk') { %>
+                                                <i class="fa fa-bolt short" title="Lightning talk"></i>
+                                            <% } else { %>
+                                                <i class="fa fa-clock-o long" title="Full session"></i>
+                                            <% } %>
+                                            <%= _.str.truncate(pres.title, 45) %>
+                                        </span>
+                                        <span class="speaker"><%= _.str.truncate(pres.names, 60).replace(/[ ]+/g, "&nbsp;") %></span>
+                                    </a>
                                 </label>
                                 <div class="rateright">
                                     <div class="ratestars" id="<%= pres.id %>-rating">
