@@ -733,6 +733,9 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .talkfeedback-sessions .talkfeedback-session label .title {
     display: block;
 }
+.talkfeedback-sessions .talkfeedback-session label a {
+    color: #000;
+}
 .talkfeedback-sessions .talkfeedback-session label .title i {
     margin-right: .2em;
 }
