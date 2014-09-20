@@ -39,6 +39,16 @@ public class PaperFeedbackService {
 		}
 		return Optional.absent();
 	}
+	
+	public PaperFeedback getFeedbackAllTalks() {
+		PaperFeedback paperFeedback = new PaperFeedback(0, 0, 0);
+		for (JsonNode feedback : jsonNode) {
+			paperFeedback.red += feedback.findValue("red").asInt();
+			paperFeedback.yellow += feedback.findValue("yellow").asInt();
+			paperFeedback.green += feedback.findValue("green").asInt();
+		}
+		return paperFeedback;
+	}
 
 	public static void main(String[] args) {
 		EmsService emsService = EmsService.getInstance();

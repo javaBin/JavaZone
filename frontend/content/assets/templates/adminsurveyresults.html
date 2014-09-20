@@ -2,9 +2,22 @@
 
 <div class="feedbackwrapper">
 
-	<p class="ratingheader">Alle stjerneratings fra web:</p>
-	<div class="paperrating paperrating-neutral">Antall: <%= feedback.totalNumberOfRatings %></div>
-	<div class="paperrating paperrating-neutral">Avg: <%= feedback.conferenceAverageRating %></div>
+	<p class="ratingheader">Web-ratings:</p>
+	<div class="paperrating paperrating-green"><%= feedback.greenWebRatings %></div>
+	<div class="paperrating paperrating-yellow"><%= feedback.yellowWebRatings %></div>
+	<div class="paperrating paperrating-red"><%= feedback.redWebRatings %></div>
+	<% if((feedback.greenWebRatings + feedback.yellowWebRatings + feedback.redWebRatings) > 0) { %>
+		<div class="paperrating paperrating-neutral">Avg: <%= ((feedback.greenWebRatings * 3 + feedback.yellowWebRatings * 2 + feedback.redWebRatings * 1) / (feedback.greenWebRatings + feedback.yellowWebRatings + feedback.redWebRatings)).toFixed(2) %></div>
+	<% } %>
+	<div class="clear"></div>
+
+	<p class="ratingheader">Papirlapp-ratings:</p>
+	<div class="paperrating paperrating-green"><%= feedback.greenPaperRatings %></div>
+	<div class="paperrating paperrating-yellow"><%= feedback.yellowPaperRatings %></div>
+	<div class="paperrating paperrating-red"><%= feedback.redPaperRatings %></div>
+	<% if((feedback.greenPaperRatings + feedback.yellowPaperRatings + feedback.redPaperRatings) > 0) { %>
+		<div class="paperrating paperrating-neutral">Avg: <%= ((feedback.greenPaperRatings * 3 + feedback.yellowPaperRatings * 2 + feedback.redPaperRatings * 1) / (feedback.greenPaperRatings + feedback.yellowPaperRatings + feedback.redPaperRatings)).toFixed(2) %></div>
+	<% } %>
 	<div class="clear"></div>
 
 	<p class="ratingheader">Kommentarer:</p>
@@ -25,15 +38,20 @@
 
 <% _.each(feedback.feedbacks, function(f, i) { %>
 	
-	<div class="feedbackwrapper">
+	<div class="feedbackwrapper">	
 		<h4><%= f.title %> (
 			<% _.each(f.speakers, function(s) { %>
 				<%= s %>  
 			<% }) %>
 		)</h4>
-		<p class="ratingheader">Stjerneratings fra web:</p>
-		<div class="paperrating paperrating-neutral">Antall: <%= f.numberOfRatingsWeb %></div>
-		<% if(f.averageRatingWeb != -1) { %><div class="paperrating paperrating-neutral">Avg: <%= f.averageRatingWeb %></div><% } %>
+
+		<p class="ratingheader">Web-ratings:</p>
+		<div class="paperrating paperrating-green"><%= f.greenWeb %></div>
+		<div class="paperrating paperrating-yellow"><%= f.yellowWeb %></div>
+		<div class="paperrating paperrating-red"><%= f.redWeb %></div>
+		<% if((f.greenWeb + f.yellowWeb + f.redWeb) > 0) { %>
+			<div class="paperrating paperrating-neutral">Avg: <%= ((f.greenWeb * 3 + f.yellowWeb * 2 + f.redWeb * 1) / (f.greenWeb + f.yellowWeb + f.redWeb)).toFixed(2) %></div>
+		<% } %>
 		<div class="clear"></div>
 
 		<p class="ratingheader">Papirlapp-ratings:</p>

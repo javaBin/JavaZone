@@ -116,7 +116,10 @@ public class NewFeedbackService {
 			}
 		}), feedbackToValue()));
 		
-		return new NewFeedbackAwesomeWrapper(emails, conferenceFeedback, rating.numberOfRatings, rating.avg, feedbacks);
+		PaperFeedback paperFeedbackAllTalks = paperFeedbackService.getFeedbackAllTalks();
+		
+		return new NewFeedbackAwesomeWrapper(emails, conferenceFeedback, rating.red, rating.yellow, rating.green, rating.avg, 
+				feedbacks, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green);
 	}
 
 	private Function<EmsSession, NewFeedbackAwesome> emsSessionToFeedback(final List<NewFeedbackDbObject> dbFeedbacks, final PaperFeedbackService paperFeedbackService) {
@@ -139,7 +142,9 @@ public class NewFeedbackService {
 				}
 				
 				
-				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, rating.numberOfRatings, rating.avg, red, green, yellow);
+				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, 
+						rating.red, rating.yellow, rating.green, rating.avg, 
+						red, green, yellow);
 			}
 
 			private ArrayList<Integer> ratings(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {
