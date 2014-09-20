@@ -869,6 +869,38 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     padding: 2em;
     margin: 1em 0
 }
+.paperrating {
+    min-width: 60px;
+    font-size: 2em;
+    padding: .2em 1em;
+    margin-right: 5px;
+    text-align: center;
+    float: left;
+}
+.paperrating-red {
+    color: #D8000C;
+    background: #FFBABA;
+}
+.paperrating-yellow {
+    color: #9F6000;
+    background: #FEEFB3;
+}
+.paperrating-green {
+    color: #4F8A10;
+    background: #DFF2BF;
+}
+.paperrating-neutral {
+    color: #444;
+    background: #eee;
+}
+.ratingheader {
+    margin: 1.5em 0 .3em 0;
+}
+.feedbackwrapper h4 {
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: none;
+}
 
 
 

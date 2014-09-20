@@ -1,5 +1,12 @@
 package no.javazone.activities.feedback;
 
+import com.google.common.base.Optional;
+import no.javazone.activities.feedback.PaperFeedbackService.PaperFeedback;
+
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import no.javazone.activities.feedback.model.Rating;
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
@@ -20,6 +27,8 @@ import org.slf4j.LoggerFactory;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
@@ -80,9 +89,16 @@ public class NewFeedbackService {
 	public NewFeedbackAwesomeWrapper getAllFeedbacks() {
 		final List<NewFeedbackDbObject> dbFeedbacks = NewFeedbackDbObject.convertFromMongo(feedbackMongoCollection.find().toArray());
 		
-		List<EmsSession> sessions = emsService.getConferenceYear().getSessions();
+		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
 		
-		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks)));
+		List<EmsSession> sessions = newArrayList(filter(emsService.getConferenceYear().getSessions(), new Predicate<EmsSession>() {
+			@Override
+			public boolean apply(EmsSession input) {
+				return !input.getFormat().contains("workshop");
+			}
+		}));
+		
+		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks, paperFeedbackService)));
 		
 		Rating rating = conferenceRatingInTotal(dbFeedbacks);
 		
@@ -103,7 +119,7 @@ public class NewFeedbackService {
 		return new NewFeedbackAwesomeWrapper(emails, conferenceFeedback, rating.numberOfRatings, rating.avg, feedbacks);
 	}
 
-	private Function<EmsSession, NewFeedbackAwesome> emsSessionToFeedback(final List<NewFeedbackDbObject> dbFeedbacks) {
+	private Function<EmsSession, NewFeedbackAwesome> emsSessionToFeedback(final List<NewFeedbackDbObject> dbFeedbacks, final PaperFeedbackService paperFeedbackService) {
 		return new Function<EmsSession, NewFeedbackAwesome>() {
 			@Override
 			public NewFeedbackAwesome apply(final EmsSession emsSession) {
@@ -112,7 +128,18 @@ public class NewFeedbackService {
 				
 				Rating rating = Rating.from(ratings(dbFeedbacks, emsSession));
 				
-				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, rating.numberOfRatings, rating.avg);
+				int red = 0;
+				int green = 0;
+				int yellow = 0;
+				Optional<PaperFeedback> paperFeedback = paperFeedbackService.getFeedback(emsSession);
+				if(paperFeedback.isPresent()) {
+					red = paperFeedback.get().red;
+					green = paperFeedback.get().green;
+					yellow = paperFeedback.get().yellow;
+				}
+				
+				
+				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, rating.numberOfRatings, rating.avg, red, green, yellow);
 			}
 
 			private ArrayList<Integer> ratings(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {

@@ -1,10 +1,13 @@
 <h2>Konferansen som helhet:</h2>
 
 <div class="feedbackwrapper">
-	<p>Totalt antall stjerneratings på web: <%= feedback.totalNumberOfRatings %></p>
-	<p>Gjennomsnitt stjerneratings fra web for alle talks: <%= feedback.conferenceAverageRating %></p>
 
-	<p>Kommentarer:</p>
+	<p class="ratingheader">Alle stjerneratings fra web:</p>
+	<div class="paperrating paperrating-neutral">Antall: <%= feedback.totalNumberOfRatings %></div>
+	<div class="paperrating paperrating-neutral">Avg: <%= feedback.conferenceAverageRating %></div>
+	<div class="clear"></div>
+
+	<p class="ratingheader">Kommentarer:</p>
 	<% _.each(feedback.conferenceFeedback, function(s) { %>
 		<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
 	<% }) %>
@@ -28,9 +31,21 @@
 				<%= s %>  
 			<% }) %>
 		)</h4>
-		<p>Stjerneratings antall: <%= f.numberOfRatingsWeb %></p>
-		<p>Stjerneratings gjennomsnitt: <%= f.averageRatingWeb %></p>
-		<p>Webkommentarer:</p>
+		<p class="ratingheader">Stjerneratings fra web:</p>
+		<div class="paperrating paperrating-neutral">Antall: <%= f.numberOfRatingsWeb %></div>
+		<% if(f.averageRatingWeb != -1) { %><div class="paperrating paperrating-neutral">Avg: <%= f.averageRatingWeb %></div><% } %>
+		<div class="clear"></div>
+
+		<p class="ratingheader">Papirlapp-ratings:</p>
+		<div class="paperrating paperrating-green"><%= f.greenPaperfeedback %></div>
+		<div class="paperrating paperrating-yellow"><%= f.yellowPaperfeedback %></div>
+		<div class="paperrating paperrating-red"><%= f.redPaperfeedback %></div>
+		<% if((f.greenPaperfeedback + f.yellowPaperfeedback + f.redPaperfeedback) > 0) { %>
+			<div class="paperrating paperrating-neutral">Avg: <%= ((f.greenPaperfeedback * 3 + f.yellowPaperfeedback * 2 + f.redPaperfeedback * 1) / (f.greenPaperfeedback + f.yellowPaperfeedback + f.redPaperfeedback)).toFixed(2) %></div>
+		<% } %>
+		<div class="clear"></div>
+
+		<p class="ratingheader">Webkommentarer:</p>
 		<% _.each(f.writtenFeedbacks, function(s) { %>
 			<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
 		<% }) %>
