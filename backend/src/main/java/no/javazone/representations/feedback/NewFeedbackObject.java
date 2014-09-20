@@ -1,17 +1,10 @@
 package no.javazone.representations.feedback;
 
-import static com.google.common.collect.Collections2.transform;
-import static com.google.common.collect.Lists.newArrayList;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.joda.time.DateTime;
-import com.google.common.base.Function;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBObject;
 
 public class NewFeedbackObject {
 

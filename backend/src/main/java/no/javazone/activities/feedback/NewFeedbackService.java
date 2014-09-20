@@ -1,28 +1,32 @@
 package no.javazone.activities.feedback;
 
-import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
-
-import no.javazone.representations.feedback.NewFeedbackOut;
-
-import no.javazone.representations.feedback.NewFeedbackObject;
-import no.javazone.representations.feedback.NewFeedback;
-
-import java.net.UnknownHostException;
-import java.util.List;
-
-import javax.swing.text.StyledEditorKit.ForegroundAction;
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.Response;
-
-import no.javazone.activities.ems.EmsService;
-import no.javazone.representations.feedback.AdminGeneralFeedback;
-import no.javazone.representations.feedback.GeneralFeedback;
-import no.javazone.server.PropertiesLoader;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
+import no.javazone.activities.ems.EmsService;
+import no.javazone.activities.ems.model.EmsSession;
+import no.javazone.activities.feedback.model.NewFeedbackDbObject;
+import no.javazone.representations.feedback.NewFeedback;
+import no.javazone.representations.feedback.NewFeedbackAwesome;
+import no.javazone.representations.feedback.NewFeedbackAwesomeWrapper;
+import no.javazone.representations.feedback.NewFeedbackObject;
+import no.javazone.server.PropertiesLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Response;
+
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.google.common.collect.Collections2.filter;
+import static com.google.common.collect.Collections2.transform;
+import static com.google.common.collect.Lists.newArrayList;
+import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 
 public class NewFeedbackService {
 
@@ -72,7 +76,59 @@ public class NewFeedbackService {
 		}
 	}
 
-	public NewFeedbackOut getAllFeedbacks() {
-		return NewFeedbackOut.convertFromMongo(feedbackMongoCollection.find().toArray());
+	public NewFeedbackAwesomeWrapper getAllFeedbacks() {
+		final List<NewFeedbackDbObject> dbFeedbacks = NewFeedbackDbObject.convertFromMongo(feedbackMongoCollection.find().toArray());
+		
+		List<EmsSession> sessions = emsService.getConferenceYear().getSessions();
+		
+		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, new Function<EmsSession, NewFeedbackAwesome>() {
+			@Override
+			public NewFeedbackAwesome apply(final EmsSession emsSession) {
+				
+				List<String> writtenFeedbacks = writtenFeedbacks(dbFeedbacks, emsSession);
+				
+				ArrayList<Integer> ratings = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+					@Override
+					public boolean apply(NewFeedbackDbObject input) {
+						return input.id.contains("rating") && emsSession.getId().startsWith(input.id.replace("-rating", ""));
+					}
+				}), new Function<NewFeedbackDbObject, Integer>() {
+					@Override
+					public Integer apply(NewFeedbackDbObject input) {
+						return Integer.parseInt(input.value);
+					}
+				}));
+				
+				double numberOfRatings = ratings.size();
+				double sum = 0;
+				for (Integer rating : ratings) {
+					sum += rating;
+				}
+				double avg = -1;
+				if(numberOfRatings > 0) {
+					avg = sum / numberOfRatings;
+				}
+				
+				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, numberOfRatings, avg);
+			}
+
+			private ArrayList<String> writtenFeedbacks(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {
+				return newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+					@Override
+					public boolean apply(NewFeedbackDbObject input) {
+						return emsSession.getId().startsWith(input.id);
+					}
+				}), new Function<NewFeedbackDbObject, String>() {
+					@Override
+					public String apply(NewFeedbackDbObject input) {
+						return input.value;
+					}
+				}));
+			}
+		}));
+		
+		return new NewFeedbackAwesomeWrapper(feedbacks);
 	}
+
+	
 }
