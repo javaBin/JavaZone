@@ -1,30 +1,40 @@
-<h2>Resultater fra survey</h2>
-<% _.each(feedback, function(feedbackgroup) { %>
-	<h4><%= feedbackgroup[0].id %> - <%= feedbackgroup[0].title %> -
-		<% if(_.isArray(feedbackgroup[0].speakers)) { %>
-			<% _.each(feedbackgroup[0].speakers, function(s) { %>
-				<%= s %>
+<h2>Konferansen som helhet:</h2>
+
+<div class="feedbackwrapper">
+	<p>Totalt antall stjerneratings på web: <%= feedback.totalNumberOfRatings %></p>
+	<p>Gjennomsnitt stjerneratings fra web for alle talks: <%= feedback.conferenceAverageRating %></p>
+
+	<p>Kommentarer:</p>
+	<% _.each(feedback.conferenceFeedback, function(s) { %>
+		<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
+	<% }) %>
+</div>
+
+<h2>Epost-adresser som har gitt feedback:</h2>
+
+<div class="feedbackwrapper">
+	<% _.each(feedback.emails, function(s) { %>
+		<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
+	<% }) %>
+</div>
+
+<h2>Talks:</h2>
+
+<% _.each(feedback.feedbacks, function(f, i) { %>
+	
+	<div class="feedbackwrapper">
+		<h4><%= f.title %> (
+			<% _.each(f.speakers, function(s) { %>
+				<%= s %>  
 			<% }) %>
-		<% } %>
-		</h4>
-	<table class="summarytable">
-		<thead>
-			<tr>
-				<td width="50%">Value</td>
-				<td width="15%">Time</td>
-				<td width="15%">IP</td>
-				<td width="20%">User Agent</td>
-			</tr>
-		</thead>
-		<tbody>
-			<% _.each(feedbackgroup, function(f) { %>
-				<tr>
-					<td><%= jz.utils.paragraphs(f.value) %></td>
-					<td><%= jz.date.date(f.time) %></td>
-					<td><%= f.ip %></td>
-					<td><%= f.userAgent %></td>
-				</tr>
-			<% }) %>
-		</tbody>
-	</table>
+		)</h4>
+		<p>Stjerneratings antall: <%= f.numberOfRatingsWeb %></p>
+		<p>Stjerneratings gjennomsnitt: <%= f.averageRatingWeb %></p>
+		<p>Webkommentarer:</p>
+		<% _.each(f.writtenFeedbacks, function(s) { %>
+			<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
+		<% }) %>
+	</div>
+	
+
 <% }) %>

@@ -413,8 +413,7 @@ jz.routes.talkfeedback = function() {
 
 jz.routes.surveyresults = function() {
     jz.api.adminsurveyresults().then(function(data) {
-        var grouped = _.groupBy(data.feedback, 'id');
-        jz.api.template("adminsurveyresults", { feedback: grouped }).then(function(html) {
+        jz.api.template("adminsurveyresults", { feedback: data }).then(function(html) {
             $(".results").html(html);
         });
     });

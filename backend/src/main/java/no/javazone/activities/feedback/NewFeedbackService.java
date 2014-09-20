@@ -1,5 +1,6 @@
 package no.javazone.activities.feedback;
 
+import no.javazone.activities.feedback.model.Rating;
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.mongodb.DB;
@@ -81,13 +82,41 @@ public class NewFeedbackService {
 		
 		List<EmsSession> sessions = emsService.getConferenceYear().getSessions();
 		
-		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, new Function<EmsSession, NewFeedbackAwesome>() {
+		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks)));
+		
+		Rating rating = conferenceRatingInTotal(dbFeedbacks);
+		
+		List<String> conferenceFeedback = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+			@Override
+			public boolean apply(NewFeedbackDbObject input) {
+				return input.id.equals("conference");
+			}
+		}), feedbackToValue()));
+		
+		List<String> emails = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+			@Override
+			public boolean apply(NewFeedbackDbObject input) {
+				return input.id.equals("email");
+			}
+		}), feedbackToValue()));
+		
+		return new NewFeedbackAwesomeWrapper(emails, conferenceFeedback, rating.numberOfRatings, rating.avg, feedbacks);
+	}
+
+	private Function<EmsSession, NewFeedbackAwesome> emsSessionToFeedback(final List<NewFeedbackDbObject> dbFeedbacks) {
+		return new Function<EmsSession, NewFeedbackAwesome>() {
 			@Override
 			public NewFeedbackAwesome apply(final EmsSession emsSession) {
 				
 				List<String> writtenFeedbacks = writtenFeedbacks(dbFeedbacks, emsSession);
 				
-				ArrayList<Integer> ratings = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+				Rating rating = Rating.from(ratings(dbFeedbacks, emsSession));
+				
+				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, rating.numberOfRatings, rating.avg);
+			}
+
+			private ArrayList<Integer> ratings(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {
+				return newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
 					@Override
 					public boolean apply(NewFeedbackDbObject input) {
 						return input.id.contains("rating") && emsSession.getId().startsWith(input.id.replace("-rating", ""));
@@ -98,18 +127,6 @@ public class NewFeedbackService {
 						return Integer.parseInt(input.value);
 					}
 				}));
-				
-				double numberOfRatings = ratings.size();
-				double sum = 0;
-				for (Integer rating : ratings) {
-					sum += rating;
-				}
-				double avg = -1;
-				if(numberOfRatings > 0) {
-					avg = sum / numberOfRatings;
-				}
-				
-				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, numberOfRatings, avg);
 			}
 
 			private ArrayList<String> writtenFeedbacks(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {
@@ -118,16 +135,36 @@ public class NewFeedbackService {
 					public boolean apply(NewFeedbackDbObject input) {
 						return emsSession.getId().startsWith(input.id);
 					}
-				}), new Function<NewFeedbackDbObject, String>() {
-					@Override
-					public String apply(NewFeedbackDbObject input) {
-						return input.value;
-					}
-				}));
+				}), feedbackToValue()));
+			}
+
+			
+		};
+	}
+
+	private Function<NewFeedbackDbObject, String> feedbackToValue() {
+		return new Function<NewFeedbackDbObject, String>() {
+			@Override
+			public String apply(NewFeedbackDbObject input) {
+				return input.value;
+			}
+		};
+	}
+	
+	private Rating conferenceRatingInTotal(final List<NewFeedbackDbObject> dbFeedbacks) {
+		ArrayList<Integer> allRatings = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+			@Override
+			public boolean apply(NewFeedbackDbObject input) {
+				return input.id.contains("rating");
+			}
+		}), new Function<NewFeedbackDbObject, Integer>() {
+			@Override
+			public Integer apply(NewFeedbackDbObject input) {
+				return Integer.parseInt(input.value);
 			}
 		}));
-		
-		return new NewFeedbackAwesomeWrapper(feedbacks);
+		Rating rating = Rating.from(allRatings);
+		return rating;
 	}
 
 	
