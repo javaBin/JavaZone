@@ -23,6 +23,11 @@ jz.routes['i-would-kill-for-game-of-codes'] = function() {
 };
 
 jz.routes.index = function() {
+    //jz.routes.partners();
+    //jz.utils.speakerPhotos();
+};
+
+jz.routes.info = function() {
     jz.routes.partners();
     jz.utils.speakerPhotos();
 };

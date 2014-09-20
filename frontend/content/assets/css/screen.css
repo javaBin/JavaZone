@@ -116,6 +116,7 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile-one { width:25%; }
 .tile-four .tile-inner { margin-right: 0; }
 .tile-tall .tile-inner { height:19.7em; }
+.tile-tallx .tile-inner { height:25em; }
 .tile-taller .tile-inner { height:30em; }
 .tile-tallerx .tile-inner { height:40em; }
 .tile-tallerxx .tile-inner { height:50em; }
@@ -144,6 +145,7 @@ ul.unnumberedlist li { list-style: disc; margin: 1em 0 1em 3em; }
 .tile .extra-top { top: 60px; bottom: auto; }
 .tile .extra-right { right: 0; left: auto;}
 .tile .extra-yellow a { color: #fcaf17; }
+.tile .extra-bottom-higher { bottom: 60px; }
 
 .tile-video { }
 .tile-video .tile-inner { padding:0; height:47.4em; }

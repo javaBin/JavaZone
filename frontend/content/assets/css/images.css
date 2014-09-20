@@ -53,6 +53,8 @@ a:hover .img-inner {
 .img-crazy4 { background-image:url("/assets/img/tiles/crazy4.jpg"); }
 .img-standcomic { background-image:url("/assets/img/tiles/standcomic.jpg"); }
 .img-standcomic-cramped { background-image:url("/assets/img/tiles/standcomic-cramped.jpg"); }
+.img-expo2014 { background-image:url("/assets/img/tiles/expo2014.jpg"); }
+.img-expo2014-tiltshift { background-image:url("/assets/img/tiles/expo2014-tiltshift.jpg"); }
 
 .img-awezone-poster { background-image:url("/assets/img/awezone/poster.jpg"); width: 45.111em; height: 63.167em; }
 
@@ -88,6 +90,8 @@ only screen and (                min-resolution: 2dppx) {
     .img-crazy4 { background-image:url("/assets/img/tiles/crazy4@2x.jpg"); }
     .img-standcomic { background-image:url("/assets/img/tiles/standcomic@2x.jpg"); }
     .img-standcomic-cramped { background-image:url("/assets/img/tiles/standcomic-cramped@2x.jpg"); }
+    .img-expo2014 { background-image:url("/assets/img/tiles/expo2014@2x.jpg"); }
+    .img-expo2014-tiltshift { background-image:url("/assets/img/tiles/expo2014-tiltshift@2x.jpg"); }
 
     .img-awezone-poster { background-image:url("/assets/img/awezone/poster@2x.jpg"); }
 
