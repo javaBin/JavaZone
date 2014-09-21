@@ -39,11 +39,7 @@
 <% _.each(feedback.feedbacks, function(f, i) { %>
 	
 	<div class="feedbackwrapper">	
-		<h4><%= f.title %> (
-			<% _.each(f.speakers, function(s) { %>
-				<%= s %>  
-			<% }) %>
-		)</h4>
+		<h4><%= f.title %> (<%= f.speakers.join(", ") %>)</h4>
 
 		<p class="ratingheader">Web-ratings:</p>
 		<div class="paperrating paperrating-green"><%= f.greenWeb %></div>
@@ -70,4 +66,12 @@
 	</div>
 	
 
+<% }) %>
+
+<h2>Links for the speakers:</h2>
+
+<% _.each(feedback.feedbacks, function(f, i) { %>
+	<p>
+		<%= f.speakers.join(", ") %>; <%= f.speakerEmails.join(", ") %>; http://2014.javazone.no/speakerfeedback.html?id=<%= f.id %>&secret=<%= f.secret %>
+	</p>
 <% }) %>

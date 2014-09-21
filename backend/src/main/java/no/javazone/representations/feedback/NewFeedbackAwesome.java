@@ -9,9 +9,13 @@ public class NewFeedbackAwesome {
 	@JsonProperty
 	private String id;
 	@JsonProperty
+	private String secret;
+	@JsonProperty
 	private String title;
 	@JsonProperty
 	private List<String> speakers;
+	@JsonProperty
+	private List<String> speakerEmails;
 	@JsonProperty
 	private List<String> writtenFeedbacks;
 	@JsonProperty
@@ -29,12 +33,14 @@ public class NewFeedbackAwesome {
 	@JsonProperty
 	private double avgWeb;
 
-	public NewFeedbackAwesome(String id, String title, List<String> speakers, List<String> writtenFeedbacks, 
+	public NewFeedbackAwesome(String id, String secret, String title, List<String> speakers, List<String> speakerEmails, List<String> writtenFeedbacks, 
 			int redWeb, int yellowWeb, int greenWeb, double avgWeb,
 			int redPaperfeedback, int greenPaperfeedback, int yellowPaperfeedback) {
 		this.id = id;
+		this.secret = secret;
 		this.title = title;
 		this.speakers = speakers;
+		this.speakerEmails = speakerEmails;
 		this.writtenFeedbacks = writtenFeedbacks;
 		this.redWeb = redWeb;
 		this.yellowWeb = yellowWeb;

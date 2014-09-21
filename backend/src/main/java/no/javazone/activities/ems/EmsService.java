@@ -3,6 +3,8 @@ package no.javazone.activities.ems;
 import static com.google.common.collect.Collections2.transform;
 import static com.google.common.collect.Lists.newArrayList;
 
+import no.javazone.server.PropertiesLoader;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -19,12 +21,10 @@ import net.hamnaberg.json.util.Optional;
 import no.javazone.activities.ems.model.ConferenceYear;
 import no.javazone.activities.ems.model.EmsSession;
 import no.javazone.activities.ems.model.EmsSpeaker;
-
 import org.apache.commons.lang3.time.StopWatch;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
@@ -125,7 +125,7 @@ public class EmsService {
 
 				InputStream stream = jerseyClient
 						.resource(speakerLink.getHref())
-						//.header("Authorization", "Basic " + PropertiesLoader.getProperty("ems.basicauth"))
+						.header("Authorization", "Basic " + PropertiesLoader.getProperty("ems.basicauth"))
 						.get(InputStream.class);
 				Collection collection = new CollectionParser().parse(stream);
 				List<EmsSpeaker> speakers = newArrayList(transform(collection.getItems(), EmsSpeaker.collectionItemToSpeaker()));

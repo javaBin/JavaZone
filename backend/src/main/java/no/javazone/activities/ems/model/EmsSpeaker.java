@@ -76,10 +76,10 @@ public class EmsSpeaker {
 
 				String gravatarUrl = GravatarUtil.getLink(item);
 				
-//				String email = ItemHelper.getStringValue(item, "email");
+				String email = ItemHelper.getStringValue(item, "email");
 //				String gravatarUrl = GravatarUtil.emailToGravatarUrl(email);
 
-				return new EmsSpeaker(id, name, bio, emsPhotoUrl, "", gravatarUrl);
+				return new EmsSpeaker(id, name, bio, emsPhotoUrl, email, gravatarUrl);
 			}
 		};
 	}

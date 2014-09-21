@@ -128,6 +128,19 @@ public class EmsSession {
 	public List<String> getSpeakerNames() {
 		return speakerNames;
 	}
+	
+	public List<String> getSpeakerEmails() {
+		if(speakerDetails != null) {
+			return newArrayList(transform(speakerDetails, new Function<EmsSpeaker, String>() {
+				@Override
+				public String apply(EmsSpeaker input) {
+					return input.getEmail();
+				}
+			}));
+		} else {
+			return newArrayList();
+		}
+	}
 
 	public Optional<Link> getSpeakerLink() {
 		return speakerLink;

@@ -1,8 +1,9 @@
 package no.javazone.activities.feedback;
 
+import no.javazone.activities.SecretService;
+import org.apache.commons.codec.binary.Base64;
 import com.google.common.base.Optional;
 import no.javazone.activities.feedback.PaperFeedbackService.PaperFeedback;
-
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.apache.commons.io.FileUtils;
@@ -30,6 +31,7 @@ import javax.ws.rs.core.Response;
 import java.io.File;
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -141,8 +143,9 @@ public class NewFeedbackService {
 					yellow = paperFeedback.get().yellow;
 				}
 				
+				String secret = SecretService.getSecretForValue(emsSession.getId());
 				
-				return new NewFeedbackAwesome(emsSession.getId(), emsSession.getTitle(), emsSession.getSpeakerNames(), writtenFeedbacks, 
+				return new NewFeedbackAwesome(emsSession.getId(), secret, emsSession.getTitle(), emsSession.getSpeakerNames(), emsSession.getSpeakerEmails(), writtenFeedbacks, 
 						rating.red, rating.yellow, rating.green, rating.avg, 
 						red, green, yellow);
 			}
