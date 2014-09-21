@@ -24,11 +24,14 @@ public class NewFeedbackAwesomeWrapperSingle {
 	private int greenPaperRatings;
 	@JsonProperty
 	private List<Double> paperHistogramData;
+	@JsonProperty
+	private List<Double> webHistogramData;
 
 	public NewFeedbackAwesomeWrapperSingle(
 			int redWebRatings, int yellowWebRatings, int greenWebRatings, double averageWebRatings, 
 			NewFeedbackAwesome feedback,
-			int redPaperRatings, int yellowPaperRatings, int greenPaperRatings, List<Double> paperHistogramData) {
+			int redPaperRatings, int yellowPaperRatings, int greenPaperRatings, 
+			List<Double> paperHistogramData, List<Double> webHistogramData) {
 		this.yellowWebRatings = yellowWebRatings;
 		this.redWebRatings = redWebRatings;
 		this.greenWebRatings = greenWebRatings;
@@ -38,6 +41,7 @@ public class NewFeedbackAwesomeWrapperSingle {
 		this.yellowPaperRatings = yellowPaperRatings;
 		this.greenPaperRatings = greenPaperRatings;
 		this.paperHistogramData = paperHistogramData;
+		this.webHistogramData = webHistogramData;
 	}
 
 }

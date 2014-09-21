@@ -1,9 +1,8 @@
 package no.javazone.activities.feedback;
 
-import no.javazone.server.PropertiesLoader;
 import com.google.common.base.Optional;
-import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.model.EmsSession;
+import no.javazone.server.PropertiesLoader;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.codehaus.jackson.JsonNode;

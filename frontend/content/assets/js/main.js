@@ -449,30 +449,20 @@ jz.routes.speakerfeedback = function() {
 
 
         jz.api.template("speakerfeedback", {all: data, avgPaper: avgPaper, avgWeb: avgWeb, avgAllPaper: avgAllPaper, avgAllWeb: avgAllWeb}).then(function(html) {
-            $(".results").html(html);
-            if(avgPaper > 0) {
-                jz.api.gauge('average-rating-paper-gauge', avgPaper);
-                jz.api.gauge('average-rating-paper-all-gauge', avgAllPaper);
-                var ctx = document.getElementById("paperHistogram").getContext("2d");
 
-                console.log(data.paperHistogramData);
+            var renderHistogram = function(selector, histoData) {
+                var ctx = document.getElementById(selector).getContext("2d");
 
-                var grouped = _.groupBy(data.paperHistogramData, function(num) { return num; });
+                var grouped = _.groupBy(histoData, function(num) { return num; });
 
                 var groupedvalues = [];
                 for(var i = 1.0; i<3.1; i = i + 0.1) {
-                    console.log(i.toFixed(1));
                     var n = grouped[i.toFixed(1)] ? grouped[i.toFixed(1)].length : 0;
                     groupedvalues.push({v: i.toFixed(1), n: n});
                 }
 
                 var keys = _.pluck(groupedvalues, 'v');
                 var values = _.pluck(groupedvalues, 'n');
-
-                
-                console.log(groupedvalues);
-
-
 
                 var chartData = {
                     labels: keys,
@@ -491,10 +481,19 @@ jz.routes.speakerfeedback = function() {
                     barValueSpacing : 1,
                     barShowStroke : false
                 });
+            };
+
+
+            $(".results").html(html);
+            if(avgPaper > 0) {
+                jz.api.gauge('average-rating-paper-gauge', avgPaper);
+                jz.api.gauge('average-rating-paper-all-gauge', avgAllPaper);
+                renderHistogram('paperHistogram', data.paperHistogramData);
             }
             if(avgWeb > 0) {
                 jz.api.gauge('average-rating-web-gauge', avgWeb);
                 jz.api.gauge('average-rating-web-all-gauge', avgAllWeb);
+                renderHistogram('webHistogram', data.webHistogramData);
             }
         });
     });

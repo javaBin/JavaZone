@@ -32,7 +32,7 @@ public class NewFeedbackAwesome {
 	@JsonProperty
 	private int greenWeb;
 	@JsonProperty
-	private double avgWeb;
+	public double avgWeb;
 	@JsonProperty
 	private VimeoStat vimeoStats;
 	@JsonProperty

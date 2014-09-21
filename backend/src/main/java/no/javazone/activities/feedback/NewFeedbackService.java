@@ -1,5 +1,6 @@
 package no.javazone.activities.feedback;
 
+import no.javazone.representations.feedback.NewFeedbackAwesome;
 import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
@@ -84,14 +85,7 @@ public class NewFeedbackService {
 		
 		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
 		
-		List<EmsSession> sessions = newArrayList(filter(emsService.getConferenceYear().getSessions(), new Predicate<EmsSession>() {
-			@Override
-			public boolean apply(EmsSession input) {
-				return !input.getFormat().contains("workshop");
-			}
-		}));
-		
-		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks, paperFeedbackService)));
+		List<NewFeedbackAwesome> feedbacks = allFeedbacks(dbFeedbacks, paperFeedbackService);
 		
 		
 		List<String> conferenceFeedback = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
@@ -113,6 +107,18 @@ public class NewFeedbackService {
 		
 		return new NewFeedbackAwesomeWrapper(emails, conferenceFeedback, rating.red, rating.yellow, rating.green, rating.avg, 
 				feedbacks, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green);
+	}
+
+	private List<NewFeedbackAwesome> allFeedbacks(final List<NewFeedbackDbObject> dbFeedbacks, PaperFeedbackService paperFeedbackService) {
+		List<EmsSession> sessions = newArrayList(filter(emsService.getConferenceYear().getSessions(), new Predicate<EmsSession>() {
+			@Override
+			public boolean apply(EmsSession input) {
+				return !input.getFormat().contains("workshop");
+			}
+		}));
+		
+		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks, paperFeedbackService)));
+		return feedbacks;
 	}
 
 	private Function<EmsSession, NewFeedbackAwesome> emsSessionToFeedback(final List<NewFeedbackDbObject> dbFeedbacks, final PaperFeedbackService paperFeedbackService) {
@@ -212,11 +218,29 @@ public class NewFeedbackService {
 		PaperFeedback paperFeedbackAllTalks = paperFeedbackService.getFeedbackAllTalks();
 		
 		List<Double> paperHistogramData = paperFeedbackService.getHistogramData();
+		List<Double> webHistogramData = calculateWebRatingsHistogram(dbFeedbacks, paperFeedbackService);
 		
 		NewFeedbackAwesome feedback = emsSessionToFeedback(dbFeedbacks, paperFeedbackService).apply(emsSession);
 		
 		return new NewFeedbackAwesomeWrapperSingle(rating.red, rating.yellow, rating.green, rating.avg, 
-				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green, paperHistogramData);
+				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green, paperHistogramData, webHistogramData);
+	}
+
+	private List<Double> calculateWebRatingsHistogram(final List<NewFeedbackDbObject> dbFeedbacks, PaperFeedbackService paperFeedbackService) {
+		// TODO: dette er også en øøøøøgly hack. jeez, denne koden begynner å bli crappy :P
+		List<NewFeedbackAwesome> feedbacks = allFeedbacks(dbFeedbacks, paperFeedbackService);
+		List<Double> webHistogramData = newArrayList(transform(filter(feedbacks, new Predicate<NewFeedbackAwesome>() {
+			@Override
+			public boolean apply(NewFeedbackAwesome input) {
+				return input.avgWeb > 0;
+			}
+		}), new Function<NewFeedbackAwesome, Double>() {
+			@Override
+			public Double apply(NewFeedbackAwesome input) {
+				return Math.floor(input.avgWeb * 10) / 10;
+			}
+		}));
+		return webHistogramData;
 	}
 
 	
