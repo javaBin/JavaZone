@@ -2,50 +2,56 @@
 
 <p>Below, we have collected the feedback we have on your talk. We hope this is of use for you. Please let us know if you have any questions or if there is anything that's unclear.</p>
 
-<div class="ratingresult-wrapper">
-	<h4>Ratings right after the talk</h4>
-	<p>During the conference, we asked all participants to rate the talks using green, yellow and red notes. This is the counted ratings for your talks:</p>
+<% if(avgPaper > 0) { %>
+	<div class="ratingresult-wrapper">
+		<h4>Ratings right after the talk</h4>
+		<p>During the conference, we asked all participants to rate the talks using green, yellow and red notes. This is the counted ratings for your talks:</p>
 
-	<div class="paperrating paperrating-green"><%= all.feedback.greenPaperfeedback %></div>
-	<div class="paperrating paperrating-yellow"><%= all.feedback.yellowPaperfeedback %></div>
-	<div class="paperrating paperrating-red"><%= all.feedback.redPaperfeedback %></div>
-	<div class="clear"></div>
-	<div class="space"></div>
+		<div class="paperrating paperrating-green"><%= all.feedback.greenPaperfeedback %></div>
+		<div class="paperrating paperrating-yellow"><%= all.feedback.yellowPaperfeedback %></div>
+		<div class="paperrating paperrating-red"><%= all.feedback.redPaperfeedback %></div>
+		<div class="clear"></div>
+		<div class="space"></div>
 
-	<p>To give you a feel for how this compares to the rest of the conference, here are your talk's calculated score compared to all others combined.</p>
-	<div>
-		<canvas id="average-rating-paper-gauge" width="150" height="100"></canvas>
-		<canvas id="average-rating-paper-all-gauge" width="150" height="100"></canvas>
+		<p>To give you a feel for how this compares to the rest of the conference, here are your talk's calculated score compared to all others combined.</p>
+		<div>
+			<canvas id="average-rating-paper-gauge" width="150" height="100"></canvas>
+			<canvas id="average-rating-paper-all-gauge" width="150" height="100"></canvas>
+		</div>
+		<div class="gaugetext">Your talk</div>
+		<div class="gaugetext">All talks</div>
+		<div class="clear"></div>
 	</div>
-	<div class="gaugetext">Your talk</div>
-	<div class="gaugetext">All talks</div>
-	<div class="clear"></div>
-</div>
+<% } %>
 
 
-<div class="ratingresult-wrapper">
-	<h4>Ratings given after the conference</h4>
+<% if(avgWeb > 0) { %>
+	<div class="ratingresult-wrapper">
+		<h4>Ratings given after the conference</h4>
 
-	<p>We also sent out a feedback form to all attendees of JavaZone, asking them to rate the talks using 1 to 3 stars. The feedback-form <a href="/survey.html">can be found here</a>, and are still active, meaning these numbers will update if more people give their feedback.</p>
+		<p>We sent out a feedback form to all attendees of JavaZone, asking them to rate the talks using 1 to 3 stars. The feedback-form <a href="/survey.html">can be found here</a>, and are still active, meaning these numbers will update if more people give their feedback.</p>
 
-	<p>This is how the ratings for your talk on the web turned out:</p>
-	<div>
-		<canvas id="average-rating-web-gauge" width="150" height="100"></canvas>
-		<canvas id="average-rating-web-all-gauge" width="150" height="100"></canvas>
+		<p>This is how the ratings for your talk on the web turned out:</p>
+		<div>
+			<canvas id="average-rating-web-gauge" width="150" height="100"></canvas>
+			<canvas id="average-rating-web-all-gauge" width="150" height="100"></canvas>
+		</div>
+		<div class="gaugetext">Your talk</div>
+		<div class="gaugetext">All talks</div>
+		<div class="clear"></div>
 	</div>
-	<div class="gaugetext">Your talk</div>
-	<div class="gaugetext">All talks</div>
-	<div class="clear"></div>
-</div>
+<% } %>
 
-<div class="ratingresult-wrapper">
-	<h4>Comments given on the rating form</h4>
+<% if(all.feedback.writtenFeedbacks.length > 0) { %>
+	<div class="ratingresult-wrapper">
+		<h4>Comments given on the rating form</h4>
 
-	<p>We also provided the attendees with the opportunity to leave comments on the rating form. The following comments were left on your talk.</p>
+		<p>We also provided the attendees with the opportunity to leave comments on the rating form. The following comments were left on your talk.</p>
 
-	<% _.each(all.feedback.writtenFeedbacks, function(s) { %>
-		<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
-	<% }) %>
+		<% _.each(all.feedback.writtenFeedbacks, function(s) { %>
+			<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
+		<% }) %>
 
-	<p>Please note that these comments are uncensored directly from the web, so should there be any inappropriate comments, please let us know (we have the IP-adresses of all commenters).</p>
-</div>
+		<p>Please note that these comments are uncensored directly from the web, so should there be any inappropriate comments, please let us know (we have the IP-adresses of all commenters).</p>
+	</div>
+<% } %>
