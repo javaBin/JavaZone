@@ -21,5 +21,9 @@ public class SecretService {
 			throw new RuntimeException(e);
 		}
 	}
+
+	public static boolean checkSecret(String id, String secret) {
+		return getSecretForValue(id).equals(secret);
+	}
 	
 }

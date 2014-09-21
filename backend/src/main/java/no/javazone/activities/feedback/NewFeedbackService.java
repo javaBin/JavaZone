@@ -1,37 +1,27 @@
 package no.javazone.activities.feedback;
 
-import no.javazone.activities.SecretService;
-import org.apache.commons.codec.binary.Base64;
-import com.google.common.base.Optional;
-import no.javazone.activities.feedback.PaperFeedbackService.PaperFeedback;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import no.javazone.activities.feedback.model.Rating;
 import com.google.common.base.Function;
+import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
+import no.javazone.activities.SecretService;
 import no.javazone.activities.ems.EmsService;
 import no.javazone.activities.ems.model.EmsSession;
+import no.javazone.activities.feedback.PaperFeedbackService.PaperFeedback;
 import no.javazone.activities.feedback.model.NewFeedbackDbObject;
-import no.javazone.representations.feedback.NewFeedback;
-import no.javazone.representations.feedback.NewFeedbackAwesome;
-import no.javazone.representations.feedback.NewFeedbackAwesomeWrapper;
-import no.javazone.representations.feedback.NewFeedbackObject;
+import no.javazone.activities.feedback.model.Rating;
+import no.javazone.representations.feedback.*;
 import no.javazone.server.PropertiesLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.UnknownHostException;
-import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -102,7 +92,6 @@ public class NewFeedbackService {
 		
 		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks, paperFeedbackService)));
 		
-		Rating rating = conferenceRatingInTotal(dbFeedbacks);
 		
 		List<String> conferenceFeedback = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
 			@Override
@@ -118,6 +107,7 @@ public class NewFeedbackService {
 			}
 		}), feedbackToValue()));
 		
+		Rating rating = conferenceRatingInTotal(dbFeedbacks);
 		PaperFeedback paperFeedbackAllTalks = paperFeedbackService.getFeedbackAllTalks();
 		
 		return new NewFeedbackAwesomeWrapper(emails, conferenceFeedback, rating.red, rating.yellow, rating.green, rating.avg, 
@@ -200,6 +190,28 @@ public class NewFeedbackService {
 		}));
 		Rating rating = Rating.from(allRatings);
 		return rating;
+	}
+
+	public NewFeedbackAwesomeWrapperSingle getSingleFeedback(String id, String secret) {
+		if(!SecretService.checkSecret(id, secret)) {
+			throw new WebApplicationException(Status.FORBIDDEN);
+		}
+		EmsSession emsSession = emsService.getSession(id);
+		if(emsSession == null) {
+			throw new WebApplicationException(Status.NOT_FOUND);
+		}
+		
+		// TODO: ganske ineffektivt, but whatever... :P
+		final List<NewFeedbackDbObject> dbFeedbacks = NewFeedbackDbObject.convertFromMongo(feedbackMongoCollection.find().toArray());
+		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
+		
+		Rating rating = conferenceRatingInTotal(dbFeedbacks);
+		PaperFeedback paperFeedbackAllTalks = paperFeedbackService.getFeedbackAllTalks();
+		
+		NewFeedbackAwesome feedback = emsSessionToFeedback(dbFeedbacks, paperFeedbackService).apply(emsSession);
+		
+		return new NewFeedbackAwesomeWrapperSingle(rating.red, rating.yellow, rating.green, rating.avg, 
+				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green);
 	}
 
 	
