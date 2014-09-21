@@ -15,7 +15,7 @@
 		<div class="clear"></div>
 		<div class="space"></div>
 
-		<p>To give you a feel for how this compares to the rest of the conference, here are your talk's calculated score compared to all others combined.</p>
+		<p>To give you a feel for how this compares to the rest of the conference, here are your talk's calculated score (<%= avgPaper %>) compared to all others combined (<%= avgAllPaper %>).</p>
 		<div>
 			<canvas id="average-rating-paper-gauge" width="150" height="100"></canvas>
 			<canvas id="average-rating-paper-all-gauge" width="150" height="100"></canvas>
@@ -35,7 +35,7 @@
 
 		<p>We sent out a feedback form to all attendees of JavaZone, asking them to rate the talks using 1 to 3 stars. The feedback-form <a href="/survey.html">can be found here</a>, and are still active, meaning these numbers will update if more people give their feedback.</p>
 
-		<p>This is how the ratings for your talk on the web turned out:</p>
+		<p>This is how the ratings for your talk on the web turned out. Your talk (<%= avgWeb %>) can be compared to the conference average (<%= avgAllWeb %>).</p>
 		<div>
 			<canvas id="average-rating-web-gauge" width="150" height="100"></canvas>
 			<canvas id="average-rating-web-all-gauge" width="150" height="100"></canvas>
@@ -44,7 +44,7 @@
 		<div class="gaugetext">All talks</div>
 		<div class="clear"></div>
 		<div class="space"></div>
-		<p class="small">A full gauge would mean only three stars, and an empty one would mean only one stars.</p>
+		<p class="small">A full gauge would mean an average of 1.00, a full gauge an average of 3.00.</p>
 	</div>
 <% } %>
 
@@ -82,7 +82,7 @@
 	<div class="space"></div>
 	<p class="small">(updated September 21th. See the stats at vimeo for the most up to date stats)</p>
 
-	<p>Regarding copyright: you are free to do whatever you want with the video, is't your presentation, so you control the content. Feel free to embed it and share it anywhere you like, download it and host it elsewhere if you want that as well.</p>
+	<p>Regarding copyright: you are free to do whatever you want with the video, it is your presentation, so you control the content. Feel free to embed it and share it anywhere you like, or download it and host it elsewhere if you want that as well.</p>
 </div>
 
 

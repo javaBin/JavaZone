@@ -448,7 +448,7 @@ jz.routes.speakerfeedback = function() {
                          : 0;
 
 
-        jz.api.template("speakerfeedback", {all: data, avgPaper: avgPaper, avgWeb: avgWeb}).then(function(html) {
+        jz.api.template("speakerfeedback", {all: data, avgPaper: avgPaper, avgWeb: avgWeb, avgAllPaper: avgAllPaper, avgAllWeb: avgAllWeb}).then(function(html) {
             $(".results").html(html);
             if(avgPaper > 0) {
                 jz.api.gauge('average-rating-paper-gauge', avgPaper);
