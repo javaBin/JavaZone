@@ -190,7 +190,6 @@ jz.routes.survey = function() {
     };
     var rateClick = function() {
         $(this).parent().data('rating', $(this).data('value'));
-        console.log('rate');
         return false;
     };
 
@@ -344,7 +343,6 @@ jz.routes.academy = function() {
 jz.routes.communities = function() {
     _.each($(".community"), function(a) {
         var color = jz.utils.randomColor();
-        console.log(color);
         $(a).css("background", color.b);
         $(a).find("h3").css("color", color.f);
         $(a).css("color", color.f);
@@ -453,11 +451,7 @@ jz.routes.speakerfeedback = function() {
             var renderHistogram = function(selector, histoData) {
                 var ctx = document.getElementById(selector).getContext("2d");
 
-                console.log(selector, "histoData", histoData)
-
                 var grouped = _.groupBy(histoData, function(num) { return num.toFixed(1); });
-
-                console.log(selector, "grouped", grouped)
 
                 var groupedvalues = [];
                 for(var i = 1.0; i<3.1; i = i + 0.1) {
@@ -468,8 +462,6 @@ jz.routes.speakerfeedback = function() {
                 var keys = _.pluck(groupedvalues, 'v');
                 var values = _.pluck(groupedvalues, 'n');
 
-                console.log(selector, "keys", keys.length, keys);
-                 console.log(selector, "values", values.length, values);
                 var chartData = {
                     labels: keys,
                     datasets: [
