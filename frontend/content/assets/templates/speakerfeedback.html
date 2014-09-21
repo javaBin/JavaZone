@@ -6,7 +6,7 @@
 <% if(avgPaper > 0) { %>
 	<div class="ratingresult-wrapper">
 		<h4>Ratings right after the talk</h4>
-		<p>During the conference, we asked all participants to rate the talks using green, yellow and red notes. This is the counted ratings for your talks:</p>
+		<p>During the conference, we asked all participants to rate the talks using green, yellow and red notes. <%= all.feedback.greenPaperfeedback + all.feedback.yellowPaperfeedback + all.feedback.redPaperfeedback %> people left this kind of feedback for your talk. This is the counted ratings:</p>
 
 		<div class="paperrating paperrating-green"><%= all.feedback.greenPaperfeedback %><span>Green notes</span></div>
 		<div class="paperrating paperrating-yellow"><%= all.feedback.yellowPaperfeedback %><span>Yellow notes</span></div>
@@ -39,7 +39,7 @@
 
 		<p>We sent out a feedback form to all attendees of JavaZone, asking them to rate the talks using 1 to 3 stars. The feedback-form <a href="/survey.html">can be found here</a>, and are still active, meaning these numbers will update if more people give their feedback.</p>
 
-		<p>This is how the ratings for your talk on the web turned out. Your talk (<%= avgWeb %>) can be compared to the conference average (<%= avgAllWeb %>).</p>
+		<p><%= all.feedback.redWeb + all.feedback.yellowWeb + all.feedback.greenWeb %> people voted on your talk. This is how the ratings for your talk turned out. Your talk (<%= avgWeb %>) can be compared to the conference average (<%= avgAllWeb %>).</p>
 		<div>
 			<canvas id="average-rating-web-gauge" width="150" height="100"></canvas>
 			<canvas id="average-rating-web-all-gauge" width="150" height="100"></canvas>
@@ -54,6 +54,8 @@
 		<div class="histogram">
 			<canvas id="webHistogram" width="730" height="150"></canvas>
 		</div>
+		<div class="spacex"></div>
+		<p class="small">A note about web ratings: these numbers are based on a total of <%= all.feedback.redWeb + all.feedback.yellowWeb + all.feedback.greenWeb %> votes on your talk, and a total of <%= all.redWebRatings + all.yellowWebRatings + all.greenWebRatings %> ratings for all talks. This means they are less statistically significant than we would like. If you have any good ideas on how to get even more people to vote after the conference, please let us know :)</p>
 	</div>
 <% } %>
 
