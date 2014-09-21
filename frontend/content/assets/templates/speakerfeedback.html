@@ -62,7 +62,7 @@
 		<div class="space"></div>
 		<p class="small">A full gauge would mean an average of 1.00, a full gauge an average of 3.00.</p>
 
-		<p>To give you an even better context for your rating, here are all the rated talks at JavaZone and their rating shown in a histogram.</p>
+		<p>To give you an even better context for your rating, here are all the rated talks at JavaZone and their ratings shown in a histogram.</p>
 		<div class="histogram">
 			<canvas id="webHistogram" width="730" height="150"></canvas>
 		</div>
@@ -95,14 +95,14 @@
 
 <div class="ratingresult-wrapper">
 	<h4>4. The video of your talk at Vimeo</h4>
-	<p>We release all talks on video at Vimeo just hours after the conference is over. JavaZone is a conference arranged by volunteers, and we belive in the sharing of knowledge: thats why all videos are release for free, without any sort of login. Feel free to share it as much as you like :)</p>
+	<p>We release all talks on video at Vimeo just hours after the conference is over. JavaZone is a conference arranged by volunteers, and we belive in the sharing of knowledge: thats why all videos are released for free, without any sort of login required to watch them. Feel free to share it as much as you like :)</p>
 
 	<div class="talkvideo">
         <iframe src="<%= all.feedback.vimeoLink.replace("http://vimeo.com/", "//player.vimeo.com/video/") %>?title=0&amp;byline=0&amp;portrait=0&amp;color=A10735" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
     <div class="space"></div>
     <p>Your talk at Vimeo: <a href="<%= all.feedback.vimeoLink %>"><%= all.feedback.vimeoLink %></a></p>
-    <p>If you would like to share it in the context of your talk's description, feel free to use the program site URL instead: <a href="/presentation.html?id=<%= all.feedback.id.substring(0,8) %>">http://2014.javazone.no/presentation.html?id=<%= all.feedback.id.substring(0,8) %></a></p>
+    <p>If you would like to share the video in the context of your talk's description, feel free to use the program site URL instead: <a href="/presentation.html?id=<%= all.feedback.id.substring(0,8) %>">http://2014.javazone.no/presentation.html?id=<%= all.feedback.id.substring(0,8) %></a></p>
 
 	<p>The following are a few stats for your video:</p>
 	<div class="paperrating paperrating-neutral"><%= all.feedback.vimeoStats.loads %><span>Loads</span></div>
@@ -116,6 +116,11 @@
 	<p>Regarding copyright: you are free to do whatever you want with the video, it is your presentation, so you control the content. Feel free to embed it and share it anywhere you like, or download it and host it elsewhere if you want that as well.</p>
 </div>
 
+<div class="space"></div>
+
+<p>We hope this "numbers overload" was valuable to you. If you have any ideas or wishes for other type of feedback, please let us know. We'll consider all good ideas for the next years conference :)</p>
+
+<p>And again, thanks for helping us make JavaZone 2014 happen! It wouldn't be possible at all without all you great speakers. Thanks!!!</p>
 
 <p>Best regards,<br>
 The JavaZone Program committee.<br>
