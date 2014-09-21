@@ -518,7 +518,7 @@ p.program-info { padding:0 0 0 3.4em; margin:0 0 1.5em 0; position: relative; co
 .form .talkcomments { list-style: circle; margin-left: 1em;}
 .form .talkcomments li { margin: .5em 0; font-size: .8em; line-height: 1.3em; }
 .form strong { font-weight: 400; }
-.form .gaugetext { width: 150px; float: left; text-align: center; font-size: .6em; color: #148f87; padding-top: .2em; text-transform: uppercase; font-weight: bold; }
+.gaugetext { width: 150px; float: left; text-align: center; font-size: .6em; color: #148f87; padding-top: .2em; text-transform: uppercase; font-weight: bold; }
 
 
 .thanks h2 { margin-top: 1em; }
@@ -902,11 +902,14 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     text-transform: none;
 }
 .results {
-    width: 60em;
+    width: 40em;
     margin: 5em auto;
-    padding: 1em 2em;
+    padding: 3em 5em;
     min-height: 50em;
     background: #fff;
+}
+.ratingresult-wrapper {
+    margin: 3em 0;
 }
 
 

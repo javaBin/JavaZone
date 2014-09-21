@@ -423,8 +423,39 @@ jz.routes.speakerfeedback = function() {
     var talkid = jz.utils.param("id");
     var secret = jz.utils.param("secret");
     jz.api.get("/api/admin/newfeedback/talk?id=" + talkid + "&secret=" + secret).then(function(data) {
-        jz.api.template("speakerfeedback", data).then(function(html) {
+        var feedback = data.feedback;
+        var avgPaper =  ((feedback.greenPaperfeedback + feedback.yellowPaperfeedback + feedback.redPaperfeedback) > 0) ?
+                            ((feedback.greenPaperfeedback * 3 + feedback.yellowPaperfeedback * 2 + feedback.redPaperfeedback * 1) / 
+                            (feedback.greenPaperfeedback + feedback.yellowPaperfeedback + feedback.redPaperfeedback))
+                            .toFixed(2)
+                        : 0;
+        var avgWeb =    ((feedback.greenWeb + feedback.yellowWeb + feedback.redWeb) > 0) ?
+                            (((feedback.greenWeb * 3 + feedback.yellowWeb * 2 + feedback.redWeb * 1) / 
+                            (feedback.greenWeb + feedback.yellowWeb + feedback.redWeb))
+                            .toFixed(2))
+                        : 0;
+
+        var avgAllPaper = ((data.greenPaperRatings + data.yellowPaperRatings + data.redPaperRatings) > 0) ?
+                            ((data.greenPaperRatings * 3 + data.yellowPaperRatings * 2 + data.redPaperRatings * 1) / 
+                            (data.greenPaperRatings + data.yellowPaperRatings + data.redPaperRatings))
+                            .toFixed(2)
+                         : 0;
+
+        var avgAllWeb = ((data.greenWebRatings + data.yellowWebRatings + data.redWebRatings) > 0) ?
+                            ((data.greenWebRatings * 3 + data.yellowWebRatings * 2 + data.redWebRatings * 1) / 
+                            (data.greenWebRatings + data.yellowWebRatings + data.redWebRatings))
+                            .toFixed(2)
+                         : 0;
+
+
+        jz.api.template("speakerfeedback", {all: data, avgPaper: avgPaper, avgWeb: avgWeb}).then(function(html) {
             $(".results").html(html);
+            jz.api.gauge('average-rating-paper-gauge', avgPaper);
+            jz.api.gauge('average-rating-paper-all-gauge', avgAllPaper);
+
+            jz.api.gauge('average-rating-web-gauge', avgWeb);
+            jz.api.gauge('average-rating-web-all-gauge', avgAllWeb);
+            
         });
     });
 
