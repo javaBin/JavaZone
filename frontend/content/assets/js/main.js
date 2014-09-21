@@ -450,12 +450,14 @@ jz.routes.speakerfeedback = function() {
 
         jz.api.template("speakerfeedback", {all: data, avgPaper: avgPaper, avgWeb: avgWeb}).then(function(html) {
             $(".results").html(html);
-            jz.api.gauge('average-rating-paper-gauge', avgPaper);
-            jz.api.gauge('average-rating-paper-all-gauge', avgAllPaper);
-
-            jz.api.gauge('average-rating-web-gauge', avgWeb);
-            jz.api.gauge('average-rating-web-all-gauge', avgAllWeb);
-            
+            if(avgPaper > 0) {
+                jz.api.gauge('average-rating-paper-gauge', avgPaper);
+                jz.api.gauge('average-rating-paper-all-gauge', avgAllPaper);
+            }
+            if(avgWeb > 0) {
+                jz.api.gauge('average-rating-web-gauge', avgWeb);
+                jz.api.gauge('average-rating-web-all-gauge', avgAllWeb);
+            }
         });
     });
 
