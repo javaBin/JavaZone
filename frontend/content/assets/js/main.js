@@ -418,3 +418,14 @@ jz.routes.surveyresults = function() {
         });
     });
 };
+
+jz.routes.speakerfeedback = function() {
+    var talkid = jz.utils.param("id");
+    var secret = jz.utils.param("secret");
+    jz.api.get("/api/admin/newfeedback/talk?id=" + talkid + "&secret=" + secret).then(function(data) {
+        jz.api.template("speakerfeedback", data).then(function(html) {
+            $(".results").html(html);
+        });
+    });
+
+};

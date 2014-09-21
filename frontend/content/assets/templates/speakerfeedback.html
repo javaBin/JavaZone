@@ -1,0 +1,24 @@
+<h2>Feedback for <%= feedback.title %> (<%= feedback.speakers.join(", ") %>)</h2>
+
+<p class="ratingheader">Web-ratings:</p>
+<div class="paperrating paperrating-green"><%= feedback.greenWeb %></div>
+<div class="paperrating paperrating-yellow"><%= feedback.yellowWeb %></div>
+<div class="paperrating paperrating-red"><%= feedback.redWeb %></div>
+<% if((feedback.greenWeb + feedback.yellowWeb + feedback.redWeb) > 0) { %>
+	<div class="paperrating paperrating-neutral">Avg: <%= ((feedback.greenWeb * 3 + feedback.yellowWeb * 2 + feedback.redWeb * 1) / (feedback.greenWeb + feedback.yellowWeb + feedback.redWeb)).toFixed(2) %></div>
+<% } %>
+<div class="clear"></div>
+
+<p class="ratingheader">Papirlapp-ratings:</p>
+<div class="paperrating paperrating-green"><%= feedback.greenPaperfeedback %></div>
+<div class="paperrating paperrating-yellow"><%= feedback.yellowPaperfeedback %></div>
+<div class="paperrating paperrating-red"><%= feedback.redPaperfeedback %></div>
+<% if((feedback.greenPaperfeedback + feedback.yellowPaperfeedback + feedback.redPaperfeedback) > 0) { %>
+	<div class="paperrating paperrating-neutral">Avg: <%= ((feedback.greenPaperfeedback * 3 + feedback.yellowPaperfeedback * 2 + feedback.redPaperfeedback * 1) / (feedback.greenPaperfeedback + feedback.yellowPaperfeedback + feedback.redPaperfeedback)).toFixed(2) %></div>
+<% } %>
+<div class="clear"></div>
+
+<p class="ratingheader">Webkommentarer:</p>
+<% _.each(feedback.writtenFeedbacks, function(s) { %>
+	<div class="webcomment"><%= jz.utils.paragraphs(s) %></div>
+<% }) %>
