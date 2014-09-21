@@ -1,7 +1,6 @@
-<h2 class="first">Feedback for <%= all.feedback.title %> (<%= all.feedback.speakers.join(", ") %>)</h2>
+<h2 class="first"><%= all.feedback.title %> <br><span><%= all.feedback.speakers.join(" and ") %></span></h2>
 
-<p>Below, we have collected the feedback we have on your talk. We hope this is of use for you. Please let us know if you have any questions or if there is anything that's unclear.</p> 
-<p>You can reach us at <a href="mailto:javazone@java.no">javazone@java.no</a></p>
+<p>Below, we have collected the feedback we have on your talk. We hope this is of use for you. Please let us know if you have any questions or if there is anything that's unclear.</p>
 <p>We hope to see you again next year. We'll give you a heads up before the "Call for Speakers" for JavaZone 2015 starts.</p>
 
 <% if(avgPaper > 0) { %>
@@ -15,7 +14,7 @@
 		<div class="clear"></div>
 		<div class="space"></div>
 
-		<p>To give you a feel for how this compares to the rest of the conference, here are your talk's calculated score (<%= avgPaper %>) compared to all others combined (<%= avgAllPaper %>).</p>
+		<p>To give you a feel for how this compares to the rest of the conference, here are your talk's calculated score (<%= avgPaper %>) compared to the average rating of all other JavaZone talks combined (<%= avgAllPaper %>).</p>
 		<div>
 			<canvas id="average-rating-paper-gauge" width="150" height="100"></canvas>
 			<canvas id="average-rating-paper-all-gauge" width="150" height="100"></canvas>
@@ -25,6 +24,11 @@
 		<div class="clear"></div>
 		<div class="space"></div>
 		<p class="small">A full gauge would mean only green notes, and an empty one would mean only red ones.</p>
+
+		<p>To give you an even better context for your rating, here are all the rated talks at JavaZone and their rating shown in a histogram.</p>
+		<div class="histogram">
+			<canvas id="paperHistogram" width="730" height="150"></canvas>
+		</div>
 	</div>
 <% } %>
 
@@ -87,4 +91,5 @@
 
 
 <p>Best regards,<br>
-The JavaZone Program committee.</p>
+The JavaZone Program committee.<br>
+<a href="mailto:javazone@java.no">javazone@java.no</a></p>

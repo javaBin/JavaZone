@@ -11,6 +11,8 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaperFeedbackService {
 
@@ -40,6 +42,21 @@ public class PaperFeedbackService {
 		return Optional.absent();
 	}
 	
+	public List<Double> getHistogramData() {
+		List<Double> scores = new ArrayList<>();
+		for (JsonNode feedback : jsonNode) {
+			double red = feedback.findValue("red").asInt();
+			double yellow = feedback.findValue("yellow").asInt();
+			double green = feedback.findValue("green").asInt();
+			double sum = red+yellow+green;
+			if(sum > 0) {
+				double score = (red*1 + yellow*2 + green*3) / sum;
+				scores.add(Math.floor(score * 10) / 10);
+			}
+		}
+		return scores;
+	}
+	
 	public PaperFeedback getFeedbackAllTalks() {
 		PaperFeedback paperFeedback = new PaperFeedback(0, 0, 0);
 		for (JsonNode feedback : jsonNode) {
@@ -51,19 +68,21 @@ public class PaperFeedbackService {
 	}
 
 	public static void main(String[] args) {
-		EmsService emsService = EmsService.getInstance();
-		emsService.refresh();
-		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
-		System.err.println("---------------------");
+//		EmsService emsService = EmsService.getInstance();
+//		emsService.refresh();
+//		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
+//		System.err.println("---------------------");
+//		
+//		for (EmsSession s : emsService.getConferenceYear().getSessions()) {
+//			Optional<PaperFeedback> feedback = paperFeedbackService.getFeedback(s);
+//			System.out.println(s.getFormat() + " – "  + s.getTitle() + ": " + feedback.toString());
+//			if(s.getFormat().equals("presentation") && !feedback.isPresent()) {
+//				System.err.println("mangler for presentasjon");
+//			}
+//		}
 		
-		for (EmsSession s : emsService.getConferenceYear().getSessions()) {
-			Optional<PaperFeedback> feedback = paperFeedbackService.getFeedback(s);
-			System.out.println(s.getFormat() + " – "  + s.getTitle() + ": " + feedback.toString());
-			if(s.getFormat().equals("presentation") && !feedback.isPresent()) {
-				System.err.println("mangler for presentasjon");
-			}
-		}
-		
+		List<Double> histogramData = new PaperFeedbackService().getHistogramData();
+		System.out.println(histogramData);
 	}
 	
 	class PaperFeedback {

@@ -20,6 +20,7 @@ exports.config = {
         "assets/js/vendor/moment.min.js",
         "assets/js/vendor/gauge.js",
         "assets/js/vendor/jquery.autosize.min.js",
+        "assets/js/vendor/Chart.min.js",
         "assets/js/namespace.js",
         "assets/js"
       ]

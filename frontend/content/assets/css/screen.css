@@ -920,8 +920,22 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     min-height: 50em;
     background: #fff;
 }
+.results h2 {
+    color: #a10035;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.results h2 span {
+    font-size: .5em;
+    color: #666;
+}
 .ratingresult-wrapper {
     margin: 3em 0;
+}
+.ratingresult-wrapper h4 {
+    color: #149089;
+    font-size: 1.2em;
 }
 .results .small {
     font-size: .8em;

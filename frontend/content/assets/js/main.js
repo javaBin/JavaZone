@@ -453,6 +453,44 @@ jz.routes.speakerfeedback = function() {
             if(avgPaper > 0) {
                 jz.api.gauge('average-rating-paper-gauge', avgPaper);
                 jz.api.gauge('average-rating-paper-all-gauge', avgAllPaper);
+                var ctx = document.getElementById("paperHistogram").getContext("2d");
+
+                console.log(data.paperHistogramData);
+
+                var grouped = _.groupBy(data.paperHistogramData, function(num) { return num; });
+
+                var groupedvalues = [];
+                for(var i = 1.0; i<3.1; i = i + 0.1) {
+                    console.log(i.toFixed(1));
+                    var n = grouped[i.toFixed(1)] ? grouped[i.toFixed(1)].length : 0;
+                    groupedvalues.push({v: i.toFixed(1), n: n});
+                }
+
+                var keys = _.pluck(groupedvalues, 'v');
+                var values = _.pluck(groupedvalues, 'n');
+
+                
+                console.log(groupedvalues);
+
+
+
+                var chartData = {
+                    labels: keys,
+                    datasets: [
+                        {
+                            label: "Histogram over all votes",
+                            fillColor: "#BDE5F8",
+                            strokeColor: "rgba(220,220,220,0.8)",
+                            highlightFill: "#BDE5F8",
+                            highlightStroke: "rgba(220,220,220,1)",
+                            data: values
+                        }
+                    ]
+                };
+                var myBarChart = new Chart(ctx).Bar(chartData, {
+                    barValueSpacing : 1,
+                    barShowStroke : false
+                });
             }
             if(avgWeb > 0) {
                 jz.api.gauge('average-rating-web-gauge', avgWeb);

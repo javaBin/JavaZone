@@ -1,7 +1,6 @@
 package no.javazone.activities.feedback;
 
 import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
-
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
@@ -212,10 +211,12 @@ public class NewFeedbackService {
 		Rating rating = conferenceRatingInTotal(dbFeedbacks);
 		PaperFeedback paperFeedbackAllTalks = paperFeedbackService.getFeedbackAllTalks();
 		
+		List<Double> paperHistogramData = paperFeedbackService.getHistogramData();
+		
 		NewFeedbackAwesome feedback = emsSessionToFeedback(dbFeedbacks, paperFeedbackService).apply(emsSession);
 		
 		return new NewFeedbackAwesomeWrapperSingle(rating.red, rating.yellow, rating.green, rating.avg, 
-				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green);
+				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green, paperHistogramData);
 	}
 
 	

@@ -1,5 +1,7 @@
 package no.javazone.representations.feedback;
 
+import java.util.List;
+
 import org.codehaus.jackson.annotate.JsonProperty;
 
 public class NewFeedbackAwesomeWrapperSingle {
@@ -20,11 +22,13 @@ public class NewFeedbackAwesomeWrapperSingle {
 	private int yellowPaperRatings;
 	@JsonProperty
 	private int greenPaperRatings;
+	@JsonProperty
+	private List<Double> paperHistogramData;
 
 	public NewFeedbackAwesomeWrapperSingle(
 			int redWebRatings, int yellowWebRatings, int greenWebRatings, double averageWebRatings, 
 			NewFeedbackAwesome feedback,
-			int redPaperRatings, int yellowPaperRatings, int greenPaperRatings) {
+			int redPaperRatings, int yellowPaperRatings, int greenPaperRatings, List<Double> paperHistogramData) {
 		this.yellowWebRatings = yellowWebRatings;
 		this.redWebRatings = redWebRatings;
 		this.greenWebRatings = greenWebRatings;
@@ -33,6 +37,7 @@ public class NewFeedbackAwesomeWrapperSingle {
 		this.redPaperRatings = redPaperRatings;
 		this.yellowPaperRatings = yellowPaperRatings;
 		this.greenPaperRatings = greenPaperRatings;
+		this.paperHistogramData = paperHistogramData;
 	}
 
 }
