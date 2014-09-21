@@ -43,7 +43,15 @@
 	<% if(avgWeb > 0) { %>
 		<p>We sent out a feedback form to all attendees of JavaZone, asking them to rate the talks using 1 to 3 stars. The feedback-form <a href="/survey.html">can be found here</a>, and are still active, meaning these numbers will update if more people give their feedback.</p>
 
-		<p><%= all.feedback.redWeb + all.feedback.yellowWeb + all.feedback.greenWeb %> people voted on your talk. This is how the ratings for your talk turned out. Your talk (<%= avgWeb %>) can be compared to the conference average (<%= avgAllWeb %>).</p>
+		<p><%= all.feedback.redWeb + all.feedback.yellowWeb + all.feedback.greenWeb %> people voted on your talk:</p> 
+
+		<div class="paperrating paperrating-green"><%= all.feedback.greenWeb %><span>3 stars</span></div>
+		<div class="paperrating paperrating-yellow"><%= all.feedback.yellowWeb %><span>2 stars</span></div>
+		<div class="paperrating paperrating-red"><%= all.feedback.redWeb %><span>1 star</span></div>
+		<div class="clear"></div>
+		<div class="space"></div>
+
+		<p>The calculated rating for your talk (<%= avgWeb %>) can be compared to the conference average (<%= avgAllWeb %>):</p>
 		<div>
 			<canvas id="average-rating-web-gauge" width="150" height="100"></canvas>
 			<canvas id="average-rating-web-all-gauge" width="150" height="100"></canvas>
