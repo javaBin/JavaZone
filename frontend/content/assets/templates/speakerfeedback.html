@@ -74,9 +74,36 @@
 	<% } %>
 </div>
 
+<div class="ratingresult-wrapper">
+	<h4>3. Number of participants at your talk</h4>
+	<p>The volunteers counted the number of participants at each talk to give us an indication of which talks had the most participants.</p>
+	<p>Your talk:</p>
+	<div class="paperrating paperrating-neutral"><%= all.roomStats.thisRoomName %><span>Your room</span></div>
+	<div class="paperrating paperrating-green"><%= all.roomStats.thisRoomCount > 0 ? all.roomStats.thisRoomCount : 'not counted' %><span>Participants</span></div>
+	<div class="clear"></div>
+	<div class="space"></div>
+	<p>Average participants pr. room for all talks:</p>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 1' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 1"].average.toFixed(0) %><span>Room 1</span></div>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 2' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 2"].average.toFixed(0) %><span>Room 2</span></div>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 3' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 3"].average.toFixed(0) %><span>Room 3</span></div>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 4' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 4"].average.toFixed(0) %><span>Room 4</span></div>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 5' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 5"].average.toFixed(0) %><span>Room 5</span></div>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 6' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 6"].average.toFixed(0) %><span>Room 6</span></div>
+	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 7' ? 'paperrating-green' : 'paperrating-neutral' %>">~100<span>Room 7</span></div>
+	<div class="clear"></div>
+	<div class="space"></div>
+	<% if(all.roomStats.thisRoomCount === 0) { %>
+		<% if(all.roomStats.thisRoomName === 'Room 7') { %>
+			<p>Why your room-count unknown: we didn't count the participants at the lightning talk room this year. The room had around 150 seats, so we hope you have a pretty good feeling for the number of participants yourself :)</p>
+		<% } else { %>
+			<p>Why your room-count unknown: the volunteers forgot to count the participants for a few sessions – sorry about that! We guess you have a pretty good number for this yourself, so you can compare your own approximation with the averages above.</p>
+		<% } %>
+	<% } %>
+</div>
+
 
 <div class="ratingresult-wrapper">
-	<h4>3. Comments given on your talk (web form)</h4>
+	<h4>4. Comments given on your talk (web form)</h4>
 
 	<% if(all.feedback.writtenFeedbacks.length > 0) { %>
 		<p>We also provided the attendees with the opportunity to leave comments on the rating form. The following comments were left on your talk.</p>
@@ -94,7 +121,7 @@
 
 
 <div class="ratingresult-wrapper">
-	<h4>4. The video of your talk at Vimeo</h4>
+	<h4>5. The video of your talk at Vimeo</h4>
 	<p>We release all talks on video at Vimeo just hours after the conference is over. JavaZone is a conference arranged by volunteers, and we belive in the sharing of knowledge: thats why all videos are released for free, without any sort of login required to watch them. Feel free to share it as much as you like :)</p>
 
 	<div class="talkvideo">

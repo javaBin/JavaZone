@@ -877,6 +877,10 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     text-align: center;
     float: left;
 }
+.paperrating-small {
+    min-width: 30px;
+    padding: .2em .6em;
+}
 .paperrating-red {
     color: #D8000C;
     background: #FFBABA;

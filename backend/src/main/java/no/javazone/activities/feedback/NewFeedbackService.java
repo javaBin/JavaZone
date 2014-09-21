@@ -1,5 +1,7 @@
 package no.javazone.activities.feedback;
 
+import no.javazone.activities.feedback.PaperFeedbackService.RoomStats;
+
 import no.javazone.representations.feedback.NewFeedbackAwesome;
 import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
 import com.google.common.base.Function;
@@ -110,15 +112,20 @@ public class NewFeedbackService {
 	}
 
 	private List<NewFeedbackAwesome> allFeedbacks(final List<NewFeedbackDbObject> dbFeedbacks, PaperFeedbackService paperFeedbackService) {
+		List<EmsSession> sessions = emsSessionsWithoutWorkshops();
+		
+		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks, paperFeedbackService)));
+		return feedbacks;
+	}
+
+	private List<EmsSession> emsSessionsWithoutWorkshops() {
 		List<EmsSession> sessions = newArrayList(filter(emsService.getConferenceYear().getSessions(), new Predicate<EmsSession>() {
 			@Override
 			public boolean apply(EmsSession input) {
 				return !input.getFormat().contains("workshop");
 			}
 		}));
-		
-		List<NewFeedbackAwesome> feedbacks = newArrayList(transform(sessions, emsSessionToFeedback(dbFeedbacks, paperFeedbackService)));
-		return feedbacks;
+		return sessions;
 	}
 
 	private Function<EmsSession, NewFeedbackAwesome> emsSessionToFeedback(final List<NewFeedbackDbObject> dbFeedbacks, final PaperFeedbackService paperFeedbackService) {
@@ -220,10 +227,13 @@ public class NewFeedbackService {
 		List<Double> paperHistogramData = paperFeedbackService.getHistogramData();
 		List<Double> webHistogramData = calculateWebRatingsHistogram(dbFeedbacks, paperFeedbackService);
 		
+		RoomStats roomStats = paperFeedbackService.getRoomStats(emsSessionsWithoutWorkshops(), emsSession);
+		
 		NewFeedbackAwesome feedback = emsSessionToFeedback(dbFeedbacks, paperFeedbackService).apply(emsSession);
 		
 		return new NewFeedbackAwesomeWrapperSingle(rating.red, rating.yellow, rating.green, rating.avg, 
-				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green, paperHistogramData, webHistogramData);
+				feedback, paperFeedbackAllTalks.red, paperFeedbackAllTalks.yellow, paperFeedbackAllTalks.green, 
+				paperHistogramData, webHistogramData, roomStats);
 	}
 
 	private List<Double> calculateWebRatingsHistogram(final List<NewFeedbackDbObject> dbFeedbacks, PaperFeedbackService paperFeedbackService) {
