@@ -30,7 +30,7 @@
 
 <div class="feedbackwrapper">
 	<% _.each(feedback.emails, function(s) { %>
-		<div class="webcomment"><%- jz.utils.paragraphs(s) %></div>
+		<div class="webcomment"><%- s %></div>
 	<% }) %>
 </div>
 
@@ -40,6 +40,8 @@
 	
 	<div class="feedbackwrapper">	
 		<h4><%- f.title %> (<%- f.speakers.join(", ") %>)</h4>
+
+		<p class="ratingheader"><a href="http://2014.javazone.no/speakerfeedback.html?id=<%- f.id %>&secret=<%- f.secret %>" target="_blank">Feedbackside til foredragsholder</a></p>
 
 		<p class="ratingheader">Web-ratings:</p>
 		<div class="paperrating paperrating-green"><%- f.greenWeb %></div>
