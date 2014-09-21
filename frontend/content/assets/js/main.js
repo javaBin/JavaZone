@@ -453,17 +453,23 @@ jz.routes.speakerfeedback = function() {
             var renderHistogram = function(selector, histoData) {
                 var ctx = document.getElementById(selector).getContext("2d");
 
-                var grouped = _.groupBy(histoData, function(num) { return num; });
+                console.log(selector, "histoData", histoData)
+
+                var grouped = _.groupBy(histoData, function(num) { return num.toFixed(1); });
+
+                console.log(selector, "grouped", grouped)
 
                 var groupedvalues = [];
                 for(var i = 1.0; i<3.1; i = i + 0.1) {
-                    var n = grouped[i.toFixed(1)] ? grouped[i.toFixed(1)].length : 0;
+                    var n = grouped[i.toFixed(1)] ? grouped[i.toFixed(1)].length : -5;
                     groupedvalues.push({v: i.toFixed(1), n: n});
                 }
 
                 var keys = _.pluck(groupedvalues, 'v');
                 var values = _.pluck(groupedvalues, 'n');
 
+                console.log(selector, "keys", keys.length, keys);
+                 console.log(selector, "values", values.length, values);
                 var chartData = {
                     labels: keys,
                     datasets: [

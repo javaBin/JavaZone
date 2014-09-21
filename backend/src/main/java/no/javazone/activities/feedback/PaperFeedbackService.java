@@ -158,18 +158,18 @@ public class PaperFeedbackService {
 	}
 
 	public static void main(String[] args) {
-		EmsService emsService = EmsService.getInstance();
-		emsService.refresh();
-		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
-
-		List<EmsSession> sessions = newArrayList(filter(emsService.getConferenceYear().getSessions(), new Predicate<EmsSession>() {
-			@Override
-			public boolean apply(EmsSession input) {
-				return !input.getFormat().contains("workshop") && !input.getFormat().contains("lightning");
-			}
-		}));
-
-		paperFeedbackService.getRoomStats(sessions, sessions.get(0));
+//		EmsService emsService = EmsService.getInstance();
+//		emsService.refresh();
+//		PaperFeedbackService paperFeedbackService = new PaperFeedbackService();
+//
+//		List<EmsSession> sessions = newArrayList(filter(emsService.getConferenceYear().getSessions(), new Predicate<EmsSession>() {
+//			@Override
+//			public boolean apply(EmsSession input) {
+//				return !input.getFormat().contains("workshop") && !input.getFormat().contains("lightning");
+//			}
+//		}));
+//
+//		paperFeedbackService.getRoomStats(sessions, sessions.get(0));
 
 //		System.err.println("---------------------");
 //		
@@ -181,8 +181,8 @@ public class PaperFeedbackService {
 //			}
 //		}
 
-//		List<Double> histogramData = new PaperFeedbackService().getHistogramData();
-//		System.out.println(histogramData);
+		List<Double> histogramData = new PaperFeedbackService().getHistogramData();
+		System.out.println(histogramData);
 
 	}
 
