@@ -77,12 +77,12 @@
 <div class="ratingresult-wrapper">
 	<h4>3. Number of participants at your talk</h4>
 	<p>The volunteers counted the number of participants at each talk to give us an indication of which talks had the most participants.</p>
-	<p>Your talk:</p>
+	<p>The counted participants for your talk:</p>
 	<div class="paperrating paperrating-neutral"><%= all.roomStats.thisRoomName %><span>Your room</span></div>
-	<div class="paperrating paperrating-green"><%= all.roomStats.thisRoomCount > 0 ? all.roomStats.thisRoomCount : 'not counted' %><span>Participants</span></div>
+	<div class="paperrating paperrating-green"><%= all.roomStats.thisRoomCount > 0 ? '~' + all.roomStats.thisRoomCount : 'not counted' %><span>Participants</span></div>
 	<div class="clear"></div>
 	<div class="space"></div>
-	<p>Average participants pr. room for all talks:</p>
+	<p>Average number of participants pr. room for all talks:</p>
 	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 1' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 1"].average.toFixed(0) %><span>Room 1</span></div>
 	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 2' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 2"].average.toFixed(0) %><span>Room 2</span></div>
 	<div class="paperrating paperrating-small <%= all.roomStats.thisRoomName === 'Room 3' ? 'paperrating-green' : 'paperrating-neutral' %>"><%= all.roomStats.averagesPerRoom["Room 3"].average.toFixed(0) %><span>Room 3</span></div>
