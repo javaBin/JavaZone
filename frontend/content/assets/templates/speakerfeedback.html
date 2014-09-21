@@ -3,9 +3,10 @@
 <p>Below, we have collected the feedback we have on your talk. We hope this is of use for you. Please let us know if you have any questions or if there is anything that's unclear.</p>
 <p>We hope to see you again next year. We'll give you a heads up before the "Call for Speakers" for JavaZone 2015 starts.</p>
 
-<% if(avgPaper > 0) { %>
-	<div class="ratingresult-wrapper">
-		<h4>Ratings right after the talk</h4>
+
+<div class="ratingresult-wrapper">
+	<h4>Ratings given right after the talk (paper notes)</h4>
+	<% if(avgPaper > 0) { %>
 		<p>During the conference, we asked all participants to rate the talks using green, yellow and red notes. <%= all.feedback.greenPaperfeedback + all.feedback.yellowPaperfeedback + all.feedback.redPaperfeedback %> people left this kind of feedback for your talk. This is the counted ratings:</p>
 
 		<div class="paperrating paperrating-green"><%= all.feedback.greenPaperfeedback %><span>Green notes</span></div>
@@ -29,14 +30,17 @@
 		<div class="histogram">
 			<canvas id="paperHistogram" width="730" height="150"></canvas>
 		</div>
-	</div>
-<% } %>
+	<% } else { %>
+		<p>We didn't collect paper ratings at the lightning talks due to the fact that there were four or five consecutive talk in the same room. Sorry about that. We'll look into a smarter system for this next year :)</p>
+	<% } %>
+</div>
 
 
-<% if(avgWeb > 0) { %>
-	<div class="ratingresult-wrapper">
-		<h4>Ratings given after the conference</h4>
 
+<div class="ratingresult-wrapper">
+	<h4>2. Ratings given after the conference (web form)</h4>
+
+	<% if(avgWeb > 0) { %>
 		<p>We sent out a feedback form to all attendees of JavaZone, asking them to rate the talks using 1 to 3 stars. The feedback-form <a href="/survey.html">can be found here</a>, and are still active, meaning these numbers will update if more people give their feedback.</p>
 
 		<p><%= all.feedback.redWeb + all.feedback.yellowWeb + all.feedback.greenWeb %> people voted on your talk. This is how the ratings for your talk turned out. Your talk (<%= avgWeb %>) can be compared to the conference average (<%= avgAllWeb %>).</p>
@@ -56,13 +60,17 @@
 		</div>
 		<div class="spacex"></div>
 		<p class="small">A note about web ratings: these numbers are based on a total of <%= all.feedback.redWeb + all.feedback.yellowWeb + all.feedback.greenWeb %> votes on your talk, and a total of <%= all.redWebRatings + all.yellowWebRatings + all.greenWebRatings %> ratings for all talks. This means they are less statistically significant than we would like. If you have any good ideas on how to get even more people to vote after the conference, please let us know :)</p>
-	</div>
-<% } %>
+	<% } else { %>
+		<p>No feedback was given on your talk at the web pages</p>
+		<p class="small">We are open for any good suggestions on how we can get more people to give feedback after the conference, please let us know if you have any good ideas :)</p>
+	<% } %>
+</div>
 
-<% if(all.feedback.writtenFeedbacks.length > 0) { %>
-	<div class="ratingresult-wrapper">
-		<h4>Comments given on the rating form</h4>
 
+<div class="ratingresult-wrapper">
+	<h4>Comments given on your talk (web form)</h4>
+
+	<% if(all.feedback.writtenFeedbacks.length > 0) { %>
 		<p>We also provided the attendees with the opportunity to leave comments on the rating form. The following comments were left on your talk.</p>
 
 		<% _.each(all.feedback.writtenFeedbacks, function(s) { %>
@@ -70,11 +78,15 @@
 		<% }) %>
 
 		<p class="small">Please note that these comments are uncensored directly from the web, so should there be any inappropriate comments, please let us know (we have the IP-adresses of all commenters).</p>
-	</div>
-<% } %>
+	<% } else { %>
+		<p>No written comments was given on your talk at the web pages.</p>
+		<p class="small">We are open for any good suggestions on how we can get more people to give feedback after the conference, please let us know if you have any good ideas :)</p>
+	<% } %>
+</div>
+
 
 <div class="ratingresult-wrapper">
-	<h4>The video of your talk</h4>
+	<h4>The video of your talk at Vimeo</h4>
 	<p>We release all talks on video at Vimeo just hours after the conference is over. JavaZone is a conference arranged by volunteers, and we belive in the sharing of knowledge: thats why all videos are release for free, without any sort of login. Feel free to share it as much as you like :)</p>
 
 	<div class="talkvideo">
