@@ -1,15 +1,17 @@
 <h2 class="first">Feedback for <%= all.feedback.title %> (<%= all.feedback.speakers.join(", ") %>)</h2>
 
-<p>Below, we have collected the feedback we have on your talk. We hope this is of use for you. Please let us know if you have any questions or if there is anything that's unclear.</p>
+<p>Below, we have collected the feedback we have on your talk. We hope this is of use for you. Please let us know if you have any questions or if there is anything that's unclear.</p> 
+<p>You can reach us at <a href="mailto:javazone@java.no">javazone@java.no</a></p>
+<p>We hope to see you again next year. We'll give you a heads up before the "Call for Speakers" for JavaZone 2015 starts.</p>
 
 <% if(avgPaper > 0) { %>
 	<div class="ratingresult-wrapper">
 		<h4>Ratings right after the talk</h4>
 		<p>During the conference, we asked all participants to rate the talks using green, yellow and red notes. This is the counted ratings for your talks:</p>
 
-		<div class="paperrating paperrating-green"><%= all.feedback.greenPaperfeedback %></div>
-		<div class="paperrating paperrating-yellow"><%= all.feedback.yellowPaperfeedback %></div>
-		<div class="paperrating paperrating-red"><%= all.feedback.redPaperfeedback %></div>
+		<div class="paperrating paperrating-green"><%= all.feedback.greenPaperfeedback %><span>Green notes</span></div>
+		<div class="paperrating paperrating-yellow"><%= all.feedback.yellowPaperfeedback %><span>Yellow notes</span></div>
+		<div class="paperrating paperrating-red"><%= all.feedback.redPaperfeedback %><span>Red notes</span></div>
 		<div class="clear"></div>
 		<div class="space"></div>
 
@@ -21,6 +23,8 @@
 		<div class="gaugetext">Your talk</div>
 		<div class="gaugetext">All talks</div>
 		<div class="clear"></div>
+		<div class="space"></div>
+		<p class="small">A full gauge would mean only green notes, and an empty one would mean only read ones.</p>
 	</div>
 <% } %>
 
@@ -55,3 +59,30 @@
 		<p>Please note that these comments are uncensored directly from the web, so should there be any inappropriate comments, please let us know (we have the IP-adresses of all commenters).</p>
 	</div>
 <% } %>
+
+<div class="ratingresult-wrapper">
+	<h4>The video of your talk</h4>
+	<p>We release all talks on video at Vimeo just hours after the conference is over. JavaZone is a conference arranged by volunteers, and we belive in the sharing of knowledge: thats why all videos are release for free, without any sort of login. Feel free to share it as much as you like :)</p>
+
+	<div class="talkvideo">
+        <iframe src="<%= all.feedback.vimeoLink.replace("http://vimeo.com/", "//player.vimeo.com/video/") %>?title=0&amp;byline=0&amp;portrait=0&amp;color=A10735" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="space"></div>
+    <p>Your talk at Vimeo: <a href="<%= all.feedback.vimeoLink %>"><%= all.feedback.vimeoLink %></a></p>
+    <p>If you would like to share it in the context of your talk's description, feel free to use the program site URL instead: <a href="/presentation.html?id=<%= all.feedback.id.substring(0,8) %>">http://2014.javazone.no/presentation.html?id=<%= all.feedback.id.substring(0,8) %></a></p>
+
+	<p>The following are a few stats for your video:</p>
+	<div class="paperrating paperrating-neutral"><%= all.feedback.vimeoStats.loads %><span>Loads</span></div>
+	<div class="paperrating paperrating-green"><%= all.feedback.vimeoStats.plays %><span>Full plays</span></div>
+	<div class="paperrating paperrating-yellow"><%= all.feedback.vimeoStats.downloads %><span>Downloads</span></div>
+	<% if(all.feedback.vimeoStats.likes > 0) { %><div class="paperrating paperrating-blue"><%= all.feedback.vimeoStats.likes %><span>Likes</span></div><% } %>
+	<div class="clear"></div>
+	<div class="space"></div>
+	<p class="small">(updated September 21th. See the stats at vimeo for the most up to date stats)</p>
+
+	<p>Regarding copyright: you are free to do whatever you want with the video, is't your presentation, so you control the content. Feel free to embed it and share it anywhere you like, download it and host it elsewhere if you want that as well.</p>
+</div>
+
+
+<p>Best regards,<br>
+The JavaZone Program committee.</p>

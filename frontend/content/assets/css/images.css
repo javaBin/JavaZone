@@ -32,6 +32,8 @@ a:hover .img-inner {
 }
 
 .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.png"); width:19.444em; height:4.889em; }
+.img-logo2 { background-image:url("/assets/img/logos/javazone.png"); width:11.11111em; height:10.27777em; }
+.page-invert .img-logo2 { background-image:url("/assets/img/logos/javazone.light.png"); }
 .page-invert .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.light.png"); }
 
 .img-map { background-image:url("/assets/img/maps/spektrum.gif"); }
@@ -69,6 +71,8 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
     .img-logo { background-image:url("/assets/img/logos/javazone.horizontal@2x.png"); }
+    .img-logo2 { background-image:url("/assets/img/logos/javazone@2x.png"); }
+    .page-invert .img-logo2 { background-image:url("/assets/img/logos/javazone.light@2x.png"); }
     .page-invert .img-logo { background-image:url("/assets/img/logos/javazone.horizontal.light@2x.png"); }
 
     .img-map { background-image:url("/assets/img/maps/spektrum@2x.gif"); }

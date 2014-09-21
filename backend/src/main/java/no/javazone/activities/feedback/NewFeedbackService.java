@@ -1,5 +1,7 @@
 package no.javazone.activities.feedback;
 
+import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
+
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
@@ -135,9 +137,11 @@ public class NewFeedbackService {
 				
 				String secret = SecretService.getSecretForValue(emsSession.getId());
 				
+				VimeoStat vimeoStats = new VimeoStatsSingle().getStatsForVideoId(emsSession.getVideoId().get());
+				
 				return new NewFeedbackAwesome(emsSession.getId(), secret, emsSession.getTitle(), emsSession.getSpeakerNames(), emsSession.getSpeakerEmails(), writtenFeedbacks, 
 						rating.red, rating.yellow, rating.green, rating.avg, 
-						red, green, yellow);
+						red, green, yellow, vimeoStats, emsSession.getVideoLink().get().getHref().toString());
 			}
 
 			private ArrayList<Integer> ratings(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {

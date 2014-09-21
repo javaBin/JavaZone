@@ -1,11 +1,12 @@
 package no.javazone.activities.feedback;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 import no.javazone.server.PropertiesLoader;
-
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,10 +40,13 @@ public class VimeoStatsSingle {
 	}
 
 	public class VimeoStat {
-
+		@JsonProperty
 		public final int loads;
+		@JsonProperty
 		public final int plays;
+		@JsonProperty
 		public final int downloads;
+		@JsonProperty
 		public final int likes;
 
 		public VimeoStat(final int loads, final int plays, final int downloads, final int likes) {

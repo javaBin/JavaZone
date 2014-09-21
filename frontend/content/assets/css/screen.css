@@ -889,9 +889,21 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
     color: #4F8A10;
     background: #DFF2BF;
 }
+.paperrating-blue {
+    color: #00529B;
+    background: #BDE5F8;
+}
 .paperrating-neutral {
     color: #444;
     background: #eee;
+}
+.paperrating span {
+    display: block;
+    text-align: center;
+    font-size: .3em;
+    padding-top: .5em;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .ratingheader {
     margin: 1.5em 0 .3em 0;
@@ -903,13 +915,21 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 }
 .results {
     width: 40em;
-    margin: 5em auto;
+    margin: 4em auto 5em auto;
     padding: 3em 5em;
     min-height: 50em;
     background: #fff;
 }
 .ratingresult-wrapper {
     margin: 3em 0;
+}
+.results .small {
+    font-size: .8em;
+    color: #999;
+}
+.logocenter {
+    width:11.11111em;
+    margin: 2em auto 0 auto;
 }
 
 
