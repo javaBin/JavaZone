@@ -461,7 +461,7 @@ jz.routes.speakerfeedback = function() {
 
                 var groupedvalues = [];
                 for(var i = 1.0; i<3.1; i = i + 0.1) {
-                    var n = grouped[i.toFixed(1)] ? grouped[i.toFixed(1)].length : -5;
+                    var n = grouped[i.toFixed(1)] ? grouped[i.toFixed(1)].length : 0;
                     groupedvalues.push({v: i.toFixed(1), n: n});
                 }
 
