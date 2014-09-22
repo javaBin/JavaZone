@@ -11,13 +11,15 @@ import static com.google.common.collect.Lists.newArrayList;
 
 public class NewFeedbackDbObject {
 
+	public String mongoId;
 	public String time;
 	public String id;
 	public String value;
 	public String ip;
 	public String userAgent;
 
-	public NewFeedbackDbObject(Object time, Object id, Object value, Object ip, Object userAgent) {
+	public NewFeedbackDbObject(String mongoId, Object time, Object id, Object value, Object ip, Object userAgent) {
+		this.mongoId = mongoId;
 		this.time = (String) time;
 		this.id = (String) id;
 		this.value = (String) value;
@@ -37,8 +39,9 @@ public class NewFeedbackDbObject {
 				Object value = dbObject.get("value");
 				Object ip = dbObject.get("ip");
 				Object userAgent = dbObject.get("userAgent");
+				String mongoId = dbObject.get("_id").toString();
 
-				return new NewFeedbackDbObject(time, id, value, ip, userAgent);
+				return new NewFeedbackDbObject(mongoId, time, id, value, ip, userAgent);
 			}
 		}));
 	}

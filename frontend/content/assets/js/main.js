@@ -413,6 +413,17 @@ jz.routes.surveyresults = function() {
     jz.api.adminsurveyresults().then(function(data) {
         jz.api.template("adminsurveyresults", { feedback: data }).then(function(html) {
             $(".results").html(html);
+            $(".deletedata").click(function(event) {
+                event.preventDefault();
+                var r = confirm("Slette?");
+                if (r == true) {
+                    var id = $(this).data("id");
+                    console.log("sletter feedback med id: ", id);
+                    jz.api.adminsurveyresultdelete(id);
+                    $(this).parent().slideUp();
+                }
+                return false;
+            });
         });
     });
 };

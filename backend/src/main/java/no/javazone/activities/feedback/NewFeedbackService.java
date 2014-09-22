@@ -1,7 +1,10 @@
 package no.javazone.activities.feedback;
 
-import no.javazone.activities.feedback.PaperFeedbackService.RoomStats;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+import no.javazone.activities.feedback.PaperFeedbackService.RoomStats;
 import no.javazone.representations.feedback.NewFeedbackAwesome;
 import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
 import com.google.common.base.Function;
@@ -90,14 +93,14 @@ public class NewFeedbackService {
 		List<NewFeedbackAwesome> feedbacks = allFeedbacks(dbFeedbacks, paperFeedbackService);
 		
 		
-		List<String> conferenceFeedback = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+		List<FeedbackWithId> conferenceFeedback = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
 			@Override
 			public boolean apply(NewFeedbackDbObject input) {
 				return input.id.equals("conference");
 			}
 		}), feedbackToValue()));
 		
-		List<String> emails = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
+		List<FeedbackWithId> emails = newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
 			@Override
 			public boolean apply(NewFeedbackDbObject input) {
 				return input.id.equals("email");
@@ -133,7 +136,7 @@ public class NewFeedbackService {
 			@Override
 			public NewFeedbackAwesome apply(final EmsSession emsSession) {
 				
-				List<String> writtenFeedbacks = writtenFeedbacks(dbFeedbacks, emsSession);
+				List<FeedbackWithId> writtenFeedbacks = writtenFeedbacks(dbFeedbacks, emsSession);
 				
 				Rating rating = Rating.from(ratings(dbFeedbacks, emsSession));
 				
@@ -170,7 +173,7 @@ public class NewFeedbackService {
 				}));
 			}
 
-			private ArrayList<String> writtenFeedbacks(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {
+			private ArrayList<FeedbackWithId> writtenFeedbacks(final List<NewFeedbackDbObject> dbFeedbacks, final EmsSession emsSession) {
 				return newArrayList(transform(filter(dbFeedbacks, new Predicate<NewFeedbackDbObject>() {
 					@Override
 					public boolean apply(NewFeedbackDbObject input) {
@@ -183,13 +186,27 @@ public class NewFeedbackService {
 		};
 	}
 
-	private Function<NewFeedbackDbObject, String> feedbackToValue() {
-		return new Function<NewFeedbackDbObject, String>() {
+	private Function<NewFeedbackDbObject, FeedbackWithId> feedbackToValue() {
+		return new Function<NewFeedbackDbObject, FeedbackWithId>() {
 			@Override
-			public String apply(NewFeedbackDbObject input) {
-				return input.value;
+			public FeedbackWithId apply(NewFeedbackDbObject input) {
+				return new FeedbackWithId(input.mongoId, input.value);
 			}
 		};
+	}
+	
+	public class FeedbackWithId {
+
+		@JsonProperty
+		public String mongoId;
+		@JsonProperty
+		public String value;
+
+		public FeedbackWithId(String mongoId, String value) {
+			this.mongoId = mongoId;
+			this.value = value;
+		}
+		
 	}
 	
 	private Rating conferenceRatingInTotal(final List<NewFeedbackDbObject> dbFeedbacks) {
@@ -251,6 +268,20 @@ public class NewFeedbackService {
 			}
 		}));
 		return webHistogramData;
+	}
+
+	public void deleteFeedback(String mongoID) {
+		LOG.info(String.format("Forsøker å slette feedback %s", mongoID));
+
+		DBCursor cursor = feedbackMongoCollection.find();
+		for (DBObject dbObject : cursor) {
+			if (dbObject.get("_id").toString().equals(mongoID)) {
+				feedbackMongoCollection.remove(dbObject);
+				LOG.info("Slettet: " + dbObject.toString());
+				return;
+			}
+		}
+		LOG.warn("Fant ikke mongoobjekt for sletting med id " + mongoID);
 	}
 
 	

@@ -109,7 +109,7 @@
 		<p>We also provided the attendees with the opportunity to leave comments on the rating form. The following comments were left on your talk.</p>
 
 		<% _.each(all.feedback.writtenFeedbacks, function(s) { %>
-			<div class="webcomment"><%- s %></div>
+			<div class="webcomment"><%- s.value %></div>
 		<% }) %>
 
 		<p class="small">Please note that these comments are uncensored directly from the web, so should there be any inappropriate comments, please let us know.</p>

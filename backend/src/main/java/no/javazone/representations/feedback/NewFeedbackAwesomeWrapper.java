@@ -1,5 +1,7 @@
 package no.javazone.representations.feedback;
 
+import no.javazone.activities.feedback.NewFeedbackService;
+
 import org.codehaus.jackson.annotate.JsonProperty;
 
 import java.util.List;
@@ -7,9 +9,9 @@ import java.util.List;
 public class NewFeedbackAwesomeWrapper {
 
 	@JsonProperty
-	private List<String> emails;
+	private List<NewFeedbackService.FeedbackWithId> emails;
 	@JsonProperty
-	private List<String> conferenceFeedback;
+	private List<NewFeedbackService.FeedbackWithId> conferenceFeedback;
 	@JsonProperty
 	private List<NewFeedbackAwesome> feedbacks;
 	@JsonProperty
@@ -27,7 +29,7 @@ public class NewFeedbackAwesomeWrapper {
 	@JsonProperty
 	private int greenPaperRatings;
 
-	public NewFeedbackAwesomeWrapper(List<String> emails, List<String> conferenceFeedback, 
+	public NewFeedbackAwesomeWrapper(List<NewFeedbackService.FeedbackWithId> emails, List<NewFeedbackService.FeedbackWithId> conferenceFeedback, 
 			int redWebRatings, int yellowWebRatings, int greenWebRatings, double averageWebRatings, 
 			List<NewFeedbackAwesome> feedbacks,
 			int redPaperRatings, int yellowPaperRatings, int greenPaperRatings) {

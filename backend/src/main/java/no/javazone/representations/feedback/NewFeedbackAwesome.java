@@ -1,5 +1,7 @@
 package no.javazone.representations.feedback;
 
+import no.javazone.activities.feedback.NewFeedbackService;
+
 import no.javazone.activities.feedback.VimeoStatsSingle.VimeoStat;
 import org.codehaus.jackson.annotate.JsonProperty;
 
@@ -18,7 +20,7 @@ public class NewFeedbackAwesome {
 	@JsonProperty
 	private List<String> speakerEmails;
 	@JsonProperty
-	private List<String> writtenFeedbacks;
+	private List<NewFeedbackService.FeedbackWithId> writtenFeedbacks;
 	@JsonProperty
 	private int redPaperfeedback;
 	@JsonProperty
@@ -38,7 +40,7 @@ public class NewFeedbackAwesome {
 	@JsonProperty
 	private String vimeoLink;
 
-	public NewFeedbackAwesome(String id, String secret, String title, List<String> speakers, List<String> speakerEmails, List<String> writtenFeedbacks, 
+	public NewFeedbackAwesome(String id, String secret, String title, List<String> speakers, List<String> speakerEmails, List<NewFeedbackService.FeedbackWithId> writtenFeedbacks, 
 			int redWeb, int yellowWeb, int greenWeb, double avgWeb,
 			int redPaperfeedback, int greenPaperfeedback, int yellowPaperfeedback, VimeoStat vimeoStats, String vimeoLink) {
 		this.id = id;

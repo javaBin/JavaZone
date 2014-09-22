@@ -185,7 +185,21 @@ jz.api.post = function(url, data) {
         url: url,
         contentType: "application/json",
         method: "post",
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
+        headers: {
+            "X-Jz-Secret": $.cookie("jz.secret") || "?"
+        }
+    });
+};
+
+jz.api.remove = function(url) {
+    return $.ajax({
+        url: url,
+        contentType: "application/json",
+        method: "delete",
+        headers: {
+            "X-Jz-Secret": $.cookie("jz.secret") || "?"
+        }
     });
 };
 
@@ -261,4 +275,12 @@ jz.api.adminsurveyresults = function() {
         $.cookie("jz.secret", secret, { path: '/', expires: 1 });
     }
     return jz.api.get("/api/admin/newfeedback");
+};
+
+jz.api.adminsurveyresultdelete = function(id) {
+    if(!$.cookie("jz.secret")) {
+        var secret = prompt('Passord:');
+        $.cookie("jz.secret", secret, { path: '/', expires: 1 });
+    }
+    return jz.api.remove("/api/admin/newfeedback/" + id);
 };
