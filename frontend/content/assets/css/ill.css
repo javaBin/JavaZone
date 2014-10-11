@@ -949,7 +949,7 @@ only screen and (                min-resolution: 2dppx) {
     	font-size: .8em;
     }
     .academy-boxes .academy-box .academy-box-inner {
-    	min-height: 16em;
+    	min-height: 11em;
     }
 }
 
@@ -965,6 +965,7 @@ only screen and (                min-resolution: 2dppx) {
 	padding: 1em;
 	text-align: center;
 	background: #a10035;
+	border-bottom: 3px solid #101010;
 }
 .academy-boxes .academy-box a:hover {
 	background: #ff4f4c;
