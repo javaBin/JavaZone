@@ -1,0 +1,16 @@
+.teaser {
+	margin-top: 70px;
+	text-align: center;
+}
+
+.teaser img {
+	margin-bottom: 40px;
+	max-width: 250px;
+	width: 50%;
+}
+
+.teaser h1 {
+	font-weight: normal;
+}
+
+@media (min-width: )

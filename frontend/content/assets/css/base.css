@@ -1,0 +1,19 @@
+body {
+	background: #fefefe;
+	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, 'sans serif';
+	font-size: 16px;
+}
+
+/* Borfer-box ftw */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+	margin-left: 20px;
+	margin-right: 20px;
+}
