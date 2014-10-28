@@ -12,7 +12,7 @@ var _ = require('underscore'),
 deploy.environments = {
 
   jzweb: {
-    prod: { server: 'javabin@2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
+    prod: { server: 'javabin@2014.javazone.no', dir: '/home/javabin/web/2014/jz-frontend' },
     test: { server: 'javabin@test.2014.javazone.no', dir: '/home/javabin/web/2014/jz-frontend' },
     dev: { server: 'javabin@192.168.111.222', dir: '/home/javabin/web/2014/jz-frontend' }
   }
@@ -214,8 +214,8 @@ deploy.verifySSH();
 
 // Deploy
 if(config.target === 'prod') {
-  git.verify();
-  deploy.test();
+  //git.verify();
+  //deploy.test();
   utils.log();
   utils.read.question('Skriv "produksjon" for å bekrefte deploy til prod: ', function(answer) {
     if(answer !== 'produksjon') process.exit(0);
