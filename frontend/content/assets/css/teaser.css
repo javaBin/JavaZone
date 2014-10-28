@@ -10,5 +10,17 @@
 }
 
 .teaser h1 {
-	font-weight: normal;
+	font-weight: 300;
+}
+
+.teaser h2 {
+	font-weight: 300;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+.teaser .splitter {
+	width: 100px;
+	margin: 40px auto;
+	border-bottom: 1px solid #eee;
 }
