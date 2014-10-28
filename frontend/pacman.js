@@ -17,6 +17,7 @@ exports.config = {
       all: [
         "assets/css/reset.css",
         "assets/css/base.css",
+        "assets/css/components.css",
         "assets/css/teaser.css",
         "assets/css/menu.css"
       ]
