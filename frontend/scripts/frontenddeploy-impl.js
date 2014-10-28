@@ -13,8 +13,8 @@ deploy.environments = {
 
   jzweb: {
     prod: { server: 'javabin@2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
-    test: { server: 'javabin@test.2014.javazone.no', dir: '/home/javabin/web/jz-frontend' },
-    dev: { server: 'javabin@192.168.111.222', dir: '/home/javabin/web/jz-frontend' }
+    test: { server: 'javabin@test.2014.javazone.no', dir: '/home/javabin/web/2014/jz-frontend' },
+    dev: { server: 'javabin@192.168.111.222', dir: '/home/javabin/web/2014/jz-frontend' }
   }
 
 };
