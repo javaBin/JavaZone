@@ -21,6 +21,35 @@
 
 .teaser .splitter {
 	width: 100px;
-	margin: 40px auto;
+	margin: 60px auto;
 	border-bottom: 1px solid #eee;
+}
+
+.teaser .buttons {
+	width: 630px;
+	margin: 50px auto 0 auto;
+}
+
+.teaser .button {
+	padding: 10px 20px;
+	border: 1px solid #286a65;
+	border-radius: 10px;
+	color: #286a65;
+	display: block;
+	min-width: 200px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+.teaser .button:hover {
+	border-color: #101010;
+	color: #101010;
+}
+
+@media only screen and (max-width: 800px) {
+	.teaser .buttons {
+		width: 200px;
+	}
+	.teaser .button {
+		margin: 10px;
+	}
 }
