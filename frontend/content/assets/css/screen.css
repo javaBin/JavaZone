@@ -272,6 +272,7 @@ ul.topiclist strong { font-weight: bold; text-transform: uppercase; }
 .page-invert .footer a { color:#8b8b8b; }
 .page-invert .footer a:hover, .page-invert .menu a:hover { border-color:#aaa; color:#fff; }
 .page-invert .tile .extra { background:#101010;  color:#fff; }
+.page-invert .tile .extra a { color: #fff; border-bottom: 1px solid #555 ;}
 .page-invert .tile-invert .tile-inner,
 .page-invert .tile-facts .tile-inner { background:#282828; }
 
@@ -955,6 +956,15 @@ a.quotes .quotee { color: #ccc; text-align: right; font-size: .9em; }
 .logocenter {
     width:11.11111em;
     margin: 2em auto 0 auto;
+}
+
+
+.nextyear_banner {
+    padding: .5em;
+    font-size: 2em;
+    background: white;
+    text-align: center;
+    line-height: 1.3;
 }
 
 
