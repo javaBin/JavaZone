@@ -29,9 +29,11 @@ html {
   box-sizing: inherit;
 }
 
-.wrapper {
+.content {
 	margin-left: 20px;
 	margin-right: 20px;
+    margin-top: 200px;
+    margin-bottom: 600px;
 }
 
 a {
