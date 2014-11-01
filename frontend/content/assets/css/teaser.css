@@ -1,5 +1,5 @@
 .teaser {
-	margin: 55px 0;
+	margin: 0 0 40px 0;
 	text-align: center;
 }
 
@@ -10,6 +10,7 @@
 }
 
 .teaser h1 {
+	font-size: 1.6em;
 	font-weight: 300;
 }
 
@@ -42,6 +43,14 @@
 }
 
 @media (min-width: 768px) {
+
+	.teaser {
+		margin: 150px 0;
+	}
+
+	.teaser h1 {
+		font-size: 2em;
+	}
 
 	.teaser .button {
 		margin: 10px 10px;

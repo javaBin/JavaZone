@@ -1,9 +1,21 @@
 .menu {
-	line-height: 150px;
+	-webkit-transition: line-height .1s ease;
+	-moz-transition: line-height .1s ease;
+	-o-transition: line-height .1s ease;
+	transition: line-height .1s ease;
+	background: rgba(254, 254, 254, .9);
 	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
-.menu img {
+.menu svg {
+	-webkit-transition: width .1s ease;
+	-moz-transition: width .1s ease;
+	-o-transition: width .1s ease;
+	transition: width .1s ease;
+	transform-origin: 50% 0;
 	vertical-align: middle;
-	width: 100px;
+	margin: 20px 0;
 }
