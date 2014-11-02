@@ -24,15 +24,11 @@
 		);
 
 		var opacity = 1 - (window.scrollY / 100) * 2;
-
-		var transform = 'scale(' + scaleFactor + ')';
-		console.log(scale);
-
-		var width = scaleFactor * 98;
+		var height = scaleFactor * 98;
 
 		requestAnimationFrame(function() {
 			style(text, 'opacity', opacity);
-			style(logo, 'height', width);
+			style(logo, 'height', height);
 		});
 
 	});
