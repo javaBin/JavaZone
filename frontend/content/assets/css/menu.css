@@ -4,8 +4,8 @@
 	-o-transition: line-height .1s ease;
 	transition: line-height .1s ease;
 	background: rgba(254, 254, 254, .9);
-	text-align: center;
 	position: fixed;
+	text-align: center;
 	top: 0;
 	width: 100%;
 }
@@ -16,6 +16,59 @@
 	-o-transition: width .1s ease;
 	transition: width .1s ease;
 	transform-origin: 50% 0;
-	vertical-align: middle;
 	margin: 20px 0;
 }
+
+.menu .container {
+	display: table;
+}
+
+.menu .menu-item {
+	display: table-cell;
+	vertical-align: middle;
+	width: 33.33%;
+}
+
+.menu-item.left {
+	text-align: left;
+}
+
+.menu-item.right {
+	text-align: right;
+}
+
+.menu a {
+	-webkit-transition: color .4s ease;
+	-moz-transition: color .4s ease;
+	-o-transition: color .4s ease;
+	transition: color .4s ease;
+	color: #101010;
+	display: block;
+	font-size: 1.8em;
+	font-weight: 300;
+	margin-top: -10px;
+}
+
+.menu a:hover,
+.menu a:focus {
+	color: #ff8641;
+}
+
+.menu a.active {
+	text-decoration: underline;
+}
+
+/*.menu .menu-item {
+	float: left;
+	font-size: 1.8em;
+	width: 33.33%;
+	display: inline-block;
+}
+
+.menu .menu-item.left {
+	text-align: left;
+}
+
+.menu .menu-item.right {
+	text-align: right;
+}*/
