@@ -9,6 +9,7 @@ exports.config = {
 
     js: {
       all: [
+        "bower_components/lodash/dist/lodash.min.js",
         "assets/js"
       ]
     },

@@ -2,6 +2,7 @@
   "name": "javazone",
   "version": "0.0.1",
   "dependencies": {
-    "less": "~1.7.5"
+    "less": "~1.7.5",
+    "lodash": "~2.4.1"
   }
 }
