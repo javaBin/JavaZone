@@ -10,6 +10,7 @@ exports.config = {
     js: {
       all: [
         "bower_components/lodash/dist/lodash.min.js",
+        "bower_components/velocity/velocity.min.js",
         "assets/js"
       ]
     },
@@ -20,7 +21,8 @@ exports.config = {
         "assets/css/base.css",
         "assets/css/components.css",
         "assets/css/teaser.css",
-        "assets/css/menu.css"
+        "assets/css/menu.css",
+        "assets/css/interview.css"
       ]
     }
   }

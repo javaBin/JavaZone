@@ -19,6 +19,7 @@ body {
 	background: #fefefe;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, 'sans serif';
 	font-size: 16px;
+    line-height: 1.4;
 }
 
 
@@ -30,11 +31,14 @@ html {
 }
 
 .content {
-    margin-top: 200px;
+    margin: 230px 0 40px 0;
 }
 
 .container {
     max-width: 840px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
 }
 
 @media (min-width: 960px) {
@@ -54,6 +58,16 @@ a:hover {
 	color: #ff8641;
 }
 
+h1 {
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+}
 
 /**
  * For modern browsers

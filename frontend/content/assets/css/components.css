@@ -15,3 +15,9 @@
 	border-color: #101010;
 	color: #101010;
 }
+
+.splitter {
+	width: 100px;
+	margin: 70px auto;
+	border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,32 @@
+.interview-image img {
+	border-radius: 100%;
+	float: left;
+	height: 200px;
+	width: 200px;
+}
+
+.interview-content {
+	margin-left: 250px;
+}
+
+.interview-info {
+	line-height: 150%;
+}
+
+.interview-info h1 {
+	margin: 0;
+}
+
+.interview-info h2 {
+	color: #707070;
+	font-family: Vollkorn;
+	font-size: 1.15em;
+	font-weight: 300;
+	margin-top: 1em;
+	font-style: italic;
+}
+
+.interview-text {
+	margin-top: 1.5em;
+	text-align: justify;
+}
