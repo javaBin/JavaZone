@@ -14,9 +14,9 @@
 		});
 	}
 
-	var menuContainer = document.querySelector('.menu');
-	var logo = document.querySelector('.menu svg');
-	var text = document.querySelector('.menu #javazone-text');
+	var menuContainer = document.querySelector('.nav');
+	var logo = document.querySelector('.nav svg');
+	var text = document.querySelector('.nav #javazone-text');
 
 	window.addEventListener('scroll', function() {
 		var scaleFactor = MAX_ZOOM - Math.min(

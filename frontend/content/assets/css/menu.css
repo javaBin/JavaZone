@@ -1,4 +1,4 @@
-.menu {
+.nav {
 	-webkit-transition: line-height .1s ease;
 	-moz-transition: line-height .1s ease;
 	-o-transition: line-height .1s ease;
@@ -6,11 +6,11 @@
 	background: rgba(254, 254, 254, .9);
 	position: fixed;
 	text-align: center;
-	top: 0;
+	top: -80px;
 	width: 100%;
 }
 
-.menu svg {
+.nav .logo svg {
 	-webkit-transition: width .1s ease;
 	-moz-transition: width .1s ease;
 	-o-transition: width .1s ease;
@@ -19,56 +19,108 @@
 	margin: 20px 0;
 }
 
-.menu .container {
+.nav .logo a {
+	margin-left: 36px;
+}
+
+.nav-toggle {
+	background: transparent;
+	border: 0;
+	display: table-cell;
+	height: 100%;
+	padding: 0;
+}
+
+.nav-toggle:focus {
+	outline: 0;
+}
+
+.nav-toggle svg {
+	position: relative;
+	top: -10px;
+}
+
+.nav-desktop {
 	display: table;
 }
 
-.menu .menu-item {
-	display: table-cell;
-	vertical-align: middle;
-	width: 33.33%;
+.nav-mobile, .nav-desktop {
+	width: 100%;
 }
 
-.menu-item.left {
+.nav-mobile {
+	list-style: none;
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+
+.nav-element {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.nav-element.left {
 	text-align: left;
 }
 
-.menu-item.right {
+.nav-element.right {
 	text-align: right;
 }
 
-.menu a {
+.nav a {
 	-webkit-transition: color .4s ease;
 	-moz-transition: color .4s ease;
 	-o-transition: color .4s ease;
 	transition: color .4s ease;
 	color: #101010;
-	display: block;
+	display: inline-block;
 	font-size: 1.8em;
 	font-weight: 300;
-	margin-top: -10px;
+	position: relative;
 }
 
-.menu a:hover,
-.menu a:focus {
+.nav .nav-item a {
+	position: relative;
+	top: -20px;
+}
+
+.nav a:hover,
+.nav a:focus {
 	color: #ff8641;
 }
 
-.menu a.active {
-	text-decoration: underline;
+.nav a.active {
+	color: #ff8641;
 }
 
-/*.menu .menu-item {
-	float: left;
-	font-size: 1.8em;
-	width: 33.33%;
-	display: inline-block;
+.nav-item {
+	display: none;
 }
 
-.menu .menu-item.left {
-	text-align: left;
-}
+@media (min-width: 768px) {
 
-.menu .menu-item.right {
-	text-align: right;
-}*/
+	.nav {
+		top: 0;
+	}
+
+	.nav .logo a {
+		margin-left: 0;
+	}
+
+	.nav-toggle {
+		display: none;
+	}
+
+	.nav-element {
+		width: 33.33%;
+	}
+
+	.nav-mobile {
+		display: none;
+	}
+
+	.nav-item {
+		display: table-cell;
+	}
+}
