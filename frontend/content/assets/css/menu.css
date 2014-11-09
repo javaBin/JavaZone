@@ -61,11 +61,11 @@
 }
 
 .nav-element.left {
-	text-align: left;
+	text-align: right;
 }
 
 .nav-element.right {
-	text-align: right;
+	text-align: left;
 }
 
 .nav a {
@@ -82,7 +82,7 @@
 
 .nav .nav-item a {
 	position: relative;
-	top: -20px;
+	top: -14px;
 }
 
 .nav a:hover,

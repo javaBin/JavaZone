@@ -32,10 +32,6 @@
 
 @media (min-width: 768px) {
 
-	.teaser {
-		margin: 150px 0;
-	}
-
 	.teaser .button {
 		margin: 10px 10px;
 		width: 200px;
