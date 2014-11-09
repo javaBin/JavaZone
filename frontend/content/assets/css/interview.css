@@ -14,7 +14,24 @@
 }
 
 .interview-info h1 {
+	display: inline-block;
 	margin: 0;
+}
+
+.interview-info .twitter {
+	margin-left: 20px;
+}
+
+.interview-info .twitter path {
+	-webkit-transition: fill .4s ease;
+	-moz-transition: fill .4s ease;
+	-o-transition: fill .4s ease;
+	transition: fill .4s ease;
+	fill: #707070;
+}
+
+.interview-info .twitter:hover path {
+	fill: #00ACED;
 }
 
 .interview-info h2 {
