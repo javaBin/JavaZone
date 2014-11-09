@@ -8,6 +8,10 @@
 	width: 50%;
 }
 
+.teaser h1 {
+	margin-top: 0;
+}
+
 .teaser h2 {
 	font-weight: 300;
 	font-size: 1.2em;
