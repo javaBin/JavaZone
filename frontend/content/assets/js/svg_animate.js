@@ -22,7 +22,8 @@
 
 	svgAnimate.prototype.registerListener = function() {
 		var _this = this;
-		this.el.addEventListener('click', function() { _this.toggle(); }, false);
+		var eventType = Modernizr.touch ? 'touchstart' : 'click';
+		this.el.addEventListener(eventType, function() { _this.toggle(); }, false);
 	};
 
 	svgAnimate.prototype.toggle = function() {
