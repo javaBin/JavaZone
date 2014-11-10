@@ -1,16 +1,17 @@
-.interview-image img {
-	border-radius: 100%;
-	float: left;
-	height: 200px;
-	width: 200px;
+.interview-image {
+	text-align: center;
 }
 
-.interview-content {
-	margin-left: 250px;
+.interview-image img {
+	border-radius: 100%;
+	height: 150px;
+	width: 150px;
 }
 
 .interview-info {
 	line-height: 150%;
+	text-align: center;
+	margin-top: 15px;
 }
 
 .interview-info h1 {
@@ -37,13 +38,38 @@
 .interview-info h2 {
 	color: #707070;
 	font-family: Vollkorn;
-	font-size: 1.15em;
+	font-size: 1em;
 	font-weight: 300;
-	margin-top: 1em;
+	margin-top: .7em;
 	font-style: italic;
 }
 
 .interview-text {
 	margin-top: 1.5em;
 	text-align: justify;
+}
+
+@media (min-width: 768px) {
+	.interview-image {
+		float: left;
+	}
+
+	.interview-image img {
+		height: 200px;
+		width: 200px;
+	}
+
+	.interview-content {
+		margin-left: 250px;
+	}
+
+	.interview-info {
+		text-align: left;
+		margin-top: 0;
+	}
+
+	.interview-info h2 {
+		font-size: 1.15em;
+		margin-top: 1em;
+	}
 }
