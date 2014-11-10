@@ -11,6 +11,7 @@ exports.config = {
       all: [
         "bower_components/lodash/dist/lodash.min.js",
         "bower_components/velocity/velocity.min.js",
+        "assets/js/modernizr.js",
         "assets/js/svg_animate.js",
         "assets/js"
       ]
