@@ -1,3 +1,8 @@
+/*global exports */
+
+var less = require('less');
+var fs = require('fs');
+
 exports.config = function(pacbot) {
 
 	var config = {
@@ -20,6 +25,7 @@ exports.config = function(pacbot) {
 	config.assets.css = {
 		all: [
 			"assets/css/reset.css",
+			"assets/css/base.css",
 			"assets/css/teaser.css",
 			"assets/css/interview.css"
 		]
@@ -32,6 +38,15 @@ exports.config = function(pacbot) {
 			"assets/less/menu.less",
 		]
 	};
+
+	/*pacbot.filter.set('compile', 'less', function(file, data, locals, callback) {
+	    var file_content = fs.readFileSync(file).toString();
+	    less.render(file_content, function (err, css) {
+	        if (err) log('error', 'could not render less file', file);
+	        if (err) throw(err);
+	        callback(css.css);
+	    });
+	});*/
 
 	return config;
 }
