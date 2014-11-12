@@ -1,3 +1,5 @@
+@import "content/assets/less/vars.less";
+
 .nav {
 	-webkit-transition: line-height .1s ease;
 	-moz-transition: line-height .1s ease;
@@ -73,7 +75,7 @@
 	-moz-transition: color .4s ease;
 	-o-transition: color .4s ease;
 	transition: color .4s ease;
-	color: #101010;
+	color: @black;
 	display: inline-block;
 	font-size: 1.8em;
 	font-weight: 300;
@@ -86,12 +88,9 @@
 }
 
 .nav a:hover,
-.nav a:focus {
-	color: #ff8641;
-}
-
-.nav a.active {
-	color: #ff8641;
+.nav a:focus,
+.nat a.active {
+	color: @orange;
 }
 
 .nav-item {
