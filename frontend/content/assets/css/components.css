@@ -1,21 +1,19 @@
-@import "content/assets/less/vars.less";
-
 .button {
 	-webkit-transition: color .4s ease, border-color .4s ease;
 	-moz-transition: color .4s ease, border-color .4s ease;
 	-o-transition: color .4s ease, border-color .4s ease;
 	transition: color .4s ease, border-color .4s ease;
 	padding: 10px 20px;
-	border: 1px solid @dark-green;
-	color: @dark-green;
+	border: 1px solid #286a65;
+	color: #286a65;
 	display: inline-block;
 	margin: 10px 0;
 	text-transform: uppercase;
 }
 
 .button:hover {
-	border-color: @orange;
-	color: @orange;
+	border-color: #ff8641;
+	color: #ff8641;
 }
 
 .splitter {

@@ -1,7 +1,22 @@
-@import "content/assets/less/vars.less";
+/*
+	Fargepaletten til JavaZone
+	(inntil vi får less-variabler)
+
+    Main Text #394549
+    Light Text #ccc
+
+    Burgunder:  a10035;
+    Lyserød:    ff4f4c;
+    Oransje:    ff8641;
+    Gul:        fcaf17;
+    Lysegrønn:  149089;
+    Mørkegrønn: 286a65;
+    Svart:      101010;
+*/
+
 
 body {
-	background: @white;
+	background: #fefefe;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, 'sans serif';
 	font-size: 16px;
     line-height: 1.4;
@@ -38,12 +53,12 @@ html {
 }
 
 a {
-	color: @burgundy;
+	color: #a10035;
 	text-decoration: none;
 }
 
 a:hover {
-	color: @orange;
+	color: #ff8641;
 }
 
 h1 {
