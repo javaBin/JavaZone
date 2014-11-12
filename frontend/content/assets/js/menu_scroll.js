@@ -30,9 +30,12 @@
 			Math.max(MAX_ZOOM, (window.scrollY / SCALE_FACTOR)) / 100, MIN_ZOOM
 		);
 
-		var opacity = 1 - (window.scrollY / 100) * 2;
+		var opacity = Math.max(1 - (window.scrollY / 100) * 2, 0);
 		var height = scaleFactor * 98;
 		var translation = 30 - (scaleFactor * 30);
+
+		if (opacity < .01)
+			style(text, 'height', 0);
 
 		requestAnimationFrame(function() {
 			style(text, 'opacity', opacity);
