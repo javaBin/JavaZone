@@ -13,7 +13,11 @@ exports.config = function(pacbot) {
 			"bower_components/velocity/velocity.min.js",
 			"assets/js/modernizr.js",
 			"assets/js/svg_animate.js",
-			"assets/js"
+			"assets/js/data.js",
+			"assets/js/menu.js",
+			"assets/js/menu_scroll.js",
+			"assets/js/partners.js",
+			"assets/js/main.js"
 		]
 	}
 
@@ -24,7 +28,8 @@ exports.config = function(pacbot) {
 			"assets/css/components.css",
 			"assets/css/teaser.css",
 			"assets/css/menu.css",
-			"assets/css/interview.css"
+			"assets/css/interview.css",
+			"assets/css/partners.css"
 		]
 	};
 

@@ -1,12 +1,15 @@
-(function(Velocity, svgAnimate) {
+(function(Velocity, svgAnimate, jz) {
 
-	var menu = document.querySelector('.nav-toggle');
+	(function setActive() {
+		var menuItems = document.querySelectorAll('.nav .nav-item a');
+		var active = _(menuItems).reduce(function(acc, a) {
+			return a.pathname === location.pathname ? a : acc;
+		}, null);
+		if (active)
+			active.classList.add('active');
+	})();
+
 	var nav = document.querySelector('.nav');
-
-	function toggleMenu() {
-		var top = window.getComputedStyle(nav).top === "0px" ? -80 : 0;
-		Velocity(nav, { top: top }, { duration: 400, easing: 'easeInOutCirc' });
-	}
 
 	var mql = window.matchMedia("(min-width: 768px)");
 	mql.addListener(function(mql) {
@@ -17,7 +20,10 @@
 	});
 
 	var props = {
-		action: toggleMenu,
+		action: function() {
+			var top = window.getComputedStyle(nav).top === "0px" ? -80 : 0;
+			Velocity(nav, { top: top }, { duration: 400, easing: 'easeInOutCirc' });
+		},
 		animation: [
 			{
 				el: '.top',
@@ -78,7 +84,6 @@
 			}
 		]
 	}
+	new svgAnimate(document.querySelector('.nav-toggle'), props);
 
-	new svgAnimate(menu, props);
-
-})(window.Velocity, window.svgAnimate);
+})(window.Velocity, window.svgAnimate, window.jz = window.jz || {});

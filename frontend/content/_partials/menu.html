@@ -21,13 +21,3 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	window.loaded.push(function() {
-		var menuItems = document.querySelectorAll('.nav .nav-item a');
-		var active = _(menuItems).reduce(function(acc, a) {
-			return a.pathname === location.pathname ? a : acc;
-		}, null);
-		if (active)
-			active.classList.add('active');
-	});
-</script>
