@@ -10,6 +10,56 @@
 }
 
 .partner-list img {
+	-webkit-animation: fadein .5s;
+	-moz-animation: fadein .5s;
+	-ms-animation: fadein .5s;
+	-o-animation: fadein .5s;
+	animation: fadein .5s;
 	height: 68px;
 	width: 150px;
+}
+
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
