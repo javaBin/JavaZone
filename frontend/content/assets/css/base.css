@@ -18,8 +18,8 @@
 body {
 	background: #fefefe;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, 'sans serif';
-	font-size: 16px;
-    line-height: 1.4;
+	font-size: 18px;
+    line-height: 1.5;
 
     /* We make our own highlights instead */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
