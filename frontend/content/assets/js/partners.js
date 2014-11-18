@@ -18,4 +18,4 @@
 		}).join('') + '</ul>'
 	}
 
-})(window._, window.jz = window.jz || {})
+})(window._, window.jz = window.jz || {});
