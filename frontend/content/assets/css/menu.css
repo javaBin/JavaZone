@@ -24,7 +24,7 @@
 }
 
 .nav .logo a {
-	margin-left: 36px;
+	margin-left: 30px;
 }
 
 .nav-toggle {
@@ -54,7 +54,7 @@
 
 .nav-mobile {
 	list-style: none;
-	margin: 0 0 0 15px;
+	margin: 0;
 	padding: 0;
 }
 
