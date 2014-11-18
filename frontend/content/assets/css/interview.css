@@ -54,6 +54,10 @@
 		float: left;
 	}
 
+	.right .interview-image {
+		float: right;
+	}
+
 	.interview-image img {
 		height: 200px;
 		width: 200px;
@@ -63,13 +67,22 @@
 		margin-left: 250px;
 	}
 
+	.right .interview-content {
+		margin-left: 0;
+		margin-right: 250px;
+	}
+
 	.interview-info {
 		text-align: left;
 		margin-top: 0;
 	}
 
+	.right .interview-info {
+		text-align: left;
+	}
+
 	.interview-info h2 {
 		font-size: 1.15em;
-		margin-top: 1em;
+		margin-top: .7em;
 	}
 }
