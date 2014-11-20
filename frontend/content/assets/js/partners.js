@@ -15,7 +15,7 @@
 		var partnerList = _(jz.data.partners)
 			.shuffle()
 			.map(function(partner) {
-				return String.format('<li><a href="{0}"><img src="{1}" alt="{2}"></a>', partner[2], imagePath + partner[1], partner[0]);
+				return String.format('<li><a href="{0}" target="_blank"><img src="{1}" alt="{2}"></a>', partner[2], imagePath + partner[1], partner[0]);
 			})
 			.join('');
 		partners.innerHTML = String.format('<ul class="cf">{0}</ul>', partnerList);
