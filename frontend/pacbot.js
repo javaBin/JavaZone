@@ -33,5 +33,11 @@ exports.config = function(pacbot) {
 		]
 	};
 
+	config.helpers = {
+		settings: {
+			partner_mail: 'partner@java.no'
+		}
+	};
+
 	return config;
 }
