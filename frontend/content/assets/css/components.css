@@ -16,8 +16,34 @@
 	color: #ff8641;
 }
 
-.splitter {
+/*.splitter {
 	width: 100px;
 	margin: 70px auto;
 	border-bottom: 1px solid #eee;
+}*/
+
+.splitter, .splitter:before, .splitter:after {
+	border: 1px solid #c0c0c0;
+	height: 4px;
+	width: 4px;
+}
+
+.splitter {
+	margin: 70px auto;
+	position: relative;
+}
+
+.splitter:before, .splitter:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -1px;
+}
+
+.splitter:before {
+	left: -30px;
+}
+
+.splitter:after {
+	left: 28px;
 }
