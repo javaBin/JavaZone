@@ -9,6 +9,7 @@
 	display: inline-block;
 	margin: 10px 0;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .button:hover {
