@@ -21,7 +21,7 @@
 
 	var props = {
 		action: function() {
-			var top = window.getComputedStyle(nav).top === "0px" ? -80 : 0;
+			var top = window.getComputedStyle(nav).top === "0px" ? -96 : 0;
 			Velocity(nav, { top: top }, { duration: 400, easing: 'easeInOutCirc' });
 		},
 		animation: [
