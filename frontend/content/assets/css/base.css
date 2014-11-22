@@ -53,8 +53,12 @@ html {
 }
 
 a {
-	color: #a10035;
-	text-decoration: none;
+    -webkit-transition: color .4s ease;
+    -moz-transition: color .4s ease;
+    -o-transition: color .4s ease;
+    transition: color .4s ease;
+	color: #286a65;
+	text-decoration: underline;
 }
 
 a:hover {
