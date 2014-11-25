@@ -61,21 +61,36 @@
 	padding: 10px 40px;
 }
 
-.section:nth-child(2) h1 {
-	margin-top: 2em;
+.section {
+	margin-top: 2.5em;
 }
 
-.section h1 {
-	margin: 1.5em 0 .6em 0;
+.section h1, .section h2 {
+	float: left;
+	margin: 0;
+	padding-right: 20px;
+	text-align: right;
+	width: 40%;
 }
 
-.section p {
-	text-align: justify;
+.section h2 {
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+.section-content {
+	float: left;
+	padding-left: 20px;
+	width: 60%;
+}
+
+.section-content p {
 	margin: 1.5em 0;
+	text-align: left;
 }
 
-.section p:nth-child(2) {
-	margin-top: 0;
+.section-content p:first-child {
+	margin-top: .7em;
 }
 
 /*.sub-section {
@@ -90,36 +105,40 @@
 	}
 }
 
-.sub-section h2 {
-	font-size: 1.3em;
-	font-weight: 300;
-}
-
-.sub-section ul {
+.section ul {
 	list-style: none;
 	margin: 0;
 	padding: 0 20px;
 	position: relative;
 }
 
-.sub-section ul:before {
+.section ul:before {
 	background: #101010;
 	content: "";
 	display: block;
-	top: 6px;
+	top: 7px;
 	bottom: 5px;
-	left: 0;
+	left: 10px;
 	position: absolute;
 	width: 2px;
 }
 
-.sub-section:last-child ul {
-	padding-right: 0;
+.section ul.section-content {
+	padding-left: 20px;
 }
 
-.sub-section li {
+.section ul {
+	padding-right: 0;
+	margin-top: .3em;
+}
+
+.section-content li {
 	margin-bottom: 20px;
 	text-align: justify;
+}
+
+.section-content li:last-child {
+	margin-bottom: 0;
 }
 
 .package .package-title {
