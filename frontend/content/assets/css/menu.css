@@ -16,11 +16,6 @@
 }
 
 .nav .logo svg {
-	/*-webkit-transition: width .1s ease;
-	-moz-transition: width .1s ease;
-	-o-transition: width .1s ease;
-	transition: width .1s ease;*/
-	transform-origin: 50% 0;
 	margin: 20px 0;
 }
 
@@ -87,16 +82,16 @@
 }
 
 .nav .nav-item a {
-	-webkit-animation: slidein 1s forwards;
+	/*-webkit-animation: slidein 1s forwards;
 	-moz-animation: slidein 1s forwards;
 	-ms-animation: slidein 1s forwards;
 	-o-animation: slidein 1s forwards;
-	animation: slidein 1s forwards;
+	animation: slidein 1s forwards;*/
 	position: relative;
 	top: -8px;
 }
 
-.nav .nav-item:first-child a {
+/*.nav .nav-item:first-child a {
 	-webkit-animation-delay: .3s;
 	-moz-animation-delay: .3s;
 	-ms-animation-delay: .3s;
@@ -111,7 +106,7 @@
 	-o-animation-delay: .4s;
 	animation-delay: .4s;
 	opacity: 0;
-}
+}*/
 
 .nav a:hover,
 .nav a:focus {

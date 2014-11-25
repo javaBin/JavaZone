@@ -16,7 +16,7 @@
 		if (mql.matches)
 			nav.style.top = 0;
 		else
-			nav.style.top = "-80px";
+			nav.style.top = "-96px";
 	});
 
 	var props = {
