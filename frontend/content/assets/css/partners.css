@@ -52,6 +52,14 @@
 	opacity: .1;
 }
 
+.partner-list-explanation {
+	text-align: center;
+	margin: 1em 0 0 0;
+	font-size: .8em;
+	text-transform: uppercase;
+	color: #555;
+}
+
 .contact {
 	margin-top: 5em;
 	text-align: center;
