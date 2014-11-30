@@ -12,6 +12,10 @@
 	text-decoration: none;
 }
 
+.button.button-wide {
+	padding: 10px 40px;
+}
+
 .button:hover {
 	border-color: #ff8641;
 	color: #ff8641;

@@ -60,21 +60,10 @@
 	color: #555;
 }
 
-.contact {
+.contact, .prospectus {
+	margin-bottom: 5em;
 	margin-top: 5em;
 	text-align: center;
-}
-
-.contact a {
-	padding: 10px 40px;
-}
-
-.prospectus {
-	margin-top: 2em;
-	text-align: center;
-}
-.prospectus a {
-	padding: 10px 40px;
 }
 
 .section {
@@ -101,12 +90,16 @@
 }
 
 .section-content p {
-	margin: 1.5em 0;
+	margin: 2.5em 0;
 	text-align: left;
 }
 
+.section-content ul {
+	margin: 2.5em 0;
+}
+
 .section-content p:first-child {
-	margin-top: .7em;
+	margin-top: 1.17em;
 }
 
 /*.sub-section {
@@ -123,7 +116,6 @@
 
 .section ul {
 	list-style: none;
-	margin: 0;
 	padding: 0 20px;
 	position: relative;
 }
@@ -134,17 +126,14 @@
 	display: block;
 	top: 7px;
 	bottom: 5px;
-	left: 10px;
+	left: -10px;
 	position: absolute;
 	width: 2px;
 }
 
-.section ul.section-content {
-	padding-left: 20px;
-}
-
-.section ul {
+.section-content ul {
 	padding-right: 0;
+	padding-left: 0;
 	margin-top: .3em;
 }
 
@@ -155,6 +144,10 @@
 
 .section-content li:last-child {
 	margin-bottom: 0;
+}
+
+.packages {
+	background: #fcaf17;
 }
 
 .package .package-title {
