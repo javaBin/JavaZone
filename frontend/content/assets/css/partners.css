@@ -69,6 +69,14 @@
 	padding: 10px 40px;
 }
 
+.prospectus {
+	margin-top: 2em;
+	text-align: center;
+}
+.prospectus a {
+	padding: 10px 40px;
+}
+
 .section {
 	margin-top: 2.5em;
 }
