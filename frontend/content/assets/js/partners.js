@@ -1,4 +1,5 @@
 (function(_, jz) {
+	var partners = document.querySelector('.partner-list');
 
 	function style(el, style, val) {
 		if (!(el instanceof NodeList))
@@ -16,20 +17,19 @@
 	}
 
 	var max = 42;
-	var max_x = 6;
+	//var max_x = 6;
+	var max_x = Math.floor(parseFloat(window.getComputedStyle(partners).width) / 140);
+	var max_y = max / max_x;
 	var pi = Math.PI;
 
 	var anim = function(x, y) {
-		return (Math.sin((pi * x) / 10) + Math.sin((pi * y) / 12)) / 4;
+		return (Math.sin((pi * x) / (max_x * 2)) + Math.sin((pi * y) / (max_y * 2))) / 4;
 	}
 
 	function getDelay(i) {
 		var x = (i % max_x);
 		var y = Math.floor(i / max_x);
-		//var val = .3 * ((x / max_x) + (y / 7));
 		val = anim(x, y);
-		console.log(val);
-		console.log(String.format("[{0} {1}] = {2}", x, y, val));
 		return val;
 	}
 
@@ -44,7 +44,6 @@
 
 	jz.partners = function() {
 		var imagePath = '/assets/img/partners/';
-		var partners = document.querySelector('.partner-list');
 		var ul = document.createElement('ul');
 		ul.classList.add('cf');
 		var i = 0;
@@ -59,7 +58,6 @@
 				img.src = imagePath + partner[1];
 				img.alt = partner[0];
 				transitionDelay(img, (getDelay(i) + "s"));
-				getDelay(i);
 				i++;
 				a.appendChild(img);
 				li.appendChild(a);

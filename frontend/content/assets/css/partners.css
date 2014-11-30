@@ -62,8 +62,8 @@
 }
 
 .contact, .prospectus {
-	margin-bottom: 5em;
-	margin-top: 5em;
+	margin-bottom: 2.5em;
+	margin-top: 2.5em;
 	text-align: center;
 }
 
@@ -72,11 +72,6 @@
 }
 
 .section h1, .section h2 {
-	float: left;
-	margin: 0;
-	padding-right: 20px;
-	text-align: right;
-	width: 40%;
 }
 
 .section h2 {
@@ -85,9 +80,28 @@
 }
 
 .section-content {
-	float: left;
-	padding-left: 20px;
-	width: 60%;
+}
+
+@media (min-width: 768px ) {
+
+	.contact, .prospectus {
+		margin-bottom: 5em;
+		margin-top: 5em;
+	}
+
+	.section h1, .section h2 {
+		float: left;
+		margin: 0;
+		padding-right: 20px;
+		text-align: right;
+		width: 40%;
+	}
+
+	.section-content {
+		float: left;
+		padding-left: 20px;
+		width: 60%;
+	}
 }
 
 .section-content p {
