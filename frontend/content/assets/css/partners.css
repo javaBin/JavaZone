@@ -27,6 +27,7 @@
 }
 
 .partner-list a {
+	background-image: none !important;
 	display: block;
 	position: relative;
 }
