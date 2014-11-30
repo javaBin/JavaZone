@@ -102,11 +102,6 @@
 	margin-top: 1.17em;
 }
 
-/*.sub-section {
-	float: left;
-	width: 50%;
-}*/
-
 @media (min-width: 768px) {
 	.sub-section {
 		float: left;
@@ -148,6 +143,10 @@
 
 .packages {
 	background: #fcaf17;
+}
+
+.packages a {
+    text-shadow: 2px 0 0 #fcaf17, -2px 0 0 #fcaf17;
 }
 
 .package .package-title {

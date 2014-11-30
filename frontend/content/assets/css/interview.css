@@ -23,6 +23,10 @@
 	margin-left: 20px;
 }
 
+.interview-info .twitter a {
+	background-image: none !important;
+}
+
 .interview-info .twitter path {
 	-webkit-transition: fill .4s ease;
 	-moz-transition: fill .4s ease;

@@ -3,11 +3,12 @@
 	-moz-transition: color .4s ease, border-color .4s ease;
 	-o-transition: color .4s ease, border-color .4s ease;
 	transition: color .4s ease, border-color .4s ease;
-	padding: 10px 20px;
+	background-image: none !important;
 	border: 1px solid #286a65;
 	color: #286a65;
 	display: inline-block;
 	margin: 10px 0;
+	padding: 10px 20px;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -20,12 +21,6 @@
 	border-color: #ff8641;
 	color: #ff8641;
 }
-
-/*.splitter {
-	width: 100px;
-	margin: 70px auto;
-	border-bottom: 1px solid #eee;
-}*/
 
 .splitter, .splitter:before, .splitter:after {
 	border: 1px solid #c0c0c0;
