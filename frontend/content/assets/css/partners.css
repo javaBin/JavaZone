@@ -55,7 +55,7 @@
 
 .partner-list-explanation {
 	text-align: center;
-	margin: 1em 0 0 0;
+	margin: 1em 0;
 	font-size: .8em;
 	text-transform: uppercase;
 	color: #555;
@@ -68,28 +68,32 @@
 }
 
 .section {
+	padding-bottom: 2.5em;
+	padding-top: 2.5em;
+}
+
+.partners .section {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.sub-section {
 	margin-top: 2.5em;
 }
 
-.section h1, .section h2 {
-}
-
-.section h2 {
+.sub-section h2 {
 	font-size: 1.3em;
 	font-weight: 300;
-}
-
-.section-content {
 }
 
 @media (min-width: 768px ) {
 
 	.contact, .prospectus {
 		margin-bottom: 5em;
-		margin-top: 5em;
+		margin-top: 3.5em;
 	}
 
-	.section h1, .section h2 {
+	.sub-section h1, .sub-section h2 {
 		float: left;
 		margin: 0;
 		padding-right: 20px;
@@ -117,20 +121,13 @@
 	margin-top: 1.17em;
 }
 
-@media (min-width: 768px) {
-	.sub-section {
-		float: left;
-		width: 50%;
-	}
-}
-
-.section ul {
+.sub-section ul {
 	list-style: none;
 	padding: 0 20px;
 	position: relative;
 }
 
-.section ul:before {
+.sub-section ul:before {
 	background: #101010;
 	content: "";
 	display: block;
@@ -157,11 +154,11 @@
 }
 
 .packages {
-	background: #fcaf17;
+	background: #fee7b9;
 }
 
 .packages a {
-    text-shadow: 2px 0 0 #fcaf17, -2px 0 0 #fcaf17;
+    text-shadow: 2px 0 0 #fee7b9, -2px 0 0 #fee7b9;
 }
 
 .package .package-title {
