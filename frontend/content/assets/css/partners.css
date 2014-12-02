@@ -67,23 +67,9 @@
 	text-align: center;
 }
 
-.section {
-	padding-bottom: 2.5em;
-	padding-top: 2.5em;
-}
-
 .partners .section {
 	padding-bottom: 0;
 	padding-top: 0;
-}
-
-.sub-section {
-	margin-top: 2.5em;
-}
-
-.sub-section h2 {
-	font-size: 1.3em;
-	font-weight: 300;
 }
 
 @media (min-width: 768px ) {
@@ -92,33 +78,10 @@
 		margin-bottom: 5em;
 		margin-top: 3.5em;
 	}
-
-	.sub-section h1, .sub-section h2 {
-		float: left;
-		margin: 0;
-		padding-right: 20px;
-		text-align: right;
-		width: 40%;
-	}
-
-	.section-content {
-		float: left;
-		padding-left: 20px;
-		width: 60%;
-	}
-}
-
-.section-content p {
-	margin: 2.5em 0;
-	text-align: left;
 }
 
 .section-content ul {
 	margin: 2.5em 0;
-}
-
-.section-content p:first-child {
-	margin-top: 1.17em;
 }
 
 .sub-section ul {
