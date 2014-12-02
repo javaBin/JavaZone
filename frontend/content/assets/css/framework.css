@@ -21,6 +21,10 @@
 	margin-top: 1.16em;
 }
 
+.jumbotron {
+	text-align: center;
+}
+
 @media (min-width: 768px) {
 	.sub-section h1, .sub-section h2 {
 		float: left;
