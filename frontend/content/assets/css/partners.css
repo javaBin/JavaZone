@@ -154,11 +154,11 @@
 }
 
 .packages {
-	background: #fee7b9;
+	background: #efefef;
 }
 
 .packages a {
-    text-shadow: 2px 0 0 #fee7b9, -2px 0 0 #fee7b9;
+    text-shadow: 2px 0 0 #efefef, -2px 0 0 #efefef;
 }
 
 .package .package-title {
