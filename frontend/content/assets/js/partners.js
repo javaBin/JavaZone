@@ -1,5 +1,4 @@
 (function(_, jz) {
-	var partners = document.querySelector('.partner-list');
 
 	function style(el, style, val) {
 		if (!(el instanceof NodeList))
@@ -16,20 +15,14 @@
 		});
 	}
 
-	var max = 42;
-	//var max_x = 6;
-	var max_x = Math.floor(parseFloat(window.getComputedStyle(partners).width) / 140);
-	var max_y = max / max_x;
-	var pi = Math.PI;
-
-	var anim = function(x, y) {
-		return (Math.sin((pi * x) / (max_x * 2)) + Math.sin((pi * y) / (max_y * 2))) / 4;
+	var anim = function(x, y, max_x, max_y) {
+		return (Math.sin((Math.PI * x) / (max_x * 2)) + Math.sin((Math.PI * y) / (max_y * 2))) / 4;
 	}
 
-	function getDelay(i) {
+	function getDelay(i, max_x, max_y) {
 		var x = (i % max_x);
 		var y = Math.floor(i / max_x);
-		val = anim(x, y);
+		val = anim(x, y, max_x, max_y);
 		return val;
 	}
 
@@ -43,9 +36,12 @@
 	}
 
 	jz.partners = function() {
+		var partners = document.querySelector('.partner-list');
+		var max = 42;
+		var max_x = Math.floor(parseFloat(window.getComputedStyle(partners).width) / 140);
+		var max_y = max / max_x;
 		var imagePath = '/assets/img/partners/';
-		var ul = document.createElement('ul');
-		ul.classList.add('cf');
+		var ul = document.querySelector('.partner-list ul');
 		var i = 0;
 		var partnerList = _(jz.data.partners)
 			.shuffle()
@@ -57,14 +53,13 @@
 				a.target = '_blank';
 				img.src = imagePath + partner[1];
 				img.alt = partner[0];
-				transitionDelay(img, (getDelay(i) + "s"));
+				transitionDelay(img, (getDelay(i, max_x, max_y) + "s"));
 				i++;
 				a.appendChild(img);
 				li.appendChild(a);
 				ul.appendChild(li);
 				return img;
 			});
-			//.join('');
 		partners.appendChild(ul);
 		setTimeout(function() {
 			requestAnimationFrame(function() {
@@ -73,7 +68,6 @@
 				});
 			});
 		}, 250);
-		//partners.innerHTML = String.format('<ul class="cf">{0}</ul>', partnerList);
 	}
 
 })(window._, window.jz = window.jz || {});
