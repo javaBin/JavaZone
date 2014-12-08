@@ -27,6 +27,7 @@ exports.config = function(pacbot) {
 			"assets/css/base.css",
 			"assets/css/framework.css",
 			"assets/css/components.css",
+			"assets/css/img.css",
 			"assets/css/teaser.css",
 			"assets/css/menu.css",
 			"assets/css/interview.css",
