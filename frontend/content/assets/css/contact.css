@@ -5,22 +5,20 @@
 
 .contact dt, .contact dd {
 	float: left;
-	font-size: 1.3em;
+	width: 50%;
+	font-size: .9em;
 	font-weight: 300;
 	margin: 0;
-	width: 50%;
 }
 
 .contact dt {
 	margin-bottom: 15px;
-	padding-right: 20px;
-	text-align: right;
+	text-align: left;
 }
 
 .contact dd {
 	margin-bottom: 15px;
-	padding-left: 20px;
-	text-align: left;
+	text-align: right;
 }
 
 .contact dd a {
@@ -34,4 +32,22 @@
 
 .contact .contacts {
 	margin-top: 3.5em;
+}
+
+@media (min-width: 768px) {
+	.contact dt, .contact dd {
+		font-size: 1.3em;
+	}
+}
+
+@media (min-width: 345px) {
+	.contact dt {
+		padding-right: 20px;
+		text-align: right;
+	}
+
+	.contact dd {
+		padding-left: 20px;
+		text-align: left;
+	}
 }
