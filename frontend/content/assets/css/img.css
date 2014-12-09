@@ -9,15 +9,28 @@
 	background-position: center center;
 }
 
+.img-sjakk2 { background-image: url('/assets/img/heros/sjakk2@1x.jpg'); }
+.img-spektrum1 { background-image: url('/assets/img/heros/spektrum1@1x.jpg'); }
+.img-pizza { background-image: url('/assets/img/heros/pizza@1x.jpg'); }
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    .img-sjakk2 { background-image: url('/assets/img/heros/sjakk2@2x.jpg'); }
+	.img-spektrum1 { background-image: url('/assets/img/heros/spektrum1@2x.jpg'); }
+	.img-pizza { background-image: url('/assets/img/heros/pizza@2x.jpg'); }
+}
+
+
+/*
+TODO: DISSE BILDENE MÅ SKALERES RIKTIG...
 .img-bouvet { background-image: url('/assets/img/heros/bouvet.jpg'); }
 .img-infostand { background-image: url('/assets/img/heros/infostand.jpg'); }
 .img-overflow { background-image: url('/assets/img/heros/overflow.jpg'); }
-.img-pizza { background-image: url('/assets/img/heros/pizza.jpg'); }
 .img-sjakk1 { background-image: url('/assets/img/heros/sjakk1.jpg'); }
-.img-sjakk2 { background-image: url('/assets/img/heros/sjakk2.jpg'); }
 .img-speaker { background-image: url('/assets/img/heros/speaker.jpg'); }
-.img-spektrum1 { background-image: url('/assets/img/heros/spektrum1.jpg'); }
 .img-webstep { background-image: url('/assets/img/heros/webstep.jpg'); }
+*/
 
 @media (max-width: 768px) {
 	.img {
