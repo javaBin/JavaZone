@@ -31,7 +31,8 @@ exports.config = function(pacbot) {
 			"assets/css/teaser.css",
 			"assets/css/menu.css",
 			"assets/css/interview.css",
-			"assets/css/partners.css"
+			"assets/css/partners.css",
+			"assets/css/contact.css"
 		]
 	};
 

@@ -1,0 +1,37 @@
+.contact dl {
+	margin: 0;
+	padding: 0;
+}
+
+.contact dt, .contact dd {
+	float: left;
+	font-size: 1.3em;
+	font-weight: 300;
+	margin: 0;
+	width: 50%;
+}
+
+.contact dt {
+	margin-bottom: 15px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.contact dd {
+	margin-bottom: 15px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+.contact dd a {
+	background: none;
+	color: #286a65;	
+}
+
+.contact dd a:hover {
+	background: none;
+}
+
+.contact .contacts {
+	margin-top: 3.5em;
+}
