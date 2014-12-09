@@ -12,6 +12,10 @@
 	font-weight: 300;
 }
 
+.section-header h1 {
+	margin: 0;
+}
+
 .section-content p {
 	margin: 2.5em 0;
 	text-align: left;
@@ -26,7 +30,7 @@
 }
 
 @media (min-width: 768px) {
-	.sub-section h1, .sub-section h2 {
+	.sub-section .section-header {
 		float: left;
 		margin: 0;
 		padding-right: 20px;

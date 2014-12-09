@@ -8,16 +8,16 @@
 	width: 150px;
 }
 
-.interview-info {
+/*.interview-info {
 	line-height: 150%;
 	text-align: center;
 	margin-top: 15px;
-}
+}*/
 
-.interview-info h1 {
+/*.interview-info h1 {
 	display: inline-block;
 	margin: 0;
-}
+}*/
 
 .interview-info .twitter {
 	margin-left: 20px;
@@ -44,7 +44,7 @@
 	font-family: Vollkorn;
 	font-size: 1em;
 	font-weight: 300;
-	margin-top: .7em;
+	margin-top: .5em;
 	font-style: italic;
 }
 
@@ -87,6 +87,5 @@
 
 	.interview-info h2 {
 		font-size: 1.15em;
-		margin-top: .7em;
 	}
 }
