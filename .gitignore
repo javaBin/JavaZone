@@ -14,6 +14,5 @@ scripts/node_modules/*
 .DS_Store
 
 frontend/node_modules/*
-resources/
 frontend/public/*
 frontend/scripts/node_modules/*
