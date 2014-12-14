@@ -148,7 +148,14 @@
 	border: 1px solid #ccc;
 }
 
+@media (min-width: 768px ) {
 
+	.table-of-content {
+		float: left;
+		width: 33%;
+	}
+
+}
 
 
 
