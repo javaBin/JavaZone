@@ -1,0 +1,18 @@
+.topics {
+	background: #efefef;
+}
+
+.topics ul {
+	margin: 0;
+	list-style: none;
+}
+
+.topics .topic {
+	float: left;
+	margin-bottom: 2em;
+	width: 25%;
+}
+
+.topic .topic-header {
+	font-weight: bold;
+}

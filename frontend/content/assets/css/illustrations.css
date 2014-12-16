@@ -1,0 +1,10 @@
+.illustration {
+	border: 10px dashed #286a65;
+	color: #286a65;
+	margin: 0 auto;
+	height: 300px;
+	padding-top: 122px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 300px;
+}
