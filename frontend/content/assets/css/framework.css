@@ -80,9 +80,22 @@
 		width: 40%;
 	}
 
+	.sub-section .section-header.centered {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
 	.section-content {
 		float: left;
 		padding-left: 20px;
 		width: 60%;
+	}
+
+	.sub-section .section-header.centered + .section-content {
+		float: none;
+		margin-top: 1.3em;
+		padding-left: 0;
+		width: 100%;
 	}
 }

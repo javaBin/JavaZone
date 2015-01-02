@@ -16,3 +16,27 @@
 .topic .topic-header {
 	font-weight: bold;
 }
+
+.deadlines ul {
+	margin: 0;
+	list-style: none;
+}
+
+.deadlines ul:before {
+	display: none;
+}
+
+.deadlines .deadline {
+	border: 1px solid #101010;
+	float: left;
+	font-size: 16px;
+	margin: 10px;
+	padding: 20px;
+	width: calc(33% - 20px);
+}
+
+.deadline .happening {
+	color: #a10035;
+	text-transform: uppercase;
+	text-align: left;
+}
