@@ -1,41 +1,45 @@
-.topics {
+.speakers-page .submit {
+	text-align: center;
+}
+
+.speakers-page .topics {
 	background: #efefef;
 }
 
-.topics ul {
+.speakers-page .topics ul {
 	margin: 0;
 	list-style: none;
 }
 
-.topics .topic {
+.speakers-page .topic {
 	float: left;
 	margin-bottom: 2em;
 	width: 25%;
 }
 
-.topic .topic-header {
+.speakers-page .topic .topic-header {
 	font-weight: bold;
 }
 
-.deadlines ul {
+.speakers-page .deadlines ul {
 	margin: 0;
 	list-style: none;
 }
 
-.deadlines ul:before {
+.speakers-page .deadlines ul:before {
 	display: none;
 }
 
-.deadlines .deadline {
+.speakers-page .deadline {
 	border: 1px solid #101010;
 	float: left;
 	font-size: 16px;
 	margin: 10px;
-	padding: 20px;
+	padding: 17px;
 	width: calc(33% - 20px);
 }
 
-.deadline .happening {
+.speakers-page .happening {
 	color: #a10035;
 	text-transform: uppercase;
 	text-align: left;
@@ -43,6 +47,7 @@
 
 .speakers-page .spread-the-word {
 	font-size: 1.4em;
+	font-weight: 300;
 }
 
 .speakers-page .regards {

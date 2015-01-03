@@ -9,13 +9,13 @@
 
 .sub-section h2 {
 	color: #505050;
-	font-family: Vollkorn;
-	font-size: 1.1em;
+	/*font-family: Vollkorn;*/
+	font-size: 1.3em;
 	font-weight: 300;
 }
 
-.sub-section h2:first-child {
-	margin-top: 1.05em;
+.section-content h2:first-child {
+	margin-top: .65em;
 }
 
 .section-header h1 {
@@ -41,7 +41,6 @@
 
 .sub-section ul {
 	list-style: none;
-	padding: 0 20px;
 	position: relative;
 }
 
@@ -51,14 +50,14 @@
 	display: block;
 	top: 7px;
 	bottom: 5px;
-	left: -10px;
+	left: 1px;
 	position: absolute;
-	width: 2px;
+	width: 3px;
 }
 
 .section-content ul {
 	padding-right: 0;
-	padding-left: 0;
+	padding-left: 30px;
 	margin-top: .3em;
 }
 
