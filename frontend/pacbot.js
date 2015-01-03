@@ -40,7 +40,9 @@ exports.config = function(pacbot) {
 
 	config.helpers = {
 		settings: {
-			partner_mail: 'partner@java.no'
+			general_mail: 'javazone@java.no',
+			partner_mail: 'partner@java.no',
+			program_mail: 'program@java.no'
 		}
 	};
 

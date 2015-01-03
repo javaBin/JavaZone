@@ -34,6 +34,10 @@
 	position: relative;
 }
 
+.splitter.small {
+	margin: 35px auto;
+}
+
 .splitter:before, .splitter:after {
 	content: "";
 	display: block;

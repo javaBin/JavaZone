@@ -40,3 +40,12 @@
 	text-transform: uppercase;
 	text-align: left;
 }
+
+.speakers-page .spread-the-word {
+	font-size: 1.4em;
+}
+
+.speakers-page .regards {
+	color: #a10035;
+	font-size: 1em;
+}
