@@ -10,16 +10,26 @@
 	width: 300px;
 }
 
-.illustration.heart {
-	border: 0;
+.illustration-left {
 	margin: 0;
 	top: 70px;
 	left: 60px;
     position: relative;
     padding-top: 180px;
-    width: 200px;
+    width: 250px;
+    height: 300px;
 }
-.illustration.heart:before,
+
+.illustration-left-high {
+    height: 400px;
+}
+
+.illustration-wide {
+    width: 800px;
+    height: 250px;
+    margin-top: 100px;
+}
+/*.illustration.heart:before,
 .illustration.heart:after {
     position: absolute;
     content: "";
@@ -53,4 +63,4 @@
         -ms-transform-origin: 100% 100%;
          -o-transform-origin: 100% 100%;
             transform-origin :100% 100%;
-}
+}*/
