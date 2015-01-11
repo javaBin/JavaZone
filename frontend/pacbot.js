@@ -25,6 +25,7 @@ exports.config = function(pacbot) {
 		all: [
 			"assets/css/reset.css",
 			"assets/css/base.css",
+			"assets/fontello/css/fontello.css",
 			"assets/css/framework.css",
 			"assets/css/components.css",
 			"assets/css/img.css",
