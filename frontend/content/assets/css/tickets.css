@@ -1,23 +1,36 @@
-.tickets-page .ticket {
+/*.tickets-page .ticket {
 	border-radius: 5px;
 	box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, .2);
 	line-height: 1;
 	margin: 50px auto;
 	width: 650px;
-}
+}*/
 
 .tickets .ticket-types:before {
 	display: none;
 }
 
-.ticket-type {
+ul.ticket-types {
+	padding-left: 0;
+}
+
+li.ticket-type {
 	float: left;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
 	width: 50%;
 }
 
-.ticket-type h2 {
-	font-size: 2em;
-	text-align: center;
+.ticket-type .illustration-placeholder {
+	border-width: 2px;
+	padding: 0;
+	height: 100px;
+	width: 100px;
+}
+
+.ticket-type a {
+    background-position: 0 33px;
 }
 
 /*.ticket-main {
