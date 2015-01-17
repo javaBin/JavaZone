@@ -15,11 +15,9 @@ ul.ticket-types {
 }
 
 li.ticket-type {
-	float: left;
 	font-size: 2em;
 	font-weight: 300;
 	text-align: center;
-	width: 50%;
 }
 
 .ticket-type .illustration-placeholder {
@@ -31,6 +29,15 @@ li.ticket-type {
 
 .ticket-type a {
     background-position: 0 33px;
+}
+
+@media (min-width: 768px) {
+
+	li.ticket-type {
+		float: left;
+		width: 50%;
+	}
+
 }
 
 /*.ticket-main {
