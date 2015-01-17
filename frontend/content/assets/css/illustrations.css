@@ -1,4 +1,4 @@
-.illustration {
+.illustration-placeholder {
 	border: 10px dashed #286a65;
 	color: #286a65;
 	margin: 0 auto;
@@ -29,6 +29,23 @@
     height: 250px;
     margin-top: 100px;
 }
+
+.illustration-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .illustration-mobile {
+        display: none;
+    }
+
+    .illustration-desktop {
+        display: inline-block;
+    }
+
+}
+
 /*.illustration.heart:before,
 .illustration.heart:after {
     position: absolute;
