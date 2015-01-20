@@ -17,14 +17,26 @@ ul.ticket-types {
 li.ticket-type {
 	font-size: 2em;
 	font-weight: 300;
+	margin-top: 40px;
 	text-align: center;
 }
 
-.ticket-type .illustration-placeholder {
-	border-width: 2px;
-	padding: 0;
-	height: 100px;
-	width: 100px;
+.ticket-type {
+	text-align: center;
+}
+
+.ticket-type a {
+	display: block;
+	background-image: none;
+}
+
+.ticket-type a:hover {
+	background-image: none;
+}
+
+.ticket-type img {
+	height: 140px;
+	width: 140px;
 }
 
 .ticket-type a {
