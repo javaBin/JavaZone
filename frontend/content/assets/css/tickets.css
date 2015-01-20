@@ -43,6 +43,21 @@ li.ticket-type {
     background-position: 0 33px;
 }
 
+.ticket-type a .price {
+	font-size: .6em;
+	color: #a10035;
+}
+
+.buybutton {
+	text-align: center;
+}
+.section-content .javabin-info p {
+	font-size: .8em;
+	text-align: center;
+	max-width: 45em;
+	margin: 0 auto 1em auto;
+}
+
 @media (min-width: 768px) {
 
 	li.ticket-type {
