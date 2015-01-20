@@ -35,7 +35,7 @@ li.ticket-type {
 }
 
 .ticket-type img {
-	height: 140px;
+	transition: width .4s ease;
 	width: 140px;
 }
 
@@ -48,6 +48,10 @@ li.ticket-type {
 	li.ticket-type {
 		float: left;
 		width: 50%;
+	}
+
+	.ticket-type img {
+		width: 200px;
 	}
 
 }
