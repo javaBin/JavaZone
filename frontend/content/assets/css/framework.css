@@ -89,6 +89,7 @@
 
 	.sub-section .section-header.centered {
 		float: none;
+		padding-right: 0;
 		text-align: center;
 		width: 100%;
 	}
@@ -104,5 +105,9 @@
 		margin-top: 1.3em;
 		padding-left: 0;
 		width: 100%;
+	}
+
+	.jumbotron-desktop {
+		text-align: center;
 	}
 }

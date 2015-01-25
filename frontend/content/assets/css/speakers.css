@@ -23,8 +23,13 @@
 }
 
 .speakers-page .topics ul {
-	margin: 0;
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.speakers-page .topics ul:before {
+	display: none;
 }
 
 .speakers-page .topic {
@@ -33,6 +38,21 @@
 
 .speakers-page .topic .topic-header {
 	font-weight: bold;
+}
+
+.speakers-page .formats ul {
+	list-style: none;
+	margin: 5.5em 0 0 0;
+	padding: 0;
+}
+
+.speakers-page .formats img {
+	height: 250px;
+	width: auto;
+}
+
+.speakers-page .format {
+	padding: 0 20px;
 }
 
 .speakers-page .deadlines ul {
@@ -73,6 +93,11 @@
 	.speakers-page .topic {
 		float: left;
 		width: 25%;
+	}
+
+	.speakers-page .format {
+		float: left;
+		width: 33%;
 	}
 
 	.speakers-page .deadline {
