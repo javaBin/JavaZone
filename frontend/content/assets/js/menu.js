@@ -19,11 +19,11 @@
 			if (mql.matches)
 				nav.style.top = 0;
 			else
-				nav.style.top = "-96px";
+				nav.style.top = "-180px";
 		});
 		var props = {
 			action: function() {
-				var top = window.getComputedStyle(nav).top === "0px" ? -96 : 0;
+				var top = window.getComputedStyle(nav).top === "0px" ? -180 : 0;
 				Velocity(nav, { top: top }, { duration: 400, easing: 'easeInOutCirc' });
 			},
 			animation: [
