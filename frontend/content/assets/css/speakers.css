@@ -65,12 +65,12 @@
 	display: none;
 }
 
-.speakers-page .deadline {
+/*.speakers-page .deadline {
 	border: 1px solid #101010;
 	font-size: 16px;
 	margin: 10px;
 	padding: 17px;
-}
+}*/
 
 .speakers-page .happening {
 	color: #a10035;
@@ -100,8 +100,134 @@
 		width: 33%;
 	}
 
-	.speakers-page .deadline {
+	/*.speakers-page .deadline {
 		float: left;
 		width: calc(33% - 20px);
-	}
+	}*/
+}
+
+/* Calendar */
+
+.speakers-page .calendar {
+	position: relative;
+	margin: 5em auto;
+}
+
+.speakers-page .calendar ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 90%;
+}
+
+.speakers-page .month {
+	border: 1px solid #149089;
+	color: #149089;
+	float: left;
+	padding: 5px 0;
+	text-align: center;
+	width: 11.11%;
+}
+
+.speakers-page .month:nth-child(even) {
+	background: #C2CDBA;
+	color: #149089;
+}
+
+.speakers-page .month:nth-child(n+2) {
+	border-left: 0;
+}
+
+.speakers-page .deadline {
+	position: absolute;
+	width: 1px;
+}
+
+.speakers-page .deadline-top {
+	top: -40px;
+}
+
+.speakers-page .deadline-cfp {
+	left: 15.5%;
+}
+
+.deadline-cfp .deadline-info {
+	left: -72px;
+}
+
+.deadline-cfp-closes {
+	left: 42%;
+}
+
+.deadline-cfp-closes .deadline-info {
+	left: -106px;
+}
+
+.deadline-notified {
+	left: 63.5%;
+}
+
+.deadline-notified .deadline-info {
+	left: -120px;
+}
+
+.deadline-speakers-dinner {
+	left: 86%;
+}
+
+.deadline-speakers-dinner .deadline-info {
+	left: -80px;
+	top: -80px;
+}
+
+.deadline-javazone {
+	left: 86.5%;
+}
+
+.deadline-javazone .deadline-info {
+	left: -58px;
+}
+
+.deadline .deadline-inner {
+	position: relative;
+}
+
+.deadline .deadline-info {
+	position: absolute;
+}
+
+.deadline-top .deadline-info {
+	top: -70px;
+}
+
+.deadline .happening {
+	display: inline-block;
+	color: #a10035;
+	white-space: nowrap;
+}
+
+.deadline .date {
+	color: #149089;
+	display: inline-block;
+	font-size: .9em;
+	white-space: nowrap;
+}
+
+.deadline-bottom:before {
+	background: #149089;
+	content: '';
+	display: block;
+	height: 40px;
+	position: relative;
+	left: 50%;
+	width: 1px;
+}
+
+.deadline-top:after {
+	background: #149089;
+	content: '';
+	display: block;
+	height: 40px;
+	position: relative;
+	width: 1px;
 }
