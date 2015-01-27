@@ -47,8 +47,33 @@
 }
 
 .speakers-page .formats img {
-	height: 250px;
 	width: auto;
+}
+
+.speakers-page .format-lightning img {
+	height: 240px;
+}
+
+.speakers-page .format-lightning h2 {
+	position: relative;
+	top: 10px;
+}
+
+.speakers-page .format-lightning p {
+	position: relative;
+	top: 10px;
+}
+
+.speakers-page .format-presentation img {
+	height: 250px;
+	position: relative;
+	top: -5px;
+}
+
+.speakers-page .format-workshop img {
+	height: 250px;
+	position: relative;
+	top: -10px;
 }
 
 .speakers-page .format {
@@ -64,13 +89,6 @@
 .speakers-page .deadlines ul:before {
 	display: none;
 }
-
-/*.speakers-page .deadline {
-	border: 1px solid #101010;
-	font-size: 16px;
-	margin: 10px;
-	padding: 17px;
-}*/
 
 .speakers-page .happening {
 	color: #a10035;
@@ -92,7 +110,7 @@
 
 .speakers-page .calendar {
 	position: relative;
-	margin: 10em auto;
+	margin: 7em auto 10em auto;
 }
 
 .speakers-page .calendar ul {
