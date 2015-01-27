@@ -88,29 +88,11 @@
 	font-size: 1em;
 }
 
-@media (min-width: 768px) {
-
-	.speakers-page .topic {
-		float: left;
-		width: 25%;
-	}
-
-	.speakers-page .format {
-		float: left;
-		width: 33%;
-	}
-
-	/*.speakers-page .deadline {
-		float: left;
-		width: calc(33% - 20px);
-	}*/
-}
-
 /* Calendar */
 
 .speakers-page .calendar {
 	position: relative;
-	margin: 5em auto;
+	margin: 10em auto;
 }
 
 .speakers-page .calendar ul {
@@ -124,18 +106,21 @@
 	border: 1px solid #149089;
 	color: #149089;
 	float: left;
-	padding: 5px 0;
+	padding: 2px 0;
 	text-align: center;
 	width: 11.11%;
 }
 
 .speakers-page .month:nth-child(even) {
 	background: #C2CDBA;
-	color: #149089;
 }
 
 .speakers-page .month:nth-child(n+2) {
 	border-left: 0;
+}
+
+.speakers-page .deadlines-desktop {
+	display: none;
 }
 
 .speakers-page .deadline {
@@ -176,8 +161,7 @@
 }
 
 .deadline-speakers-dinner .deadline-info {
-	left: -80px;
-	top: -80px;
+	left: -75px;
 }
 
 .deadline-javazone {
@@ -194,6 +178,7 @@
 
 .deadline .deadline-info {
 	position: absolute;
+	top: 10px;
 }
 
 .deadline-top .deadline-info {
@@ -210,10 +195,12 @@
 	color: #149089;
 	display: inline-block;
 	font-size: .9em;
+	position: relative;
+	top: -3px;
 	white-space: nowrap;
 }
 
-.deadline-bottom:before {
+.deadline-bottom .line {
 	background: #149089;
 	content: '';
 	display: block;
@@ -223,11 +210,60 @@
 	width: 1px;
 }
 
-.deadline-top:after {
+.deadline-bottom .line:after {
+	background: #149089;
+	border-radius: 100%;
+	bottom: 0;
+	content: '';
+	display: block;
+	left: -2px;
+	height: 5px;
+	position: absolute;
+	width: 5px;
+}
+
+.deadline-top .line {
 	background: #149089;
 	content: '';
 	display: block;
 	height: 40px;
 	position: relative;
 	width: 1px;
+}
+
+.deadline-top .line:before {
+	background: #149089;
+	border-radius: 100%;
+	content: '';
+	display: block;
+	left: -2px;
+	height: 5px;
+	position: absolute;
+	width: 5px;
+}
+
+@media (min-width: 768px) {
+
+	.speakers-page .topic {
+		float: left;
+		width: 25%;
+	}
+
+	.speakers-page .format {
+		float: left;
+		width: 33%;
+	}
+
+	/*.speakers-page .deadline {
+		float: left;
+		width: calc(33% - 20px);
+	}*/
+
+	.speakers-page .deadlines-mobile {
+		display: none;
+	}
+
+	.speakers-page .deadlines-desktop {
+		display: block;
+	}
 }
