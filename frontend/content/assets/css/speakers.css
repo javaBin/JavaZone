@@ -80,6 +80,11 @@
 	padding: 0 20px;
 }
 
+.speakers-page .illustration-question {
+	margin-top: 2.5em;
+	width: 150px;
+}
+
 .speakers-page .deadlines ul {
 	list-style: none;
 	margin: 0;
@@ -272,10 +277,9 @@
 		width: 33%;
 	}
 
-	/*.speakers-page .deadline {
-		float: left;
-		width: calc(33% - 20px);
-	}*/
+	.speakers-page .illustration-question {
+		width: 250px;
+	}
 
 	.speakers-page .deadlines-mobile {
 		display: none;
