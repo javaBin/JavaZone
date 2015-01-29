@@ -1,3 +1,6 @@
 
 .icon-location:before { content: '\e800'; } /* '' */
 .icon-calendar:before { content: '\e801'; } /* '' */
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-facebook:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */

@@ -1,0 +1,29 @@
+.footer {
+	margin-bottom: 5em;
+	margin-top: 10em;
+}
+
+.footer .twitter, .footer .facebook, .footer .contact {
+	margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+
+	.footer .twitter, .footer .facebook, .footer .contact {
+		display: inline-block;
+		float: left;
+		margin-right: 20px;
+	}
+
+	.footer .social {
+		float: left;
+		width: 50%;
+	}
+
+	.footer .made-by {
+		float: left;
+		text-align: right;
+		width: 50%;
+	}
+
+}

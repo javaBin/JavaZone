@@ -13,6 +13,21 @@
 	text-decoration: none;
 }
 
+.button.button-red {
+	border-color: #a10035;
+	color: #a10035;
+}
+
+.button.button-yellow {
+	border-color: #fcaf17;
+	color: #fcaf17;
+}
+
+.button.button-black {
+	border-color: #101010;
+	color: #101010;
+}
+
 .button.button-wide {
 	padding: 10px 40px;
 }

@@ -61,7 +61,7 @@
 	color: #555;
 }
 
-.contact, .prospectus {
+.partners-page .contact, .prospectus {
 	margin-bottom: 2.5em;
 	margin-top: 2.5em;
 	text-align: center;
@@ -70,14 +70,6 @@
 .partners .section {
 	padding-bottom: 0;
 	padding-top: 0;
-}
-
-@media (min-width: 768px ) {
-
-	.contact, .prospectus {
-		margin-bottom: 5em;
-		margin-top: 3.5em;
-	}
 }
 
 .packages {
@@ -101,6 +93,11 @@
 }
 
 @media (min-width: 768px ) {
+
+	.partners-page .contact, .prospectus {
+		margin-bottom: 5em;
+		margin-top: 3.5em;
+	}
 
 	.table-of-content {
 		float: left;

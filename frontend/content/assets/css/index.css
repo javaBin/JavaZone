@@ -1,47 +1,45 @@
-.teaser {
+.index-page {
 	text-align: center;
 }
 
-.teaser img {
-	margin-bottom: 40px;
-	max-width: 250px;
-	width: 50%;
-}
-
-.teaser h1 {
+.index-page h1 {
 	margin-top: 0;
 }
 
-.teaser h2 {
+.index-page .teaser-image {
+	margin-top: 3em;
+}
+
+.index-page h2 {
 	font-weight: 300;
 	font-size: 1.2em;
 	line-height: 1.5;
 }
 
-.teaser .buttons {
+.index-page .buttons {
 	list-style: none;
 	text-align: center;
 	margin-top: 70px;
 	padding: 0;
 }
 
-.teaser .button {
+.index-page .button {
 	max-width: 300px;
 	width: 100%;
 }
 
-.teaser li:first-child .button {
+.index-page li:first-child .button {
 	margin-top: 0;
 }
 
 @media (min-width: 768px) {
 
-	.teaser .button {
+	.index-page .button {
 		margin: 10px 10px;
 		width: 200px;
 	}
 
-	.teaser .buttons li {
+	.index-page .buttons li {
 		display: inline-block;
 	}
 }

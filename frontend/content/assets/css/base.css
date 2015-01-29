@@ -5,7 +5,7 @@
     Main Text #394549
     Light Text #ccc
 
-    Burgunder:      ;
+    Burgunder:  a10035;
     Lyserød:    ff4f4c;
     Oransje:    ff8641;
     Gul:        fcaf17;
@@ -74,7 +74,7 @@ a {
 	text-decoration: none;
 }
 
-.content a {
+.content a, .footer a {
     color: #286a65;
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, #286a65);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #286a65);
@@ -84,7 +84,7 @@ a {
     text-shadow: 2px 0 0 #fefefe, -2px 0 0 #fefefe;
 }
 
-.content a:hover {
+.content a:hover, .footer a:hover {
     color: #ff8641;
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, #ff8641);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #ff8641);
