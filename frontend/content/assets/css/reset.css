@@ -186,6 +186,10 @@ img {
   max-width: 100%; /* responsive images */
 }
 
+svg {
+  max-width: 100%;
+}
+
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
