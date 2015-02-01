@@ -34,8 +34,9 @@ li.ticket-type {
 	background-image: none;
 }
 
-.ticket-type img {
+.ticket-type svg {
 	transition: width .4s ease;
+	height: 140px;
 	width: 140px;
 }
 
@@ -58,6 +59,11 @@ li.ticket-type {
 	margin: 0 auto 1em auto;
 }
 
+.tickets-page .tickets-illustration svg {
+	max-height: 444px;
+	max-width: 983px;
+}
+
 @media (min-width: 768px) {
 
 	li.ticket-type {
@@ -65,7 +71,8 @@ li.ticket-type {
 		width: 50%;
 	}
 
-	.ticket-type img {
+	.ticket-type svg {
+		height: 200px;
 		width: 200px;
 	}
 

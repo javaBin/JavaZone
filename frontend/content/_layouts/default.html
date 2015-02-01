@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="<%= get("page") %>">
+<html lang="en">
 <head>
 	<title>JavaZone 2015</title>
 	<meta charset="utf-8">
@@ -14,9 +14,9 @@
 		window.onloaded = [];
 	</script>
 </head>
-<body id="javazone" class="<%= get("page") %>">
+<body id="javazone" class="">
 	<%= partial('_partials/menu.html') %>
-	<div class="content">
+	<div class="content <%= get("page") %>">
 		<%= content %>
 	</div>
 	<%= partial('_partials/footer.html') %>
