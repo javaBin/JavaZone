@@ -46,7 +46,8 @@ exports.config = function(pacbot) {
 		settings: {
 			general_mail: 'javazone@java.no',
 			partner_mail: 'partner@java.no',
-			program_mail: 'program@java.no'
+			program_mail: 'program@java.no',
+			submitit_url: 'http://javazone.no/submitit/'
 		}
 	};
 

@@ -2,7 +2,7 @@
 
 <div class="jumbotron container">
 	<h1>Call for speakers for JavaZone 2015 is now open!</h1>
-	<p>JavaZone takes place in Oslo, Norway, on September 8th-10th 2015. The conference offers a combination of technical talks and workshops in an informal atmosphere with an expected attendance of more than 2500 highly skilled developers.</p>
+	<p>JavaZone takes place in Oslo, Norway, on September 9th-10th 2015. The conference offers a combination of technical talks and workshops in an informal atmosphere with an expected attendance of more than 2500 highly skilled developers.</p>
 </div>
 
 <div class="hello">
@@ -16,7 +16,7 @@
 			<div class="section-content">
 				<p>JavaZone 2015 will be the 14th consecutive JavaZone conference and will consist of one day of workshops followed by two days of presentations and (more) workshops. Last year's event was a great success with more than 2500 attendees enjoying 150 talks covering a wide range of topics.  Speakers include both internationally known names and home-grown Norwegian talent.</p>
 				<p>Over the last decade, JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – videos from previous years are available for free at <a href="http://vimeo.com/javazone/videos">Vimeo</a>, and the full program from JavaZone 2014 can be found on <a href="http://2014.javazone.no/program.html">last year's web page</a>.</p>
-				<p>We can brag as much as we want but JavaZone would be nothing without all the great speakers. That is why we need your help to make sure that JavaZone 2015 will be at least as awesome as the earlier events. If you think that you have something interesting to share, please <a href="/submitit/index.html">submit your talk or workshop</a> by the 20th of April, 2015.</p>
+				<p>We can brag as much as we want but JavaZone would be nothing without all the great speakers. That is why we need your help to make sure that JavaZone 2015 will be at least as awesome as the earlier events. If you think that you have something interesting to share, please <a href="<%= settings.submitit_url %>">submit your talk or workshop</a> by the 20th of April, 2015.</p>
 			</div>
 		</div>
 	</div>
@@ -24,7 +24,7 @@
 
 <div class="section container cf">
 	<div class="submit">
-		<a href="/submitit" class="button">Submit your talk today</a>
+		<a href="<%= settings.submitit_url %>" class="button">Submit your talk today</a>
 	</div>
 </div>
 
@@ -86,19 +86,19 @@
 			<li class="format format-lightning">
 				<!-- <img src="/assets/img/illustrations/foredragstype_lyntale.png" /><br /> -->
 				<%= partial('assets/svg/illustrations/lightning_talk.svg') %>
-				<h2>Lightning talks<br />(10 minutes)</h2>
+				<h2>Lightning talks<br /><span>(10 minutes)</span></h2>
 				<p>Are you presenting a great new idea or want to give the audience a teaser for a cool topic? If so, you should strongly consider the lightning talk format.  Note that the 10 minute limit is mandatory!</p>
 			</li>
 			<li class="format format-presentation">
 				<!-- <img src="/assets/img/illustrations/foredragstype_foredrag.png" /><br /> -->
 				<%= partial('assets/svg/illustrations/talk.svg') %>
-				<h2>Presentations<br />(60 minutes)</h2>
-				<p>Presentations at JavaZone have a length of 60 minutes. This lets you to elaborate on an topic and should leave you time to answer questions. We consider double slots for special topics, so if you feel you need more than 60 minutes, please contact us!</p>
+				<h2>Presentations<br /><span>(60 minutes)</span></h2>
+				<p>Presentations at JavaZone have a length of 60 minutes. This lets you to elaborate on a topic and should leave you time to answer questions. We consider double slots for special topics, so if you feel you need more than 60 minutes, please contact us!</p>
 			</li>
 			<li class="format format-workshop">
 				<!-- <img src="/assets/img/illustrations/foredragstype_workshop.png" /><br /> -->
 				<%= partial('assets/svg/illustrations/workshop.svg') %>
-				<h2>Workshops<br />(2, 4 or 8 hours)</h2>
+				<h2>Workshops<br /><span>(2, 4 or 8 hours)</span></h2>
 				<p>We will continue the popular workshop concept, both half-day and whole-day workshops on Tuesday September 8th and shorter 2-hour workshops during the conference. The format for the workshops is in-depth, hands-on and interactive.</p>
 			</li>
 		</ul>
@@ -247,9 +247,9 @@
 		<h1 class="section-header">What's in it for me?</h1>
 		<div class="section-content">
 			<h2>Accepted presentations and workshops</h2>
-			<p>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 8th. Finally, you have first priority on the limited number of slots for <a href="/journeyzone">JourneyZone, our annual speaker adventure.</a></p>
+			<p>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 8th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</p>
 			<h2>Accepted lightning talks</h2>
-			<p>You are invited to the speakers' dinner, held on September 8th, but have to purchase your ticket to JavaZone.</p>
+			<p>You are invited to the speakers' dinner, held on September 8th, and will also be invited to JourneyZone. You have to provide your own ticket to JavaZone.</p>
 			<h2>Monetary policy</h2>
 			<p>Please see our <a href="/monetarypolicy">monetary policy</a> if you have any questions regarding coverage of other expenses.</p>
 		</div>
@@ -263,17 +263,18 @@
 <div class="section container cf">
 	<div class="sub-section cf">
 		<div class="section-header">
-			<h1>Will it blend?</h1>
+			<h1>Important principles</h1>
 		</div>
 		
 		<div class="section-content">
-			<p>JavaZone is proud to be an independent and community-driven conference. It is organized by javaBin, the idealistic and non-profit Norwegian Java User Group. We have three important principles for selecting talks:</p>
+			<p>JavaZone is proud to be an independent and community-driven conference. It is organized by <a href="http://www.java.no">javaBin</a>, the idealistic and non-profit Norwegian Java User Group.</p> 
+			<p>We have three important principles for selecting talks:</p>
 			<ul>
 				<li>We do not sell speaker slots.</li>
 				<li>We do not accept sales pitches masked as presentations.</li>
 				<li>We do not differentiate between speakers from partners and independent speakers.</li>
 			</ul>
-			<p>If you you agree to these very important principles, we are looking forward to your <a href="/submitit">submission!</a>.
+			<p>If you you agree to these very important principles, we are looking forward to your <a href="<%= settings.submitit_url %>">submission!</a>.
 		</div>
 	</div>
 </div>
@@ -295,7 +296,7 @@
 
 <div class="section container cf">
 	<div class="submit">
-		<a href="/submitit" class="button">Submit your talk today</a>
+		<a href="<%= settings.submitit_url %>" class="button">Submit your talk today</a>
 	</div>
 </div>
 
