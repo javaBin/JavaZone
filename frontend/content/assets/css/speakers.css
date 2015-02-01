@@ -46,7 +46,7 @@
 	width: auto;
 }
 
-.speakers-page .format-lightning img {
+.speakers-page .format-lightning svg {
 	height: 240px;
 }
 
@@ -60,13 +60,13 @@
 	top: 10px;
 }
 
-.speakers-page .format-presentation img {
+.speakers-page .format-presentation svg {
 	height: 250px;
 	position: relative;
 	top: -5px;
 }
 
-.speakers-page .format-workshop img {
+.speakers-page .format-workshop svg {
 	height: 250px;
 	position: relative;
 	top: -10px;
@@ -76,7 +76,7 @@
 	padding: 0 20px;
 }
 
-.speakers-page .illustration-question {
+.speakers-page .illustration-question svg {
 	margin-top: 2.5em;
 	width: 150px;
 }
@@ -287,7 +287,7 @@
 		width: 33%;
 	}
 
-	.speakers-page .illustration-question {
+	.speakers-page .illustration-question svg {
 		width: 250px;
 	}
 
