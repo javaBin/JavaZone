@@ -1,6 +1,6 @@
 (function(_, jz) {
 
-	jz.tickets = function() {
+	/*jz.tickets = function() {
 		var tickets = document.querySelectorAll('.ticket-types a');
 		var jzTicket = tickets[0];
 		var regularTicket = tickets[1];
@@ -19,6 +19,6 @@
 		regularTicket.addEventListener('mouseleave', function() {
 			jzTicket.classList.remove('inactive');
 		});
-	}
+	}*/
 
 })(window._, window.jz = window.jz || {})

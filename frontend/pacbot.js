@@ -17,7 +17,6 @@ exports.config = function(pacbot) {
 			"assets/js/menu.js",
 			"assets/js/menu_scroll.js",
 			"assets/js/partners.js",
-			"assets/js/tickets.js",
 			"assets/js/main.js"
 		]
 	}
