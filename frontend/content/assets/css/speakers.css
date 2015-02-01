@@ -75,6 +75,12 @@
 .speakers-page .format {
 	padding: 0 20px;
 }
+.speakers-page .format h2 {
+	line-height: 1.2;
+}
+.speakers-page .format h2 span {
+	font-size: .7em;
+}
 
 .speakers-page .illustration-question {
 	margin-top: 2.5em;
