@@ -67,3 +67,13 @@
 .splitter:after {
 	left: 28px;
 }
+
+.container.thank-you .spread-the-word {
+	font-size: 1.4em;
+	font-weight: 300;
+}
+
+.container.thank-you .regards {
+	color: #a10035;
+	font-size: 1em;
+}
