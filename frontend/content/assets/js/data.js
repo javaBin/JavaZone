@@ -75,12 +75,13 @@
         ["Ciber", "ciber_2012.jpg", "http://www.ciber.no/"],
         ["Accenture", "accenture_2012.jpg", "http://www.accenture.no/"],
         ["Skatteetaten", "skatteetaten_2012.jpg", "http://www.skatteetaten.no/"],
-        // TODO Sopra Steria (ny logo)
+        ["Sopra Steria", "soprasteria_2015.png", "http://www.steria.com/no/"],
         ["Finn.no", "finn_2012.jpg", "http://www.finn.no"],
         ["Visma", "visma_2012.jpg", "http://www.visma.no/"],
         ["Systek", "systek_2013.jpg", "http://www.systek.no/"],
         ["embriq", "embriq_2014.png", "http://www.embriq.no/"],
-        ["GitHub", "github_2014.png", "https://github.com/"]
+        ["GitHub", "github_2014.png", "https://github.com/"],
+        ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"]
     ];
 
     jz.data.academypartners = [
