@@ -1,10 +1,16 @@
 .footer {
 	margin-bottom: 5em;
 	margin-top: 5em;
+	text-align: center;
 }
 
 .footer .twitter, .footer .facebook, .footer .contact {
 	margin-bottom: 1em;
+}
+
+.footer .twitter, .footer .facebook {
+	float: left;
+	width: 50%;
 }
 
 @media (min-width: 768px) {
@@ -12,12 +18,14 @@
 	.footer {
 		margin-bottom: 5em;
 		margin-top: 10em;
+		text-align: left;
 	}
 
 	.footer .twitter, .footer .facebook, .footer .contact {
 		display: inline-block;
 		float: left;
 		margin-right: 20px;
+		width: auto;
 	}
 
 	.footer .social {

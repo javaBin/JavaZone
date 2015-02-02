@@ -59,9 +59,6 @@ li.ticket-type {
 	margin: 0 auto 1em auto;
 }
 
-.tickets-page .tickets-illustration svg {
-}
-
 @media (min-width: 768px) {
 
 	li.ticket-type {
