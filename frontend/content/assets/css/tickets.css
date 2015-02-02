@@ -60,8 +60,6 @@ li.ticket-type {
 }
 
 .tickets-page .tickets-illustration svg {
-	height: 444px;
-	width: 983px;
 }
 
 @media (min-width: 768px) {

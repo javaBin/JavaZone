@@ -1,6 +1,6 @@
 .footer {
 	margin-bottom: 5em;
-	margin-top: 10em;
+	margin-top: 5em;
 }
 
 .footer .twitter, .footer .facebook, .footer .contact {
@@ -8,6 +8,11 @@
 }
 
 @media (min-width: 768px) {
+
+	.footer {
+		margin-bottom: 5em;
+		margin-top: 10em;
+	}
 
 	.footer .twitter, .footer .facebook, .footer .contact {
 		display: inline-block;
