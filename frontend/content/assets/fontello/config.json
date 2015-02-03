@@ -13,15 +13,57 @@
       "src": "elusive"
     },
     {
+      "uid": "628e5fc59fc5965a6b91189467b037d5",
+      "css": "heart",
+      "code": 59400,
+      "src": "elusive"
+    },
+    {
+      "uid": "829c06a0a3b73b02a6224f4bbb73d99c",
+      "css": "home",
+      "code": 59402,
+      "src": "elusive"
+    },
+    {
       "uid": "22cfc7af2c4f158b37317c65c92b48c2",
       "css": "location",
       "code": 59392,
       "src": "elusive"
     },
     {
+      "uid": "6083c8aa5e3345476a24a28ac1afaa61",
+      "css": "cog",
+      "code": 59398,
+      "src": "elusive"
+    },
+    {
       "uid": "64abb7c56aefca89046bb69f7251d2e2",
       "css": "calendar",
       "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "599d6c088f4a1c64611b989459d65f6b",
+      "css": "lightbulb",
+      "code": 59403,
+      "src": "elusive"
+    },
+    {
+      "uid": "a904215f9fea569335d2a8addb4356b4",
+      "css": "leaf",
+      "code": 59401,
+      "src": "elusive"
+    },
+    {
+      "uid": "7ea2f977b793b6044189122babbaa8eb",
+      "css": "road",
+      "code": 59397,
+      "src": "elusive"
+    },
+    {
+      "uid": "a4232c4b087d715e826ba0793dab59ae",
+      "css": "book",
+      "code": 59399,
       "src": "elusive"
     },
     {

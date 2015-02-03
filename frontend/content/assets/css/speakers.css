@@ -270,8 +270,17 @@
 	.speakers-page .topic {
 		float: left;
 		min-height: 150px;
-		padding: 0 10px;
+		padding: 0 20px;
 		width: 33%;
+	}
+
+	.speakers-page .topic-header {
+		position: relative;
+	}
+
+	.speakers-page .topic-header [class^='icon-'] {
+		left: -30px;
+		position: absolute;
 	}
 
 	.speakers-page .topic:last-child {
