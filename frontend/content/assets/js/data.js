@@ -81,7 +81,8 @@
         ["Systek", "systek_2013.jpg", "http://www.systek.no/"],
         ["embriq", "embriq_2014.png", "http://www.embriq.no/"],
         ["GitHub", "github_2014.png", "https://github.com/"],
-        ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"]
+        ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],
+        ["Acando", "acando_2012.jpg", "http://www.acando.no/"]
     ];
 
     jz.data.academypartners = [
