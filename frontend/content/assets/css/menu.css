@@ -38,6 +38,7 @@
 .nav-toggle svg {
 	position: relative;
 	top: -10px;
+	max-width: none;
 }
 
 .nav-desktop {
