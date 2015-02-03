@@ -6,14 +6,13 @@
 	margin-top: 0;
 }
 
-.index-page .teaser-image svg {
-	margin-top: 3em;
-}
-
 .index-page h2 {
 	font-weight: 300;
 	font-size: 1.2em;
 	line-height: 1.5;
+}
+.index-page .teaser-image svg {
+	margin: 3em 0 1em 0;
 }
 
 .index-page .buttons {
@@ -33,6 +32,10 @@
 }
 
 @media (min-width: 768px) {
+
+	.index-page .teaser-image svg {
+		margin-top: 3em;
+	}
 
 	.index-page .button {
 		margin: 10px 10px;

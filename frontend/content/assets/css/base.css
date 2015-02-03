@@ -31,12 +31,13 @@ body {
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 .content {
-    margin: 210px 0 40px 0;
+    margin: 160px 0 40px 0;
 }
 
 .container {
@@ -91,13 +92,17 @@ a {
 }
 
 h1 {
-    font-size: 1.6em;
+    font-size: 1.45em;
     font-weight: 300;
 }
 
 @media (min-width: 768px) {
     h1 {
         font-size: 2em;
+    }
+
+    .content {
+        margin: 210px 0 40px 0;
     }
 }
 
