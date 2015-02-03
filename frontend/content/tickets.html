@@ -13,7 +13,7 @@
 			<div class="section-content">
 				<ul class="ticket-types cf">
 					<li class="ticket-type">
-						<a href="#">
+						<a href="<%= settings.tickets_buy_url %>">
 							<!-- <img src="/assets/img/illustrations/ticket_buyer_2.png" /> -->
 							<%= partial('assets/svg/illustrations/regular_ticket.svg') %>
 							<div>Regular Ticket</div>
@@ -21,7 +21,7 @@
 						</a>
 					</li>
 					<li class="ticket-type">
-						<a href="#">
+						<a href="<%= settings.tickets_buy_url %>">
 							<!-- <img src="/assets/img/illustrations/ticket_buyer_1.png" /> -->
 							<%= partial('assets/svg/illustrations/javabin_ticket.svg') %>
 							<div>javaBin Ticket</div>
@@ -31,7 +31,7 @@
 				</ul>
 				<div class="javabin-info">
 					<p>Both ticket types gives full access to the conference, but javaBin-tickets are discounted by NOK 1000,–</p>
-					<p>We fully recommend that you <a href="http://java.no/index.html?page=medlemskap">consider a membership</a> before buying your ticket. Anyone is welcome to join javaBin, we already have more than 2.000 members from all over the country.</p>
+					<p>We fully recommend that you <a href="<%= settings.javabin_membership_url %>">consider a membership</a> before buying your ticket. Anyone is welcome to join javaBin, we already have more than 2.000 members from all over the country.</p>
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 
 <div class="section container cf">
 	<div class="buybutton">
-		<a href="#" class="button">Buy your ticket today</a>
+		<a href="<%= settings.tickets_buy_url %>" class="button">Buy your ticket today</a>
 	</div>
 </div>
 
@@ -48,9 +48,9 @@
 	<div class="sub-section cf">
 		<h1 class="section-header">Special ticket types</h1>
 		<div class="section-content">
-			<p><strong>Partners</strong> may buy tickets at reduced prices. Read more about <a href="/partners.html">partnerships of JavaZone</a> and contact us at <a href="mailto:partner@java.no">partner@java.no</a> to buy tickets.</p>
-			<p><strong>Multiple tickets</strong> might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into <a href="#">our webshop</a>.</p>
-			<p><strong>Paying by invoice</strong> can be accommodated if you need that, but please consider buying the tickets using <a href="#">the webshop</a> if you can. Please contact us at <a href="mailto:javazone@java.no">javazone@java.no</a> if you need to buy tickets and get an invoice.</p>
+			<p><strong>Partners</strong> may buy tickets at reduced prices. Read more about <a href="/partners.html">partnerships of JavaZone</a> and contact us at <a href="mailto:<%= settings.partner_mail %>">partner@java.no</a> to buy tickets.</p>
+			<p><strong>Multiple tickets</strong> might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into <a href="<%= settings.tickets_manage_url %>">our webshop</a>.</p>
+			<p><strong>Paying by invoice</strong> can be accommodated if you need that, but please consider buying the tickets using <a href="<%= settings.tickets_buy_url %>">the webshop</a> if you can. Please contact us at <a href="mailto:<%= settings.general_mail %>">javazone@java.no</a> if you need to buy tickets and get an invoice.</p>
 		</div>
 	</div>
 </div>
