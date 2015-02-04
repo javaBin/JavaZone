@@ -4,6 +4,7 @@
 
 .index-page h1 {
 	margin-top: 0;
+	font-size: 1.4em;
 }
 
 .index-page h2 {
@@ -33,6 +34,11 @@
 
 @media (min-width: 768px) {
 
+	.index-page h1 {
+		margin-top: 0;
+		font-size: 1.8em;
+	}
+
 	.index-page .teaser-image svg {
 		margin-top: -2em;
 	}
@@ -45,4 +51,5 @@
 	.index-page .buttons li {
 		display: inline-block;
 	}
+	
 }
