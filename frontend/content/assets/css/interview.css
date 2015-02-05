@@ -39,6 +39,14 @@
 	fill: #00ACED;
 }
 
+.interview .talklinks {
+	font-size: .9em;
+	font-weight: 600;
+}
+.interview .talklinks a {
+	font-weight: 400;
+}
+
 .interview-info h2 {
 	color: #707070;
 	font-family: Vollkorn;
