@@ -82,7 +82,10 @@
         ["embriq", "embriq_2014.png", "http://www.embriq.no/"],
         ["GitHub", "github_2014.png", "https://github.com/"],
         ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],
-        ["Acando", "acando_2012.jpg", "http://www.acando.no/"]
+        ["Acando", "acando_2012.jpg", "http://www.acando.no/"],
+        ["Bekk", "bekk_2012.jpg", "http://www.bekk.no/"],
+        ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
+        ["Westerdals", "stolt_partner_westerdals2014_1.jpg", "http://www.westerdals.no"]
     ];
 
     jz.data.academypartners = [
