@@ -69,7 +69,7 @@
         ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
         ["NETS", "nets_2012.jpg", "http://www.nets.no/"],
         ["Mesan", "mesan_2012.jpg", "http://www.mesan.no/"],
-        // TODO Politiets IKT-tjenester
+        ["Politiets IKT-tjenester", "politiet_2015.png", "https://www.politi.no"],
         ["CapGemini", "capgemini_2012.jpg", "http://www.capgemini.no/"],
         ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
         ["Ciber", "ciber_2012.jpg", "http://www.ciber.no/"],
@@ -82,7 +82,7 @@
         ["embriq", "embriq_2014.png", "http://www.embriq.no/"],
         ["GitHub", "github_2014.png", "https://github.com/"],
         ["Bouvet", "bouvet_2012.jpg", "http://www.bouvet.no/"],
-        ["Acando", "acando_2012.jpg", "http://www.acando.no/"],
+        ["Acando", "acando_2015.png", "http://www.acando.no/"],
         ["Bekk", "bekk_2012.jpg", "http://www.bekk.no/"],
         ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
         ["Westerdals", "stolt_partner_westerdals2014_1.jpg", "http://www.westerdals.no"]
