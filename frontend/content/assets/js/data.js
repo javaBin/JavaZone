@@ -69,7 +69,7 @@
         ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
         ["NETS", "nets_2012.jpg", "http://www.nets.no/"],
         ["Mesan", "mesan_2012.jpg", "http://www.mesan.no/"],
-        ["Politiets IKT-tjenester", "politiet_2015.png", "https://www.politi.no"],
+        ["Politiets IKT-tjenester", "politiet_2015.png", "https://www.politi.no/politiets_ikt-tjenester/"],
         ["CapGemini", "capgemini_2012.jpg", "http://www.capgemini.no/"],
         ["Conduct", "conduct_2012.jpg", "http://www.conduct.no"],
         ["Ciber", "ciber_2012.jpg", "http://www.ciber.no/"],
