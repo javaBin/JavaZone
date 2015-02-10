@@ -4,7 +4,8 @@
 	var routes = {
 		'.*': [jz.menu.setActive, jz.menu.initializeMenu],
 		'partners': jz.partners,
-		'tickets': jz.tickets
+		'tickets': jz.tickets,
+		'contact': jz.contact
 	};
 
 	_(Object.keys(routes)).each(function(route) {

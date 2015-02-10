@@ -9,6 +9,7 @@ exports.config = function(pacbot) {
 
 	config.assets.js = {
 		all: [
+			"bower_components/jquery/dist/jquery.min.js",
 			"bower_components/lodash/dist/lodash.min.js",
 			"bower_components/velocity/velocity.min.js",
 			"assets/js/modernizr.js",
@@ -17,6 +18,7 @@ exports.config = function(pacbot) {
 			"assets/js/menu.js",
 			"assets/js/menu_scroll.js",
 			"assets/js/partners.js",
+			"assets/js/contact.js",
 			"assets/js/main.js"
 		]
 	}
