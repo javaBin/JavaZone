@@ -141,5 +141,8 @@
         ["Sten Aksel", "/assets/img/javabin/sten_aksel.jpg", ""],
         ["Kristian Berg", "https://robohash.org/77", ""],
         ["Erlend Birkenes", "https://robohash.org/88", ""],
+        ["Trygve Laugstøl", "https://robohash.org/99", ""],
+        ["Kristoffer Moum", "https://robohash.org/111", ""],
+        ["Ole Christian Rynning", "https://robohash.org/222", ""]
     ];
 })(window.jz = window.jz || {});
