@@ -148,6 +148,7 @@
         ["Stian Alsos", "/assets/img/javabin/stian_alsos.jpg", "#"],
         ["Oddbjorn Kvalsund", "/assets/img/javabin/oddbjorn_kvalsund.jpg", "#"],
         ["Konrad Beiske", "/assets/img/javabin/konrad_beiske.jpg", "#"],
-        ["Markus Krüger", "/assets/img/javabin/markus_kruger.jpg", "#"]
+        ["Markus Krüger", "/assets/img/javabin/markus_kruger.jpg", "#"],
+        ["Hans Ove Ringstad", "https://robohash.org/9999", "#"]
     ];
 })(window.jz = window.jz || {});
