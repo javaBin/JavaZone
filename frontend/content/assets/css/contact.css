@@ -34,11 +34,6 @@
 	margin-top: 3.5em;
 }
 
-.javabinsuperstars {
-	margin: 2em auto;
-	width: 77em;
-}
-
 
 .javabiner {
 	float: left;
@@ -118,8 +113,35 @@
 
 
 
-
-
+.javabinsuperstars {
+	margin: 2em auto;
+	width: 22em;
+}
+@media (min-width: 45em) {
+	.javabinsuperstars {
+		width: 33em;
+	}
+}
+@media (min-width: 56em) {
+	.javabinsuperstars {
+		width: 44em;
+	}
+}
+@media (min-width: 67em) {
+	.javabinsuperstars {
+		width: 55em;
+	}
+}
+@media (min-width: 78em) {
+	.javabinsuperstars {
+		width: 66em;
+	}
+}
+@media (min-width: 88em) {
+	.javabinsuperstars {
+		width: 77em;
+	}
+}
 
 
 
