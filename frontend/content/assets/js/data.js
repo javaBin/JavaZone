@@ -113,7 +113,7 @@
         ["Markus Eisele", "https://robohash.org/15", "https://twitter.com/myfear"],
         ["Ole Bakstad", "https://robohash.org/16", "#"],
         ["Øyvind Løkling", "/assets/img/javabin/oyvind_lokling.jpg", "https://twitter.com/lokling"],
-        ["Rafael Winterhalter", "https://robohash.org/18", "https://twitter.com/rafaelcodes"],
+        ["Rafael Winterhalter", "/assets/img/javabin/rafael_winterhalter.jpg", "https://twitter.com/rafaelcodes"],
         ["Martin Skarsaune", "/assets/img/javabin/martin_skarsaune.jpg", "https://twitter.com/mskarsaune"],
         ["Christian K. Wiik", "https://robohash.org/20", "#"],
         ["Ingar Abrahamsen", "https://robohash.org/21", "#"],
