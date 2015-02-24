@@ -10,7 +10,7 @@
 
 		_(el).each(function(e) {
 			e.style[style] = val;
-		});
+		}).value();
 	}
 
 	function transform(el, val) {

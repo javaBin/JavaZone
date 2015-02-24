@@ -9,9 +9,9 @@ exports.config = function(pacbot) {
 
 	config.assets.js = {
 		all: [
-			"bower_components/jquery/dist/jquery.min.js",
-			"bower_components/lodash/dist/lodash.min.js",
-			"bower_components/velocity/velocity.min.js",
+			"node_modules/jquery/dist/jquery.min.js",
+			"assets/js/lodash.min.js",
+			"node_modules/velocity-animate/velocity.min.js",
 			"assets/js/modernizr.js",
 			"assets/js/svg_animate.js",
 			"assets/js/data.js",
