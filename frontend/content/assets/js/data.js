@@ -87,7 +87,9 @@
         ["jPro", "jpro_2012.jpg", "http://www.jpro.no/"],
         ["Westerdals", "stolt_partner_westerdals2014_1.jpg", "http://www.westerdals.no"],
         ["Kodemaker", "kodemaker_2012.jpg", "http://www.kodemaker.no/"],
-        ["NAV IKT", "nav_2014.png", "http://www.nav.no/"]
+        ["NAV IKT", "nav_2014.png", "http://www.nav.no/"],
+        ["Evry", "evry_2013.jpg", "http://www.evry.no"],
+        ["Computas", "computas_2012.jpg", "http://www.computas.no/"]
     ];
 
     jz.data.academypartners = [
