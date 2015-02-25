@@ -89,7 +89,9 @@
         ["Kodemaker", "kodemaker_2012.jpg", "http://www.kodemaker.no/"],
         ["NAV IKT", "nav_2014.png", "http://www.nav.no/"],
         ["Evry", "evry_2013.jpg", "http://www.evry.no"],
-        ["Computas", "computas_2012.jpg", "http://www.computas.no/"]
+        ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
+        ["Programutvikling", "programutvikling_2012.jpg", "http://www.put.no/"],
+        ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"]
     ];
 
     jz.data.academypartners = [
