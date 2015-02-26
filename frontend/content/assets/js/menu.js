@@ -13,18 +13,11 @@
 
 
 	jz.menu.initializeMenu = function() {
-		var nav = document.querySelector('.nav');
-		var mql = window.matchMedia("(min-width: 768px)");
-		mql.addListener(function(mql) {
-			if (mql.matches)
-				nav.style.top = 0;
-			else
-				nav.style.top = "-180px";
-		});
+		var nav = document.querySelector('.nav-mobile-items');
 		var props = {
 			action: function() {
-				var top = window.getComputedStyle(nav).top === "0px" ? -180 : 0;
-				Velocity(nav, { top: top }, { duration: 400, easing: 'easeInOutCirc' });
+				var cmd = $(nav).is(':visible') ? 'fadeOut' : 'fadeIn';
+				Velocity(nav, cmd);
 			},
 			animation: [
 				{
@@ -45,7 +38,7 @@
 					},
 					props: {
 						easing: 'easeInOutCirc',
-						duration: 400
+						duration: 200
 					}
 				},
 				{
@@ -66,7 +59,7 @@
 					},
 					props: {
 						easing: 'easeInOutCirc',
-						duration: 400
+						duration: 200
 					}
 				},
 				{
@@ -81,7 +74,7 @@
 					},
 					props: {
 						easing: 'easeInOutCirc',
-						duration: 400
+						duration: 200
 					}
 				}
 			]
