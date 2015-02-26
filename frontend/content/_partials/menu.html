@@ -1,27 +1,43 @@
 <div class="nav">
-	<div class="container cf">
-		<ul class="nav-mobile">
-			<li><a href="/speakers.html">Speakers</a></li>
-			<li><a href="/tickets.html">Tickets</a></li>
-			<li><a href="/partners.html">Partners</a></li>
-			<li><a href="/stories.html">Stories</a></li>
-		</ul>
-		<div class="nav-desktop">
-			<div class="nav-element nav-item left">
+	<div class="nav-logo">
+		<a href="/"><%= partial('assets/svg/logo.svg') %></a>
+	</div>
+	<div class="nav-desktop container cf">
+		<ul>
+			<li class="nav-item left">
 				<a href="/speakers.html">Speakers</a>
+			</li>
+			<li class="nav-item left">
 				<a href="/tickets.html">Tickets</a>
-			</div>
-			<div class="nav-element logo">
-				<a href="/"><%= partial('assets/svg/logo.svg') %></a>
-			</div>
-			<div class="nav-element nav-item right">
+			</li>
+			<li class="nav-item">
 				<a href="/partners.html">Partners</a>
+			</li>
+			<li class="nav-item">
 				<a href="/stories.html">Stories</a>
-			</div>
-
-			<button class="nav-toggle">
-				<%= partial('assets/svg/menu.svg') %>
-			</button>
+			</li>
+		</ul>
+	</div>
+	<div class="nav-mobile">
+		<button class="nav-toggle">
+			<%= partial('assets/svg/menu.svg') %>
+		</button>
+		<div class="mobile-background"></div>
+		<div class="nav-mobile-items">
+			<ul>
+				<li class="nav-item">
+					<a href="/speakers.html">Speakers</a>
+				</li>
+				<li class="nav-item">
+					<a href="/tickets.html">Tickets</a>
+				</li>
+				<li class="nav-item">
+					<a href="/partners.html">Partners</a>
+				</li>
+				<li class="nav-item">
+					<a href="/stories.html">Stories</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

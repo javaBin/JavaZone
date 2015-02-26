@@ -29,7 +29,7 @@
 	svgAnimate.prototype.toggle = function() {
 		var to = this.toggled ? 'from' : 'to';
 		this.animElements.forEach(function(element) {
-			var props = _.defaults({}, element.props, { duration: 400, easing: 'easeOutExpo' })
+			var props = _.defaults({}, element.props, { duration: element.props.duration || 400, easing: 'easeOutExpo' })
 			Velocity(element.node, element[to], props);
 		});
 
