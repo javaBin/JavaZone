@@ -15,6 +15,6 @@
 			else
 				_.invoke(routes[route], Function.prototype.apply);
 		}
-	});
+	}).value();
 
 })(window._, window.jz = window.jz || {});
