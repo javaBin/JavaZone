@@ -6,7 +6,7 @@
 
 		_(el).each(function(e) {
 			e.style[style] = val;
-		});
+		}).value();
 	}
 
 	function transitionDelay(el, val) {
@@ -59,13 +59,13 @@
 				li.appendChild(a);
 				ul.appendChild(li);
 				return img;
-			});
+			}).value();
 		partners.appendChild(ul);
 		setTimeout(function() {
 			requestAnimationFrame(function() {
-				partnerList.each(function(img) {
+				_(partnerList).each(function(img) {
 					img.classList.add('visible');
-				});
+				}).value();
 			});
 		}, 250);
 	}

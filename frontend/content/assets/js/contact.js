@@ -19,7 +19,7 @@
 				);
 				
 				superstarsDiv.prepend(heltDiv);
-			});
+			}).value();
 	}
 
 })(window._, window.jz = window.jz || {}, window.$);
