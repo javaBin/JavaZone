@@ -91,7 +91,8 @@
         ["Evry", "evry_2013.jpg", "http://www.evry.no"],
         ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
         ["Programutvikling", "programutvikling_2012.jpg", "http://www.put.no/"],
-        ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"]
+        ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"],
+        ["ZeroTurnaround", "zt_2015.png", "http://zeroturnaround.com"]
     ];
 
     jz.data.academypartners = [
