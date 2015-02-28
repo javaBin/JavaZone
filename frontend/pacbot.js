@@ -19,6 +19,7 @@ exports.config = function(pacbot) {
 			"assets/js/menu_scroll.js",
 			"assets/js/partners.js",
 			"assets/js/contact.js",
+			"assets/js/info.js",
 			"assets/js/main.js"
 		]
 	}
@@ -39,7 +40,8 @@ exports.config = function(pacbot) {
 			"assets/css/contact.css",
 			"assets/css/illustrations.css",
 			"assets/css/speakers.css",
-			"assets/css/tickets.css"
+			"assets/css/tickets.css",
+			"assets/css/info.css"
 		]
 	};
 
