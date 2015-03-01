@@ -1,7 +1,7 @@
 (function(_, jz){
 
 	function initializeMap() {
-		var spektrum = new google.maps.LatLng(59.912993, 10.754742);
+		var spektrum = new google.maps.LatLng(59.913007, 10.754743);
 		var options = {
 			center:  spektrum,
 			zoom: 15,

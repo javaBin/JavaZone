@@ -5,3 +5,55 @@
 .info-page .map {
 	height: 500px;
 }
+
+.info-page .practicality {
+	position: relative;
+}
+
+.info-page .practicality-location:before {
+	background: url('/assets/svg/location.svg') no-repeat;
+	content: '';
+	display: inline-block;
+	height: 44px;
+	left: -4.2em;
+	margin-top: -22px;
+	position: absolute;
+	top: 50%;
+	width: 34px;
+}
+
+.info-page .practicality-foods:before {
+	background: url('/assets/svg/location.svg') no-repeat;
+	content: '';
+	display: inline-block;
+	height: 44px;
+	left: -4.2em;
+	margin-top: -22px;
+	position: absolute;
+	top: 50%;
+	width:34px;
+}
+
+.info-page .practicality-hotels:before {
+	background: url('/assets/svg/location.svg') no-repeat;
+	content: '';
+	display: inline-block;
+	height: 44px;
+	left: -4.2em;
+	margin-top: -22px;
+	position: absolute;
+	top: 50%;
+	width:34px;
+}
+
+.info-page .practicality-language:before {
+	background: url('/assets/svg/location.svg') no-repeat;
+	content: '';
+	display: inline-block;
+	height: 44px;
+	left: -4.2em;
+	margin-top: -22px;
+	position: absolute;
+	top: 50%;
+	width:34px;
+}
