@@ -10,6 +10,10 @@
 	width: 300px;
 }
 
+.illustration-placeholder.wide {
+    width: 750px;
+}
+
 .illustration-placeholder.circle {
     border-radius: 100%;
 }
