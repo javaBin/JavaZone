@@ -57,3 +57,50 @@
 	top: 50%;
 	width:34px;
 }
+
+/*
+	At the conference timeline
+*/
+
+.info-page .conference-days .section-content {
+	height: 1500px;
+	position: relative;
+}
+
+.info-page .conference-days .section-content:before {
+	background: #149089;
+	bottom: 0;
+	content: '';
+	display: block;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	width: 1px;
+}
+
+.info-page .conference-day {
+	height: 33.33%;
+	position: relative;
+}
+
+.info-page .conference-day-title {
+	float: right;
+	margin-top: -7px !important;
+	padding-left: 1em;
+	text-align: left;
+	width: 50%;
+}
+
+.info-page .conference-day-title:before {
+	background: white;
+	border: 2px solid #149089;
+	border-radius: 100%;
+	content: '';
+	display: block;
+	height: 21px;
+	left: 50%;
+	margin-left: -10px;
+	position: absolute;
+	top: 0;
+	width: 21px;
+}
