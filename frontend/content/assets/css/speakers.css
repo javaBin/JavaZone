@@ -155,6 +155,14 @@
 	left: -72px;
 }
 
+.deadline-speakers-workshop {
+	left: 34%;
+}
+
+.deadline-speakers-workshop .deadline-info {
+	left: -120px;
+}
+
 .deadline-cfp-closes {
 	left: 42%;
 }
@@ -171,12 +179,20 @@
 	left: -120px;
 }
 
+.deadline-presentation-skills {
+	left: 76%;
+}
+
+.deadline-presentation-skills .deadline-info {
+	left: -150px;
+}
+
 .deadline-speakers-dinner {
 	left: 86%;
 }
 
 .deadline-speakers-dinner .deadline-info {
-	left: -75px;
+	left: -35px;
 }
 
 .deadline-javazone {
