@@ -134,7 +134,7 @@ jz.routes.program = function() {
             $(".filters a").on("click", filter);
         });
         jz.api.template("sessions", { 
-            sessions: data.sessions, 
+            //sessions: data.sessions, 
             notScheduledSessions: data.notScheduledSessions,
             notScheduledPresentations: data.notScheduledPresentations,
             notScheduledLightning: data.notScheduledLightning, 

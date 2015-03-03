@@ -121,15 +121,14 @@ jz.api.sessionsByUrl = function(url) {
         var notScheduledPresentations = _.filter(notScheduledSessions, function(d) { return d.format === 'presentation'; });
         var notScheduledLightning = _.filter(notScheduledSessions, function(d) { return d.format === 'lightning-talk'; });
         //var notScheduledWorkshops = _.filter(notScheduledSessions, function(d) { return d.format === 'workshop'; });
-
-        var workshops = _.filter(data, function(d) { return d.format === 'workshop'; });
-        workshops = _.sortBy(workshops, function(d) { return d.room; });
-        workshops = _.sortBy(workshops, function(d) { return jz.date.sortable(d.start); });
+        //var workshops = _.filter(data, function(d) { return d.format === 'workshop'; });
+        //workshops = _.sortBy(workshops, function(d) { return d.room; });
+        //workshops = _.sortBy(workshops, function(d) { return jz.date.sortable(d.start); });
 
         // Only keep sessions with room or timeslot
-        var scheduledSessions = _.reject(data, function(d) {
-            return !d.start || !d.room || d.format === 'workshop';
-        });
+        //var scheduledSessions = _.reject(data, function(d) {
+        //    return !d.start || !d.room || d.format === 'workshop';
+        //});
 
         var c = _.chain(data), parsed = {
             tags: c.pluck("keywords").flatten().uniq().value().sort(),
@@ -139,12 +138,12 @@ jz.api.sessionsByUrl = function(url) {
             langs: c.pluck("language").uniq().value().sort(),
             levels: c.pluck("level").uniq().value(),
             formats: c.pluck("format").uniq().value().reverse(),
-            sessions: jz.api.groupSessions(scheduledSessions),
+            //sessions: jz.api.groupSessions(scheduledSessions),
             notScheduledSessions: notScheduledSessions,
             notScheduledPresentations: notScheduledPresentations,
             notScheduledLightning: notScheduledLightning, 
             //notScheduledWorkshops: notScheduledWorkshops,
-            workshops: workshops,
+            //workshops: workshops,
             raw: data
         };
         parsed.slugs = _.map(parsed.formats, jz.utils.slug);
