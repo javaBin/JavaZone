@@ -92,7 +92,8 @@
         ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
         ["Programutvikling", "programutvikling_2012.jpg", "http://www.put.no/"],
         ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"],
-        ["ZeroTurnaround", "zt_2015.png", "http://zeroturnaround.com"]
+        ["ZeroTurnaround", "zt_2015.png", "http://zeroturnaround.com"],
+        ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"]
     ];
 
     jz.data.academypartners = [
