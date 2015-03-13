@@ -210,3 +210,19 @@
 .info-page .conference-day-second .conference-event:nth-child(6) {
 	top: 20%;
 }
+
+.info-page .conference-day-third .conference-event:nth-child(2) {
+	top: 10%;
+}
+
+.info-page .conference-day-third .conference-event:nth-child(3) {
+	top: 10%;
+}
+
+.info-page .conference-day-third .conference-event:nth-child(4) {
+	top: 10%;
+}
+
+.info-page .conference-day-third .conference-event:nth-child(5) {
+	top: 20%;
+}
