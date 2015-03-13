@@ -83,6 +83,14 @@
 	position: relative;
 }
 
+.info-page .conference-day.conference-day-third {
+	height: 32.33%;
+}
+
+.info-page .conference-day.conference-end {
+	height: 1%;
+}
+
 .info-page .conference-day-title {
 	float: right;
 	margin-top: -7px !important;
@@ -93,7 +101,7 @@
 
 .info-page .conference-day-title:before {
 	background: white;
-	border: 2px solid #149089;
+	border: 1px solid #149089;
 	border-radius: 100%;
 	content: '';
 	display: block;
@@ -103,4 +111,102 @@
 	position: absolute;
 	top: 0;
 	width: 21px;
+}
+
+.info-page .conference-event {
+	position: relative;
+	text-align: left;
+	width: 50%;
+}
+
+.info-page .conference-event .time, .info-page .conference-event .title {
+	display: inline-block;
+	margin-bottom: 10px
+}
+
+.info-page .conference-event .time {
+	margin-right: 10px;
+}
+
+.info-page .conference-event .title {
+	padding-left: 10px;
+	position: relative;
+}
+
+.info-page .conference-event .title:before {
+	background: #149089;
+	bottom: 2px;
+	content: '';
+	display: block;
+	left: 0;
+	position: absolute;
+	top: 5px;
+	width: 1px;
+}
+
+.info-page .conference-event .separator {
+	border-bottom: 1px solid #149089;
+	margin-bottom: 10px;
+	opacity: .25;
+}
+
+.info-page .conference-event.right {
+	margin-left: 50%;
+	text-align: right;
+}
+
+.info-page .conference-event.right .title {
+	padding-right: 10px;
+}
+
+.info-page .conference-event.right .title:before {
+	display: none;
+}
+
+.info-page .conference-event.right .title:after {
+	background: #149089;
+	bottom: 2px;
+	content: '';
+	display: block;
+	right: 0;
+	position: absolute;
+	top: 5px;
+	width: 1px;
+}
+
+.info-page .conference-event.right .time {
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+.info-page .conference-day-first .conference-event:nth-child(2) {
+	top: 10%;
+}
+
+.info-page .conference-day-first .conference-event:nth-child(3) {
+	top: 40%;
+}
+
+.info-page .conference-day-first .conference-event:nth-child(4) {
+	top: 50%;
+}
+
+.info-page .conference-day-second .conference-event:nth-child(2) {
+	top: 10%;
+}
+
+.info-page .conference-day-second .conference-event:nth-child(3) {
+	top: 5%;
+}
+
+.info-page .conference-day-second .conference-event:nth-child(4) {
+	top: 5%;
+}
+
+.info-page .conference-day-second .conference-event:nth-child(5) {
+	top: 5%;
+}
+
+.info-page .conference-day-second .conference-event:nth-child(6) {
+	top: 20%;
 }
