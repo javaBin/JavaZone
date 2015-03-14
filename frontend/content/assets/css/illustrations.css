@@ -11,7 +11,8 @@
 }
 
 .illustration-placeholder.wide {
-    width: 750px;
+    max-width: 750px;
+    width: 100%;
 }
 
 .illustration-placeholder.circle {

@@ -62,12 +62,12 @@
 	At the conference timeline
 */
 
-.info-page .conference-days .section-content {
+.info-page .conference-days .timeline {
 	height: 1500px;
 	position: relative;
 }
 
-.info-page .conference-days .section-content:before {
+.info-page .conference-days .timeline:before {
 	background: #149089;
 	bottom: 14px;
 	content: '';
@@ -241,4 +241,116 @@
 
 .info-page .conference-day-third .conference-event:nth-child(5) {
 	top: 20%;
+}
+
+
+
+.info-page .topics {
+	/*background: #efefef;*/
+}
+
+.info-page .topics h2 {
+	margin-top: 2.5em;
+}
+
+.info-page .topics ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.info-page .topics ul:before {
+	display: none;
+}
+
+.info-page .topic {
+	margin-bottom: 2em;
+}
+
+.info-page .topic .topic-header {
+	font-weight: bold;
+}
+
+.info-page .formats ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.info-page .formats img {
+	width: auto;
+}
+
+.info-page .format-lightning svg {
+	height: 240px;
+}
+
+.info-page .format-lightning h2 {
+	position: relative;
+	top: 10px;
+}
+
+.info-page .format-lightning p {
+	position: relative;
+	top: 10px;
+}
+
+.info-page .format-presentation svg {
+	height: 250px;
+	position: relative;
+	top: -5px;
+}
+
+.info-page .format-workshop svg {
+	height: 250px;
+	position: relative;
+	top: -10px;
+}
+
+.info-page .format {
+	padding: 0 20px;
+}
+
+.info-page .format h2 {
+	line-height: 1.2;
+}
+
+.info-page .format h2 span {
+	font-size: .7em;
+}
+
+
+
+
+@media (min-width: 768px) {
+
+	.info-page .topics h2 {
+		margin-top: 1em;
+	}
+
+	.info-page .topic {
+		float: left;
+		min-height: 150px;
+		padding: 0 20px;
+		width: 33%;
+	}
+
+	.info-page .topic-header {
+		position: relative;
+	}
+
+	.info-page .topic-header [class^='icon-'] {
+		left: -30px;
+		position: absolute;
+	}
+
+	.info-page .topic:last-child {
+		margin-left: 33%;
+		margin-bottom: 0;
+	}
+
+	.info-page .format {
+		float: left;
+		width: 33%;
+	}
 }
