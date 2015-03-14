@@ -69,13 +69,14 @@
 
 .info-page .conference-days .section-content:before {
 	background: #149089;
-	bottom: 0;
+	bottom: 14px;
 	content: '';
 	display: block;
 	left: 50%;
 	position: absolute;
 	top: 0;
 	width: 1px;
+	z-index: 1;
 }
 
 .info-page .conference-day {
@@ -83,7 +84,16 @@
 	position: relative;
 }
 
+.info-page .conference-day-first {
+	background: #e3e3e3;
+}
+
+.info-page .conference-day-second {
+	background: #e8ede9
+}
+
 .info-page .conference-day.conference-day-third {
+	background: #ebf3f6;
 	height: 32.33%;
 }
 
@@ -93,9 +103,10 @@
 
 .info-page .conference-day-title {
 	float: right;
-	margin-top: -7px !important;
+	margin-top: -16px !important;
 	padding-left: 1em;
 	text-align: left;
+	text-transform: uppercase;
 	width: 50%;
 }
 
@@ -109,14 +120,19 @@
 	left: 50%;
 	margin-left: -10px;
 	position: absolute;
-	top: 0;
+	top: -10px;
 	width: 21px;
+	z-index: 2;
 }
 
 .info-page .conference-event {
 	position: relative;
 	text-align: left;
 	width: 50%;
+}
+
+.info-page .conference-day .container {
+	height: 100%;
 }
 
 .info-page .conference-event .time, .info-page .conference-event .title {
@@ -147,7 +163,7 @@
 .info-page .conference-event .separator {
 	border-bottom: 1px solid #149089;
 	margin-bottom: 10px;
-	opacity: .25;
+	opacity: .5;
 }
 
 .info-page .conference-event.right {
