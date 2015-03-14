@@ -1,0 +1,33 @@
+.top-talks-page .section {
+	padding-top: 0;
+}
+
+.top-talks-page .sub-section {
+	margin-top: 0;
+}
+
+.top-talks-page iframe {
+	height: 25em;
+	width: 100%;
+}
+
+.top-talks-page .talk {
+	margin-bottom: 2.5em;
+}
+
+.top-talks-page .talk h1 {
+	margin-bottom: 0;
+}
+
+.top-talks-page .talk h2 {
+	font-weight: 300;
+	margin-top: 0;
+}
+
+.top-talks-page .jumbotron h1 {
+	color: #149089;
+}
+
+.top-talks-page .jumbotron:not(:first-child) {
+	margin-top: 5em;
+}
