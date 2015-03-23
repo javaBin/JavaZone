@@ -64,7 +64,7 @@
 	transition: color .4s ease;
 	color: #101010;
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	padding: 0 .5em;
 	font-weight: 300;
 	position: relative;
@@ -73,6 +73,14 @@
 
 .nav .nav-item a {
 	display: block;
+}
+
+.nav-desktop .nav-item:first-child a {
+	padding-left: 0;
+}
+
+.nav-desktop .nav-item:last-child a {
+	padding-right: 0;
 }
 
 .nav a:hover,
@@ -115,7 +123,7 @@
 	outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 880px) {
 
 	.nav {
 		top: 0;
