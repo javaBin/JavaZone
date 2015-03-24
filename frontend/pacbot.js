@@ -42,7 +42,8 @@ exports.config = function(pacbot) {
 			"assets/css/speakers.css",
 			"assets/css/tickets.css",
 			"assets/css/info.css",
-			"assets/css/toptalks.css"
+			"assets/css/toptalks.css",
+			"assets/css/volunteer.css"
 		]
 	};
 

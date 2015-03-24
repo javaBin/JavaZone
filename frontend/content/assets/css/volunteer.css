@@ -1,0 +1,31 @@
+.volunteer-page ul.information:before {
+	display: none;
+}
+
+.volunteer-page ul.information {
+	margin: 0;
+	padding: 0;
+}
+
+.volunteer-page .info {
+	float: left;
+	min-height: 200px;
+	width: 50%;
+}
+
+.volunteer-page .info-header {
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+@media (min-width: 880px) {
+
+	.volunteer-page .info:nth-child(odd) {
+		padding-right: 20px;
+	}
+
+	.volunteer-page .info:nth-child(even) {
+		padding-left: 20px;
+	}
+
+}
