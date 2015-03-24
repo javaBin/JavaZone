@@ -12,7 +12,11 @@
 }
 
 .top-talks-page .talk {
-	margin-bottom: 2.5em;
+	padding-top: 5em;
+}
+
+.top-talks-page .talk.first {
+	padding-top: 0;
 }
 
 .top-talks-page .talk h1 {
@@ -30,4 +34,8 @@
 
 .top-talks-page .jumbotron:not(:first-child) {
 	margin-top: 5em;
+}
+
+.top-talks-page .no-video {
+	text-align: center;
 }
