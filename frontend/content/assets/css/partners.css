@@ -83,6 +83,9 @@
 .package .package-title {
 	font-weight: 300;
 }
+.package .package-title.package-title-soldout {
+	text-decoration: line-through;
+}
 
 .slide {
 	display: block;
