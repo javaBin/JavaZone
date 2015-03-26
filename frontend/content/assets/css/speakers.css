@@ -152,7 +152,7 @@
 }
 
 .deadline-cfp .deadline-info {
-	left: -72px;
+	left: -60px;
 }
 
 .deadline-speakers-workshop {
@@ -160,7 +160,7 @@
 }
 
 .deadline-speakers-workshop .deadline-info {
-	left: -120px;
+	left: -110px;
 }
 
 .deadline-cfp-closes {
@@ -168,7 +168,7 @@
 }
 
 .deadline-cfp-closes .deadline-info {
-	left: -106px;
+	left: -96px;
 }
 
 .deadline-notified {
@@ -176,7 +176,7 @@
 }
 
 .deadline-notified .deadline-info {
-	left: -120px;
+	left: -110px;
 }
 
 .deadline-presentation-skills {
@@ -184,7 +184,7 @@
 }
 
 .deadline-presentation-skills .deadline-info {
-	left: -150px;
+	left: -110px;
 }
 
 .deadline-speakers-dinner {
@@ -192,7 +192,7 @@
 }
 
 .deadline-speakers-dinner .deadline-info {
-	left: -35px;
+	left: -50px;
 }
 
 .deadline-javazone {
@@ -210,10 +210,11 @@
 .deadline .deadline-info {
 	position: absolute;
 	top: 10px;
+	font-size: .9em;
 }
 
 .deadline-top .deadline-info {
-	top: -70px;
+	top: -60px;
 }
 
 .deadline .happening {
