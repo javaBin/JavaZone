@@ -139,3 +139,7 @@ h1 {
     position: relative; 
     top: -89px; 
 }
+
+.spacer {
+    height: 2em;
+}
