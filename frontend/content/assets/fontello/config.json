@@ -7,6 +7,24 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "xoidjr6q3rzi7tpw6hci1k6srz15g11l",
+      "css": "puzzle",
+      "code": 59404,
+      "src": "typicons"
+    },
+    {
+      "uid": "d27bcf5c8638e4078aaadae1d49b6909",
+      "css": "fast-food",
+      "code": 59407,
+      "src": "maki"
+    },
+    {
+      "uid": "bcbb9470c9ba0699d5a0e4e97b3d5be9",
+      "css": "glass",
+      "code": 59406,
+      "src": "elusive"
+    },
+    {
       "uid": "b6ef4443ecc502136135437837d9724b",
       "css": "mail",
       "code": 59396,
@@ -16,6 +34,12 @@
       "uid": "628e5fc59fc5965a6b91189467b037d5",
       "css": "heart",
       "code": 59400,
+      "src": "elusive"
+    },
+    {
+      "uid": "ce7452abce8b55ded1c393997a51e6b3",
+      "css": "ok",
+      "code": 59405,
       "src": "elusive"
     },
     {
