@@ -6,7 +6,7 @@
 		'partners': jz.partners,
 		'tickets': jz.tickets,
 		'contact': jz.contact,
-		'info': jz.info.initializeMap
+		'info': [jz.info.initializeMap, jz.partners]
 	};
 
 	_(Object.keys(routes)).each(function(route) {
