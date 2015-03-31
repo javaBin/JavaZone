@@ -338,7 +338,15 @@
 	font-size: .7em;
 }
 
-
+.info-page .party {
+	background: #111;
+	color: #eee;
+	padding: 0 0 5em 0;
+	margin: 3em 0;
+}
+.info-page .party h1, .info-page .party h2 {
+	color: #efbc3b;
+}
 
 
 @media (min-width: 768px) {
