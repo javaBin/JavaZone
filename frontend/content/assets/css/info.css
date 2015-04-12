@@ -98,7 +98,7 @@
 }
 
 .info-page .conference-days .timeline {
-	height: 1600px;
+	height: 1800px;
 	position: relative;
 }
 
@@ -236,11 +236,11 @@
 }
 
 .info-page .conference-day-first .conference-event:nth-child(3) {
-	top: 40%;
+	top: 20%;
 }
 
 .info-page .conference-day-first .conference-event:nth-child(4) {
-	top: 50%;
+	top: 30%;
 }
 
 .info-page .conference-day-second .conference-event:nth-child(2) {
@@ -260,7 +260,7 @@
 }
 
 .info-page .conference-day-second .conference-event:nth-child(6) {
-	top: 20%;
+	top: 5%;
 }
 
 .info-page .conference-day-third .conference-event:nth-child(2) {
