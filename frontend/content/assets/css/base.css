@@ -143,3 +143,7 @@ h1 {
 .spacer {
     height: 2em;
 }
+
+.smaller {
+    font-size: .8em;
+}

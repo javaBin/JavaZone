@@ -1,3 +1,7 @@
+.info-page .first-info h1 {
+	font-size: 1.8em;
+}
+
 .info-page .ticket-includes:before {
 	display: none;
 }
@@ -81,8 +85,12 @@
 	At the conference timeline
 */
 
+.info-page .at-the-conference {
+	background: #efefef;
+}
+
 .info-page .conference-days .timeline {
-	height: 1500px;
+	height: 1600px;
 	position: relative;
 }
 
@@ -104,15 +112,15 @@
 }
 
 .info-page .conference-day-first {
-	background: #e3e3e3;
+	/*background: #e3e3e3;*/
 }
 
 .info-page .conference-day-second {
-	background: #e8ede9
+	/*background: #e8ede9*/
 }
 
 .info-page .conference-day.conference-day-third {
-	background: #ebf3f6;
+	/*background: #ebf3f6;*/
 	height: 32.33%;
 }
 
@@ -126,6 +134,8 @@
 	padding-left: 1em;
 	text-align: left;
 	text-transform: uppercase;
+	font-weight: 400;
+	color: #149089;
 	width: 50%;
 }
 
