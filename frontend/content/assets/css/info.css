@@ -50,7 +50,7 @@
 }
 
 .info-page .practicality-foods:before {
-	background: url('/assets/svg/location.svg') no-repeat;
+	background: url('/assets/svg/meal.svg') no-repeat;
 	content: '';
 	display: inline-block;
 	height: 44px;
@@ -62,7 +62,7 @@
 }
 
 .info-page .practicality-hotels:before {
-	background: url('/assets/svg/location.svg') no-repeat;
+	background: url('/assets/svg/sleep.svg') no-repeat;
 	content: '';
 	display: inline-block;
 	height: 44px;
@@ -74,7 +74,7 @@
 }
 
 .info-page .practicality-language:before {
-	background: url('/assets/svg/location.svg') no-repeat;
+	background: url('/assets/svg/earth.svg') no-repeat;
 	content: '';
 	display: inline-block;
 	height: 44px;
@@ -138,11 +138,11 @@
 
 .info-page .conference-day-title {
 	float: right;
-	margin-top: -16px !important;
+	margin-top: -17px !important;
 	padding-left: 1em;
 	text-align: left;
 	text-transform: uppercase;
-	color: #005c76;
+	color: #101010;
 	width: 50%;
 }
 
@@ -162,6 +162,7 @@
 }
 
 .info-page .conference-event {
+	color: #005c76;
 	position: relative;
 	text-align: left;
 	width: 50%;
