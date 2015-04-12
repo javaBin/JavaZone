@@ -29,6 +29,10 @@
 	height: 500px;
 }
 
+.info-page .practicalities {
+	margin-top: 5em;
+}
+
 .info-page .practicality {
 	position: relative;
 }
@@ -86,7 +90,11 @@
 */
 
 .info-page .at-the-conference {
-	background: #efefef;
+	background: #EDF3F5;
+}
+
+.info-page .conference-days h1.section-header {
+	color: #005c76;
 }
 
 .info-page .conference-days .timeline {
@@ -95,7 +103,7 @@
 }
 
 .info-page .conference-days .timeline:before {
-	background: #149089;
+	background: #005c76;
 	bottom: 14px;
 	content: '';
 	display: block;
@@ -134,14 +142,13 @@
 	padding-left: 1em;
 	text-align: left;
 	text-transform: uppercase;
-	font-weight: 400;
-	color: #149089;
+	color: #005c76;
 	width: 50%;
 }
 
 .info-page .conference-day-title:before {
 	background: white;
-	border: 1px solid #149089;
+	border: 1px solid #005c76;
 	border-radius: 100%;
 	content: '';
 	display: block;
@@ -179,7 +186,7 @@
 }
 
 .info-page .conference-event .title:before {
-	background: #149089;
+	background: #005c76;
 	bottom: 2px;
 	content: '';
 	display: block;
@@ -190,7 +197,7 @@
 }
 
 .info-page .conference-event .separator {
-	border-bottom: 1px solid #149089;
+	border-bottom: 1px solid #005c76;
 	margin-bottom: 10px;
 	opacity: .5;
 }
@@ -209,7 +216,7 @@
 }
 
 .info-page .conference-event.right .title:after {
-	background: #149089;
+	background: #005c76;
 	bottom: 2px;
 	content: '';
 	display: block;
