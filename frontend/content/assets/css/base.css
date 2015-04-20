@@ -96,9 +96,18 @@ h1 {
     font-weight: 300;
 }
 
+.jumbotron h2 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 2em;
+    }
+
+    .jumbotron h2 {
+        font-size: 1.3em;
     }
 
     .content {
