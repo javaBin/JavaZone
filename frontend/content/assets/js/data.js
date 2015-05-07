@@ -95,7 +95,8 @@
         ["ZeroTurnaround", "zt_2015.png", "http://zeroturnaround.com"],
         ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"],
         ["Tripletex", "tripletex_2015.png", "https://www.tripletex.no"],
-        ["Enonic", "enonic_2015.png", "https://enonic.com"]
+        ["Enonic", "enonic_2015.png", "https://enonic.com"],
+        ["Red Hat", "redhat_2015.png", "http://www.redhat.com/en"]
     ];
 
     jz.data.academypartners = [
