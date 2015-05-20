@@ -90,13 +90,14 @@
         ["NAV IKT", "nav_2014.png", "http://www.nav.no/"],
         ["Evry", "evry_2013.jpg", "http://www.evry.no"],
         ["Computas", "computas_2012.jpg", "http://www.computas.no/"],
-        ["Programutvikling", "programutvikling_2012.jpg", "http://www.put.no/"],
+        ["Programutvikling", "programutvikling_2015.png", "http://www.put.no/"],
         ["Arktekk", "arktekk_2012.jpg", "http://www.arktekk.no/"],
         ["ZeroTurnaround", "zt_2015.png", "http://zeroturnaround.com"],
         ["KnowIT", "knowit_2012.jpg", "http://www.knowit.no/"],
         ["Tripletex", "tripletex_2015.png", "https://www.tripletex.no"],
         ["Enonic", "enonic_2015.png", "https://enonic.com"],
-        ["Red Hat", "redhat_2015.png", "http://www.redhat.com/en"]
+        ["Red Hat", "redhat_2015.png", "http://www.redhat.com/en"],
+        ["Hazelcast", "hazelcast_2015.png", "http://hazelcast.com"]
     ];
 
     jz.data.academypartners = [
