@@ -2,7 +2,6 @@ exports.config = function(pacbot) {
 
 	var config = {
 		port: 3000,
-		ignore_build: ["bower_components"],
 		ignore_processing: ["assets/templates", "assets/components"],
 		assets: {}
 	}
