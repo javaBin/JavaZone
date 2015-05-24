@@ -20,6 +20,7 @@ exports.config = function(pacbot) {
 			"assets/js/partners.js",
 			"assets/js/contact.js",
 			"assets/js/info.js",
+			"assets/js/program.js",
 			"assets/js/main.js"
 		]
 	}
