@@ -1,27 +1,34 @@
 (function(_, request, Handlebars, jz) {
 
-    _.templateSettings.variable = 'data';
-
     function program() {
         request('http://test.javazone.no/javazone-web-api/event/javazone_2014/sessions')
-        .end(create);
+        .end(render);
     }
 
-    function create(err, res) {
+    function transform(res) {
+        var data = JSON.parse(res.text);
+
+        return data;
+    }
+
+    function render(err, res) {
         if (err) {
-            console.log(err);
+            renderError(err);
             return;
         }
 
-        console.log(res);
+        renderProgram(transform(res));
+    }
 
-        var data = JSON.parse(res.text);
+    function renderProgram(program) {
         var template = Handlebars.compile(document.querySelector('.program-template').innerHTML);
-        var program = document.querySelector('.javazone-program');
+        var container = document.querySelector('.javazone-program');
+        container.innerHTML = template({talks: program});
+    }
 
-        console.log(data);
-
-        program.innerHTML = template({talks: data});
+    function renderError(err) {
+        // TODO: actually do something
+        console.error(err);
     }
 
 	jz.program = program;
