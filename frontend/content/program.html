@@ -1,6 +1,12 @@
 <% set('page', 'program-page') %>
 
 <div class="section container cf">
+    <div class="sub-section cf">
+        <h1 class="section-header centered">CURRENTLY SHOWING 2014 PROGRAM</h1>
+    </div>
+</div>
+
+<div class="section container cf">
 	<div class="sub-section cf">
 		<h1 class="section-header centered">Program</h1>
 		<div class="section-content">
@@ -16,7 +22,14 @@
 </div>
 
 <script type="text/tempate" class="program-template">
-    {{#each talks }}
-        <div>{{tittel}}</div>
+    {{#each days}}
+        <div class="program-day">
+            <div class="program-day-title">{{date}}</div>
+            <div class="program-day-presentations">
+                {{#each presentations}}
+                    <div>{{tittel}}</div>
+                {{/each}}
+            </div>
+        </div>
     {{/each}}
 </script>
