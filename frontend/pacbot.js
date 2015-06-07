@@ -11,6 +11,7 @@ exports.config = function(pacbot) {
 			"assets/js/lodash.min.js",
 			"node_modules/velocity-animate/velocity.min.js",
 			"node_modules/jquery/dist/jquery.min.js",
+			"node_modules/handlebars/dist/handlebars.min.js",
 			"assets/js/superagent.js",
 			"assets/js/modernizr.js",
 			"assets/js/svg_animate.js",
