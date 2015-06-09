@@ -38,10 +38,10 @@
     <ul class="topics">
     {{#each topics}}
         <li class="topic">
-            <div class="topic-title">{{topic}}</div>
+            <div class="topic-title">{{key}}</div>
             <ul class="topic-submissions">
-                {{#each submissions}}
-                    <li>{{tittel}}</li>
+                {{#each value}}
+                    <li>{{tittel}} ({{type}})</li>
                 {{/each}}
             </ul>
         </li>

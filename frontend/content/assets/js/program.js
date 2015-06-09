@@ -1,7 +1,10 @@
 (function(_, request, Handlebars, jz) {
 
-    //var getTopic = _.partial(_.startsWith, _, 'topic:');
-    var getTopic = function (n) { return n.indexOf('topic:') >= 0 };
+    var matcher = function(type) {
+        return _.ary(_.partial(_.startsWith, _, type), 1);
+    }
+    var hasTopic = matcher('topic:');
+    var hasType = matcher('type:');
 
     function program() {
         request('http://test.javazone.no/javazone-web-api/event/javazone_2015/sessions')
@@ -19,22 +22,27 @@
 
     function transformToCategories(res) {
         return _(parse(res))
-            .map(extractTopic)
+            .map(_.compose(extract('topic', hasTopic), extract('type', hasType)))
             .groupBy('topic')
-            .transform(function(result, submissions, topic) {
-                result.push({topic: topic, submissions: submissions});
-            }, [])
+            .transform(toObject, [])
             .value();
     }
 
-    function extractTopic(submission) {
-        console.log(submission.nokkelord);
-        var topic = _.find(submission.nokkelord, getTopic);
-        console.log(topic);
-        if (topic)
-            submission.topic = _.trimLeft(topic, 'topic:');
+    function toObject(result, value, key) {
+        result.push({
+            key: key,
+            value: value
+        });
+    }
 
-        return submission;
+    function extract(t, matcher) {
+        return function(submission) {
+            var result = _.find(submission.nokkelord, matcher);
+            if (result)
+                submission[t] = _.trimLeft(result, t + ':');
+
+            return submission;
+        }
     }
 
     function render(err, res) {
