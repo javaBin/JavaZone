@@ -21,7 +21,7 @@
     <div class="javazone-program"></div>
 </div>
 
-<script type="text/tempate" class="program-template">
+<script type="text/tempate" class="program-day-template">
     {{#each days}}
         <div class="program-day">
             <div class="program-day-title">{{date}}</div>
@@ -32,4 +32,19 @@
             </div>
         </div>
     {{/each}}
+</script>
+
+<script type="text/template" class="program-categories-template">
+    <ul class="topics">
+    {{#each topics}}
+        <li class="topic">
+            <div class="topic-title">{{topic}}</div>
+            <ul class="topic-submissions">
+                {{#each submissions}}
+                    <li>{{tittel}}</li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/each}}
+    </ul>
 </script>
