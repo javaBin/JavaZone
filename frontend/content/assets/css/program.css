@@ -5,3 +5,93 @@
 .program-day-title {
     border-bottom: 1px solid black;
 }
+
+.javazone-program .section-content h2:first-child {
+    margin-top: 0;
+}
+
+.javazone-program .section-content h2 {
+    margin-bottom: 0.25em;
+}
+
+.javazone-program .section-header {
+    position: relative;
+}
+
+.javazone-program .sub-section .section-icon {
+    opacity: .9;
+    position: absolute;
+    right: 16px;
+    top: 120%;
+}
+
+.javazone-program .section-content ul + p {
+    margin-bottom: 1.7em;
+    margin-top: .25em;
+}
+
+.javazone-program ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.javazone-program ul:before {
+    display: none;
+}
+
+.javazone-program li {
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity: .2s ease-in-out;
+    -o-transition: opacity: .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-bottom: 0;
+    padding: 1px 10px;
+    opacity: .5;
+}
+
+.javazone-program li:hover {
+    opacity: 1;
+}
+
+.topics, .topic-submissions {
+    list-style: none;
+    padding: 0;
+}
+
+.topic-submissions {
+    padding-left: 4em;
+}
+
+.topic {
+    margin: 5em 0 2em;
+}
+
+.topic-title h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.topic-title h2 i {
+    margin-right: 1.5em;
+}
+
+.difficulty-hardcore {
+    background-color: #a10035;
+    color: white;
+}
+
+.difficulty-advanced {
+    background-color: #ff4f4c;
+}
+
+.difficulty-beginner {
+    background-color: #149089;
+}
+
+.difficulty-intermediate {
+    background-color: #fcaf17;
+}
