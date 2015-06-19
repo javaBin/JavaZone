@@ -11,6 +11,8 @@
 }
 
 .javazone-program .section-content h2 {
+    border-bottom: 1px solid #999;
+    display: inline-block;
     margin-bottom: 0.25em;
 }
 
@@ -39,12 +41,13 @@
     display: none;
 }
 
-.javazone-program li {
+.javazone-program .submission-keyword {
     -webkit-transition: opacity .2s ease-in-out;
     -moz-transition: opacity: .2s ease-in-out;
     -o-transition: opacity: .2s ease-in-out;
     transition: opacity .2s ease-in-out;
     border-radius: 3px;
+    color: white;
     display: inline-block;
     font-size: 0.8em;
     margin-bottom: 0;
@@ -79,19 +82,24 @@
     margin-right: 1.5em;
 }
 
-.difficulty-hardcore {
+/* keyword colors */
+
+.submission-keyword.difficulty-hardcore {
     background-color: #a10035;
-    color: white;
 }
 
-.difficulty-advanced {
+.submission-keyword.difficulty-advanced {
     background-color: #ff4f4c;
 }
 
-.difficulty-beginner {
+.submission-keyword.difficulty-beginner {
     background-color: #149089;
 }
 
-.difficulty-intermediate {
+.submission-keyword.difficulty-intermediate {
     background-color: #fcaf17;
+}
+
+.submission-keyword {
+    background-color: #555;
 }
