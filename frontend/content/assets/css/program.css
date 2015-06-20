@@ -41,7 +41,7 @@
     display: none;
 }
 
-.javazone-program .submission-keyword {
+.javazone-program .submission-keyword, .filter-difficulty, .filter-category {
     -webkit-transition: opacity .2s ease-in-out;
     -moz-transition: opacity: .2s ease-in-out;
     -o-transition: opacity: .2s ease-in-out;
@@ -84,22 +84,41 @@
 
 /* keyword colors */
 
-.submission-keyword.difficulty-hardcore {
+.submission-keyword, .filter-category {
+    background-color: #555;
+}
+
+.difficulty-hardcore {
     background-color: #a10035;
 }
 
-.submission-keyword.difficulty-advanced {
+.difficulty-advanced {
     background-color: #ff4f4c;
 }
 
-.submission-keyword.difficulty-beginner {
+.difficulty-beginner {
     background-color: #149089;
 }
 
-.submission-keyword.difficulty-intermediate {
+.difficulty-intermediate {
     background-color: #fcaf17;
 }
 
-.submission-keyword {
-    background-color: #555;
+/* filter */
+.javazone-program-filter {
+    text-align: center;
+}
+
+.javazone-program-filter .filter-difficulties {
+    padding: 0;
+}
+
+.javazone-program-filter .filter-categories {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0;
+}
+
+.javazone-program-filter .filter-difficulty {
+    opacity: 1;
 }

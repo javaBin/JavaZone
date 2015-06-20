@@ -11,7 +11,21 @@
 	</div>
 </div>
 
+<div class="javazone-program-filter"></div>
 <div class="javazone-program"></div>
+
+<script type="text/template" class="program-filter">
+    <ul class="filter-difficulties">
+    {{#each difficulty}}
+        <li class="filter-difficulty {{c}}">{{l}}</li>
+    {{/each}}
+    </ul>
+    <ul class="filter-categories">
+    {{#each categories}}
+        <li class="filter-category {{c}}">{{l}}</li>
+    {{/each}}
+    </ul>
+</script>
 
 <script type="text/tempate" class="program-day-template">
     {{#each days}}
