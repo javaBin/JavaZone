@@ -33,12 +33,12 @@
 }
 
 .journeyzone-page .attend {
+    margin: 0 0 3em 0;
     text-align: center;
 }
 
 .journeyzone-page .map {
     height: 500px;
-    margin-top: 5em;
 }
 
 .journeyzone-page .img-isfjord-radio {
@@ -55,6 +55,15 @@
     .journeyzone-page .img-polar-bear-sign {
         height: 800px;
     }
+}
+
+.polar-bear {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.polar-bear img {
+    border-radius: 100%;
 }
 
 /* dl */
