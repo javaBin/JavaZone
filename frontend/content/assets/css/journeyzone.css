@@ -2,6 +2,10 @@
     background: transparent;
 }
 
+.journeyzone-page .nav.bg {
+    background: rgba(254, 254, 254, .95);
+}
+
 .journeyzone-page .mood {
     margin-top: -210px;
     min-height: 400px;
@@ -29,12 +33,12 @@
 }
 
 .journeyzone-page .attend {
+    margin: 0 0 3em 0;
     text-align: center;
 }
 
 .journeyzone-page .map {
     height: 500px;
-    margin-top: 5em;
 }
 
 .journeyzone-page .img-isfjord-radio {
@@ -44,5 +48,53 @@
 
 .journeyzone-page .img-polar-bear-sign {
     background-image: url('/assets/img/polar_bear_sign.jpg');
-    height: 800px;
+    height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .journeyzone-page .img-polar-bear-sign {
+        height: 800px;
+    }
+}
+
+.polar-bear {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.polar-bear img {
+    border-radius: 100%;
+}
+
+/* dl */
+.journeyzone-page dl {
+    margin-top: .3em;
+    padding-left: 30px;
+    position: relative;
+}
+
+.journeyzone-page dl:before {
+    background: #101010;
+    bottom: 5px;
+    content: '';
+    display: block;
+    top: 7px;
+    left: 1px;
+    position: absolute;
+    width: 3px;
+}
+
+.journeyzone-page dt {
+    display: block;
+    font-weight: 600;
+}
+
+.journeyzone-page dd {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+}
+
+.journeyzone-page dd:last-child {
+    margin-bottom: 0;
 }
