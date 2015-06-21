@@ -49,7 +49,8 @@ exports.config = function(pacbot) {
 			"assets/css/toptalks.css",
 			"assets/css/volunteer.css",
             		"assets/css/program.css",
-			"assets/css/details.css"
+			"assets/css/details.css",
+			"assets/css/journeyzone.css"
 		]
 	};
 

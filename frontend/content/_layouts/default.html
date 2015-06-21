@@ -14,9 +14,9 @@
 		window.onloaded = [];
 	</script>
 </head>
-<body id="javazone" class="">
+<body id="javazone" class="<%= get("page") %>">
 	<%= partial('_partials/menu.html') %>
-	<div class="content <%= get("page") %>">
+	<div class="content">
 		<%= content %>
 	</div>
 	<%= partial('_partials/footer.html') %>
