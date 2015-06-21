@@ -36,3 +36,8 @@
     height: 500px;
     margin-top: 5em;
 }
+
+.journeyzone-page .img-isfjord-radio {
+    background-image: url('/assets/img/isfjord_radio.jpg');
+    height: 300px;
+}
