@@ -46,3 +46,36 @@
     background-image: url('/assets/img/polar_bear_sign.jpg');
     height: 800px;
 }
+
+/* dl */
+.journeyzone-page dl {
+    margin-top: .3em;
+    padding-left: 30px;
+    position: relative;
+}
+
+.journeyzone-page dl:before {
+    background: #101010;
+    bottom: 5px;
+    content: '';
+    display: block;
+    top: 7px;
+    left: 1px;
+    position: absolute;
+    width: 3px;
+}
+
+.journeyzone-page dt {
+    display: block;
+    font-weight: 600;
+}
+
+.journeyzone-page dd {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+}
+
+.journeyzone-page dd:last-child {
+    margin-bottom: 0;
+}
