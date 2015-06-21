@@ -41,3 +41,8 @@
     background-image: url('/assets/img/isfjord_radio.jpg');
     height: 300px;
 }
+
+.journeyzone-page .img-polar-bear-sign {
+    background-image: url('/assets/img/polar_bear_sign.jpg');
+    height: 800px;
+}
