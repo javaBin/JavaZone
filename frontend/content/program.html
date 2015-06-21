@@ -64,24 +64,3 @@
     {{/each}}
     </div>
 </script>
-
-<script type="text/template" class="program-categories-template-old">
-    <ul class="topics">
-    {{#each topics}}
-        <li class="topic">
-            <div class="topic-title">
-                <h2><i class="{{icon}}"></i> {{key}}</h2>
-            </div>
-            <ul class="topic-submissions">
-                {{#each value}}
-                    <li>
-                        <div class="submission-difficulty submission-difficulty-{{niva}}">{{difficulty}}</div>
-                        <span class="submission-title">{{tittel}}</span>
-                        <span class="submission-type">{{format}}</span>
-                    </li>
-                {{/each}}
-            </ul>
-        </li>
-    {{/each}}
-    </ul>
-</script>
