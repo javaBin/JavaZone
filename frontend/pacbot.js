@@ -2,7 +2,6 @@ exports.config = function(pacbot) {
 
 	var config = {
 		port: 3000,
-		ignore_build: ["bower_components"],
 		ignore_processing: ["assets/templates", "assets/components"],
 		assets: {}
 	}
@@ -12,6 +11,8 @@ exports.config = function(pacbot) {
 			"assets/js/lodash.min.js",
 			"node_modules/velocity-animate/velocity.min.js",
 			"node_modules/jquery/dist/jquery.min.js",
+			"node_modules/handlebars/dist/handlebars.min.js",
+			"assets/js/superagent.js",
 			"assets/js/modernizr.js",
 			"assets/js/svg_animate.js",
 			"assets/js/data.js",
@@ -20,6 +21,9 @@ exports.config = function(pacbot) {
 			"assets/js/partners.js",
 			"assets/js/contact.js",
 			"assets/js/info.js",
+			"assets/js/program.js",
+			"assets/js/details.js",
+			"assets/js/journeyzone.js",
 			"assets/js/main.js"
 		]
 	}
@@ -31,6 +35,7 @@ exports.config = function(pacbot) {
 			"assets/fontello/css/fontello.css",
 			"assets/css/framework.css",
 			"assets/css/components.css",
+			"assets/css/spinner.css",
 			"assets/css/footer.css",
 			"assets/css/img.css",
 			"assets/css/index.css",
@@ -43,7 +48,10 @@ exports.config = function(pacbot) {
 			"assets/css/tickets.css",
 			"assets/css/info.css",
 			"assets/css/toptalks.css",
-			"assets/css/volunteer.css"
+			"assets/css/volunteer.css",
+            		"assets/css/program.css",
+			"assets/css/details.css",
+			"assets/css/journeyzone.css"
 		]
 	};
 

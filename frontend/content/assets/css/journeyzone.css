@@ -1,0 +1,48 @@
+.journeyzone-page .nav {
+    background: transparent;
+}
+
+.journeyzone-page .mood {
+    margin-top: -210px;
+    min-height: 400px;
+    position: relative;
+}
+
+.journeyzone-page .mood:before {
+    content: '';
+    display: block;
+    padding-top: 45%;
+}
+
+.mood .mood-background {
+    background-image: url('/assets/img/spitsbergen_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.journeyzone-page .jumbotron {
+    margin-top: 5em;
+}
+
+.journeyzone-page .attend {
+    text-align: center;
+}
+
+.journeyzone-page .map {
+    height: 500px;
+    margin-top: 5em;
+}
+
+.journeyzone-page .img-isfjord-radio {
+    background-image: url('/assets/img/isfjord_radio.jpg');
+    height: 300px;
+}
+
+.journeyzone-page .img-polar-bear-sign {
+    background-image: url('/assets/img/polar_bear_sign.jpg');
+    height: 800px;
+}
