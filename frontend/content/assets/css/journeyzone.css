@@ -48,7 +48,13 @@
 
 .journeyzone-page .img-polar-bear-sign {
     background-image: url('/assets/img/polar_bear_sign.jpg');
-    height: 800px;
+    height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .journeyzone-page .img-polar-bear-sign {
+        height: 800px;
+    }
 }
 
 /* dl */
