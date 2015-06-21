@@ -7,7 +7,8 @@
 		'tickets': jz.tickets,
 		'contact': jz.contact,
 		'info': [jz.info.initializeMap, jz.partners],
-		'program': jz.program
+		'program': jz.program,
+        'details': jz.details
 	};
 
 	_(Object.keys(routes)).each(function(route) {

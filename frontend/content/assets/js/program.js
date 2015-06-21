@@ -46,7 +46,7 @@
 
     function transformToCategories(program) {
         return _(program)
-            .map(_.compose(transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
+            .map(_.compose(extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
             .groupBy('topic')
             .transform(toObject, [])
             .value();
@@ -67,6 +67,12 @@
             .value();
 
             return {difficulty: categories[0], categories: categories[1]};
+    }
+
+    function extractDetailsLink(submission) {
+        var link = _.find(submission.links, {rel: 'detaljer'});
+        submission.detaljer = '/details.html?talk=' + encodeURIComponent(link.href);
+        return submission;
     }
 
     function toObject(result, value, key) {
@@ -108,8 +114,8 @@
             renderError(err);
             return;
         }
-
         program = transformToCategories(parse(res));
+        console.log(program);
         categories = extractCategories(parse(res));
         renderFilter();
         renderProgram();

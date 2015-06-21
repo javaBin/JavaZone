@@ -22,6 +22,7 @@ exports.config = function(pacbot) {
 			"assets/js/contact.js",
 			"assets/js/info.js",
 			"assets/js/program.js",
+			"assets/js/details.js",
 			"assets/js/main.js"
 		]
 	}
@@ -33,6 +34,7 @@ exports.config = function(pacbot) {
 			"assets/fontello/css/fontello.css",
 			"assets/css/framework.css",
 			"assets/css/components.css",
+			"assets/css/spinner.css",
 			"assets/css/footer.css",
 			"assets/css/img.css",
 			"assets/css/index.css",
@@ -46,7 +48,8 @@ exports.config = function(pacbot) {
 			"assets/css/info.css",
 			"assets/css/toptalks.css",
 			"assets/css/volunteer.css",
-            "assets/css/program.css"
+            		"assets/css/program.css",
+			"assets/css/details.css"
 		]
 	};
 
