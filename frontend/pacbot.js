@@ -23,6 +23,7 @@ exports.config = function(pacbot) {
 			"assets/js/info.js",
 			"assets/js/program.js",
 			"assets/js/details.js",
+			"assets/js/journeyzone.js",
 			"assets/js/main.js"
 		]
 	}

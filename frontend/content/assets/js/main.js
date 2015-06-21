@@ -8,7 +8,8 @@
 		'contact': jz.contact,
 		'info': [jz.info.initializeMap, jz.partners],
 		'program': jz.program,
-        'details': jz.details
+        'details': jz.details,
+        'journeyzone': jz.journeyzone
 	};
 
 	_(Object.keys(routes)).each(function(route) {

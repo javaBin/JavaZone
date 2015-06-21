@@ -11,7 +11,7 @@
 .journeyzone-page .mood:before {
     content: '';
     display: block;
-    padding-top: 40%;
+    padding-top: 45%;
 }
 
 .mood .mood-background {
@@ -22,4 +22,16 @@
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.journeyzone-page .jumbotron {
+    margin-top: 5em;
+}
+
+.journeyzone-page .attend {
+    text-align: center;
+}
+
+.journeyzone-page .map {
+    height: 500px;
 }
