@@ -29,7 +29,7 @@
 
 .javazone-program .section-content ul + p {
     margin-bottom: 1.7em;
-    margin-top: .25em;
+    margin-top: .5em;
 }
 
 .javazone-program ul {
@@ -56,6 +56,17 @@
 
 .javazone-program .submission-keyword {
     opacity: .5;
+}
+
+.javazone-program .submission-speaker:not(:last-child):after {
+    content: ',';
+    margin-right: 15px;
+}
+
+.javazone-program .submission-speaker img {
+    border-radius: 100%;
+    margin-bottom: -5px;
+    margin-right: 5px;
 }
 
 .javazone-program li:hover {
