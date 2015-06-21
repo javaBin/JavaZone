@@ -111,20 +111,22 @@
 
         program = transformToCategories(parse(res));
         categories = extractCategories(parse(res));
-        var categoriesContainer = renderProgram();
-        attachListeners(categoriesContainer);
+        renderFilter();
+        renderProgram();
+    }
+
+    function renderFilter() {
+        var template = Handlebars.compile(document.querySelector('.program-filter').innerHTML);
+        var container = document.querySelector('.javazone-program-filter');
+        container.innerHTML = template(categories);
+        attachListeners(container);
     }
 
     function renderProgram() {
         filteredProgram = filterProgram(_.cloneDeep(program));
-        var categoriesTemplate = Handlebars.compile(document.querySelector('.program-filter').innerHTML);
         var template = Handlebars.compile(document.querySelector('.program-categories-template').innerHTML);
-        var categoriesContainer = document.querySelector('.javazone-program-filter');
         var container = document.querySelector('.javazone-program');
-        categoriesContainer.innerHTML = categoriesTemplate(categories);
         container.innerHTML = template({topics: filteredProgram});
-
-        return categoriesContainer;
     }
 
     function attachListeners(container) {
