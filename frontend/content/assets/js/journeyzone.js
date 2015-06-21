@@ -1,5 +1,10 @@
 (function(jz) {
 
+    function journeyzone() {
+        initializeMap();
+        attachScrollListener();
+    }
+
     function initializeMap() {
         var center = new google.maps.LatLng(78.320019, 15.580244);
         var longyearbyenPos = new google.maps.LatLng(78.320019, 15.580244);
@@ -48,6 +53,19 @@
         isfjord.setMap(map);
     }
 
-    jz.journeyzone = initializeMap;
+    function attachScrollListener() {
+        var nav = document.querySelector('.nav')
+        document.addEventListener('scroll', _.throttle(function() {
+            var height = document.querySelector('.mood').clientHeight;
+            var scrolled = document.body.scrollTop;
+            if (scrolled > height && !nav.classList.contains('bg')) {
+                nav.classList.add('bg');
+            } else if (scrolled < height) {
+                nav.classList.remove('bg');
+            }
+        }, 100));
+    }
+
+    jz.journeyzone = journeyzone;
 
 })(window.jz = window.jz || {});

@@ -2,6 +2,10 @@
     background: transparent;
 }
 
+.journeyzone-page .nav.bg {
+    background: rgba(254, 254, 254, .95);
+}
+
 .journeyzone-page .mood {
     margin-top: -210px;
     min-height: 400px;
