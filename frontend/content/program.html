@@ -1,11 +1,28 @@
 <% set('page', 'program-page') %>
 
+<div class="jumbotron container">
+    <h1>Program</h1>
+    <h2>Have a peak below to see what's waiting for you at JavaZone 2015, and start planning your days at the conference already now.</h2>
+</div>
+
+<div class="section container cf">
+    <div class="heads-up cf">
+        <%= partial('assets/svg/illustrations/hoder/hode3.svg') %>
+        <div class="heads-up-text">
+            <h1>Heads up!</h1>
+            <p>
+                This is not the final program – talks are still being published as more and more speakers accept their invitation. Rooms and time slots will be assigned when JavaZone 2015 approaches.
+            </p>
+        </div>
+    </div>
+</div>
+
 <div class="section container cf">
 	<div class="sub-section cf">
-		<h1 class="section-header centered">Program</h1>
+		<h1 class="section-header">Filters</h1>
 		<div class="section-content">
 			<p>
-			So, you're ready to induce some serious amounts of information into your brain? Have a peak below to see what's waiting for you at JavaZone 2015, and start planning your days at the conference already now.
+                You can filter talks by difficulty and category. Press the ones that interest you, and talks not falling into these categories are removed from the listing.
 			</p>
 		</div>
 	</div>
@@ -50,7 +67,7 @@
             <h2 class="section-header">{{key}}</h2>
             <div class="section-content">
             {{#each value}}
-                <h2 class="submission-difficulty submission-difficulty-{{niva}}">{{tittel}}</h2>
+                <h2 class="submission-difficulty submission-difficulty-{{niva}}"><a href="{{detaljer}}">{{tittel}}</a></h2>
                 <ul class="submission-keywords">
                 {{#each nokkelord}}
                     <li class="submission-keyword {{c}}">{{l}}</li>

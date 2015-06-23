@@ -11,9 +11,13 @@
 }
 
 .javazone-program .section-content h2 {
-    border-bottom: 1px solid #999;
+    /*border-bottom: 1px solid #999;*/
     display: inline-block;
     margin-bottom: 0.25em;
+}
+
+.javazone-program .section-content h2 a {
+    background-position: 0 21px;
 }
 
 .javazone-program .section-header {
@@ -59,7 +63,8 @@
 }
 
 .javazone-program .submission-speaker:not(:last-child):after {
-    content: ',';
+    content: '&';
+    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -148,6 +153,30 @@
     opacity: 1;
 }
 
-/*.javazone-program-filter .filter-difficulty {
-    opacity: 1;
-}*/
+/* Heads up */
+.heads-up {
+    background: rgba(252,175,23, .7);
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 20px;
+}
+
+.heads-up svg {
+    float: left;
+    height: 80px;
+    width: 80px;
+}
+
+.heads-up-text {
+    margin-left: 120px;
+}
+
+.heads-up-text h1 {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.heads-up-text p {
+    font-size: .8em;
+    margin: 0;
+}
