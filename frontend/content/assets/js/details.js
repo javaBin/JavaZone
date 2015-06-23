@@ -6,6 +6,11 @@
         request(url).end(render);
     }
 
+    function transform(submission) {
+        submission.beskrivelse = submission.beskrivelse.replace(/\n/g, '<br />');
+        return submission;
+    }
+
     function render(err, res) {
         if (err) {
             renderError(err);
@@ -17,6 +22,8 @@
 
     function renderSubmission(submission) {
         console.log(submission);
+
+        submission = transform(submission);
 
         var template = Handlebars.compile(document.querySelector('.submission-details-template').innerHTML);
         var container = document.querySelector('.javazone-submission-details');

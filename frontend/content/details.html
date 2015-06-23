@@ -5,16 +5,13 @@
 </div>
 
 <script type="text/template" class="submission-details-template">
-    <div class="jumbotron container">
-        <h1>{{tittel}}</h1>
-        <p>{{oppsummering}}</p>
-    </div>
     <div class="section container cf">
+        <h1>{{tittel}}</h1>
         <div class="sub-section cf">
-            <h1 class="section-header centered">{{tittel}}</h1>
+            <h2 class="section-header">About</h2>
             <div class="section-content">
-                <p>{{oppsummering}}</p>
-                <p>beskrivelse</p>
+                <p class="submission-summary">{{oppsummering}}</p>
+                <p class="submission-description">{{{beskrivelse}}}</p>
             </div>
         </div>
     </div>
