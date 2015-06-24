@@ -20,6 +20,14 @@
     background-position: 0 21px;
 }
 
+.javazone-program .submission .submission-icon {
+    font-size: .7em;
+    margin-right: 7px;
+    opacity: .5;
+    position: relative;
+    top: -2px;
+}
+
 .javazone-program .section-header {
     position: relative;
 }
@@ -70,8 +78,10 @@
 
 .javazone-program .submission-speaker img {
     border-radius: 100%;
+    height: 24px;
     margin-bottom: -5px;
     margin-right: 5px;
+    width: 24px;
 }
 
 .javazone-program li:hover {
@@ -104,7 +114,7 @@
 /* keyword colors */
 
 .submission-keyword, .filter-category {
-    background-color: #555;
+    background-color: #777;
 }
 
 .difficulty-hardcore {

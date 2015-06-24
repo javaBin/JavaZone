@@ -6,12 +6,56 @@
 
 <script type="text/template" class="submission-details-template">
     <div class="section container cf">
+        <div class="submission-speakers-images">
+            {{#each images}}
+                <img src="{{this}}" />
+            {{/each}}
+        </div>
+        <div class="submission-speakers-names">
+            {{speakers}}
+        </div>
         <h1>{{tittel}}</h1>
         <div class="sub-section cf">
             <h2 class="section-header">About</h2>
             <div class="section-content">
                 <p class="submission-summary">{{oppsummering}}</p>
                 <p class="submission-description">{{{beskrivelse}}}</p>
+            </div>
+        </div>
+        {{#each foredragsholdere}}
+            <div class="sub-section cf">
+                <h2 class="section-header">{{navn}}</h2>
+                <div class="section-content">
+                    <p>{{bio}}</p>
+                </div>
+            </div>
+        {{/each}}
+        <div class="sub-section cf">
+            <h2 class="section-header">Intended Audience</h2>
+            <div class="section-content">
+                <p>{{tiltenktPublikum}}</p>
+            </div>
+        </div>
+        <div class="sub-section cf">
+            <h2 class="section-header">Keywords</h2>
+            <div class="section-content">
+                <ul>
+                    {{#each nokkelord}}
+                        <li class="submission-keyword {{c}}">{{l}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="sub-section cf">
+            <h2 class="section-header">Language</h2>
+            <div class="section-content">
+                <p>??</p>
+            </div>
+        </div>
+        <div class="sub-section cf">
+            <h2 class="section-header">Format</h2>
+            <div class="section-content">
+                <p>??</p>
             </div>
         </div>
     </div>

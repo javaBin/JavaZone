@@ -10,6 +10,12 @@
         'Other Awesomeness': 'icon-smiley'
     };
 
+    var formatMapping = {
+        'lightning-talk': 'icon-flash',
+        'workshop': 'icon-wrench',
+        'presentation': 'icon-easel'
+    }
+
     var program = {};
     var categories = {};
     var active = [];
@@ -46,10 +52,16 @@
 
     function transformToCategories(program) {
         return _(program)
-            .map(_.compose(extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
+            .map(_.compose(speaker, icon, extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
             .groupBy('topic')
             .transform(toObject, [])
             .value();
+    }
+
+    function imageUrl(url) {
+        var pixelRatio = window.devicePixelRatio || 1;
+        var size = pixelRatio >= 2 ? 48 : 24;
+        return url + '?size=' + size;
     }
 
     function extractCategories(program) {
@@ -67,6 +79,20 @@
             .value();
 
             return {difficulty: categories[0], categories: categories[1]};
+    }
+
+    function speaker(submission) {
+        submission.foredragsholdere = _.map(submission.foredragsholdere, function(f) {
+            f.bildeUri = imageUrl(f.bildeUri);
+            return f;
+        });
+        return submission;
+    }
+
+    function icon(submission) {
+        submission.icon = formatMapping[submission.format];
+        submission.format = _.capitalize(submission.format);
+        return submission;
     }
 
     function extractDetailsLink(submission) {

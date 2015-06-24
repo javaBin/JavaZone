@@ -67,7 +67,7 @@
             <h2 class="section-header">{{key}}</h2>
             <div class="section-content">
             {{#each value}}
-                <h2 class="submission-difficulty submission-difficulty-{{niva}}"><a href="{{detaljer}}">{{tittel}}</a></h2>
+                <h2 class="submission submission-difficulty submission-difficulty-{{niva}}"><i class="submission-icon {{icon}}" title="{{format}}"></i><a href="{{detaljer}}">{{tittel}}</a></h2>
                 <ul class="submission-keywords">
                 {{#each nokkelord}}
                     <li class="submission-keyword {{c}}">{{l}}</li>
@@ -75,7 +75,7 @@
                 </ul>
                 <p class="submission-speakers">
                 {{#each foredragsholdere}}
-                    <span class="submission-speaker"><img src="{{bildeUri}}?size=24" />{{navn}}</span>
+                    <span class="submission-speaker"><img src="{{bildeUri}}" />{{navn}}</span>
                 {{/each}}
                 </p>
             {{/each}}
