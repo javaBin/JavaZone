@@ -13,6 +13,18 @@
       "src": "typicons"
     },
     {
+      "uid": "606054f1c67f8193d59d9c12e3f4d3e1",
+      "css": "flash",
+      "code": 59409,
+      "src": "iconic"
+    },
+    {
+      "uid": "px45pk7jgwms9zb3zcm44h8al4f3xxkd",
+      "css": "easel",
+      "code": 59411,
+      "src": "modernpics"
+    },
+    {
       "uid": "d27bcf5c8638e4078aaadae1d49b6909",
       "css": "fast-food",
       "code": 59407,
@@ -58,6 +70,12 @@
       "uid": "6083c8aa5e3345476a24a28ac1afaa61",
       "css": "cog",
       "code": 59398,
+      "src": "elusive"
+    },
+    {
+      "uid": "cde79a37774e5817bc68fff2464aee28",
+      "css": "wrench",
+      "code": 59410,
       "src": "elusive"
     },
     {
