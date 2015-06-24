@@ -37,7 +37,7 @@
     }
 
     function getProgram() {
-        request('http://test.javazone.no/javazone-web-api/events/javazone_2015/sessions')
+        request('http://javazone.no/javazone-web-api/events/javazone_2015/sessions')
         .end(render);
     }
 
