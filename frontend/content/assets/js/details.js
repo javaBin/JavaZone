@@ -1,5 +1,16 @@
 (function(_, request, Handlebars, jz) {
 
+    var languageMapping = {
+        'en': 'English',
+        'no': 'Norwegian'
+    };
+
+    var formatMapping = {
+        'lightning-talk': 'icon-flash',
+        'workshop': 'icon-wrench',
+        'presentation': 'icon-easel'
+    }
+
     var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions/';
 
     var matcher = function(type) {
@@ -48,6 +59,8 @@
         extract('topic', hasTopic)(submission);
         extract('type', hasType)(submission);
         transformNokkelord(submission);
+        submission.format = formatMapping[submission.format];
+        submission.sprak = languageMapping[submission.sprak];
         return submission;
     }
 
