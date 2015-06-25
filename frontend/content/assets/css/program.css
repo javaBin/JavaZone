@@ -30,6 +30,14 @@
     top: 6px;
 }
 
+.javazone-program .submission .submission-flag {
+    height: 24px;
+    left: -34px;
+    position: absolute;
+    top: 41px;
+    width: 24px;
+}
+
 .javazone-program .section-header {
     position: relative;
 }

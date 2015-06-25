@@ -67,7 +67,11 @@
             <h2 class="section-header">{{key}}</h2>
             <div class="section-content">
             {{#each value}}
-                <h2 class="submission submission-difficulty submission-difficulty-{{niva}}"><i class="submission-icon {{icon}}" title="{{format}}"></i><a href="{{detaljer}}">{{tittel}}</a></h2>
+                <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
+                    <i class="submission-icon {{icon}}" title="{{format}}"></i>
+                    <img src="{{flag}}" alt="{{sprak}}" class="submission-flag" />
+                    <a href="{{detaljer}}">{{tittel}}</a>
+                </h2>
                 <ul class="submission-keywords">
                 {{#each nokkelord}}
                     <li class="submission-keyword {{c}}">{{l}}</li>

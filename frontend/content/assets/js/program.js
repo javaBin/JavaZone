@@ -16,6 +16,16 @@
         'presentation': 'icon-easel'
     }
 
+    var languageMapping = {
+        'en': 'English',
+        'no': 'Norwegian'
+    };
+
+    var flagMapping = {
+        'en': '/assets/img/GB.png',
+        'no': '/assets/img/NO.png'
+    };
+
     var program = {};
     var categories = {};
     var active = [];
@@ -52,7 +62,7 @@
 
     function transformToCategories(program) {
         return _(program)
-            .map(_.compose(speaker, icon, extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
+            .map(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
             .groupBy('topic')
             .transform(toObject, [])
             .value();
@@ -79,6 +89,12 @@
             .value();
 
             return {difficulty: categories[0], categories: categories[1]};
+    }
+
+    function flag(submission) {
+        submission.flag = flagMapping[submission.sprak];
+        submission.sprak = languageMapping[submission.sprak];
+        return submission;
     }
 
     function speaker(submission) {
