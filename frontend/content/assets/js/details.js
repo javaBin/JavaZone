@@ -59,7 +59,8 @@
         extract('topic', hasTopic)(submission);
         extract('type', hasType)(submission);
         transformNokkelord(submission);
-        submission.format = formatMapping[submission.format];
+        submission.icon = formatMapping[submission.format];
+        submission.format = _.capitalize(submission.format);
         submission.sprak = languageMapping[submission.sprak];
         return submission;
     }
