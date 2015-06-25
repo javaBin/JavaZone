@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<div class="section container cf">
+<div class="section container cf hide">
 	<div class="sub-section cf">
 		<h1 class="section-header">Filters</h1>
 		<div class="section-content">
@@ -28,8 +28,9 @@
 	</div>
 </div>
 
-<div class="javazone-program-filter">
+<div class="javazone-program-filter hide">
 </div>
+
 <div class="javazone-program">
     <div class="spinner"></div>
 </div>
@@ -64,7 +65,7 @@
     <div class="section container cf">
     {{#each topics}}
         <div class="sub-section cf">
-            <h2 class="section-header">{{key}}</h2>
+            <h1 class="section-header">{{key}}</h1>
             <div class="section-content">
             {{#each value}}
                 <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
