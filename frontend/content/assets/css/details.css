@@ -40,11 +40,11 @@
     margin-top: 1.5em;
 }
 
-.details-page ul:before {
+.details-page .section ul:before {
     display: none;
 }
 
-.details-page ul {
+.details-page .section ul {
     margin-bottom: 0;
     padding-left: 0;
 }
