@@ -71,7 +71,7 @@
     function imageUrl(url) {
         var pixelRatio = window.devicePixelRatio || 1;
         var size = pixelRatio >= 2 ? 48 : 24;
-        return url + '?size=' + size;
+        return url + '?size=' + size + '&d=mm';
     }
 
     function extractCategories(program) {

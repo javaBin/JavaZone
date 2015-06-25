@@ -47,7 +47,7 @@
     function imageUrl(url) {
         var pixelRatio = window.devicePixelRatio || 1;
         var size = pixelRatio >= 2 ? 240 : 120;
-        return url + '?size=' + size;
+        return url + '?size=' + size + '&d=mm';
     }
 
     function transform(submission) {
