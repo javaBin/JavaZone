@@ -66,7 +66,7 @@
 
     function extractCategories(program) {
         var categories = _(_(program)
-            .map(_.compose(transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
+            .map(_.compose(transformFilters, extract('topic', hasTopic), extract('type', hasType)))
             .reduce(function(result, cur) {
                 return result.concat(cur.nokkelord);
             }, []))
@@ -111,6 +111,15 @@
             icon: iconMapping[key],
             value: value
         });
+    }
+
+    function transformFilters(submission) {
+        submission.nokkelord = [
+            {c: 'difficulty-' + submission.niva, l: _.capitalize(submission.niva)},
+            {c: _.kebabCase(submission.type), l: submission.type},
+            {c: _.kebabCase(submission.topic), l: submission.topic}
+        ];
+        return submission;
     }
 
     function transformNokkelord(submission) {

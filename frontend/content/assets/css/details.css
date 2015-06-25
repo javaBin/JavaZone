@@ -55,6 +55,7 @@
     display: inline-block;
     font-size: 0.8em;
     margin-bottom: 0;
+    opacity: .5;
     padding: 1px 10px;
 }
 

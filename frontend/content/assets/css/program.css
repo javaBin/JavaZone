@@ -84,9 +84,9 @@
     width: 24px;
 }
 
-.javazone-program li:hover {
+/*.javazone-program li:hover {
     opacity: 1;
-}
+}*/
 
 .topics, .topic-submissions {
     list-style: none;
