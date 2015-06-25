@@ -96,8 +96,12 @@
     }
 
     function extractDetailsLink(submission) {
-        var link = _.find(submission.links, {rel: 'detaljer'});
-        submission.detaljer = '/details.html?talk=' + encodeURIComponent(link.href);
+        var linkParts = _.find(submission.links, {rel: 'detaljer'});
+        if (!linkParts) {
+            return;
+        }
+        var id = _.last(linkParts.href.split('/'));
+        submission.detaljer = '/details.html?talk=' + encodeURIComponent(id);
         return submission;
     }
 

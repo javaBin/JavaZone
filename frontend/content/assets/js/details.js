@@ -1,5 +1,7 @@
 (function(_, request, Handlebars, jz) {
 
+    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions/';
+
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
     }
@@ -27,7 +29,7 @@
     }
 
     function getTalk() {
-        var url = decodeURIComponent(location.search.substr(1).split('=')[1]);
+        var url = baseUrl + decodeURIComponent(location.search.substr(1).split('=')[1]);
         request(url).end(render);
     }
 
