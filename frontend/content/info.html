@@ -1,7 +1,5 @@
 <% set('page', 'info-page') %>
 <div class="jumbotron container first-info">
-	<!-- <div class="illustration-placeholder wide">Illustration 1 - introduksjon</div> -->
-	<!-- <img src="/assets/img/illustrations/info_1.png"> -->
 	<%= partial('assets/svg/illustrations/info_1.svg') %>
 	<h1>The community-driven conference for modern Java Developers. <br>Join us for 2 days of awesome learning in Oslo this September.</h1>
 	<p>JavaZone is a conference for Java developers created by the Norwegian Java User Group: javaBin. The conference consists of almost 200 speakers and 7 parallel sessions over 2 days, plus an additional day of workshops beforehand (included in the cost of your ticket, but with limited seating). Join us, together with more than 2.500 fellow developers in September.</p>
@@ -13,7 +11,6 @@
 		<div class="section-content">
 			<p>The first thing you'll need is a ticket. Since we believe in simplicity, our tickets are also quite simple: the JavaZone ticket gives you <b>full access</b> to the whole conference – including the workshops (registrations on a first come, first served basis). If you are a member of javaBin, you even get a discount!</p>
 			<a class="button" href="/tickets.html">Get your ticket now</a>
-			<p class="smaller">Are you a student? You can join JavaZone as a volunteer, and help us create the conference. <a href="/frivillig.html">Read more and apply here</a>.
 		</div>
 	</div>
 </div>
@@ -21,7 +18,6 @@
 <div class="jumbotron container">
 	<div class="section cf">
 		<div class="sub-section cf">
-<!-- 			<div class="illustration-placeholder">Illustration 2</div> -->
 			<%= partial('assets/svg/illustrations/tickets.svg') %>
 		</div>
 	</div>
@@ -37,17 +33,17 @@
 			<li>
 				<div class="includes-icon"><i class="icon-puzzle"></i></div>
 				<div class="includes-title">Workshops</div>
-				<div class="includes-description">Are you a hands-on type of person? Take part in one of our many, great workshops – both during the conference and the day before.</div>
+				<div class="includes-description">Are you a hands-on type of person? Take part in one of our many, great workshops – both during the conference and the day before. <a href="/program.html">See the program</a></div>
 			</li>
 			<li>
 				<div class="includes-icon"><i class="icon-ok"></i></div>
 				<div class="includes-title">2 Conference days</div>
-				<div class="includes-description">2 days packed full of talks from both Norwegian and well known international speakers, in varying formats and categories. Something for everyone!</div>
+				<div class="includes-description">2 days packed full of talks from both Norwegian and well known international speakers, in varying formats and categories. <a href="/program.html">Something for everyone!</a></div>
 			</li>
 			<li>
 				<div class="includes-icon"><i class="icon-glass"></i></div>
 				<div class="includes-title">An awesome afterparty</div>
-				<div class="includes-description">After a day full of learning, it feels good to relax a bit and have a few beers. Join us for great music and mingling as we transform the venue to a nice afterparty!</div>
+				<div class="includes-description">After a day full of learning, it feels good to relax a bit and have a few beers. Join us for great music and mingling as we transform the venue to <a href="#awezone">a nice afterparty</a>!</div>
 			</li>
 			<li>
 				<div class="includes-icon"><i class="icon-fast-food"></i></div>
@@ -88,7 +84,7 @@
 				</p>
 				<h2>I don't speak norwegian…</h2>
 				<p class="practicality practicality-language">
-					Don't worry! About 50% of the talks are typically held in english, and the spoken language is always specified in the program. So even if you don't "snakker norsk", you should still get plenty of learning out of the conference.
+					Don't worry! About 60% of the talks are  held in english, and the spoken language is specified in <a href="/program.html">the program</a>. So even if you don't "snakker norsk", you should still get plenty of learning out of the conference.
 				</p>
 			</div>
 		</div>
@@ -100,8 +96,6 @@
 	<div class="jumbotron container">
 		<div class="section cf">
 			<div class="sub-section cf">
-				<!-- <div class="illustration-placeholder wide">Illustration 2 - kart/skilter</div> -->
-				<!-- <img src="/assets/img/illustrations/info_2.png"> -->
 				<%= partial('assets/svg/illustrations/info_2.svg') %>
 			</div>
 		</div>
@@ -113,6 +107,8 @@
 				<h1 class="section-header centered">Day after day, hour after hour!</h1>
 				<div class="section-content">
 					What will the days at JavaZone be like? Well, there will of course be a lot of presentations, lightning talks and workshops, but there will be other things as well. Have a look below!
+					<br>
+					See <a href="/program.html">the program</a> for more details about the talks.
 				</div>
 			</div>
 
@@ -207,46 +203,14 @@
 <div class="topics">
 	<div class="section container cf">
 		<div class="sub-section cf">
-			<h1 class="section-header">Formats & Topics</h1>
+			<h1 class="section-header">The JavaZone program</h1>
 			<div class="section-content">
-				<p>JavaZone has a few different presentation formats – full presentations, lightning talks and workshops. This means that you should have something nice to attend both when you just want a little teaser, and when you're in for the full package.</p>
-				<a class="button">Full program coming in July</a>
-				<p>The full program will be available in July, but you can have a sneak peek at the topics already now.</p> 
-			</div>
-		</div>
+				<p>90 full presentations, 65 lightning talks and 12 workshops. In total, there will be almost 200 speakers ready to give you a lot of inspiration and plenty of new knowledge. Check out our full program to see all the details, and start to plan your conference days now.</p>
+				<p><a href="/program.html" class="button">See the full program</a></p>
 
-		<div class="sub-section cf">
-			<h2 class="sub-secion-header"></h2>
-			<ul class="cf">
-				<li class="topic">
-					<div class="topic-header"><i class="icon-road"></i> Architecture</div>
-					<div class="topic-text">Architecture in Practice, Application Architecture, Designs, Scalability</div>
-				</li>
-				<li class="topic">
-					<div class="topic-header"><i class="icon-cog"></i> Backend</div>
-					<div class="topic-text">Data, Integration, Server, Cloud, NoSQL</div>
-				</li>
-				<li class="topic">
-					<div class="topic-header"><i class="icon-book"></i> Theory</div>
-					<div class="topic-text">Features in Languages, Paradigms (i.e. Functional, Reactive)</div>
-				</li>
-				<li class="topic">
-					<div class="topic-header"><i class="icon-heart"></i> Craftsmanship</div>
-					<div class="topic-text">Clean Code, Continuous Delivery, DevOps</div>
-				</li>
-				<li class="topic">
-					<div class="topic-header"><i class="icon-leaf"></i> Frontend</div>
-					<div class="topic-text">UX, Apps, Mobile, Responsive, HTML5, JavaFX</div>
-				</li>
-				<li class="topic">
-					<div class="topic-header"><i class="icon-home"></i> Java Platforms</div>
-					<div class="topic-text">Java SE, Java EE, Java ME, Core, Memory, APIs, Performance, JVM Languages, Memory, 20 years of Java</div>
-				</li>
-				<li class="topic">
-					<div class="topic-header"><i class="icon-lightbulb"></i> Cross Cutting Concerns</div>
-					<div class="topic-text">Security, Internet of Things, Big Data, JavaScript</div>
-				</li>
-			</ul>
+				<h2>The different formats</h2>
+				<p>JavaZone has a few different presentation formats – full presentations, lightning talks and workshops. This means that you should have something nice to attend both when you just want a little teaser, and when you're in for the full package.</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -273,14 +237,12 @@
 	</div>
 </div>
 
-<div class="party">
+<div class="party" id="awezone">
 
 	<div class="jumbotron container">
 		<div class="section cf">
 			<div class="sub-section cf">
-				<!-- <img src="/assets/img/illustrations/info_3.png"> -->
 				<%= partial('assets/svg/illustrations/info_3.svg') %>
-				<!-- <div class="illustration-placeholder wide">Illustration 3 - festen</div> -->
 			</div>
 		</div>
 
@@ -303,9 +265,7 @@
 <div class="jumbotron container see-you-at-javazone">
 	<div class="section cf">
 		<div class="sub-section cf">
-			<!-- <img src="/assets/img/illustrations/info_4.png"> -->
 			<%= partial('assets/svg/illustrations/info_4.svg') %>
-			<!-- <div class="illustration-placeholder wide">Illustration 4 - "see you at JavaZone"</div> -->
 		</div>
 	</div>
 </div>
