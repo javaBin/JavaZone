@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<div class="section container cf hide">
+<div class="section container cf">
 	<div class="sub-section cf">
 		<h1 class="section-header">Filters</h1>
 		<div class="section-content">
@@ -28,7 +28,7 @@
 	</div>
 </div>
 
-<div class="javazone-program-filter hide">
+<div class="javazone-program-filter">
 </div>
 
 <div class="javazone-program">
@@ -63,29 +63,35 @@
 
 <script type="text/template" class="program-categories-template">
     <div class="section container cf">
-    {{#each topics}}
-        <div class="sub-section cf">
-            <h1 class="section-header">{{key}}</h1>
-            <div class="section-content">
-            {{#each value}}
-                <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
-                    <i class="submission-icon {{icon}}" title="{{format}}"></i>
-                    <img src="{{flag}}" alt="{{sprak}}" class="submission-flag" />
-                    <a href="{{detaljer}}">{{tittel}}</a>
-                </h2>
-                <ul class="submission-keywords">
-                {{#each nokkelord}}
-                    <li class="submission-keyword {{c}}">{{l}}</li>
+    {{#if topics}}
+        {{#each topics}}
+            <div class="sub-section cf">
+                <h1 class="section-header">{{key}}</h1>
+                <div class="section-content">
+                {{#each value}}
+                    <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
+                        <i class="submission-icon {{icon}}" title="{{format}}"></i>
+                        <img src="{{flag}}" alt="{{sprak}}" class="submission-flag" />
+                        <a href="{{detaljer}}">{{tittel}}</a>
+                    </h2>
+                    <ul class="submission-keywords">
+                    {{#each nokkelord}}
+                        <li class="submission-keyword {{c}}">{{l}}</li>
+                    {{/each}}
+                    </ul>
+                    <p class="submission-speakers">
+                    {{#each foredragsholdere}}
+                        <span class="submission-speaker"><img src="{{bildeUri}}" />{{navn}}</span>
+                    {{/each}}
+                    </p>
                 {{/each}}
-                </ul>
-                <p class="submission-speakers">
-                {{#each foredragsholdere}}
-                    <span class="submission-speaker"><img src="{{bildeUri}}" />{{navn}}</span>
-                {{/each}}
-                </p>
-            {{/each}}
+                </div>
             </div>
+        {{/each}}
+    {{else}}
+        <div class="sub-section cf">
+            <h1 class="section-header centered">No results</h1>
         </div>
-    {{/each}}
+    {{/if}}
     </div>
 </script>

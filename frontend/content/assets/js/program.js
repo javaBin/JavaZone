@@ -28,7 +28,9 @@
 
     var program = {};
     var categories = {};
-    var active = [];
+
+    var categoriesFilter = [];
+    var difficultiesFilter = [];
 
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
@@ -149,14 +151,26 @@
     }
 
     function filterProgram(prog) {
-        if (active.length === 0)
+        if (!difficultiesFilter.length && !categoriesFilter.length)
             return prog;
+
+        console.log(difficultiesFilter);
+        console.log(categoriesFilter);
 
         return _(prog)
             .map(function(p) {
+                if (categoriesFilter.length && categoriesFilter.indexOf(p.key) === -1) {
+                    p.value = [];
+                    return p;
+                }
+
                 p.value = _.filter(p.value, function(submission) {
-                    var isActive = _.intersection(active, _.pluck(submission.nokkelord, 'l'));
-                    return isActive.length > 0;
+                    var isActive = true;
+
+                    if (difficultiesFilter.length)
+                        isActive = isActive && difficultiesFilter.indexOf(_.capitalize(submission.niva)) >= 0;
+
+                    return isActive;
                 });
                 return p;
             }).filter(function(category) {
@@ -191,21 +205,39 @@
     }
 
     function attachListeners(container) {
-        $(container).on('click li', function(ev) {
-            var el = $(ev.target);
-            if (!el.is('li'))
-                return;
+        var $container = $(container);
+        $container.find('.filter-difficulty').on('click', filterDifficulty);
+        $container.find('.filter-category').on('click', filterCategory);
+    }
 
-            el.toggleClass('active');
-            var category = el.text();
-            if (_.includes(active, category)) {
-                active = _.reject(active, _.matches(category));
-            } else {
-                active.push(category);
-            }
+    function filterDifficulty(ev) {
+        var $el = $(ev.target);
+        if(!$el.is('li'))
+            return;
 
-            renderProgram();
-        });
+        $el.toggleClass('active');
+        var difficulty = $el.text();
+        if (_.includes(difficultiesFilter, difficulty))
+            difficultiesFilter = _.reject(difficultiesFilter, _.matches(difficulty));
+        else
+            difficultiesFilter.push(difficulty);
+
+        renderProgram();
+    }
+
+    function filterCategory(ev) {
+        var $el = $(this);
+        if(!$el.is('li'))
+            return;
+
+        $el.toggleClass('active');
+        var category = $el.text();
+        if (_.includes(categoriesFilter, category))
+            categoriesFilter = _.reject(categoriesFilter, _.matches(category));
+        else
+            categoriesFilter.push(category);
+
+        renderProgram();
     }
 
     function renderError(err) {
