@@ -49,8 +49,9 @@
     }
 
     function getProgram() {
-        request('http://javazone.no/javazone-web-api/events/javazone_2015/sessions')
-        .end(render);
+        jz.data.program()
+        .then(renderSuccess)
+        .fail(renderError);
     }
 
     function transformToDays(res) {
@@ -154,9 +155,6 @@
         if (!difficultiesFilter.length && !categoriesFilter.length)
             return prog;
 
-        console.log(difficultiesFilter);
-        console.log(categoriesFilter);
-
         return _(prog)
             .map(function(p) {
                 if (categoriesFilter.length && categoriesFilter.indexOf(p.key) === -1) {
@@ -178,14 +176,9 @@
             }).value();
     }
 
-    function render(err, res) {
-        if (err) {
-            renderError(err);
-            return;
-        }
-        program = transformToCategories(parse(res));
-        console.log(program);
-        categories = extractCategories(parse(res));
+    function renderSuccess(data) {
+        program = transformToCategories(data);
+        categories = extractCategories(data);
         renderFilter();
         renderProgram();
     }
