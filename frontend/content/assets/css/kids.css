@@ -1,0 +1,49 @@
+.kids-page .nav {
+    background: transparent;
+}
+
+.kids-page .nav.bg {
+    background: rgba(254, 254, 254, .95);
+}
+
+.kids-page .nav a {
+    color: #fff;
+}
+
+.kids-page .nav.bg a {
+    color: #101010;
+}
+
+.kids-page .mood {
+    margin-top: -210px;
+    min-height: 400px;
+    position: relative;
+}
+
+.kids-page .mood:before {
+    content: '';
+    display: block;
+    padding-top: 45%;
+}
+
+.kids-page .mood .mood-background {
+    background-image: url('/assets/img/kids2_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.kids-page .jumbotron {
+    margin-top: 5em;
+}
+
+/*
+https://www.flickr.com/photos/marcus_hansson/14659581920/in/photolist-okqbYq-rubHGh-84cJf3-8JAHbf-a8hfzE-4tA4Z5-4KANwu-M3m5x-cJ3cS-hFCJ7h-5s7pZ-eu9ynv-8vPF2W-5Z194F-6ctVnj-gRcm7-2a53Ey-b44ibc-8xRHz9-8JmU1F-aoqyUy-pT4Zzu-a8euhz-NC7uL-6w58An-8xNFG8-82xDSd-4Luvx5-bwwhaf-6uGPaJ-noJtdv-4uHyyk-52xNCD-5ixpy-6ME1wo-7VX8NJ-nj16Gv-rX1Qg-6MzPK8-5Dq8Ak-4nNn6w-gVf673-8TyAdd-8tUtnz-6Crd1i-gVf6e7-6ACjLv-34Qf5T-5iyeJ-27AHH
+https://www.flickr.com/photos/twicepix/7080055333/in/photolist-bMD8Mx-5X6h8y-9j5xxM-mgATt7-qhvbx-fviF6E-nUAMaM-5X6h2Q-5YUMn5-cJ75m-7CBdL-4DmvrY-bJ813F-5fCQQE-bvdhKQ-aiu11b-fTu1x2-9wwmiE-6zDyZt-6hfhWL-p2QkXW-7anJ3-a9By9b-5ogzRS-7nzwsv-mv8FNz-7C6Maw-ktxUvD-btw96L-bGqXyV-ktxpTa-ktzzqw-bGqXMa-ktxozZ-8cUhVy-6mYgm-ip9zam-bGqWYX-fmCVGM-aircmz-bvde3d-9K2RXz-RK6Zb-mv9sF8-nt9K4F-bJ81og-6Gmkii-owbWpi-anXc7y-MqznL
+https://www.flickr.com/photos/wildlife_encounters/8024194007/in/photolist-de56jx-66zzgf-dmtR3S-j2AkLb-5ngbsN-aBkpC-qYEYHo-5jWU3i-ajj77A-61T8sa-7mwezf-gkTjM6-77tbUt-8tD92f-9C3sma-dteoXm-PusQ8-tm5x9k-qJRjVL-p8ULNk-rosmrD-61Sq7F-dX4JyE-pENpXu-BmW1n-aZAXL-3hxgy-Krwr4-pTFESj-5EGLDG-5EjcJo-i5ZJa1-5EGJ3q-7hdVjk-99iWsp-5jWTUH-FPUC6-Puspa-pMob6r-a3Pdjy-8CuAQr-Gu2rq-61WDuw-61SruR-61Sqi2-t4zvff-uykKac-7PdCSM-pmJu1Z-8pgkwm
+https://www.flickr.com/photos/pinksherbet/233228813/in/photolist-mBmNr-p2YC3s-pvPY2s-61WA3b-6VJtYa-4hrZeu-pqborv-oiAXk-froHyP-9qixXv-5h1jLD-55m4QT-hULgS8-3kGsgL-qjErhG-7Q2CdQ-an8K2-6T9kwc-4iLE2e-xgVFg-bvoxeM-38VB2k-zuMj6-de56jx-66zzgf-dmtR3S-j2AkLb-5ngbsN-aBkpC-qYEYHo-5jWU3i-ajj77A-61T8sa-7mwezf-gkTjM6-77tbUt-8tD92f-9C3sma-dteoXm-PusQ8-tm5x9k-qJRjVL-p8ULNk-rosmrD-61Sq7F-dX4JyE-pENpXu-BmW1n-aZAXL-3hxgy
+
+*/

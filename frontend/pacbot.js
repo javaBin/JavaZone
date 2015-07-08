@@ -25,6 +25,7 @@ exports.config = function(pacbot) {
 			"assets/js/details.js",
 			"assets/js/journeyzone.js",
 			"assets/js/workshops.js",
+			"assets/js/kids.js",
 			"assets/js/main.js"
 		]
 	}
@@ -50,10 +51,11 @@ exports.config = function(pacbot) {
 			"assets/css/info.css",
 			"assets/css/toptalks.css",
 			"assets/css/volunteer.css",
-            		"assets/css/program.css",
+			"assets/css/program.css",
 			"assets/css/details.css",
 			"assets/css/workshops.css",
-			"assets/css/journeyzone.css"
+			"assets/css/journeyzone.css",
+			"assets/css/kids.css"
 		]
 	};
 

@@ -10,7 +10,8 @@
 		'program': jz.program,
         'details': jz.details,
         'workshops': jz.workshops,
-        'journeyzone': jz.journeyzone
+        'journeyzone': jz.journeyzone,
+        'kids': jz.kids
 	};
 
 	_(Object.keys(routes)).each(function(route) {
