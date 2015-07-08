@@ -9,6 +9,7 @@
 		'info': [jz.info.initializeMap, jz.partners],
 		'program': jz.program,
         'details': jz.details,
+        'workshops': jz.workshops,
         'journeyzone': jz.journeyzone
 	};
 
