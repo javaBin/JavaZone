@@ -107,4 +107,22 @@
         ["Markus Krüger", "/assets/img/javabin/markus_kruger.jpg", "#"],
         ["Hans Ove Ringstad", "/assets/img/javabin/hans_ove_ringstad.jpg", "#"]
     ];
-})(window.jz = window.jz || {});
+
+    jz.data.program = function(cb) {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(res.body);
+        }
+
+        request('http://javazone.no/javazone-web-api/events/javazone_2015/sessions')
+        .end(parse);
+
+        return def;
+    }
+})(window.superagent, window.$, window.jz = window.jz || {});
