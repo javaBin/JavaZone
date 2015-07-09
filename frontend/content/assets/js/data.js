@@ -42,7 +42,8 @@
         ["Enonic", "enonic_2015.png", "https://enonic.com"],
         ["Red Hat", "redhat_2015.png", "http://www.redhat.com/en"],
         ["Hazelcast", "hazelcast_2015.png", "http://hazelcast.com"],
-        ["Schibsted", "schibsted_2015.png", "http://www.schibsted.com"]
+        ["Schibsted", "schibsted_2015.png", "http://www.schibsted.com"],
+        ["Sans", "sans_2015.png", "https://www.sans.org"]
     ];
 
     jz.data.academypartners = [
