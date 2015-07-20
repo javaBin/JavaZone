@@ -1,0 +1,41 @@
+.academy-page .nav {
+    background: transparent;
+}
+
+.academy-page .nav.bg {
+    background: rgba(254, 254, 254, .95);
+}
+
+.academy-page .nav a {
+    color: #fff;
+}
+
+.academy-page .nav.bg a {
+    color: #101010;
+}
+
+.academy-page .mood {
+    margin-top: -210px;
+    min-height: 400px;
+    position: relative;
+}
+
+.academy-page .mood:before {
+    content: '';
+    display: block;
+    padding-top: 45%;
+}
+
+.academy-page .mood .mood-background {
+    background-image: url('/assets/img/expo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.academy-page .jumbotron {
+    margin-top: 5em;
+}

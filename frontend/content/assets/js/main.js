@@ -11,7 +11,8 @@
         'details': jz.details,
         'workshops': jz.workshops,
         'journeyzone': jz.journeyzone,
-        'kids': jz.kids
+        'kids': jz.kids,
+        'academy': jz.academy
 	};
 
 	_(Object.keys(routes)).each(function(route) {
