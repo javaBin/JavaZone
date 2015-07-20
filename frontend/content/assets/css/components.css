@@ -77,3 +77,9 @@
 	color: #a10035;
 	font-size: 1em;
 }
+
+.container.thank-you .credits {
+	margin-top: 5em;
+	color: #555555;
+	font-size: .6em;
+}

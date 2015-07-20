@@ -26,8 +26,9 @@
     padding-top: 45%;
 }
 
+/* https://www.flickr.com/photos/wildlife_encounters/8024194007/in/photolist-de56jx-66zzgf-dmtR3S-j2AkLb-5ngbsN-aBkpC-qYEYHo-5jWU3i-ajj77A-61T8sa-7mwezf-gkTjM6-77tbUt-8tD92f-9C3sma-dteoXm-PusQ8-tm5x9k-qJRjVL-p8ULNk-rosmrD-61Sq7F-dX4JyE-pENpXu-BmW1n-aZAXL-3hxgy-Krwr4-pTFESj-5EGLDG-5EjcJo-i5ZJa1-5EGJ3q-7hdVjk-99iWsp-5jWTUH-FPUC6-Puspa-pMob6r-a3Pdjy-8CuAQr-Gu2rq-61WDuw-61SruR-61Sqi2-t4zvff-uykKac-7PdCSM-pmJu1Z-8pgkwm */
 .kids-page .mood .mood-background {
-    background-image: url('/assets/img/kids2_background.jpg');
+    background-image: url('/assets/img/kids/kids2_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -40,10 +41,25 @@
     margin-top: 5em;
 }
 
-/*
-https://www.flickr.com/photos/marcus_hansson/14659581920/in/photolist-okqbYq-rubHGh-84cJf3-8JAHbf-a8hfzE-4tA4Z5-4KANwu-M3m5x-cJ3cS-hFCJ7h-5s7pZ-eu9ynv-8vPF2W-5Z194F-6ctVnj-gRcm7-2a53Ey-b44ibc-8xRHz9-8JmU1F-aoqyUy-pT4Zzu-a8euhz-NC7uL-6w58An-8xNFG8-82xDSd-4Luvx5-bwwhaf-6uGPaJ-noJtdv-4uHyyk-52xNCD-5ixpy-6ME1wo-7VX8NJ-nj16Gv-rX1Qg-6MzPK8-5Dq8Ak-4nNn6w-gVf673-8TyAdd-8tUtnz-6Crd1i-gVf6e7-6ACjLv-34Qf5T-5iyeJ-27AHH
-https://www.flickr.com/photos/twicepix/7080055333/in/photolist-bMD8Mx-5X6h8y-9j5xxM-mgATt7-qhvbx-fviF6E-nUAMaM-5X6h2Q-5YUMn5-cJ75m-7CBdL-4DmvrY-bJ813F-5fCQQE-bvdhKQ-aiu11b-fTu1x2-9wwmiE-6zDyZt-6hfhWL-p2QkXW-7anJ3-a9By9b-5ogzRS-7nzwsv-mv8FNz-7C6Maw-ktxUvD-btw96L-bGqXyV-ktxpTa-ktzzqw-bGqXMa-ktxozZ-8cUhVy-6mYgm-ip9zam-bGqWYX-fmCVGM-aircmz-bvde3d-9K2RXz-RK6Zb-mv9sF8-nt9K4F-bJ81og-6Gmkii-owbWpi-anXc7y-MqznL
-https://www.flickr.com/photos/wildlife_encounters/8024194007/in/photolist-de56jx-66zzgf-dmtR3S-j2AkLb-5ngbsN-aBkpC-qYEYHo-5jWU3i-ajj77A-61T8sa-7mwezf-gkTjM6-77tbUt-8tD92f-9C3sma-dteoXm-PusQ8-tm5x9k-qJRjVL-p8ULNk-rosmrD-61Sq7F-dX4JyE-pENpXu-BmW1n-aZAXL-3hxgy-Krwr4-pTFESj-5EGLDG-5EjcJo-i5ZJa1-5EGJ3q-7hdVjk-99iWsp-5jWTUH-FPUC6-Puspa-pMob6r-a3Pdjy-8CuAQr-Gu2rq-61WDuw-61SruR-61Sqi2-t4zvff-uykKac-7PdCSM-pmJu1Z-8pgkwm
-https://www.flickr.com/photos/pinksherbet/233228813/in/photolist-mBmNr-p2YC3s-pvPY2s-61WA3b-6VJtYa-4hrZeu-pqborv-oiAXk-froHyP-9qixXv-5h1jLD-55m4QT-hULgS8-3kGsgL-qjErhG-7Q2CdQ-an8K2-6T9kwc-4iLE2e-xgVFg-bvoxeM-38VB2k-zuMj6-de56jx-66zzgf-dmtR3S-j2AkLb-5ngbsN-aBkpC-qYEYHo-5jWU3i-ajj77A-61T8sa-7mwezf-gkTjM6-77tbUt-8tD92f-9C3sma-dteoXm-PusQ8-tm5x9k-qJRjVL-p8ULNk-rosmrD-61Sq7F-dX4JyE-pENpXu-BmW1n-aZAXL-3hxgy
+/*  http://cannybots.com */
+.kids-page .img-cannybots {
+    background-image: url('/assets/img/kids/cannybots.jpg');
+    height: 500px;
+}
 
-*/
+/*  https://www.flickr.com/photos/kwarz/13974382668/in/photolist-nhSn7d-5ESVRc-pa1tU5-kQStQ4-2yGq7-9TfRmX-ehBnRE-7WmkhD-7WpBWm-5QT8MU-itLPxf-aiJKsj-9PWn4-zB9w4-539gSu-9PWnv-68fTjR-63CgrG-4Cnamd-5mafQF-5nF9AA-hT9xeh-771N9b-7CDfhH-5X58n4-pwe8oK-4K6zsd-a4BoB-8JMvMz-5pDsRR-2mMw3-5guc28-6wdLat-4E2zcQ-5gCCxz-6Yv8t-3j864t-4JNs7f-56ZPbz-nqwu-2Gf1s9-4m5ojv-uVicS-d3FSMW-4cPmgA-6wnx18-7ScYqT-4kAwqA-9k5FFA-dWWQXm */
+.kids-page .img-code-mac {
+    background-image: url('/assets/img/kids/code-mac.jpg');
+    height: 500px;
+}
+
+/* https://www.flickr.com/photos/kjarrett/15611702891/in/photolist-pMy4ne-oQWfsE-pKGsxd-oQZkxT-pkWskU-jr3aLG-d6yB37-khNTBc-b9xtAT-pRi9xF-9sBMJC-czMCty-pvoztm-pvkTBj-pKGsD5-pvmsxZ-pMy4d6-oQZkKr-pKGssJ-pvoz81-pMS3qQ-oQZkxn-pvoyGS-qtXAo2-cm82iJ-qkMuoN-9gKPdS-9gGJdt-9gKP77-9gKL5C-9gKL5u-dm7xco-chW6xQ-8RvpQv-bb2VTX-ferjje-vUrpm1-fucE8X-9hUdYJ-9hR8kH-9FSB1u-qwa9Ux-nnNfxW-qLo6uH-gG3fQc-qw3NZW-qLo6ux-qtPLNE-8MWXC6-qtNWuJ */
+.kids-page .img-minecraft {
+    background-image: url('/assets/img/kids/minecraft.jpg');
+    height: 500px;
+}
+
+.kids-page .img-keyboard {
+    background-image: url('/assets/img/kids/keyboard.jpg');
+    height: 500px;
+}
