@@ -109,7 +109,9 @@
         ["Hans Ove Ringstad", "/assets/img/javabin/hans_ove_ringstad.jpg", "#"]
     ];
 
-    jz.data.program = function(cb) {
+    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions';
+
+    jz.data.program = function() {
         var def = $.Deferred();
 
         function parse(err, res) {
@@ -121,7 +123,25 @@
             def.resolve(res.body);
         }
 
-        request('http://javazone.no/javazone-web-api/events/javazone_2015/sessions')
+        request(baseUrl)
+        .end(parse);
+
+        return def;
+    }
+
+    jz.data.talk = function(id) {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(res.body);
+        }
+
+        request(baseUrl + '/' + id)
         .end(parse);
 
         return def;

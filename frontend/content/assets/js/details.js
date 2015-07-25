@@ -11,8 +11,6 @@
         'presentation': 'icon-easel'
     }
 
-    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions/';
-
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
     }
@@ -40,8 +38,10 @@
     }
 
     function getTalk() {
-        var url = baseUrl + decodeURIComponent(location.search.substr(1).split('=')[1]);
-        request(url).end(render);
+        var id = decodeURIComponent(location.search.substr(1).split('=')[1]);
+        jz.data.talk(id)
+        .then(renderSuccess)
+        .fail(renderError);
     }
 
     function imageUrl(url) {
@@ -65,16 +65,7 @@
         return submission;
     }
 
-    function render(err, res) {
-        if (err) {
-            renderError(err);
-            return;
-        }
-
-        renderSubmission(parse(res));
-    }
-
-    function renderSubmission(submission) {
+    function renderSuccess(submission) {
         console.log(submission);
 
         submission = transform(submission);
