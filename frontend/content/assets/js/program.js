@@ -28,9 +28,11 @@
 
     var program = {};
     var categories = {};
+    var dates = [];
 
     var categoriesFilter = [];
     var difficultiesFilter = [];
+    var dateFilter = '';
 
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
@@ -54,18 +56,43 @@
         .fail(renderError);
     }
 
-    function transformToDays(res) {
-        return _(parse(res))
+    function findInitialDate(dates) {
+        var today = new Date().getDate();
+        var date = _.find(dates, function(date) {
+            return date.getDate() === today;
+        });
+
+        return _.isEmpty(date) ? _.first(dates) : date;
+    }
+
+    function transformTalk() {
+        return _.compose(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)));
+    }
+
+    function groupByTimeslots(date) {
+        date.presentations = _.groupBy(date.presentations, function(presentation) {
+            return presentation.starter.substr(11, 5);
+        });
+        return date;
+    }
+
+    function transformToDays(program) {
+        return _(program)
+            .filter(function(talk) {
+                return talk.starter && talk.format !== 'workshop';
+            })
+            .map(transformTalk())
             .groupBy(day)
-            .transform(function(result, day, date) {
-                result.push({date: date, presentations: day});
+            .transform(function(result, presentations, date) {
+                result.push({date: date, presentations: presentations});
             }, [])
+            .map(groupByTimeslots)
             .value();
     }
 
     function transformToCategories(program) {
         return _(program)
-            .map(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)))
+            .map(transformTalk())
             .groupBy('topic')
             .transform(toObject, [])
             .value();
@@ -75,6 +102,22 @@
         var pixelRatio = window.devicePixelRatio || 1;
         var size = pixelRatio >= 2 ? 48 : 24;
         return url + '?size=' + size + '&d=mm';
+    }
+
+    function extractDates(program) {
+        return _(program)
+            .filter(function(talk) {
+                return talk.starter && talk.format !== 'workshop';
+            })
+            .map(function(talk) {
+                return new Date(talk.starter.split('T')[0]);
+            }).uniq(function(date) {
+                return date.getTime();
+            })
+            .sortBy(function(date) {
+                return date.getTime();
+            })
+            .value();
     }
 
     function extractCategories(program) {
@@ -176,25 +219,11 @@
             }).value();
     }
 
-    function renderSuccess(data) {
-        program = transformToCategories(data);
-        categories = extractCategories(data);
-        renderFilter();
-        renderProgram();
-    }
-
-    function renderFilter() {
-        var template = Handlebars.compile(document.querySelector('.program-filter').innerHTML);
-        var container = document.querySelector('.javazone-program-filter');
-        container.innerHTML = template(categories);
-        attachListeners(container);
-    }
-
-    function renderProgram() {
-        filteredProgram = filterProgram(_.cloneDeep(program));
-        var template = Handlebars.compile(document.querySelector('.program-categories-template').innerHTML);
-        var container = document.querySelector('.javazone-program');
-        container.innerHTML = template({topics: filteredProgram});
+    function filterDate(date) {
+        console.log(date);
+        return _.find(program, function(p) {
+            return p.date == date.getDate();
+        });
     }
 
     function attachListeners(container) {
@@ -233,18 +262,48 @@
         renderProgram();
     }
 
+    function renderSuccess(data) {
+        console.log(data);
+        program = transformToDays(data);
+        console.log(program);
+        dates = extractDates(data);
+        console.log(dates);
+        dateFilter = findInitialDate(dates);
+        console.log(dateFilter);
+        console.log(program);
+        //program = transformToCategories(data);
+        categories = extractCategories(data);
+        renderFilter();
+        renderProgram();
+    }
+
+    function renderFilter() {
+        var template = Handlebars.compile(document.querySelector('.program-filter').innerHTML);
+        var container = document.querySelector('.javazone-program-filter');
+        container.innerHTML = template(categories);
+        attachListeners(container);
+    }
+
+    function renderProgram() {
+        var programForDate = filterDate(dateFilter);
+        console.log(programForDate);
+        filteredProgram = filterProgram(_.cloneDeep(programForDate));
+        var template = Handlebars.compile(document.querySelector('.program-categories-template').innerHTML);
+        var container = document.querySelector('.javazone-program');
+        container.innerHTML = template({topics: filteredProgram});
+    }
+
     function renderError(err) {
         // TODO: actually do something
         console.error(err);
     }
 
     function day(talk) {
+        if (_.isEmpty(talk.starter))
+            return "-1";
+        
         var d = new Date(talk.starter).getDate();
         return d;
-    }
-
-    function parse(res) {
-        return JSON.parse(res.text);
     }
 
 	jz.program = getProgram;

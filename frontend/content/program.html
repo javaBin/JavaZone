@@ -49,16 +49,26 @@
 </script>
 
 <script type="text/tempate" class="program-day-template">
-    {{#each days}}
-        <div class="program-day">
-            <div class="program-day-title">{{date}}</div>
-            <div class="program-day-presentations">
-                {{#each presentations}}
-                    <div>{{tittel}}</div>
-                {{/each}}
+    <div class="section container cf">
+    {{#if days}}
+        {{#each days}}
+            <div class="sub-section cf">
+                <div class="program-day">
+                    <div class="program-day-title">{{date}}</div>
+                    <div class="program-day-presentations">
+                        {{#each presentations}}
+                            <div>{{tittel}}</div>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
+        {{/each}}
+    {{else}}
+        <div class="sub-section cf">
+            <h1 class="section-header centered">No results</h1>
         </div>
-    {{/each}}
+    {{/if}}
+    </div>
 </script>
 
 <script type="text/template" class="program-categories-template">
