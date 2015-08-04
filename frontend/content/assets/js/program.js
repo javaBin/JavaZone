@@ -66,13 +66,50 @@
     }
 
     function transformTalk() {
-        return _.compose(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, extract('topic', hasTopic), extract('type', hasType)));
+        return _.compose(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
+    }
+
+    function createSlots(memo, current) {
+        console.log(current);
+        var timestamp = current.starter;
+        if (current.format === 'Presentation') {
+            var slot = memo[timestamp] || [];
+            slot.push(current);
+            memo[timestamp] = slot;
+        } else {
+            timestamp = _.chain(Object.keys(memo))
+                    .filter(function(slot) {
+                            return slot <= timestamp;
+                    })
+                    .last()
+                    .value();
+            var slot = memo[timestamp];
+            slot.push(current);
+            memo[timestamp] = slot;
+        }
+
+        return memo;
     }
 
     function groupByTimeslots(date) {
-        date.presentations = _.groupBy(date.presentations, function(presentation) {
-            return presentation.starter.substr(11, 5);
-        });
+        console.log(date);
+        date.presentations = _(date.presentations)
+            .sortByOrder(['format', 'starter'], ['desc', 'asc'])
+            .map(function(talk) {
+                return talk.starter + ' ' + talk.format;
+            })
+            //.reduce(createSlots, {})
+            .value();
+        // date.presentations = _(date.presentations)
+        //     .groupBy(function(presentation) {
+        //         return presentation.starter.substr(11, 5);
+        //     })
+        //     .reduce(function(mem, slot, key) {
+        //         if (slot.])
+        //     }, [])
+        //     .transform(toObject, [])
+        //     .value();
+        console.log(date);
         return date;
     }
 
@@ -104,13 +141,18 @@
         return url + '?size=' + size + '&d=mm';
     }
 
+    // This is seriously horrible. Thank you Javascript for your lack of date handling
     function extractDates(program) {
         return _(program)
             .filter(function(talk) {
                 return talk.starter && talk.format !== 'workshop';
             })
             .map(function(talk) {
-                return new Date(talk.starter.split('T')[0]);
+                var date = new Date(talk.starter).getDate();
+                if (date < 10)
+                    date = '0' + date;
+
+                return new Date('2015-09-' + date);
             }).uniq(function(date) {
                 return date.getTime();
             })
@@ -170,7 +212,6 @@
     function toObject(result, value, key) {
         result.push({
             key: key,
-            icon: iconMapping[key],
             value: value
         });
     }
@@ -182,6 +223,11 @@
             {c: _.kebabCase(submission.topic), l: submission.topic}
         ];
         return submission;
+    }
+
+    function transformStarter(talk) {
+        talk.starter = new Date(talk.starter).getTime();
+        return talk;
     }
 
     function transformNokkelord(submission) {
@@ -299,7 +345,7 @@
     }
 
     function day(talk) {
-        if (_.isEmpty(talk.starter))
+        if (!talk.starter)
             return "-1";
         
         var d = new Date(talk.starter).getDate();
