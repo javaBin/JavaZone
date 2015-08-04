@@ -171,7 +171,7 @@
             case 'FEW_SPOTS': return {className: 'few-spots', no: 'Få plasser', en: 'Few spots'};
             case 'FULL': return {className: 'full', no: 'Full', en: 'Full'};
             case 'VERY_FULL': return {className: 'waiting-list', no: 'Venteliste', en: 'Waiting list'};
-            case 'CLOSED': return {className: 'closed', no: 'Lukket', en: 'Closed'};
+            case 'CLOSED': return {className: 'closed', no: 'Stengt', en: 'Closed'};
             default: return {className: 'not-opened', no: 'Ikke åpnet', en: 'Not opened'};
         }
     }
