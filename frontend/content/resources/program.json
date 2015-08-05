@@ -1,0 +1,4648 @@
+[
+    {
+        "tittel": "Interaktiv programmering med ClojureScript",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T11:40:00Z",
+        "stopper": "2015-09-09T11:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Odin Standal",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/262f7c0f1ab17a413778193d9e80611a5c46c9fe08733c1b8e05d69bcf99c137/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b51c5f7b60c1e739456d5cf0ea8fc8f69802928d9c7ccd8c1d037a9a34f9f690"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Web Technologies",
+            "ClojureScript",
+            "topic:Frontend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Hawtio and Jolokia to the rescue!",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T10:20:00Z",
+        "stopper": "2015-09-10T10:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Henrik Schwarz",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/9e8232a45ffbfd9fc67de1ed76bf63682ca234aafdc6ef4bf43dec5e0b02b2f6/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/11960d4fca8ac2112eb9e99f96aabf2816f42adfa2b6b74cc1587a503a8073f2"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Continuous Delivery",
+            "DevOps",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Docker for Java developers",
+        "format": "workshop",
+        "starter": "2015-09-08T07:00:00Z",
+        "stopper": "2015-09-08T11:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Arun Gupta",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/96e7d042bf0896ad067252948debf698860cb6b8397155f7ddde2d485575508c/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/010f79f10ad3698c72c5920f4e667ff06f611feb1e571eee59a9abd8b01a65ad"
+            },
+            null
+        ],
+        "rom": "Workshop Room 3",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Universell utforming for alle!",
+        "format": "presentation",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Lotte Johansen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/83024a70d9d8077cf106c3ce5e6bf506c99c7ef6385dd2407387610f6e67e24e/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b6f65230d9f8054ef2260b67071cbeb01e2d24c1313e071ec27250586b686c71"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "UX",
+            "Accessibility",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Maven - mer enn clean install",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T08:30:00Z",
+        "stopper": "2015-09-09T08:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Hans Joachim Desserud",
+                "bildeUri": "http://www.gravatar.com/avatar/b60eb54c0d37001654503ad8eb758424"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b6a050b1f1edb60ce9495265d2b009b46ff0842c424a593ce044b34997cde2ef"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Continuous Delivery",
+            "DevOps",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Lag ditt eget kart!",
+        "format": "workshop",
+        "starter": "2015-09-08T11:30:00Z",
+        "stopper": "2015-09-08T15:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kristoffer Dyrkorn",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/75166410cbc84a23249b814029a19313ea26d5f9a93cd3d6a88b2d3e9fc25c9e/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/5e5ae7dcff76fecf473c55017f5608d24bb1e729294de532f6fa4e45a94d2ec4"
+            },
+            null
+        ],
+        "rom": "Workshop Room 4",
+        "nokkelord": [
+            "Maps and geodata",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Fjellvettreglene og design av software",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T07:30:00Z",
+        "stopper": "2015-09-10T07:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kari Bergh Schjønsby",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/4852018293292e5d66d277d5c486713cb8914c41bb6ae9ee1c0a0a84c432c081/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/2110308bd1a60cb111c920bc2dd3ffad5badd3be88a3b621abc3abc5284e1ccb"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Rules of thumb",
+            "topic:Concepts / Theory",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Seven Things Developers Can Learn from Film",
+        "format": "presentation",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Tim Berglund",
+                "bildeUri": "http://www.gravatar.com/avatar/a234c21cb2781c557bcef84676d3821f"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/dba3bb3d6dfe01bda80007c2650ba2a8939a62d71e7f51b66396d4e82ab9e091"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "film development",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Code Reviews: Techniques and Tips",
+        "format": "presentation",
+        "starter": "2015-09-10T15:00:00Z",
+        "stopper": "2015-09-10T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Rabea Gransberger",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ff759e606e97fd142974ebe7e2942c2ef9c2cc3a2c5ec3bbaf6f92a461529085/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/cdcedf752420b7e749b8224072323939b3a6f605f9898f29bc1c99c62063b103"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Hvordan ødelegge en applikasjon med gode intensjoner",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T10:00:00Z",
+        "stopper": "2015-09-09T10:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Erlend Flaten",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/4b170559bdf0ad46480a4125b3d60b232babff2f6ba4af18606585c92917293f/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/4887c070cdda00a375a0147da6dd771e4d71c098123ae442ae9d4d88382e4dc1"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Efficient HTTP Apis",
+        "format": "presentation",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Adrian Cole",
+                "bildeUri": "http://www.gravatar.com/avatar/55ad0e1514e79e1b42784a65b744a5a7"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/fc70dd366ce6bb562d848ddd3a9b67f0a2a507d4d85018b6bee8f84af942307a"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Designs",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Hva er en god teamleder?",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T07:40:00Z",
+        "stopper": "2015-09-10T07:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Hong Nhung Thi Vo",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/d33fb14f69287c34ab15f44f71acfe1da5baa1c3fa83c7176fe6082a7db7bdee/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/42b3ccc06e86d7cc6634eff46886b023ce36b7d9b7045dec808a5c212291b50e"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Teamledelse Prosjektledelse Samhandling",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Through the JMX Window",
+        "format": "workshop",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Matt Brasier",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/163bc9b694f1d811c54b100796fa252ffbc6b5116e78e5ee93333dbbc5c22e89/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e77bcf4c287316fd9b01538abab6c1451c9815a828810d8bfe2c958396d8faf2"
+            },
+            null
+        ],
+        "rom": "Workshop Room 1",
+        "nokkelord": [
+            "Core Java",
+            "Java EE",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "NoSQL and Einstein's theory of relativity",
+        "format": "presentation",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Lars Marius Garshol",
+                "bildeUri": "http://www.gravatar.com/avatar/9cc04db1a19bb78c13f5abaf051956ab"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a3f11d3b3e788bf95fb12e00ab92ad5b351850cb916286907e4919bab48aeac1"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Paradigms",
+            "BigData",
+            "topic:Concepts / Theory",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "public abstract JSON executeJavaScript(String script, boolean shouldYou);",
+        "format": "presentation",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Magnus Bae",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/fe0d9b82e42f5412c477ba390a96f5a4c20aee278fdb787b65315a0d87c8249c/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/4ae0353dc51b91ff4accf02dc18211c42b3e0053434cce942f8e72040fdb012a"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Integration",
+            "JavaScript",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Big Data Engineering - The Hitchhiker's Guide",
+        "format": "presentation",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Abdelmonaim Remani",
+                "bildeUri": "http://www.gravatar.com/avatar/e8faf13ca2834441cd9335827ee7e842"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/89c852934c26019f7a60aa483c2a96b70ffca4b21ea95a0b58ccb465180fba33"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Architecture in Practice",
+            "BigData",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Hvordan FINN.no unngår hysteri med Hystrix",
+        "format": "presentation",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Audun Fauchald Strand",
+                "bildeUri": "http://www.gravatar.com/avatar/60471018dc399bad57acddc40310dc02"
+            },
+            {
+                "navn": "Henning Spjelkavik",
+                "bildeUri": "http://www.gravatar.com/avatar/6a9bd39b5d3ef0e1ecca535ee94b3b08"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/8b576b324be11b408a47289dc5afa1637cf7544eefba6d13346633212fe8e014"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Scalability",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Hvem er vel redd for æøå�",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T09:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Håvard Wigtil",
+                "bildeUri": "http://www.gravatar.com/avatar/bcb4ce98e285374dc8a224d15d71be8d"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/127c560f2f937d2b3928b2cc90d4d5483bc6b07047369ca12011e35be6e04b39"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "I18N",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "ASVS in a business application",
+        "format": "presentation",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Joachim Van der Auwera",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/4f02ef0b988949d0fafe49f86a982fddfb4835aa842e241e449a29597a53869d/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/5c4d2a3c8e9d4d973c31c6e1795bb182a954e9428765712d0a92c08f1f77eca8"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Security",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Spesifisering av egenskaper med junit-quickcheck",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T12:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Rune Flobakk",
+                "bildeUri": "http://www.gravatar.com/avatar/98ec044abb4ddb34d4e572a2efcae762"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/9b8004d1b90340118288af688419f27e990684a4355de8b47a0c7234b187eedd"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "Testing",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Glem JavaDoc, PowerPoint er viktigere!",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T11:20:00Z",
+        "stopper": "2015-09-10T11:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Per Otto Bergum Christensen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/b33c5c33e70ff78ea7ab8ccb651bd828d3781b04b91a428e88cc69e13d4644e7/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d315a6a61a831ea12103313cb76805afe22729f756ad320bd56fdbdcb28ad794"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Stateless authentication with OAuth 2 and JWT",
+        "format": "presentation",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Alvaro Sanchez-Mariscal",
+                "bildeUri": "http://www.gravatar.com/avatar/6ff7b4622483547899dd09918d83732e"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d1c1435762e3a624a62174f6e44528ad4a4241a87ba0caf5ad1d815b1e900cbf"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Application Architecture",
+            "Security",
+            "topic:Architecture",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Meteor - Lag moderne apps raskere enn noen gang i ren JavaScript",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T13:50:00Z",
+        "stopper": "2015-09-09T14:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kjetil Aamodt",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/6dec62383c106691459fcae57fd8d1917e85c6693b994ae7a6265763bccffaf1/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/fee1918d60fb6c0d2dd54ab884d23aa87cfb83b4fc25d1b4d854d49e18d5d8f2"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Web Platform",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Erfaringsrapport fra større refaktorering i domstolenes saksbehandlingssystem Lovisa.",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T10:10:00Z",
+        "stopper": "2015-09-09T10:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Geir Arne Waagbø",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/e998d9cfb629a208da7a1e68a3fa25e0678a549a72d5a7a62f37424267007097/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/c940cd87cef3e15e522181b9256fab696575fbb438f5b36335729378ef2b7cd1"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "Refactoring",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Elasticsearch, Logstash and Kibana – Highly Configurable Log Analysis",
+        "format": "presentation",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sigmund Hansen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/040ea4dadc56ccb56d6c7bbb7cc3345317e59efa548fb340be1607fe9b1b56bc/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/ae8df2986a6052d34daf97a223acd3abd11e2119431d779c3592c0167fc60180"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "DevOps",
+            "Log analysis",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Nyttig logging",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T09:50:00Z",
+        "stopper": "2015-09-10T10:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Torbjørn Skyberg Knutsen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/7510d0f78d6b70858f4c2abe48386316bf5dff95628d34d8a96dc6fc473c39d9/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7c5bc29d161cf3c3309745e27b8d2cd49cbaf34f91931276aab15d125d2927fa"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "Logging",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Til xml sitt forsvar…​",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T17:10:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kim A. Betti",
+                "bildeUri": "http://www.gravatar.com/avatar/3120e3db401361292eab43c7be870af5"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/318a42b0f5dd434fe5c35f3d50b18dc566c2fe95801a296472d054d3725fe68b"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "teamwork concepts",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Future crimes and our responsibility",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T12:40:00Z",
+        "stopper": "2015-09-09T12:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Irwan Syahrir",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/1afbad431c7b52eecfbf19df286403e3d6ed27f189439da35418eae73b075cc2/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/903b04a51846af4a55f7cb98ace9adae4076792c4a17712702e67dbe175a0261"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Security",
+            "IoT",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Akka Streams: Streaming data transformation á la carte",
+        "format": "presentation",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Viktor Klang",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/602f976f67dd85f2022b5d7dc18f2751f8310a7b9733a3f01956567a8432099d/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/c0a437232089b625375d1cb9b1ac97d2b8d3160196706767b4fef35113fbdcb2"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Integration",
+            "React",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "High Performance Java - Binary instead of Objects",
+        "format": "presentation",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "John Davies",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/07b4281b7fed494d5cfab2a7c53a0bd3d677b6d01594e776b3c7a9a3a4f4291e/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/8974d19aa12e06ccaa39a59fb0465c32731aab901d7fbbce40bd5b158f41e483"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Core Java",
+            "Performance",
+            "topic:Java platforms",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Modellering av neocortex for gjenkjenning av mønstre og avvik i Big Data",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T08:40:00Z",
+        "stopper": "2015-09-10T08:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Bjørnar Almli",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/987908ac17349524e43dcb7eec3183695ad517500e8fcecc13f43302d418f86a/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e124ddd150cedd480ccb6d6fed4c5ece85199648caf12490fcf66de86e4bb3e3"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "BigData",
+            "topic:Backend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Android 101",
+        "format": "workshop",
+        "starter": "2015-09-08T11:30:00Z",
+        "stopper": "2015-09-08T15:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christoffer Marcussen",
+                "bildeUri": "http://www.gravatar.com/avatar/9fdd82f91ba944279dc10d196a990dbb"
+            },
+            {
+                "navn": "Øystein Strand",
+                "bildeUri": "http://www.gravatar.com/avatar/9ee64c5d062dde931c0ca92247870875"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/1696e8818e8643888e6acba6a684ad3648fec9074cb49c1a4264b248592094cf"
+            },
+            null
+        ],
+        "rom": "Workshop Room 3",
+        "nokkelord": [
+            "Apps",
+            "Mobile",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Building security into your continous delivery pipline",
+        "format": "presentation",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Anand Sudhir",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/73065637591cdb0d54b0ba5e0cfa54b8378c1648ef374e8d7918c25cc09e124a/image"
+            },
+            {
+                "navn": "Rita Nordtug",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/8ee2f69c3236d72d9258e476fe8c26dbb380e5b29e4a2b5eb068d0e13eddcb69/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7a3fcb229a2ea4aa520b4ba43c7b5fd16548d8b778b95e3d4d551eaf8ac68681"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Continuous Delivery",
+            "Security",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Building a Carputer: Java and teh Automotive Internet of Things",
+        "format": "presentation",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Simon Ritter",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/581f219c0c578c481ed50ce69fa59be5300693b6c34419c53e120df8002d073e/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a76d542a433febcfba21fb0f1de13f029a5eaf13d5415e34d58d4a21c65adeee"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "IoT",
+            "topic:Other Awesomeness",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "IntelliJ IDEA Tips and Tricks",
+        "format": "presentation",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Hadi Hariri",
+                "bildeUri": "http://www.gravatar.com/avatar/c2072a8f90f9fe379ca21c3af39a3757"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/0802cb9274ebf62bddf5f8563d99a9a95daf0b5c8c2c39548971855882364ac8"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Tools",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Funksjonell programmering med Java i virkeligheten",
+        "format": "presentation",
+        "starter": "2015-09-10T15:00:00Z",
+        "stopper": "2015-09-10T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Atle Prange",
+                "bildeUri": "http://www.gravatar.com/avatar/c4949ecde911dfe824067962c8853fb2"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/345e3f6343da3d29ab1676fce6c014923a8f5089a67f551edea54e263fd295dd"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Clean Code",
+            "Functional",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Fornuft og følelser: Hvordan man går fra å være junior til å bli senior",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T16:50:00Z",
+        "stopper": "2015-09-09T17:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Simen Fure Jørgensen",
+                "bildeUri": "http://www.gravatar.com/avatar/319b97691ba6d97f5f4957709a1d51bb"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/3ea92148588074d2a79e61b96b3ec3f7e984fcc425a0cf8c47849661fb91f8f6"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Craftsmanship",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Production time profiling On-Demand with Java Flight Recorder",
+        "format": "presentation",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Klara Ward",
+                "bildeUri": "http://www.gravatar.com/avatar/62062c4d62376f5bf2dd7b261c476da2"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e3759776796ea2f6de6306ef68de48ae9dcfaf8f4947a79cab20aed0d22ca60f"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Performance",
+            "Java SE",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Playing with Hypermedia",
+        "format": "presentation",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Einar W. Høst",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/42a19e328aee1c972bb2f45f794cf9a1c073018f0aac9bb9bf73e861aa311b5c/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e37d983a3fe18e1ea8c8411a58e16bf8cf60c5262dd90f6f722c927c32242cfe"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Mine containere er lettere enn dine. Enklere uviklingsmiljø med Boot2Docker og Docker Compose.",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T09:00:00Z",
+        "stopper": "2015-09-10T09:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Anders Breivik",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/41a2f8049e1a0cf62ed7091845b617e005563ce23e967714136ca21cb60e188c/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/bcc4432e5c5fcb026c5f9dc67e92fd9d1ff55bf2673d7a9720b02b50a26c732e"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "DevOps",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Er dette et krav, noe du faktisk krever?",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T14:20:00Z",
+        "stopper": "2015-09-09T14:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Rolf Rander Næss",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/9ef665b6a27054d4b9034b0ca5f29a3f82aba698b6434cc8f085b8109df24141/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/f6a4f67f5cc8e4a91d5d74f84b3f6afae6ec659128936f4d0287ea8e208216ad"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Requirements",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Kast dine java rammeverk",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T07:10:00Z",
+        "stopper": "2015-09-09T07:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Anders Karlsen",
+                "bildeUri": "http://www.gravatar.com/avatar/6870c4512ce719702e655606e1ac08af"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/6294c19855b6b47a53701f9ec5c3f05d1297578f6bc0d4749c0ac62102dc92cf"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Core Java",
+            "Java SE",
+            "topic:Java platforms",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Developers, start thinking about design!",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T11:30:00Z",
+        "stopper": "2015-09-10T11:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Alexandra Leisse",
+                "bildeUri": "http://www.gravatar.com/avatar/2c7bb1c3fa73fc779f9ed5f3abfb6d77"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/fd09fba268aa5329705298f5f456bb01673edb85ab4a5c6233b3a8d8658ab3cb"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "UX",
+            "Rant",
+            "topic:Frontend",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "JVM debugging under the hood",
+        "format": "presentation",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Martin Skarsaune",
+                "bildeUri": "http://www.gravatar.com/avatar/82f1a2c27bcd9ddd4749d926b345eee4"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/673464a832c00765b363c0144f844a572486c1de129750c27a3143b08e74ea50"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Core Java",
+            "topic:Java platforms",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "JCache - Say Goodbye to proprietary Caching APIs",
+        "format": "presentation",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christoph Engelbert",
+                "bildeUri": "http://www.gravatar.com/avatar/29985ef0127c36ef5f8ad0b115c8323e"
+            },
+            {
+                "navn": "Jaromir Hamala",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/a4689ebaacf9e5736ab56defda74c16aa94fc25038d4d5d26877cc2382ec7813/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/225ae506af1a687cdd1ba3953606560598e4b8b1f91893eae18ef11ebb21990e"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Application Architecture",
+            "Scalability",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "PubSub++ - few tips that make your life with kafka easier.",
+        "format": "presentation",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Krzysztof Debski",
+                "bildeUri": "http://www.gravatar.com/avatar/af3b8a85ec3f3e34dd0d8676f5f0d291"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e2bc975208438f65b2f5e2e395817367d74290a2aecc425d81e6b698db74da76"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "DevOps",
+            "Scalability",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Beyond Basic Auth - Logins for Apps and APIs",
+        "format": "presentation",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Stian Thorgersen",
+                "bildeUri": "http://www.gravatar.com/avatar/87fe00619f08c241da8dfb23d907ffa2"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7a6d2788b3a9418856761a9243d2f6e0c6d81c9540fdb976b24a69281c18fcbc"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Application Architecture",
+            "Security",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "NodeBots 101 : Using JavaScript to power your next IOT / Robotics Project",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T11:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Mark West",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/cb2d8b7649d0b7d33eb7450b7a1b1692405d924600efde95f24dbafb304e8481/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/65b51b83b9d6816ebde93e8bef1fae273ee411bc957fa291150d58f3077d58fe"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "IoT",
+            "JavaScript",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "HTTP/2 and Java",
+        "format": "presentation",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Gunnar Wagenknecht",
+                "bildeUri": "http://www.gravatar.com/avatar/10f731d047c7746e749039098536f12f"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/22acec6a73e837f9b94024f49adf5a0e0c44ed6cf0caccb8fe5d28e733546bd2"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Application Architecture",
+            "Scalability",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Developing iOS applications with Java and Eclipse",
+        "format": "presentation",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Frank Nimphius",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/0698ebfbe9536c423363a6bbc7ebcd75bb3b5537186a7c4a51e0ec9db04afdba/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/1487efd15aa4a411026391bf767211c1b5b1f9734136d1c5a835327d2c5d9a88"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Java SE",
+            "Mobile",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Low Latency in Java 8",
+        "format": "presentation",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Peter Lawrey",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ed24604c6e4efab13c03afab261d9c55fcb6056f6d6a5bed105987ce12633d99/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/76dfa3899c9cb58fb4542161e9241a9eabe4463f856f9c0d0510d7a3e892cec0"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Core Java",
+            "Functional",
+            "topic:Java platforms",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Continuous releases with maven",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T08:50:00Z",
+        "stopper": "2015-09-09T09:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Ivar Refsdal",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/8f832090cd68bc0e12cd34dcc2c372defd404b624e35ab14e873480fb9382c01/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/91293fc61d0286941efcc9f0c753942a4f0eaadc6ae192b0c18f097bec438f7b"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Continuous Delivery",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Jenkins, mer enn en byggeplass",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T08:40:00Z",
+        "stopper": "2015-09-09T08:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Anders Bjørnestad",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/da2224774414635441f1f709e4df407e6ac8a6613bb2b3561b506eb3cfbce8a7/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d496974d8279d1fa1c5041078dc39099c1796ba15cb12613fbbd43e05416a2f5"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Integration",
+            "Server",
+            "topic:Backend",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Anbefalinger fra Apache Mahout til Spark MLlib på 4 steg i FINN.no",
+        "format": "presentation",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Helge Jenssen",
+                "bildeUri": "http://www.gravatar.com/avatar/ce56b97c3b2c203e671c10452a0d993f"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/1aa01cb223604c14c9046f6a400b9447f934cc1eada34c969f88dd189d7dfadc"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Integration",
+            "BigData",
+            "topic:Backend",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Youre the app that I want",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T13:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Haavard Gulbrandsen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/1990734eeeb4572773e8320c11322a26d4955bad3842cefb8cb943daeb733215/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/0e45de1f53816349bae75211f8cab6fef81fa91a22eadb716724e76a64efd0b5"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "testing",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "11 erfaringer ditt prosjekt ikke behøver å gjenta",
+        "format": "presentation",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Trond Arve Wasskog",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/819a631a2d54f4bdb5a41cc7dc4a7ac29749371fa8fa0ea9413090a3c8a00696/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/41c7a0b5f9012e4c764f626c429433963e8bc28bff68d61651f3baf8035b835f"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Designs",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Microservices i Open Source Software: kos eller kaos?",
+        "format": "presentation",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Erik Drolshammer",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/6c0ca6c661381090912946df49766c8ce693d1e3a76acc1beb24b50ae49e4619/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a0eb6b83959869bc9b5ebaa6dd7cc937f314ebff7f9ccf5f4cc49b13de700ac9"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Security",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "20 tips to reach your goals!",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T07:10:00Z",
+        "stopper": "2015-09-10T07:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Shervin Asgari",
+                "bildeUri": "http://www.gravatar.com/avatar/1c81239ef2dbd47eaaa8e8e44e9ebb93"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/efcc30e3ef8fcebb57435cf78b96452bd69ad9f02421e329a837a3d84236351e"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Knowledge",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Motivasjon - er det så viktig da?",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T07:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christina Kjær Seime",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/a3fe4963cd386a8179f333edce1fb298ca5eec639fce4546cf5aa93c6c24f36d/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e571395841e0355e92e9c4a37638dec6ad9293c2fdcd49807616edb71106cd84"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "motivasjon",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "React.js på JVM",
+        "format": "presentation",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Martin Solli",
+                "bildeUri": "http://www.gravatar.com/avatar/98464c6e06d457b7c8be0dd637d883d1"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/9c81b826f4d971d8759188702556405546c6878b0741300a1dd358737ce335e9"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "React",
+            "JVM",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Metrics, metrics everywhere",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T07:40:00Z",
+        "stopper": "2015-09-09T07:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Henrik Nordvik",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ca21e30a199016cfff5bc63314031c76edd2297c2b29640027da31ac0a26f05d/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/8a072e481c41f4572bd3cf44df36164b6032d1953e792bd249e90453b0c8ed54"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Performance",
+            "Monitoring",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Et utilsiktet API",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T16:30:00Z",
+        "stopper": "2015-09-09T16:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Håkon Arneng Holmstedt",
+                "bildeUri": "http://www.gravatar.com/avatar/9ae861060b4a9af57a8334a149ef0a8b"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/99b5c405a1ba7618d1748192052b971504c81982a86d85ab899a6c8209ed5264"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Nine nines: The robust Erlang and the magic Elixir",
+        "format": "presentation",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Lars Storjord",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/6111afb90842a08363b138a01881962b1552d75ab1699cda65b6c6ddbef315b2/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7c26b52e97483d14ba71c635c27980aef458f5586fd155d53e28a0f27dad8e75"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Programming languages",
+            "Paradigms",
+            "topic:Concepts / Theory",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Retrofit - mobil REST på 1-2-3",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T14:20:00Z",
+        "stopper": "2015-09-10T14:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christian Askeland",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/1d5ad3e649e980726b6a6c39855aa2de90bb2feab008badb8cbaae9a2afc4a6e/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/52885d58f543433b4888266967509be10438f4151aadd7fa6b7c0cfc680954f8"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Mobile",
+            "API",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "jdk not so hidden treasures",
+        "format": "presentation",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T17:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Andrzej Grzesik",
+                "bildeUri": "http://www.gravatar.com/avatar/498838b88051c5a4c8a20b8499bd1b19"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/35e4aad7359b8f00698b148c5524c5fbe916880b06c6a202a479d4946e006b8e"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Core Java",
+            "Performance",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Winning Integration Architectures with Apache Camel",
+        "format": "presentation",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Jakub Korab",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/54dbcec8efe6bd608b3954ab6a99fcb7df3e70eb7566f617f25f725056fe44ad/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e1d73aa0c9d74ddb14384f71f7b15b497e9204419ed585c59460dcc0c1cb0c93"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Integration",
+            "topic:Backend",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "JTransfo, converting between transfer and domain objects",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T07:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Joachim Van der Auwera",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ccc844999541e1ecf33556627f9cb9b6a72a6c46dacc17fd0bef059e96925c41/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/8b355259bd6d48440a5557ef708be00e087228463942f7b8a2d8128910343f28"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Server",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Continuous Security",
+        "format": "presentation",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Stein Inge Morisbak",
+                "bildeUri": "http://www.gravatar.com/avatar/73a3fd9e6ae54623af4bf59c832a498b"
+            },
+            {
+                "navn": "Erlend Oftedal",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/dd82312250fa397a2f57fefc82c998ad4a316d39db3d1abcfef4fc54a3a12158/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/83d95a896ea2356c310f1d717e507e90944e26b2444f276093b3d861f0bc176f"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Continuous Delivery",
+            "Security",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "5 Reasons Why You Can't do Stream Processing Without Knowing FP Well",
+        "format": "presentation",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Alex Petrov",
+                "bildeUri": "http://www.gravatar.com/avatar/c1a634a6db1049a4b98b365f63a5fd97"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/8bf391299863534592e69fdab0127f8f3b3d52e6e9cdcee7c61019b3b368174b"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "BigData",
+            "React",
+            "topic:Backend",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Stor endring i kjernefunksjonalitet – er det så lurt da?",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T10:20:00Z",
+        "stopper": "2015-09-09T10:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Anne Landro",
+                "bildeUri": "http://www.gravatar.com/avatar/9eb27888db62c6577df801d72cb4cd92"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/6301eaa678c48bd82b731aaa4cd4b3fe6288cbc123d3a0a1cd4fdfbccd6b4e37"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "functionality",
+            "topic:Other Awesomeness",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Plugin-basert arkitektur i Java!",
+        "format": "presentation",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Eivind Barstad Waaler",
+                "bildeUri": "http://www.gravatar.com/avatar/84351fd5f8f85e2caf1807031f6a2025"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d56218727154ca3e20b69d7ac3acbfc5244ade470a2625376286860998ba2d82"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Application Architecture",
+            "Scalability",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Konsulenteriet må DØ!",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T11:40:00Z",
+        "stopper": "2015-09-10T11:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Erik Assum",
+                "bildeUri": "http://www.gravatar.com/avatar/43bd7a18f173910f4c5e248a5ef13cae"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a81dce6dcf848a83e531e2efc704146a2238321641a4f4fa17c26084625403ff"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Rant",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "How to make your code sustainable - what they don't teach you",
+        "format": "presentation",
+        "starter": "2015-09-09T11:00:00Z",
+        "stopper": "2015-09-09T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christin Gorman",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/38a99163a9dfaca5df61e4366036eaec9d835987cbd4ffd2030d2412597bfb6d/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7e0cbcd0e5c7e63c21fd3b90188b6ea8879870a601282b3cc47a3360ab66617d"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "99% Java",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T15:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Ragnar Aas",
+                "bildeUri": "http://www.gravatar.com/avatar/f0296ea5da005d163c0a63e9c8bae948"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/02283b984ec7430666beb45170af9de5b870c9e0ca3615d191e36b3ed0747ae4"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "IoT",
+            "topic:Other Awesomeness",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Confessions from a disillusioned architect // En desillusjonert arkitekts bekjennelser",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T09:50:00Z",
+        "stopper": "2015-09-09T10:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Thorsten Heller",
+                "bildeUri": "http://www.gravatar.com/avatar/3c768e5908e0cf383bf9f65cf8a0f1c8"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/9bc8d79399ca8efeaeb6220024645496eb3a474aaf9befe08bba8712dae89a21"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Designs",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Kom i gang med vektorgrafikk på Android",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T14:00:00Z",
+        "stopper": "2015-09-10T14:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Mikkel Steine",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ee0e1fa96f62797da9df3f2bd3e5e6baeea0a11bd9d561831a3b7ee23b0b11bf/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/512ba50166c8f571429726039a1a4da1bdf56a2800ca559e62e6498aacd29c6b"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Apps",
+            "Mobile",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Does My Profiler Tell The Truth?",
+        "format": "presentation",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Fabian Lange",
+                "bildeUri": "http://www.gravatar.com/avatar/7cf37f97ba1c98f5181c5a2751a80c14"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/8bc30e48c1789a0fbd9ecb05b5db43b4868507486db641602da770dff4ef5dd3"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Core Java",
+            "Performance",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Securing Your Java EE Applications",
+        "format": "presentation",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Markus Eisele",
+                "bildeUri": "http://www.gravatar.com/avatar/a8b195bb2287928a48b364974187216c"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7a990808a4176c4162b4e54525399f109b3b62d7cf7751084ea52a59d0b3ae66"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Java EE",
+            "Security",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "DSL Development with Xtext",
+        "format": "presentation",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sven Efftinge",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/af99295ca9470db4a6f9e2c1f52f7e7f96a467bb3f1f31b2b2b572c00cbd9880/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b59e2842f6eefc0354b5d1ce3c887ccf186b387cc178584ad9fcc0a98da3db02"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Core Java",
+            "APIs",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Unlocking the magic of monads with Java 8",
+        "format": "presentation",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Oleg Šelajev",
+                "bildeUri": "http://www.gravatar.com/avatar/67b9795f7bff096f2e68640ea0b212dd"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/bbf332b326ec026a6be7ba80cbb0fe84ebaeaa83b28799725482f65f341bc035"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Paradigms",
+            "topic:Concepts / Theory",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "BYO Java RetroPi Console",
+        "format": "presentation",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Stephen Chin",
+                "bildeUri": "http://www.gravatar.com/avatar/6a9260f3add09eebd832f5e7c0202419"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/0f97e6b9189ed838d753a0fcf5d08e397e4b2e6846618dde2f96fb6513e37ef8"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "IoT",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Brukertesting - 5 ting du ikke ante at brukerne dine sliter med",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T12:40:00Z",
+        "stopper": "2015-09-10T12:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Cecilie Schrøder Fjellhøy",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/e4a3d0a6e34021acb3523a3ea9d97b1262bdb36d01458f3dde3757a94771ab86/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/425d8165abc8104fe9725d4ef1bc742fdfd199e7f87278774d05198b56b4814b"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "UX",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "The Illusion of Execution",
+        "format": "presentation",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Nitsan Wakart",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ea662d1c797aa74918a9988420bd0b84c7e7ff6627b72dba0a9e198d0feea756/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/0dd02a9823549e6c1379351e63cd187b9f5cfad8182238649c81273a4d82fef5"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Deep Dive",
+            "topic:Other Awesomeness",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Farvel til JavaScript med Scala.js",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T11:10:00Z",
+        "stopper": "2015-09-09T11:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sigmund Marius Nilssen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ffd7f12495a3453e3e79e113b559e783920336491e3d975fa9f3ada6e5c8a8a4/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/15f2af4a66f052de1bb9140638f0dc20ff1feacc30b755682e74624a23455044"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Web Technologies",
+            "Scala",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Sikker på 1-2-3: websikkerhet i lyntempo!",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T12:30:00Z",
+        "stopper": "2015-09-09T12:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Øyvind Kvangardsnes",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/b187621d818df573ad472e17f5569600d668ec686f83a7b9613900015072c7b9/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/1247c31ebc14bb263ee6378a0b5980db31c1a147fe08b399c9c0dd825789cd23"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Security",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Førstehjelp til bedre UX - 5 raske tips",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T12:50:00Z",
+        "stopper": "2015-09-10T13:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Susanne Kvernmo",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/f7783a8ecd47af80e7b9a4d2984251b91ad5530c4722995ffda31179c1b3cbb1/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b6bbba768d4c43bc5adb4c4046ea56ebdeaed37158cf4dc86ae3eb73fa3c54e2"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "UX",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Don't compromise: Native UX and cross-platform mobile app development in Java using RoboVM",
+        "format": "presentation",
+        "starter": "2015-09-10T15:00:00Z",
+        "stopper": "2015-09-10T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Niklas Therning",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/654c89dbe4562420e81ae97701b3846d950c34218119394b0c8a9d527af5a01f/image"
+            },
+            {
+                "navn": "Henric Müller",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/72abd508a4fee1710e5cbda880174d2612d0c72a96754ef0d0813c0b4cba1f3a/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/6cf34bb6b15bd72da5bf64c74860d8d68a72deab931d39dd1f54189f1ebccd77"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Apps",
+            "Mobile",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Squares and question marks: An adventure into the world of character sets and encodings",
+        "format": "presentation",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Torstein Krause Johansen",
+                "bildeUri": "http://www.gravatar.com/avatar/0f8ce8b3ec47f451d48ef0d48973178a"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/5b477049996318a1312163210c57ffc527d94fd8b04c68936b1d3386edf86868"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Programming languages",
+            "topic:Concepts / Theory",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Haflsund AMS: Hvordan semantisk integrasjon redder norges største IOT-prosjekt",
+        "format": "presentation",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Simen Sommerfeldt",
+                "bildeUri": "http://www.gravatar.com/avatar/d8f36258f8cde57d1a5e6aa0e1a06709"
+            },
+            {
+                "navn": "Jon Andreas Pretorius",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/733400207027fdacfb157540238988b5541a6c9557f6b1cfd7ffe8de4206ffd1/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/cb72352c6a850c480dbfd02c0e185d030ab26ae6145c7828b558f48755a16407"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Scalability",
+            "IoT",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Fra leveranseløp til løpende leveranser - første avsnitt",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T13:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Geir Amdal",
+                "bildeUri": "http://www.gravatar.com/avatar/9553106109397ad24ec10c33de4adfb7"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/1c7f48b48d35934057d94d8d1c2fe5b6e467624bc1a6d827fe35f10abfe208ff"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Continuous Delivery",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "7 Maven-plugins å ha i din verktøykasse",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T08:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Rustam Mehmandarov",
+                "bildeUri": "http://www.gravatar.com/avatar/05c3f7f58d28ae2c794df07efb92411a"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/86734cc36c24b081d399454534248f3aad7062ce30de5aea27de84f80a476269"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "buildtools",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Selvpåført kodegenerator",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T15:30:00Z",
+        "stopper": "2015-09-09T15:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Vidar Berentsen Folden",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/5a52555cad8c1adee8e5839aef33e69c79ca7593971a723ddcd3dc57d55e334f/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d07d18109357cd8b7588cd52228ebf5b6a39b29ae5a346831b3fc9c310d0e4a4"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "copy paste elimination",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "En swift(?) gjennomgang av Swift",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T13:50:00Z",
+        "stopper": "2015-09-10T14:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Tobias K Torrissen",
+                "bildeUri": "http://www.gravatar.com/avatar/1f0f1f6cde81c32935462c20a9c407a7"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/f256d7a46259390e432258145a857fd197cd40966aeabb9d24b766136a45d385"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Apps",
+            "Mobile",
+            "topic:Frontend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "What's wrong with Java's type system?",
+        "format": "presentation",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Erlend Hamberg",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/88e517c927ded56e2b06e2cbf56796742522fc7917f307319708436b7b94daf3/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/dd9a58e96047acc25634637c22e839244dd51012fa234b96aa5f8513ad05883e"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Programming languages",
+            "Features in Languages",
+            "topic:Concepts / Theory",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Taming the WebRTC beast on Android",
+        "format": "presentation",
+        "starter": "2015-09-10T15:00:00Z",
+        "stopper": "2015-09-10T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Dag-Inge Aas",
+                "bildeUri": "http://www.gravatar.com/avatar/95a22710b6df37e7fa2054910bdb3595"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/1b58cb2c33b9e80f587db53f53d32ffb68caf098c01627f3b104876ffac2d071"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Web Technologies",
+            "Apps",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Hvordan starte egen audio streamingstjeneste gratis?",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T10:00:00Z",
+        "stopper": "2015-09-10T10:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Peyman Shakari",
+                "bildeUri": "http://www.gravatar.com/avatar/f057674d07ccc5d2ebb42393c2584a8f"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/fcd87fa7cb1e9a7a44082ab637785f9f33c696f1c576e4d25056205c9c4716c4"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Server",
+            "Cloud",
+            "topic:Backend",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Gradle Glam: Plugins Galore",
+        "format": "presentation",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Andres Almiray",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/8d0e80c28c59581ef6327c8808dc1bb03a762bf72e16a9e6342052c3bd76e24a/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a6a9f52ca12c60879838cc1a2f0e52c891d220250410296240880367d62a884f"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Core Java",
+            "Build Tools",
+            "topic:Java platforms",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Everything a Java Developer Should Know about the JavaScript Landscape",
+        "format": "presentation",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Geertjan Wielenga",
+                "bildeUri": "http://www.gravatar.com/avatar/b228d5ed0699e8caffef327d83fa4c73"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/ab37a31c3acd4204379c553742ab638f4d7853a8ffdc70f9509876a639149f57"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Web Technologies",
+            "Mobile",
+            "topic:Frontend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Practical API design",
+        "format": "presentation",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sebastian Dehne",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/4629d8a1dda21051d23e8b30c9a0eef57112559c5c5c5dfad9615acded7eb4e2/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/65156077911f804ee0b5b85a2ef11c942ac2e0eae792bdfbdaea9843df998c2b"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Designs",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Testing and packaging a system of microservices based on docker and spring",
+        "format": "presentation",
+        "starter": null,
+        "stopper": null,
+        "foredragsholdere": [
+            {
+                "navn": "Kristian Rosenvold",
+                "bildeUri": "http://www.gravatar.com/avatar/4d56dc8724cf2f1424459ff47a49c56e"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/dd7ebd167669db227a3ecd4c80fc2656f4d0bdf5c0bd52dba2afb82fc3b05212"
+            },
+            null
+        ],
+        "rom": null,
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Optimizing Java Platform for JVM Languages: The Challenges",
+        "format": "presentation",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Vladimir Ivanov",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/03ae8ce1399ad8cb5628c97171fc2984a884ff5084b02e76068a518f0409beb2/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a68d2e3ec5ff7c02325e5c32fbfacda8bb5cdd8341513ec42be6c524637ba6d6"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Core Java",
+            "Performance",
+            "topic:Java platforms",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "There is no snapshot",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T14:00:00Z",
+        "stopper": "2015-09-09T14:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Ole Christian Langfjæran",
+                "bildeUri": "http://www.gravatar.com/avatar/e36ebce4ab76ac233a45ff5973bc46f5"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b65107892b655204a6318e4462ae1bc3e71ac2f4cc9778dc63555592739cc1f0"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Continuous Delivery",
+            "DevOps",
+            "topic:Craftmanship",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Make your REST services attack proof",
+        "format": "presentation",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Alex Soto Bueno",
+                "bildeUri": "http://www.gravatar.com/avatar/8ac4459a1de90107204dbe42c2e687be"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e283db27117eb14a0676d1869149b8a80e75c708a2aa7b96ec06dfc9db956e94"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Security",
+            "RESTful Web Services",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Java 8 JVM Memory and Thread Management",
+        "format": "presentation",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Ken Sipe",
+                "bildeUri": "http://www.gravatar.com/avatar/54ce5c4133119bd3791bd23f2cc2f582"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b2186af45005cc20ec33600049c29d1ade49fe37a5068b5464e3a1e2a258c4fe"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Memory",
+            "Performance",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Unlock the value of your data with Elasticsearch",
+        "format": "presentation",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Aleksander M. Stensby",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/118be289eab77fece34203745f0d200e651c7322a5cac34873eca55a80e369c0/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/44d15f6e408e224c5146ac90ab8f13681c1915076457caa6e21e2e173eb6d3b1"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "NoSql",
+            "BigData",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Containerization 101",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T08:50:00Z",
+        "stopper": "2015-09-10T09:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Gareth Western",
+                "bildeUri": "http://www.gravatar.com/avatar/c74585f38defd7a6ec672a8aa97111e8"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/250dbd7a84d219a3b0a253922d082e8277a4e1c04b3bf7747c7ce761da5bd4ca"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Docker",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Building microservices  with functional domain models and event sourcing",
+        "format": "presentation",
+        "starter": "2015-09-10T15:00:00Z",
+        "stopper": "2015-09-10T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Chris Richardson",
+                "bildeUri": "http://www.gravatar.com/avatar/a290a8643359e2495e1c6312e662012f"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/279dc8157e47df849206ff64a899f80316462e7e49db9c62923460e69f6f003e"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Application Architecture",
+            "Designs",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Keeping your frontend intact while the backend is breaking into pieces",
+        "format": "presentation",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Haakon Gjersvik Eriksen",
+                "bildeUri": "http://www.gravatar.com/avatar/f59eb8555b1b4dc60fb8eb7bb3426c24"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/0066fc82c5a3cb6d2e0fb84c45328bd5eb8969315a1f8bc38fcf9cf95a0b29eb"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Microservices",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Java EE 8 - What's new on the Web front?",
+        "format": "presentation",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "David Delabassee",
+                "bildeUri": "http://www.gravatar.com/avatar/9999629551902f546d4817c9840bb9f6"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d5a730b535101742943b9518186c63bc60624381f7191431692eb03f1d03abad"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "APIs",
+            "Java EE",
+            "topic:Java platforms",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Practical mutation testing with pitest",
+        "format": "workshop",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Henry Coles",
+                "bildeUri": "http://www.gravatar.com/avatar/07119e61665e8a7eea29e17b3e7e78ff"
+            },
+            {
+                "navn": "Seb Rose",
+                "bildeUri": "http://www.gravatar.com/avatar/a503d7cbdb4a8a795e1a0912668d076e"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/4ec8f9c9f9b79275e77fbe3e68fcff07b22a7d24fd278bac2139fdb5d057b9af"
+            },
+            null
+        ],
+        "rom": "Workshop Room 1",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "React Native: En revolusjon innen apputvikling?",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T07:20:00Z",
+        "stopper": "2015-09-09T07:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Magnús Dæhlen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/db1ee58c647ebb3248c2f3e7d9070afa271de3cb8a0fd5abe586519598faa0a1/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/46e9f8c969a6d9b28c8c0aa29b0f1c61b2e0a58dd328d11736d08a8d25d319ce"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Mobile",
+            "React",
+            "topic:Frontend",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "A dedicated follower of fashion",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T15:20:00Z",
+        "stopper": "2015-09-09T15:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Margaretha Miles",
+                "bildeUri": "http://www.gravatar.com/avatar/d2bcdd938ca70851f519295985d0febb"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/25d9cd475fbd46cf266cf96397b9e23bb775c775f01762b88e5c1a154d91b900"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Designs",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Event Sourcing?",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T16:40:00Z",
+        "stopper": "2015-09-09T16:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Tor Åge Ballo",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/f8b6f2b9928c3ae4cea6794656380be1cd17dd46f607a825b5b902d08783bba8/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/f2659655c5fe1a7ea7bfefc01e0947cc530b13d5b0b1fdf30d8e842003da16c1"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Application Architecture",
+            "Designs",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Så du gjør automatisert testing sa du?",
+        "format": "presentation",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Øystein Skadsem",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/0ddde7371d336df55b5ed7fa87e6f0482ed99499c6ea34c7be6b6de067d31b5f/image"
+            },
+            {
+                "navn": "Lars Andreas Eidsheim",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/c79fbfac19e20220ea7e55f2136a7d8d06e6a8f8e54de650eba57ca3050d58bc/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/7e2a84b017c3b241def441eb07b94d6604ed327225ad81a98b8c65a459b2fcae"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Testing",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Hvem kommer til å vinne kommunevalget?",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T08:30:00Z",
+        "stopper": "2015-09-10T08:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Filip van Laenen",
+                "bildeUri": "http://www.gravatar.com/avatar/e826d487dcab0851245fa9f908d563c6"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b3333440567e6dd738eac1015f9e5222a1e53db02f14a5caaa7bdcede2e39741"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "SmallData",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Create your own programming language",
+        "format": "workshop",
+        "starter": "2015-09-08T07:00:00Z",
+        "stopper": "2015-09-08T15:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kjetil Valle",
+                "bildeUri": "http://www.gravatar.com/avatar/979e2d6c1b9e43481f64ff6fbc2c9039"
+            },
+            {
+                "navn": "Bendik Solheim",
+                "bildeUri": "http://www.gravatar.com/avatar/8c7269978903498ad517f9a2ce9bca90"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/a1142678fcf52c769f39bd48c52e1ec0b51a9187c1c65f25e3face4d487a55d4"
+            },
+            null
+        ],
+        "rom": "Workshop Room 1",
+        "nokkelord": [
+            "Programming languages",
+            "Features in Languages",
+            "topic:Concepts / Theory",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Pulling Yourself to Nirvana",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T14:10:00Z",
+        "stopper": "2015-09-09T14:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "John L Fjellstad",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/eecadfda109e195b7efcd5973be5b87e522180fc3b70d72e86546c7a5cdf68cd/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/ca09d2849927138ac6e225305e0688cc1043d4541f4d503c3973def63f5fd02a"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Code Reviews",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "The dangers of building microservices",
+        "format": "presentation",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christopher Batey",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/bfefe3f36228a092fde3a39f3fbb83e3afc6cc8c405e1e32705cf82365b5c5bf/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/00fa2831883358d6f29e2e2f7e8d038d8ee119a121341142c294b662c009cf72"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Core Java",
+            "topic:Java platforms",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "CORS-headere",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T12:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sigurd Stendal",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/97114e09b2a3117a661a61b43b986c9535b8482984684baefe667be02dd124d7/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/80bdfa686279ef745d42533d1740c38a0b2d32dfde7640590553b56171e870fb"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Web Technologies",
+            "Security",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Java 8 in the highly distributed world",
+        "format": "presentation",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Oleg Zhurakousky",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/b9ed319b49366e431b025dd7530af2dcfa163219d77ed9b9bc554befcef0b936/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/49d4091bc0a7c81a7ec6d55c2e59afe254374400d6751a91bd0c55b9c910e68a"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Integration",
+            "BigData",
+            "topic:Backend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Front end for back end developers",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T11:30:00Z",
+        "stopper": "2015-09-09T11:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Mads Hoel",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/5abd272ae18e1c8d0adeb13c8f59f381afb431685e191db1e34aa81922642034/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/0556cd9691b419156473e601b5707b54a7c0b5c91670c4bdb2c66f0585782531"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Web Technologies",
+            "JavaScript",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "High Performance Lists in Java",
+        "format": "presentation",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Thomas Mauch",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/7aa7a16433b0d27dbdbf163d429c3f26901566c21f44bb827bf27415fd3d3109/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/3b2c46f15ec292bfbed82adb2984ef17e2c47748768167f9060b263a74e37659"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Memory",
+            "Performance",
+            "topic:Java platforms",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "First steps in Garbage Collector tuning",
+        "format": "presentation",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Nikita Salnikov-Tarnovski",
+                "bildeUri": "http://www.gravatar.com/avatar/3567dfb6f332dbbe31c9b179d1d297b3"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e4fb661062650188aff02abbd30c8959ca2848b22e9dca890e939881b8944533"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Memory",
+            "Performance",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Project Jigsaw – modularisering av JDK-en",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T15:10:00Z",
+        "stopper": "2015-09-09T15:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Henrik Wingerei",
+                "bildeUri": "http://www.gravatar.com/avatar/93adc27931ac7890d79bdcbcd426bff8"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e31d802a3ca9f7f901d15f8fc59b10eda9fec98361c3ded931963070b74b9689"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Core Java",
+            "Java SE",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Systemdokumentasjon med Markdown og Asciidoctor.",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T11:10:00Z",
+        "stopper": "2015-09-10T11:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Michael Gfeller",
+                "bildeUri": "http://www.gravatar.com/avatar/751886ee6646156662d7a299413e2519"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b3e861bbb276d41687baff1d6f91735b98ccac910e583533ab2c7ff162850ed7"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Making Java more dynamic",
+        "format": "presentation",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Rafael Winterhalter",
+                "bildeUri": "http://www.gravatar.com/avatar/bc96521f79789d75fa63cfa5c2758765"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/bbf8706a9a82ae8d986f44e7a80597b748f1456abd1e618d2a56691043b1eb46"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Core Java",
+            "Java SE",
+            "topic:Java platforms",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Microservices for Mortals",
+        "format": "presentation",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Bert Ertman",
+                "bildeUri": "http://www.gravatar.com/avatar/0ef5809f84b03b7e16c219a3a77db48f"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/cecd9da5ae398074f97c82182c15aea58271392994958ac3ccebc65988845199"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Juggling chainsaws while on fire: Introduction to Product Management",
+        "format": "presentation",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Lisa Long",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/a7251579a0da0185168abb85912461eb9075ccd65df21eb9a56511b1ffd6a2c5/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/39f48f35f259e6f4df221f145de8cc485613b5698b1c305727bea2245896af95"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "product",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Sanntidsovervåkning av Twitter med React.js",
+        "format": "workshop",
+        "starter": "2015-09-08T07:00:00Z",
+        "stopper": "2015-09-08T15:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Erik Wendel",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/29194fbfa23a9ab5b435e30837163a80dc88b1ee9e675d177c7c38e921068fe3/image"
+            },
+            {
+                "navn": "Kim Joar Bekkelund",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/e6eda7629853ef8ce4c7c91ea8d1356d53e4a0e0dc8ea276cdfbac5f8716db9d/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/ce5cb420b09fca71573c20bcb4805e51033c52dfc29f146d85275957de06b49c"
+            },
+            null
+        ],
+        "rom": "Workshop Room 2",
+        "nokkelord": [
+            "JavaScript",
+            "React",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Coding Culture",
+        "format": "presentation",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sven Peters",
+                "bildeUri": "http://www.gravatar.com/avatar/610be07888ce00983ed435ca575efe41"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/c488baa18594ea93c50aaddf56194ff3a05ceff76f8b7b2062ce1a3b950500df"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Culture",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Utvikling av apper for smartklokker i JavaScript",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T14:10:00Z",
+        "stopper": "2015-09-10T14:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Merethe Granevang",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/cda525c697c50f8c1f03586d2f2b98c83ef712331baf0af15d2ebcbec837b891/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/ea2a5b829b2a0ed900990bdcebc050650e90fee4a49506bfecdd806d57c72115"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Apps",
+            "JavaScript",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "A guided tour of the BigData technologies zoo",
+        "format": "presentation",
+        "starter": "2015-09-10T15:00:00Z",
+        "stopper": "2015-09-10T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Itamar Syn-Hershko",
+                "bildeUri": "http://www.gravatar.com/avatar/1bd776c3d70cec1b14dbfd6ac97c7810"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/57b6e022dbe6648dd839c575253c20dc3b5d67f53eca22a4745956ce36a387bc"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "NoSql",
+            "BigData",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Hvilken api-diskusjon har du?",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T16:20:00Z",
+        "stopper": "2015-09-09T16:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Vegard Hartmann",
+                "bildeUri": "http://www.gravatar.com/avatar/5af49da8c414d5b8037ff8e1babe851f"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/95cda2fe04d8e6df93221e404110a220d4460f3b3020d4fc47c199182e4d0213"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Designs",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Node.js compared to traditional Java EE App Servers",
+        "format": "presentation",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Niko Köbler",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/8830d3a347f4d7a1a22da288b65574e40f626a05589abbefc19a86fe4df807b0/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/2f3041244209f8eed692b2965ad970aee8b09d1321fe94357df37b78c97e426b"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Scalability",
+            "nonblocking",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Five Inconvenient Truths about REST",
+        "format": "presentation",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Filip van Laenen",
+                "bildeUri": "http://www.gravatar.com/avatar/e826d487dcab0851245fa9f908d563c6"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/f458b91182853fcb3f90724517ac58a2c65444119933986f81e27b58fb3add9c"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Angular 2 + TypeScript = true. Let's Play!",
+        "format": "presentation",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sirar Salih",
+                "bildeUri": "http://www.gravatar.com/avatar/14a7eeedfa6895a090d11ac29920f760"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/acebf1e3eee01e898dce83500151c00ddf734eafe9fc17721f550477890791dd"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Web Technologies",
+            "JavaScript",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "IoT LiveHacking with TinkerForge and Java8",
+        "format": "workshop",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sven Ruppert",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/fcbefcb5caec3be9c0c42faff720c2d0302dea3a6a89ea6deebb7d6f6ca4e31e/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/022a500bd0b03f35720d23de768c83532fc3b040be7fff0ba4bc6875601f46f7"
+            },
+            null
+        ],
+        "rom": "Workshop Room 1",
+        "nokkelord": [
+            "IoT",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "\"Bootiful\" Applications with Spring Boot",
+        "format": "presentation",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Josh Long",
+                "bildeUri": "http://www.gravatar.com/avatar/4886b019214662e71939af7bbca97e25"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/235238e493b9b589f28185fe4a08aea5ada26e2acf6e62662c9a6add8837e610"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "productivity",
+            "topic:Other Awesomeness",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "The Rule of Three",
+        "format": "presentation",
+        "starter": "2015-09-09T12:20:00Z",
+        "stopper": "2015-09-09T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kevlin Henney",
+                "bildeUri": "http://www.gravatar.com/avatar/4382e44b944c8fc3069191765dc665f2"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/66b7ea199bfbda4a3aedd2f3f9746d447ffed7f30d53d7cb0d65fdcd8b8141eb"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Development Practice",
+            "topic:Other Awesomeness",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Lærdom fra reisen til DevOps og Micro Services i Posten",
+        "format": "presentation",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Jøran Vagnby Lillesand",
+                "bildeUri": "http://www.gravatar.com/avatar/1682200011449a19f18ff3f31ba4373f"
+            },
+            {
+                "navn": "Stian Mathiassen",
+                "bildeUri": "http://www.gravatar.com/avatar/c93f18e65d0fb9a5cb1b01792afc5d0f"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/947a8775129172668fd3af3a7f52f3fe2893e3b3d0d1d138aadba4a4f5f290f3"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Paradigms",
+            "topic:Concepts / Theory",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Erfaringer med Clojure og Scala (og Java 8)",
+        "format": "presentation",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Alf Kristian Støyle",
+                "bildeUri": "http://www.gravatar.com/avatar/dba8f63859ce1f8e66a1f06a257f0f85"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/c8779c23b2b1396e31d712ed4e579a25e23f6c2c3d24bd20d9eba716192a941f"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Scala",
+            "Clojure",
+            "topic:Java platforms",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Ekorn i buksene (SQRL Secure Quick Reliable Login)",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T12:50:00Z",
+        "stopper": "2015-09-09T13:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Liv Kolås",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/f8dca9145e9cff5503ac7479573e15b9c0d350125776462d10c60635c53cd8a7/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/f400ed16352f851142ce8e0358c66091c93fbfddbaf5d847f842cc231f0f9545"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Security",
+            "Login",
+            "topic:Other Awesomeness",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Skaler frontend uten å måtte kaste alt",
+        "format": "presentation",
+        "starter": "2015-09-09T15:00:00Z",
+        "stopper": "2015-09-09T16:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Kent Andersen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/806ac52c9f60ac38b61c8503fca684a39bb57a0a117326e50940a2ec3ccb2283/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/eae591c8777d397253c6ef60caf5d9136d2b14370374fda7a93930d2dd88de3e"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "JavaScript",
+            "Arkitektur",
+            "topic:Frontend",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "JRebel under the covers - how is it even possible?",
+        "format": "presentation",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Simon Maple",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/961157e9a13ca46d1e82f3755e1b4af72f3bc419c9fbb3b882087c215d9e5994/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/65369441ee144c42fa77182009105851826df69f1b764c0df39d1fdd62e52388"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Java SE",
+            "Java EE",
+            "topic:Java platforms",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "Web push - bringing apps to the browser",
+        "format": "presentation",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Johannes Brodwall",
+                "bildeUri": "http://www.gravatar.com/avatar/4f603396c8723741d2665f87beb4d1f2"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/57968e58c8d3d34a9c0b5dee2d2d6d8b8d9128828b9e622ba892145dea38d17f"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Web Technologies",
+            "Mobile",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Helhetstesting",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T12:30:00Z",
+        "stopper": "2015-09-10T12:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Andreas Lowzow Morland",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/0d90cabaac11e129e26122aa11b875d1681080badcf9924baf39f9ef08079964/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/63385079d90ff720b5b1d655aaf414bf8001349a5fcb6269b90c488a319c06d0"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Lambdas and Streams Hands on Lab",
+        "format": "workshop",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Simon Ritter",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/ab446a76d5baed1c5317674e92185c5d9133f5a9aa1671433596db299da30879/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/01732b6c8fd0633cb5c974ee363822253c09d27361d0a529cf79bb3ed1706446"
+            },
+            null
+        ],
+        "rom": "Workshop Room 1",
+        "nokkelord": [
+            "Java SE",
+            "Functional",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Java modularity: life after Java 9",
+        "format": "presentation",
+        "starter": "2015-09-09T07:00:00Z",
+        "stopper": "2015-09-09T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Paul Bakker",
+                "bildeUri": "http://www.gravatar.com/avatar/8894a613cfca5771e7f03a204e6cd1cf"
+            },
+            {
+                "navn": "Sander Mak",
+                "bildeUri": "http://www.gravatar.com/avatar/54ef231a31560fa88933fcc80edfb718"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/22a1f3b6e6f831700223b20c579cb0d3f903ab4dac1ce96d761b92168c7dc2bc"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Core Java",
+            "Modularity",
+            "topic:Java platforms",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "The Lisp in the Machine: Clojure inside Braintree",
+        "format": "presentation",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Joe Nash",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/92ae3e670bd30861ed862e22e7f79e008a107ee89ae0677e9baf238c7777a4c0/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/fe5f92335066619c5aebb37f41ca47a2dcdbf034dcdbab2b78b2aba94c53edf1"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Integration",
+            "BigData",
+            "topic:Backend",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Easy Batch: batch processing with Java made easy",
+        "format": "presentation",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Mahmoud Ben Hassine",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/52bf2b6b45461b1b19fa2f3f0fc7ac327bfab6e09da1267282d5bb9cf5625eda/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/62beb3f48030ee38f658d5ebad4f1d0325002186cd7cc2d963e0140c7dddb1e9"
+            },
+            null
+        ],
+        "rom": "Room 3",
+        "nokkelord": [
+            "Batch processing",
+            "topic:Backend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Java Concurrency Under The Hood",
+        "format": "presentation",
+        "starter": "2015-09-09T13:40:00Z",
+        "stopper": "2015-09-09T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Gleb Smirnov",
+                "bildeUri": "http://www.gravatar.com/avatar/edb535019335d7947f80dbecb62cee88"
+            }
+        ],
+        "sprak": "en",
+        "niva": "advanced",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/e2e5e816259926481fcbe0edd8e1ceb4564d9b1d511af8b4ab93322c31058197"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Core Java",
+            "Memory",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Breaking the Monolith @ SpareBank 1",
+        "format": "presentation",
+        "starter": "2015-09-10T09:40:00Z",
+        "stopper": "2015-09-10T10:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Vidar Moe",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/bd49f45464654dfdc03de65016bf2d359ea3b74085c5f62defc236f8c56c6cc4/image"
+            },
+            {
+                "navn": "Stian Conradsen",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/3e11711f962349c829edee9124a704f78cedcba5c72ca23352bf8d933257802e/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/4c2fb78058f8b8de4b86562c6c114dbb707c0526ad57e27a1d9895ca85f86608"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Architecture in Practice",
+            "topic:Architecture",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Skrivetips for utviklere",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T07:20:00Z",
+        "stopper": "2015-09-10T07:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "June Henriksen",
+                "bildeUri": "http://www.gravatar.com/avatar/13473d1f5da77903517b3194663315e6"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/5664bfbc4917bae68942a2bafbd365941de928d67d75853ff96e47cabe7ae8de"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Wisdom"
+        ]
+    },
+    {
+        "tittel": "A Toolbox of Software Architecture Review Techniques",
+        "format": "presentation",
+        "starter": "2015-09-10T07:00:00Z",
+        "stopper": "2015-09-10T08:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Jason Baragry",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/a7fbe43ece3f211c6b27c9cdebf617ad66c0df44217d089221c8e39e2e0c9dbf/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/d88f03f69dd33212b3d1739f988427ea3105d6c6dd422c230484b3c8a095636b"
+            },
+            null
+        ],
+        "rom": "Room 2",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Graph Search and Discovery for your Dark Data",
+        "format": "presentation",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Michael Hunger",
+                "bildeUri": "http://www.gravatar.com/avatar/f522bc835d745f319a9567d63f5c0cc9"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/aa838a632866ef3f5a61c41cb72936ad793a9321bef2fd6c318b008b586a0e37"
+            },
+            null
+        ],
+        "rom": "Room 4",
+        "nokkelord": [
+            "Integration",
+            "NoSql",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "The age of orchestration: from Docker basics to cluster management",
+        "format": "presentation",
+        "starter": "2015-09-09T08:20:00Z",
+        "stopper": "2015-09-09T09:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Nicola Paolucci",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/0ec64f9d7a635da62a204d163d83ac12e7b86888c0f6fe0c0bfc7c31db3b9eac/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/2dbe066e15a64ad14105b994ff2f5a8c4227b51ec5bbec11390af5b2f06c36dd"
+            },
+            null
+        ],
+        "rom": "Room 6",
+        "nokkelord": [
+            "Server",
+            "Cloud",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "IntelliJ-O-Rama",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T11:10:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Sindre Mehus",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/fe58fd0ff59cf17da725fb1fcc0aa29c8c84c5217251192685bd7ea34fbd6f26/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/69c5b3b730522c97722f0bcc6425fd0446102fb5e177db8fab4f04b77f036d3b"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "topic:Craftmanship",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Metode savnet!",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T15:40:00Z",
+        "stopper": "2015-09-09T15:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Marvin Bredal Lillehaug",
+                "bildeUri": "http://www.gravatar.com/avatar/f87f34b693c3daf2aad42abdfc30fe2b"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/89c023a4ce72b7ea2442bb4bd2b310087e26b2dfa10d5b7de5a11fd1b74c0106"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Clean Code",
+            "build system",
+            "topic:Craftmanship",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Java Flight Recorder Hands On Lab",
+        "format": "workshop",
+        "starter": "2015-09-08T07:00:00Z",
+        "stopper": "2015-09-08T11:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Klara Ward",
+                "bildeUri": "http://www.gravatar.com/avatar/62062c4d62376f5bf2dd7b261c476da2"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/fe2e3c6aecec2b248fb233f087dd6ce014711ca56ac5f6486b854d1bf3a7a950"
+            },
+            null
+        ],
+        "rom": "Workshop Room 4",
+        "nokkelord": [
+            "Performance",
+            "Java SE",
+            "topic:Java platforms",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Offline først og søk på steroider med Couchbase Lite og Elasticsearch",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T07:30:00Z",
+        "stopper": "2015-09-09T07:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Vegard Haugstvedt",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/39a773bdf412ffa0122ff85853c321502510a92d78c12837a89c43d337169eba/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/009d418e5cd12c6e19490deb010d63cddfacdb715d005f99f5e66b02c20c20e5"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Cloud",
+            "Mobile search",
+            "topic:Backend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Building Microservice Architectures",
+        "format": "presentation",
+        "starter": "2015-09-10T12:20:00Z",
+        "stopper": "2015-09-10T13:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Neal Ford",
+                "bildeUri": "http://www.gravatar.com/avatar/ffa3043f44a3d0973490cb40b475428e"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/61cae85a4fe2cfceef4e3ee0ab2c2a0b3a07c6fbed10f56b44d7ef93cd157e6f"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Architecture in Practice",
+            "Application Architecture",
+            "topic:Architecture",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "EcmaScript 6: The close future of JavaScript",
+        "format": "presentation",
+        "starter": "2015-09-10T11:00:00Z",
+        "stopper": "2015-09-10T12:00:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Christian Johansen",
+                "bildeUri": "http://www.gravatar.com/avatar/6e7ddb6784d284c385f3f0f307ebf90d"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/eb583a027877011f642654b2fe14bff0f855b76ba8aeb27bc11bc4976051dbb4"
+            },
+            null
+        ],
+        "rom": "Room 1",
+        "nokkelord": [
+            "Web Technologies",
+            "JavaScript",
+            "topic:Frontend",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "My formula racer has WebSockets, does yours?",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T10:10:00Z",
+        "stopper": "2015-09-10T10:20:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Magnus Bae",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/55e7c2a7690732571597eb59fafe0bad0de0b337e0db8e34496fdf1e594efa4e/image"
+            }
+        ],
+        "sprak": "en",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/01420a5f05e6f0f6c21d55f2facc31f1895ce27fbd75f2f6eea7956b3a440fcb"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "IoT",
+            "WebSockets",
+            "topic:Other Awesomeness",
+            "type:Experience reports"
+        ]
+    },
+    {
+        "tittel": "Kom i gang med Maskinlæring!",
+        "format": "lightning-talk",
+        "starter": "2015-09-10T08:20:00Z",
+        "stopper": "2015-09-10T08:30:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Dervis Mansuroglu",
+                "bildeUri": "http://javazone.no/javazone-web-api/speakers/703b4df9fc0e0aef6ed4b95ec2c170d232bcc8828110889fdb05745bf02aadeb/image"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/2f96b27566ef47d582a0010005d608fa6bad1bcae69ce8ec7c162e03ad8485cb"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Artifical Intelligence",
+            "topic:Concepts / Theory",
+            "type:Knowledge Practice"
+        ]
+    },
+    {
+        "tittel": "Up in the sky: Architecture and Deployment of Microservices for the Cloud",
+        "format": "presentation",
+        "starter": "2015-09-10T13:40:00Z",
+        "stopper": "2015-09-10T14:40:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Axel Fontaine",
+                "bildeUri": "http://www.gravatar.com/avatar/86d52caa5e795871fd139cae32b3efd6"
+            }
+        ],
+        "sprak": "en",
+        "niva": "intermediate",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/9d8b67334c65cd7cd21dee8fe8de3f9128f70a923107ee365427747e341a9c54"
+            },
+            null
+        ],
+        "rom": "Room 5",
+        "nokkelord": [
+            "Server",
+            "Cloud",
+            "topic:Backend",
+            "type:Research Innovation"
+        ]
+    },
+    {
+        "tittel": "Bygg for endring",
+        "format": "lightning-talk",
+        "starter": "2015-09-09T09:40:00Z",
+        "stopper": "2015-09-09T09:50:00Z",
+        "foredragsholdere": [
+            {
+                "navn": "Jan Henrik Gundelsby",
+                "bildeUri": "http://www.gravatar.com/avatar/fe68375258216e805f0c03a55b79e6ac"
+            }
+        ],
+        "sprak": "no",
+        "niva": "beginner",
+        "links": [
+            {
+                "rel": "detaljer",
+                "href": "http://javazone.no/javazone-web-api/events/javazone_2015/sessions/b6450bddba21119857ad8857e56ba207f614bac072195731164d4afa6a757ae6"
+            },
+            null
+        ],
+        "rom": "Room 7",
+        "nokkelord": [
+            "Architecture in Practice",
+            "topic:Architecture",
+            "type:Wisdom"
+        ]
+    }
+]

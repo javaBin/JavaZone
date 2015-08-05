@@ -110,7 +110,9 @@
         ["Hans Ove Ringstad", "/assets/img/javabin/hans_ove_ringstad.jpg", "#"]
     ];
 
-    jz.data.program = function(cb) {
+    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions';
+
+    jz.data.program = function() {
         var def = $.Deferred();
 
         function parse(err, res) {
@@ -122,9 +124,57 @@
             def.resolve(res.body);
         }
 
-        request('http://javazone.no/javazone-web-api/events/javazone_2015/sessions')
+        request(baseUrl)
         .end(parse);
 
         return def;
     }
+
+    jz.data.talk = function(id) {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(res.body);
+        }
+
+        request(baseUrl + '/' + id)
+        .end(parse);
+
+        return def;
+    }
+
+    jz.data.workshops = function() {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(JSON.parse(res.text));
+        }
+
+        request('http://test.javazone.no/moosehead/data/workshopList')
+        .end(parse);
+
+        return def;
+    }
+
+    jz.data.workshopStatus = function(status) {
+        switch (status) {
+            case 'FREE_SPOTS': return {className: 'free-spots', no: 'Ledige plasser', en: 'Free spots'};
+            case 'FEW_SPOTS': return {className: 'few-spots', no: 'Få plasser', en: 'Few spots'};
+            case 'FULL': return {className: 'full', no: 'Full', en: 'Full'};
+            case 'VERY_FULL': return {className: 'waiting-list', no: 'Venteliste', en: 'Waiting list'};
+            case 'CLOSED': return {className: 'closed', no: 'Stengt', en: 'Closed'};
+            default: return {className: 'not-opened', no: 'Ikke åpnet', en: 'Not opened'};
+        }
+    }
+
 })(window.superagent, window.$, window.jz = window.jz || {});
