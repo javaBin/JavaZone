@@ -160,7 +160,7 @@
             def.resolve(JSON.parse(res.text));
         }
 
-        request('http://test.javazone.no/moosehead/data/workshopList')
+        request('http://javazone.no/moosehead/data/workshopList')
         .end(parse);
 
         return def;
