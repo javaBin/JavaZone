@@ -87,7 +87,7 @@
     background: #a10035;
 }
 
-.kids-page .workshop-registration.very-full .workshop-status:before {
+.kids-page .workshop-registration.waiting-list .workshop-status:before {
     background: #a10035;
 }
 
