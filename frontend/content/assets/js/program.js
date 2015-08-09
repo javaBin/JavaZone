@@ -65,51 +65,45 @@
         return _.isEmpty(date) ? _.first(dates) : date;
     }
 
-    function transformTalk() {
-        return _.compose(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
+    function format(timestamp) {
+        var d = new Date(timestamp);
+        var hours = d.getHours() + '';
+        if (hours.length === 1)
+            hours = '0' + hours;
+
+        var minutes = d.getMinutes() + '';
+        if (minutes.length === 1)
+            minutes = '0' + minutes;
+
+        return hours + ':' + minutes;
     }
 
+    var transformTalk = _.compose(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
+
     function createSlots(memo, current) {
-        console.log(current);
         var timestamp = current.starter;
         if (current.format === 'Presentation') {
-            var slot = memo[timestamp] || [];
-            slot.push(current);
-            memo[timestamp] = slot;
+            var slot = _.find(memo, {timestamp:timestamp});
+            if (slot)
+                slot.talks.push(current);
+            else
+                memo.push({timestamp: timestamp, talks: [current], slot: format(timestamp)});
         } else {
-            timestamp = _.chain(Object.keys(memo))
-                    .filter(function(slot) {
-                            return slot <= timestamp;
-                    })
-                    .last()
-                    .value();
-            var slot = memo[timestamp];
-            slot.push(current);
-            memo[timestamp] = slot;
+            var slot = _(memo)
+                .filter(function(slot) {
+                    return slot.timestamp <= timestamp;
+                })
+                .last();
+            slot.talks.push(current);
         }
 
         return memo;
     }
 
     function groupByTimeslots(date) {
-        console.log(date);
         date.presentations = _(date.presentations)
-            .sortByOrder(['format', 'starter'], ['desc', 'asc'])
-            .map(function(talk) {
-                return talk.starter + ' ' + talk.format;
-            })
-            //.reduce(createSlots, {})
-            .value();
-        // date.presentations = _(date.presentations)
-        //     .groupBy(function(presentation) {
-        //         return presentation.starter.substr(11, 5);
-        //     })
-        //     .reduce(function(mem, slot, key) {
-        //         if (slot.])
-        //     }, [])
-        //     .transform(toObject, [])
-        //     .value();
-        console.log(date);
+            .sortByOrder(['starter', 'format'], [true, false])
+            .reduce(createSlots, []);
         return date;
     }
 
@@ -118,7 +112,7 @@
             .filter(function(talk) {
                 return talk.starter && talk.format !== 'workshop';
             })
-            .map(transformTalk())
+            .map(transformTalk)
             .groupBy(day)
             .transform(function(result, presentations, date) {
                 result.push({date: date, presentations: presentations});
@@ -309,7 +303,6 @@
     }
 
     function renderSuccess(data) {
-        console.log(data);
         program = transformToDays(data);
         console.log(program);
         dates = extractDates(data);
@@ -317,7 +310,6 @@
         dateFilter = findInitialDate(dates);
         console.log(dateFilter);
         console.log(program);
-        //program = transformToCategories(data);
         categories = extractCategories(data);
         renderFilter();
         renderProgram();
@@ -334,9 +326,9 @@
         var programForDate = filterDate(dateFilter);
         console.log(programForDate);
         filteredProgram = filterProgram(_.cloneDeep(programForDate));
-        var template = Handlebars.compile(document.querySelector('.program-categories-template').innerHTML);
+        var template = Handlebars.compile(document.querySelector('.program-day-template').innerHTML);
         var container = document.querySelector('.javazone-program');
-        container.innerHTML = template({topics: filteredProgram});
+        container.innerHTML = template(filteredProgram);
     }
 
     function renderError(err) {
