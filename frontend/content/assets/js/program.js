@@ -346,7 +346,9 @@
 
     function listenForHashChange() {
         window.addEventListener('hashchange', function() {
+            $('.active-day').removeClass('active-day');
             var hash = window.location.hash.substr(1);
+            $('a[href="#' + hash + '"]').addClass('active-day');
             var d = _.find(dates, function(date) {
                 return date.getDate() == hash;
             });
@@ -356,8 +358,10 @@
 
         if (window.location.hash === '')
             window.location.hash = dateFilter.getDate();
-        else
+        else {
             renderProgram();
+            $('a[href="' + window.location.hash + '"]').addClass('active-day');
+        }
     }
 
     function renderError(err) {

@@ -16,8 +16,10 @@
     background-position: 0 33px;
 }
 
-.program-days a:active {
-    color: red;
+.program-days a.active-day {
+    color: #ff8641;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, #ff8641);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #ff8641);
 }
 
 .program-day {
