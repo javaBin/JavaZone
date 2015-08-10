@@ -47,11 +47,11 @@
                     <div class="section-content">
                     {{#each talks}}
                         <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
-                            <i class="submission-icon {{icon}}" title="{{format}}"></i>
-                            <img src="{{flag}}" alt="{{sprak}}" class="submission-flag" />
                             <a href="{{detaljer}}">{{tittel}}</a>
+                            {{#if icon}}<i class="submission-icon {{icon}}" title="{{format}}"></i>{{/if}}
+                            <img src="{{flag}}" alt="{{sprak}}" class="submission-flag" />
                         </h2>
-                        <ul class="submission-keywords">
+                        <ul class="submission-keywords" style="display: none;">
                         {{#each nokkelord}}
                             <li class="submission-keyword {{c}}">{{l}}</li>
                         {{/each}}

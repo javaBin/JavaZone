@@ -12,8 +12,7 @@
 
     var formatMapping = {
         'lightning-talk': 'icon-flash',
-        'workshop': 'icon-wrench',
-        'presentation': 'icon-easel'
+        'presentation': undefined
     }
 
     var languageMapping = {
