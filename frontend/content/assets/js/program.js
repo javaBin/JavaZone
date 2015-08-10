@@ -247,26 +247,40 @@
     function filterProgram(prog) {
         if (!difficultiesFilter.length && !categoriesFilter.length)
             return prog;
-
-        return _(prog)
+        console.log(prog);
+        prog.presentations = _(prog.presentations)
             .map(function(p) {
-                if (categoriesFilter.length && categoriesFilter.indexOf(p.key) === -1) {
-                    p.value = [];
-                    return p;
-                }
+                console.log(p);
+                // if (categoriesFilter.length && categoriesFilter.indexOf(p.key) === -1) {
+                //     p.value = [];
+                //     return p;
+                // }
 
-                p.value = _.filter(p.value, function(submission) {
+                p.talks = _.filter(p.talks, function(talk) {
                     var isActive = true;
 
                     if (difficultiesFilter.length)
-                        isActive = isActive && difficultiesFilter.indexOf(_.capitalize(submission.niva)) >= 0;
+                        isActive = isActive && difficultiesFilter.indexOf(_.capitalize(talk.niva)) >= 0;
 
                     return isActive;
                 });
+
+                console.log(p.talks);
+
+                // p. = _.filter(p.value, function(submission) {
+                //     var isActive = true;
+
+                //     if (difficultiesFilter.length)
+                //         isActive = isActive && difficultiesFilter.indexOf(_.capitalize(submission.niva)) >= 0;
+
+                //     return isActive;
+                // });
                 return p;
-            }).filter(function(category) {
+            })/*.filter(function(category) {
                 return category.value.length > 0;
-            }).value();
+            })*/.value();
+
+        return prog;
     }
 
     function filterDate(date) {
