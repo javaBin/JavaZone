@@ -2,6 +2,8 @@
 
     jz.data = {};
 
+    jz.data.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
     // 2015:
     jz.data.partners = [
         ["Microsoft", "Microsoft.jpg", "http://www.microsoft.no/"],

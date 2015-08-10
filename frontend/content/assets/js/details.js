@@ -62,7 +62,30 @@
         submission.icon = formatMapping[submission.format];
         submission.format = _.capitalize(submission.format);
         submission.sprak = languageMapping[submission.sprak];
+        submission.starter = formatDate(submission.starter, submission.stopper);
         return submission;
+    }
+
+    function formatDate(start, end) {
+        var d = new Date(start);
+        var day = jz.data.days[d.getDay()];
+        var date = d.getDate();
+        var start = formatTime(d);
+        var end = formatTime(new Date(end));
+
+        return day + ', September ' + date + 'th 2015 at ' + start + '-' + end;
+    }
+
+    function formatTime(t) {
+        var hours = t.getHours() + '';
+        if (hours.length === 1)
+            hours = 0 + hours;
+
+        var minutes = t.getMinutes() + '';
+        if (minutes.length === 1)
+            minutes = 0 + minutes;
+
+        return hours + ':' + minutes;
     }
 
     function renderSuccess(submission) {

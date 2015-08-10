@@ -57,12 +57,22 @@
     }
 
     function findInitialDate(dates) {
-        var today = new Date().getDate();
+        var hash = window.location.hash.substr(1);
+        if (hash !== '') {
+            var date = _.find(dates, function(date) { return date.getDate() == hash; });
+            if (_.isDate(date))
+                return date;
+        }
+
+        var today = new Date();
+        if (today.getMonth() !== 8)
+            return _.first(dates);
+
         var date = _.find(dates, function(date) {
-            return date.getDate() === today;
+            return date.getDate() === today.getDate();
         });
 
-        return _.isEmpty(date) ? _.first(dates) : date;
+        return _.isDate(date) ? date : _.first(dates);
     }
 
     function format(timestamp) {
@@ -260,7 +270,6 @@
     }
 
     function filterDate(date) {
-        console.log(date);
         return _.find(program, function(p) {
             return p.date == date.getDate();
         });
@@ -304,15 +313,20 @@
 
     function renderSuccess(data) {
         program = transformToDays(data);
-        console.log(program);
         dates = extractDates(data);
-        console.log(dates);
         dateFilter = findInitialDate(dates);
-        console.log(dateFilter);
-        console.log(program);
         categories = extractCategories(data);
+        renderDates();
         renderFilter();
-        renderProgram();
+        listenForHashChange();
+    }
+
+    function renderDates() {
+        var template = Handlebars.compile(document.querySelector('.program-days-template').innerHTML);
+        var container = document.querySelector('.program-days');
+        container.innerHTML = template(dates.map(function(date) {
+            return {url: date.getDate(), text: jz.data.days[date.getDay()]};
+        }));
     }
 
     function renderFilter() {
@@ -329,6 +343,22 @@
         var template = Handlebars.compile(document.querySelector('.program-day-template').innerHTML);
         var container = document.querySelector('.javazone-program');
         container.innerHTML = template(filteredProgram);
+    }
+
+    function listenForHashChange() {
+        window.addEventListener('hashchange', function() {
+            var hash = window.location.hash.substr(1);
+            var d = _.find(dates, function(date) {
+                return date.getDate() == hash;
+            });
+            dateFilter = d;
+            renderProgram();
+        });
+
+        if (window.location.hash === '')
+            window.location.hash = dateFilter.getDate();
+        else
+            renderProgram();
     }
 
     function renderError(err) {

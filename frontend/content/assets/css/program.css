@@ -1,3 +1,25 @@
+.program-days {
+    text-align: center;
+}
+
+.program-days ul:before {
+    display: none;
+}
+
+.program-days li {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.program-days a {
+    background-position: 0 33px;
+}
+
+.program-days a:active {
+    color: red;
+}
+
 .program-day {
     margin-bottom: 2.5em;
 }
