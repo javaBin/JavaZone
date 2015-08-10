@@ -1,5 +1,9 @@
 (function(_, jz) {
 
+    var mapping = {
+        
+    }
+
     function transform(data) {
         return _(data)
             .filter(_.matchesProperty('format', 'workshop'))
