@@ -45,7 +45,8 @@
         ["Red Hat", "redhat_2015.png", "http://www.redhat.com/en"],
         ["Hazelcast", "hazelcast_2015.png", "http://hazelcast.com"],
         ["Schibsted", "schibsted_2015.png", "http://www.schibsted.com"],
-        ["Sans", "sans_2015.png", "https://www.sans.org"]
+        ["Sans", "sans_2015.png", "https://www.sans.org"],
+        ["IBM", "ibm_2014.png", "http://www.ibm.com/no/no/"]
     ];
 
     jz.data.academypartners = [
@@ -149,4 +150,34 @@
 
         return def;
     }
+
+    jz.data.workshops = function() {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(JSON.parse(res.text));
+        }
+
+        request('http://javazone.no/moosehead/data/workshopList')
+        .end(parse);
+
+        return def;
+    }
+
+    jz.data.workshopStatus = function(status) {
+        switch (status) {
+            case 'FREE_SPOTS': return {className: 'free-spots', no: 'Ledige plasser', en: 'Free spots'};
+            case 'FEW_SPOTS': return {className: 'few-spots', no: 'Få plasser', en: 'Few spots'};
+            case 'FULL': return {className: 'waiting-list', no: 'Venteliste', en: 'Venteliste'};
+            case 'VERY_FULL': return {className: 'full', no: 'Ingen ledige plasser', en: 'No free spots'};
+            case 'CLOSED': return {className: 'closed', no: 'Stengt', en: 'Closed'};
+            default: return {className: 'not-opened', no: 'Ikke åpnet', en: 'Not opened'};
+        }
+    }
+
 })(window.superagent, window.$, window.jz = window.jz || {});

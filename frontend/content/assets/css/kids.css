@@ -63,3 +63,39 @@
     background-image: url('/assets/img/kids/keyboard.jpg');
     height: 500px;
 }
+
+.kids-page .workshop-status:before {
+    border-radius: 100%;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    width: 20px;
+}
+
+.kids-page .workshop-registration.free-spots .workshop-status:before {
+    background: #149089;
+}
+
+.kids-page .workshop-registration.few-spots .workshop-status:before {
+    background: #fcaf17;
+}
+
+.kids-page .workshop-registration.full .workshop-status:before {
+    background: #a10035;
+}
+
+.kids-page .workshop-registration.waiting-list .workshop-status:before {
+    background: #a10035;
+}
+
+.kids-page .workshop-registration.not-opened .workshop-status:before {
+    background: #101010;
+}
+
+.kids-page .workshop-registration.closed .workshop-status:before {
+    background: #101010;
+    opacity: .5;
+}
