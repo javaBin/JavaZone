@@ -2,7 +2,6 @@
 
 <div class="jumbotron container">
     <h1>Workshops</h1>
-    <h2>Workshops.</h2>
 </div>
 
 <div class="javazone-workshops">
@@ -13,18 +12,26 @@
     <div class="section container cf">
         {{#each this}}
             <div class="sub-section cf">
-                <h1 class="section-header">{{key}}</h1>
+                <h2 class="section-header"><a href="{{detaljer}}">{{tittel}}</a></h2>
                 <div class="section-content">
-                {{#each value}}
-                    <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
-                        <a href="{{detaljer}}">{{tittel}}</a>
-                    </h2>
+                    <p>
+                        {{description}}
+                    </p>
                     <p class="submission-speakers">
+                        <h2>{{speakerTitle}}</h2>
+                    <p>
                     {{#each foredragsholdere}}
                         <span class="submission-speaker"><img src="{{bildeUri}}" />{{navn}}</span>
                     {{/each}}
                     </p>
-                {{/each}}
+                    <h2>When</h2>
+                    <p class="when">
+                        {{when}}    
+                    </p>
+                    </p>
+                    <p class="workshop-registration">
+                        <a href="#" class="button">Registration<span class="status">({{status}})</span></a>
+                    </p>
                 </div>
             </div>
         {{/each}}

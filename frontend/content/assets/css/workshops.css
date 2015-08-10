@@ -1,9 +1,8 @@
-.workshop-page .section-content a {
+.workshop-page .section-header a {
     background-position: 0 22px;
 }
 
 .workshop-page .section-content h2 {
-    /*border-bottom: 1px solid #999;*/
     display: inline-block;
     margin-bottom: 0.25em;
     position: relative;
@@ -21,4 +20,13 @@
     margin-bottom: -5px;
     margin-right: 5px;
     width: 24px;
+}
+
+.workshop-page .workshop-registration .status {
+    /*display: inline-block;*/
+    padding-left: 10px;
+}
+
+.workshop-page .section-content p:first-child {
+    margin-top: .4em;
 }
