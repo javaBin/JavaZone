@@ -1,7 +1,15 @@
 <% set('page', 'workshop-page') %>
 
+<div class="jumbotron illustration-ears">
+    <%= partial('assets/svg/illustrations/ears.svg') %>
+</div>
+
 <div class="jumbotron container">
     <h1>Workshops</h1>
+    <p>
+    If you're more into hands-on experiences, the JavaZone workshops might be something for you. This year, as last year,
+    we have a full day dedicated to workshops before JavaZone officially begins. We also have a few, shorter workshops during the two days of presentations.
+    </p>
 </div>
 
 <div class="javazone-workshops">
@@ -15,7 +23,8 @@
                 <h2 class="section-header"><a href="{{detaljer}}">{{tittel}}</a></h2>
                 <div class="section-content">
                     <p>
-                        {{description}}
+                        {{description}}<br />
+                        <a href="{{detaljer}}">More details</a>
                     </p>
                     <h2>{{speakerTitle}}</h2>
                     <p class="submission-speakers cf">
