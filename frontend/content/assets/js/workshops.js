@@ -25,6 +25,7 @@
         return function(workshop) {
             var workshopId = mapping[workshop.id];
             var status = _.find(workshopList, {'id': workshopId});
+            workshop.workshopId = workshopId;
             workshop.description = status.description;
             workshop.status = jz.data.workshopStatus(status.status).en;
             return workshop;
