@@ -1,5 +1,5 @@
-.program-days {
-    text-align: center;
+.program-days ul {
+    padding-left: 0;
 }
 
 .program-days ul:before {

@@ -1,23 +1,30 @@
 (function(_, jz) {
 
-    var days = [
-        'Monday', 'Tuesday', 'Wednesday', 'Thursday'
-    ];
-
     function transform(data) {
         return _(data)
             .filter(_.matchesProperty('format', 'workshop'))
-            .map(_.compose(day, extractDetailsLink))
-            .groupBy(_.property('day'))
+            .map(_.compose(timestamp, extractDetailsLink))
+            .groupBy(_.property('timestamp'))
             .transform(function(result, value, key) {
                 result.push({key: key, value: value})
             }, [])
+            .sortBy('key')
+            .map(function(d) {
+                d.key = day(d.key);
+                return d;
+            })
             .value();
     }
 
-    function day(workshop) {
-        workshop.day = days[(new Date(workshop.starter)).getDay() - 1];
+    function timestamp(workshop) {
+        var date = new Date(workshop.starter);
+        workshop.timestamp = new Date('2015-' + (date.getMonth() + 1) + '-' + date.getDate()).getTime();
         return workshop;
+    }
+
+    function day(timestamp) {
+        var date = new Date(parseInt(timestamp, 10));
+        return jz.data.days[date.getDay()] + ' ' + date.getDate() + 'th';
     }
 
     function extractDetailsLink(workshop) {
