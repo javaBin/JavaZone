@@ -35,7 +35,6 @@
 }
 
 .javazone-program .section-content h2 {
-    /*border-bottom: 1px solid #999;*/
     display: inline-block;
     font-size: 1.1em;
     margin-bottom: 0.15em;
@@ -117,6 +116,11 @@
     content: '&';
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.javazone-program .submission-speaker {
+    font-size: .9em;
+    font-weight: 300;
 }
 
 .javazone-program .submission-speaker img {
