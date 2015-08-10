@@ -325,7 +325,7 @@
         var template = Handlebars.compile(document.querySelector('.program-days-template').innerHTML);
         var container = document.querySelector('.program-days');
         container.innerHTML = template(dates.map(function(date) {
-            return {url: date.getDate(), text: jz.data.days[date.getDay()]};
+            return {url: date.getDate(), text: jz.data.days[date.getDay()] + ' ' + date.getDate() + 'th'};
         }));
     }
 
@@ -338,7 +338,6 @@
 
     function renderProgram() {
         var programForDate = filterDate(dateFilter);
-        console.log(programForDate);
         filteredProgram = filterProgram(_.cloneDeep(programForDate));
         var template = Handlebars.compile(document.querySelector('.program-day-template').innerHTML);
         var container = document.querySelector('.javazone-program');
