@@ -2,6 +2,58 @@
 	text-align: center;
 }
 
+.index-page .movie {
+    border: 1px solid black;
+    display: inline-block;
+    height: 140px;
+    margin-right: 51px;
+    text-align: center;
+    vertical-align: top;
+    width: 250px;
+}
+
+.movie-1 {
+    background-image: url('/assets/img/movies/movie_1@2x.jpg');
+    background-size: contain;
+}
+
+.play {
+    -webkit-transition: background-color .4s ease;
+    -moz-transition: background-color .4s ease;
+    -o-transition: background-color .4s ease;
+    transition: background-color .4s ease;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    position: relative;
+    top: 45px;
+    width: 50px;
+}
+
+.play:before {
+    border-width: 15px;
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    border-color: transparent;
+    border-left-color: rgba(255, 255, 255, .75);
+    border-style: solid;
+    content: '';
+    display: block;
+    left: 20px;
+    position: absolute;
+    top: 12px;
+}
+
+.play:hover {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.index-page .movie:last-child {
+    margin-right: 0;
+}
+
 .index-page h1 {
 	margin-top: 0;
 	font-size: 1.4em;
