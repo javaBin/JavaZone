@@ -30,25 +30,31 @@
     border-bottom: 1px solid black;
 }
 
+.javazone-program .section-content h2:first-child {
+    margin-top: .85em;
+}
+
 .javazone-program .section-content h2 {
     /*border-bottom: 1px solid #999;*/
     display: inline-block;
-    margin-bottom: 0.25em;
+    font-size: 1.1em;
+    margin-bottom: 0.15em;
     position: relative;
 }
 
 .javazone-program .section-content h2 a {
-    background-position: 0 21px;
+    background-position: 0 16px;
 }
 
 .javazone-program .submission .submission-icon {
     font-size: .7em;
-    opacity: .5;
+    opacity: .75;
     position: relative;
 }
 
 .javazone-program .submission .submission-flag {
     height: 24px;
+    opacity: .5;
     position: relative;
     top: 5px;
     width: 24px;
@@ -77,8 +83,8 @@
 }
 
 .javazone-program .section-content ul + p {
-    margin-bottom: 1.7em;
-    margin-top: .02em;
+    margin-bottom: .5em;
+    margin-top: 0;
 }
 
 .javazone-program ul {
