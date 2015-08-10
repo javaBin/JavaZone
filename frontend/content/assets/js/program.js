@@ -247,40 +247,33 @@
     function filterProgram(prog) {
         if (!difficultiesFilter.length && !categoriesFilter.length)
             return prog;
-        console.log(prog);
+
         prog.presentations = _(prog.presentations)
             .map(function(p) {
-                console.log(p);
-                // if (categoriesFilter.length && categoriesFilter.indexOf(p.key) === -1) {
-                //     p.value = [];
-                //     return p;
-                // }
-
                 p.talks = _.filter(p.talks, function(talk) {
                     var isActive = true;
 
                     if (difficultiesFilter.length)
                         isActive = isActive && difficultiesFilter.indexOf(_.capitalize(talk.niva)) >= 0;
 
+                    if (categoriesFilter.length)
+                        isActive = isActive && hasCategory(talk, categoriesFilter);
+
                     return isActive;
                 });
 
-                console.log(p.talks);
-
-                // p. = _.filter(p.value, function(submission) {
-                //     var isActive = true;
-
-                //     if (difficultiesFilter.length)
-                //         isActive = isActive && difficultiesFilter.indexOf(_.capitalize(submission.niva)) >= 0;
-
-                //     return isActive;
-                // });
                 return p;
-            })/*.filter(function(category) {
-                return category.value.length > 0;
-            })*/.value();
+            })
+            .filter(function(p) {
+                return p.talks.length > 0;
+            })
+            .value();
 
         return prog;
+    }
+
+    function hasCategory(talk, categories) {
+        return _.intersection(_.pluck(talk.nokkelord, 'l'), categories).length > 0;
     }
 
     function filterDate(date) {
