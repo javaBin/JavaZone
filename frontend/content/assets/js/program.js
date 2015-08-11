@@ -87,7 +87,7 @@
         return hours + ':' + minutes;
     }
 
-    var transformTalk = _.compose(_.compose(flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
+    var transformTalk = _.compose(_.compose(room, flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
 
     function createSlots(memo, current) {
         var timestamp = current.starter;
@@ -180,6 +180,11 @@
             .value();
 
             return {difficulty: categories[0], categories: categories[1]};
+    }
+
+    function room(submission) {
+        submission.roomNumber = _.last(submission.rom.split(' '));
+        return submission;
     }
 
     function flag(submission) {

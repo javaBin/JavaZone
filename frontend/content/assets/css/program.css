@@ -59,6 +59,22 @@
     width: 24px;
 }
 
+.javazone-program .submission .room-number {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 100%;
+    color: #fff;
+    content: '';
+    display: inline-block;
+    font-size: .7em;
+    font-weight: 400;
+    height: 20px;
+    margin-left: 7px;
+    position: relative;
+    text-align: center;
+    top: -2px;
+    width: 20px;
+}
+
 @media (min-width: 768px) {
     .javazone-program .submission .submission-icon {
         left: -30px;
@@ -67,10 +83,7 @@
     }
 
     .javazone-program .submission .submission-flag {
-        /*left: -34px;
-        position: absolute;
-        top: 41px;*/
-        margin-left: 3px;
+        margin-left: 7px;
     }
 }
 
