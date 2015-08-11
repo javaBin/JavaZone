@@ -3,6 +3,7 @@
 
 	var routes = {
 		'.*': [jz.menu.setActive, jz.menu.initializeMenu],
+        '^/$': jz.index,
 		'partners': jz.partners,
 		'tickets': jz.tickets,
 		'contact': jz.contact,
