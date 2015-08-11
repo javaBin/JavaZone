@@ -16,8 +16,14 @@
 
         if (d.days > 0)
             el.innerHTML = d.days + ' days';
+        else if (d.hours > 0)
+            el.innerHTML = d.hours + ' hours';
+        else if (d.minutes > 0)
+            el.innerHTML = d.minutes + ' minutes';
+        else if (d.seconds > 0)
+            el.innerHTML = d.seconds + ' seconds';
         else
-            el.innerHTML = d.days + ' days<br />' + d.hours + ' hours<br />' + d.minutes + ' minutes <br />' + d.seconds + ' seconds';
+            el.innerHTML = 'Is here!';
 
         setTimeout(function() {
             countdown(el, goal);
