@@ -1,6 +1,12 @@
 <% set('page', 'program-page') %>
 
 <div class="jumbotron container">
+    <h1>Program</h1>
+    <p>Espen, skriv noe kult her.</p>
+    <p>Looking for workshops? Those can be found <a href="/workshops.html">here</a></p>
+</div>
+
+<div class="jumbotron container">
     <div class="program-days">
     </div>
 </div>
@@ -16,9 +22,9 @@
     <ul>
     {{#each this}}
         <li>
-            <h1>
+            <h2>
                 <a href="#{{url}}">{{text}}</a>
-            </h1>
+            </h2>
         </li>
     {{/each}}
     </ul>

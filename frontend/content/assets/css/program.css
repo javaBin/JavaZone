@@ -13,7 +13,11 @@
 }
 
 .program-days a {
-    background-position: 0 33px;
+    background-position: 0 20px;
+}
+
+.program-days h2 {
+    margin-bottom: 0;
 }
 
 .program-days a.active-day {
