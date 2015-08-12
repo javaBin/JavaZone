@@ -5,15 +5,15 @@
 .index-page .movie-container {
     background: black;
     display: none;
-    height: 480px;
-    width: 640px;
+    max-height: 480px;
+    max-width: 640px;
 }
 
 .index-page .movie {
     border: 1px solid #999;
-    display: inline-block;
+    display: block;
     height: 140px;
-    margin-right: 51px;
+    margin: 20px auto 0 auto;
     text-align: center;
     vertical-align: top;
     width: 250px;
@@ -64,10 +64,6 @@
 
 .play:hover {
     background-color: rgba(0, 0, 0, .9);
-}
-
-.index-page .movie:last-child {
-    margin-right: 0;
 }
 
 .index-page h1 {
@@ -136,4 +132,17 @@
 		display: inline-block;
 	}
 	
+}
+
+@media (min-width: 880px) {
+
+    .index-page .movie {
+        display: inline-block;
+        margin-right: 51px;
+        margin-top: 0;
+    }
+
+    .index-page .movie:last-child {
+        margin-right: 0;
+    }
 }

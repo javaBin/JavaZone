@@ -45,7 +45,10 @@
     function attachClickListeners() {
         var movie1 = document.querySelector('.movie-1 .play');
         movie1.addEventListener('click', function() {
+            var size = getSize();
             var movieContainer = document.querySelector('.movie-container');
+            movieContainer.style.width = size.width + 'px';
+            movieContainer.style.height = size.height + 'px';
             Velocity(movieContainer, 'slideDown', {
                 display: 'inline-block',
                 duration: 250,
@@ -61,9 +64,11 @@
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         window.onYouTubePlayerAPIReady = function() {
+            var size = getSize();
+            console.log(size);
             var player = new YT.Player('movie', {
-                height: 480,
-                width: 640,
+                height: size.height,
+                width: size.width,
                 videoId: '3vI_7os2V_o',
                 events: {
                     'onReady': function(event) {
@@ -72,6 +77,13 @@
                 }
             })
         }
+    }
+
+    function getSize() {
+        var containerWidth = document.querySelector('.content .container').clientWidth;
+        var width = Math.min(containerWidth, 640);
+        var height = width * 0.75;
+        return {width: width, height: height};
     }
 
 })(window.jz = window.jz || {});
