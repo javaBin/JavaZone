@@ -3,7 +3,7 @@
 }
 
 .index-page .movie {
-    border: 1px solid black;
+    border: 1px solid #999;
     display: inline-block;
     height: 140px;
     margin-right: 51px;
@@ -19,7 +19,7 @@
 
 .movie-1 {
     background-image: url('/assets/img/movies/movie_1@2x.jpg');
-    background-size: contain;
+    background-size: cover;
 }
 
 .play {
@@ -89,6 +89,11 @@
 	margin-top: 0;
 }
 
+.index-page .movieheader {
+    margin-top: 2em;
+    color: #a10035;
+}
+
 @media (min-width: 768px) {
 
 	.index-page h1 {
@@ -97,7 +102,7 @@
 	}
 
 	.index-page .teaser-image svg {
-		margin-top: 4em;
+		margin-top: 0;
 	}
 
 	.index-page .button {
