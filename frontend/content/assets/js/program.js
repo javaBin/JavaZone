@@ -111,8 +111,9 @@
 
     function groupByTimeslots(date) {
         date.presentations = _(date.presentations)
-            .sortByOrder(['starter', 'format'], [true, false])
+            .sortByOrder(['starter', 'format', 'rom'], [true, false, true])
             .reduce(createSlots, []);
+
         return date;
     }
 
