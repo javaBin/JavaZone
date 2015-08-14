@@ -69,7 +69,7 @@
             var player = new YT.Player('movie', {
                 height: size.height,
                 width: size.width,
-                videoId: '3vI_7os2V_o',
+                videoId: 'V8BY9jdrCh0',
                 events: {
                     'onReady': function(event) {
                         event.target.playVideo();
@@ -82,7 +82,7 @@
     function getSize() {
         var containerWidth = document.querySelector('.content .container').clientWidth;
         var width = Math.min(containerWidth, 640);
-        var height = width * 0.75;
+        var height = width * 0.5625;
         return {width: width, height: height};
     }
 

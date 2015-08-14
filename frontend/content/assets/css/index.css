@@ -5,7 +5,7 @@
 .index-page .movie-container {
     background: black;
     display: none;
-    max-height: 480px;
+    max-height: 360px;
     max-width: 640px;
 }
 
