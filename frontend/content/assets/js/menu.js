@@ -4,6 +4,9 @@
 
 	jz.menu.setActive = function() {
 		var menuItems = document.querySelectorAll('.nav .nav-item a');
+        if (!menuItems.length)
+            return;
+
 		var active = _(menuItems).reduce(function(acc, a) {
 			return a.pathname === location.pathname ? a : acc;
 		}, null);
@@ -14,6 +17,9 @@
 
 	jz.menu.initializeMenu = function() {
 		var nav = document.querySelector('.nav-mobile-items');
+        if (!nav)
+            return;
+        
 		var props = {
 			action: function() {
 				var cmd = $(nav).is(':visible') ? 'fadeOut' : 'fadeIn';
