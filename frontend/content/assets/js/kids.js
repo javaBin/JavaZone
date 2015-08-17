@@ -27,7 +27,6 @@
     }
 
     function renderWorkshopStatus(workshops) {
-        console.log(workshops);
         var $statuses = $('.workshop-registration');
         $statuses.each(function(status) {
             var registration = $(this);
