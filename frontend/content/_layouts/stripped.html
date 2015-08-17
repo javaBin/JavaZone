@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaZone 2015</title>
+    <meta property="og:title" content="<%= get("description") ? get("description") : "JavaZone is Norway's largest IT-conference, and takes place in Oslo, September 9th–10th 2015." %>">
+    <meta property="og:image" content="http://2015.javazone.no/assets/img/javazone@2x-luft.png">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= get("description") ? get("description") : "JavaZone is Norway's largest IT-conference, and takes place in Oslo, September 9th–10th 2015." %>">
+    <script type="text/javascript">
+        window.onloaded = [];
+    </script>
+</head>
+<body class="print-program">
+    <div class="content">
+        <%= content %>
+    </div>
+    <%= assets("js", "all") %>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3676724-8']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            if(window.googleAnalyticsInjected) return;
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            window.googleAnalyticsInjected = true;
+        })();
+    </script>
+</body>
+</html>

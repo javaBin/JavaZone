@@ -6,6 +6,10 @@ exports.config = function(pacbot) {
 		assets: {}
 	}
 
+	config.layouts = {
+		'printprogram.html': '_layouts/stripped.html'
+	};
+
 	config.assets.js = {
 		all: [
 			"assets/js/lodash.min.js",
@@ -28,6 +32,7 @@ exports.config = function(pacbot) {
 			"assets/js/kids.js",
 			"assets/js/academy.js",
 			"assets/js/index.js",
+			"assets/js/printprogram.js",
 			"assets/js/main.js"
 		]
 	}
