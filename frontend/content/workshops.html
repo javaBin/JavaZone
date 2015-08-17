@@ -39,10 +39,10 @@
                     <p class="when">
                         {{when}}    
                     </p>
-                    </p>
-                    <p class="workshop-registration">
-                        <a href="http://javazone.no/moosehead/#/register/{{workshopId}}" class="button">Registration<span class="status">({{status}})</span></a>
-                    </p>
+                    <div class="workshop-registration {{status.className}}">
+                        <a href="http://javazone.no/moosehead/#/register/{{workshopId}}" class="button">Registration</a>
+                        <div class="workshop-status">{{status.en}}</div>
+                    </div>
                 </div>
             </div>
         {{/each}}

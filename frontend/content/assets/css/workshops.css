@@ -1,3 +1,7 @@
+.workshop-page .sub-section {
+    margin-top: 5em;
+}
+
 .workshop-page .section-header a {
     background-position: 0 32px;
     font-size: .9em;
@@ -23,14 +27,48 @@
     width: 24px;
 }
 
-.workshop-page .workshop-registration .status {
-    padding-left: 10px;
-}
-
 .workshop-page .section-content p:first-child {
     margin-top: 1.25em;
 }
 
 .workshop-page .section-content p {
     margin-bottom: 1em;
+}
+
+
+
+.workshop-page .workshop-status:before {
+    border-radius: 100%;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    width: 20px;
+}
+
+.workshop-page .workshop-registration.free-spots .workshop-status:before {
+    background: #149089;
+}
+
+.workshop-page .workshop-registration.few-spots .workshop-status:before {
+    background: #fcaf17;
+}
+
+.workshop-page .workshop-registration.full .workshop-status:before {
+    background: #a10035;
+}
+
+.workshop-page .workshop-registration.waiting-list .workshop-status:before {
+    background: #a10035;
+}
+
+.workshop-page .workshop-registration.not-opened .workshop-status:before {
+    background: #101010;
+}
+
+.workshop-page .workshop-registration.closed .workshop-status:before {
+    background: #101010;
+    opacity: .5;
 }
