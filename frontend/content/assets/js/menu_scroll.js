@@ -5,6 +5,9 @@
 	var MAX_ZOOM = 1;
 
 	function style(el, style, val) {
+        if (!el)
+            return;
+
 		if (!(el instanceof NodeList))
 			el = [el];
 
