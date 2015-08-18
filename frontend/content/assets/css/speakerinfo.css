@@ -1,0 +1,436 @@
+.speaker-info-page .first-info h1 {
+    font-size: 1.8em;
+}
+
+.speaker-info-page .ticket-includes:before {
+    display: none;
+}
+
+.speaker-info-page .ticket-includes {
+    margin: 5em 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+.speaker-info-page .includes-icon {
+    font-size: 140%;
+}
+
+.speaker-info-page .includes-title {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.speaker-info-page .includes-description{
+    text-align: justify;
+}
+
+.speaker-info-page .map {
+    height: 500px;
+}
+
+.speaker-info-page .practicalities {
+    margin-top: 5em;
+}
+
+.speaker-info-page .practicality {
+    position: relative;
+}
+
+.speaker-info-page .practicality-location:before {
+    background: url('/assets/svg/location.svg') no-repeat;
+    content: '';
+    display: inline-block;
+    height: 44px;
+    left: -4.2em;
+    margin-top: -22px;
+    position: absolute;
+    top: 50%;
+    width: 34px;
+}
+
+.speaker-info-page .practicality-foods:before {
+    background: url('/assets/svg/meal.svg') no-repeat;
+    content: '';
+    display: inline-block;
+    height: 44px;
+    left: -4.2em;
+    margin-top: -22px;
+    position: absolute;
+    top: 50%;
+    width:34px;
+}
+
+.speaker-info-page .practicality-hotels:before {
+    background: url('/assets/svg/sleep.svg') no-repeat;
+    content: '';
+    display: inline-block;
+    height: 44px;
+    left: -4.2em;
+    margin-top: -22px;
+    position: absolute;
+    top: 50%;
+    width:34px;
+}
+
+.speaker-info-page .practicality-language:before {
+    background: url('/assets/svg/earth.svg') no-repeat;
+    content: '';
+    display: inline-block;
+    height: 44px;
+    left: -4.2em;
+    margin-top: -22px;
+    position: absolute;
+    top: 50%;
+    width:34px;
+}
+
+/*
+    At the conference timeline
+*/
+
+.speaker-info-page .at-the-conference {
+    background: #EDF3F5;
+}
+
+.speaker-info-page .conference-day {
+    margin-bottom: 4em;
+}
+
+.speaker-info-page .conference-event .time, .speaker-info-page .conference-event .title {
+    display: inline-block;
+    margin-bottom: 10px
+}
+
+.speaker-info-page .conference-event {
+    margin-bottom: 1.5em;
+}
+
+.speaker-info-page .conference-event .time {
+    color: #005c76;
+    float: left;
+    margin-right: 10px;
+}
+
+.speaker-info-page .conference-event .title {
+    color: #005c76;
+    padding-left: 10px;
+    position: relative;
+}
+
+.speaker-info-page .conference-event .title:before {
+    background: #005c76;
+    bottom: 2px;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 1px;
+}
+
+.speaker-info-page .topics h2 {
+    margin-top: 2.5em;
+}
+
+.speaker-info-page .topics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.speaker-info-page .topics ul:before {
+    display: none;
+}
+
+.speaker-info-page .topic {
+    margin-bottom: 2em;
+}
+
+.speaker-info-page .topic .topic-header {
+    font-weight: bold;
+}
+
+.speaker-info-page .formats ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.speaker-info-page .formats img {
+    width: auto;
+}
+
+.speaker-info-page .format-lightning svg {
+    height: 240px;
+}
+
+.speaker-info-page .format-lightning h2 {
+    position: relative;
+    top: 10px;
+}
+
+.speaker-info-page .format-lightning p {
+    position: relative;
+    top: 10px;
+}
+
+.speaker-info-page .format-presentation svg {
+    height: 250px;
+    position: relative;
+    top: -5px;
+}
+
+.speaker-info-page .format-workshop svg {
+    height: 250px;
+    position: relative;
+    top: -10px;
+}
+
+.speaker-info-page .format {
+    padding: 0 20px;
+}
+
+.speaker-info-page .format h2 {
+    line-height: 1.2;
+}
+
+.speaker-info-page .format h2 span {
+    font-size: .7em;
+}
+
+.speaker-info-page .party {
+    background: #111;
+    color: #eee;
+    padding: 0 0 5em 0;
+    margin: 3em 0;
+}
+.speaker-info-page .party h1, .speaker-info-page .party h2 {
+    color: #efbc3b;
+}
+
+
+@media (min-width: 768px) {
+
+    .speaker-info-page .ticket-includes li {
+        float: left;
+        min-height: 250px;
+        padding: 0 20px;
+        width: 33%;
+    }
+
+    .speaker-info-page .ticket-inclues li:first-child {
+        padding-left: 0;
+    }
+
+    .speaker-info-page .ticket-includes li:nth-child(3) {
+        padding-right: 0;
+    }
+
+    .speaker-info-page .ticket-includes li:nth-child(4) {
+        margin-left: 15%;
+    }
+
+    .speaker-info-page .topics h2 {
+        margin-top: 1em;
+    }
+
+    .speaker-info-page .topic {
+        float: left;
+        min-height: 150px;
+        padding: 0 20px;
+        width: 33%;
+    }
+
+    .speaker-info-page .topic-header {
+        position: relative;
+    }
+
+    .speaker-info-page .topic-header [class^='icon-'] {
+        left: -30px;
+        position: absolute;
+    }
+
+    .speaker-info-page .topic:last-child {
+        margin-left: 33%;
+        margin-bottom: 0;
+    }
+
+    .speaker-info-page .format {
+        float: left;
+        width: 33%;
+    }
+
+    /*
+        Timeline
+    */
+
+    .speaker-info-page .conference-days h1.section-header {
+        color: #005c76;
+    }
+
+    .speaker-info-page .conference-days .timeline {
+        height: 1800px;
+        position: relative;
+    }
+
+    .speaker-info-page .conference-days .timeline:before {
+        background: #005c76;
+        bottom: 14px;
+        content: '';
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 1px;
+        z-index: 1;
+    }
+
+    .speaker-info-page .conference-day {
+        height: 33.33%;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .speaker-info-page .conference-day-first {
+        /*background: #e3e3e3;*/
+    }
+
+    .speaker-info-page .conference-day-second {
+        /*background: #e8ede9*/
+    }
+
+    .speaker-info-page .conference-day.conference-day-third {
+        /*background: #ebf3f6;*/
+        height: 32.33%;
+    }
+
+    .speaker-info-page .conference-day.conference-end {
+        height: 1%;
+    }
+
+    .speaker-info-page .conference-day-title {
+        float: right;
+        margin-top: -17px !important;
+        padding-left: 1em;
+        text-align: left;
+        text-transform: uppercase;
+        color: #101010;
+        width: 50%;
+    }
+
+    .speaker-info-page .conference-day-title:before {
+        background: white;
+        border: 1px solid #005c76;
+        border-radius: 100%;
+        content: '';
+        display: block;
+        height: 21px;
+        left: 50%;
+        margin-left: -10px;
+        position: absolute;
+        top: -10px;
+        width: 21px;
+        z-index: 2;
+    }
+
+    .speaker-info-page .conference-event {
+        color: #005c76;
+        margin-bottom: 0;
+        position: relative;
+        text-align: left;
+        width: 50%;
+    }
+
+    .speaker-info-page .conference-event .time {
+        float: none;
+    }
+
+    .speaker-info-page .conference-day .container {
+        height: 100%;
+    }
+
+    .speaker-info-page .conference-event .separator {
+        border-bottom: 1px solid #005c76;
+        margin-bottom: 10px;
+        opacity: .5;
+    }
+
+    .speaker-info-page .conference-event.right {
+        margin-left: 50%;
+        text-align: right;
+    }
+
+    .speaker-info-page .conference-event.right .title {
+        padding-right: 10px;
+    }
+
+    .speaker-info-page .conference-event.right .title:before {
+        display: none;
+    }
+
+    .speaker-info-page .conference-event.right .title:after {
+        background: #005c76;
+        bottom: 2px;
+        content: '';
+        display: block;
+        right: 0;
+        position: absolute;
+        top: 5px;
+        width: 1px;
+    }
+
+    .speaker-info-page .conference-event.right .time {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    .speaker-info-page .conference-day-first .conference-event:nth-child(2) {
+        top: 10%;
+    }
+
+    .speaker-info-page .conference-day-first .conference-event:nth-child(3) {
+        top: 20%;
+    }
+
+    .speaker-info-page .conference-day-first .conference-event:nth-child(4) {
+        top: 30%;
+    }
+
+    .speaker-info-page .conference-day-second .conference-event:nth-child(2) {
+        top: 10%;
+    }
+
+    .speaker-info-page .conference-day-second .conference-event:nth-child(3) {
+        top: 5%;
+    }
+
+    .speaker-info-page .conference-day-second .conference-event:nth-child(4) {
+        top: 5%;
+    }
+
+    .speaker-info-page .conference-day-second .conference-event:nth-child(5) {
+        top: 5%;
+    }
+
+    .speaker-info-page .conference-day-second .conference-event:nth-child(6) {
+        top: 5%;
+    }
+
+    .speaker-info-page .conference-day-third .conference-event:nth-child(2) {
+        top: 10%;
+    }
+
+    .speaker-info-page .conference-day-third .conference-event:nth-child(3) {
+        top: 10%;
+    }
+
+    .speaker-info-page .conference-day-third .conference-event:nth-child(4) {
+        top: 10%;
+    }
+
+    .speaker-info-page .conference-day-third .conference-event:nth-child(5) {
+        top: 20%;
+    }
+
+}

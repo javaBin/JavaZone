@@ -63,7 +63,8 @@ exports.config = function(pacbot) {
 			"assets/css/workshops.css",
 			"assets/css/journeyzone.css",
 			"assets/css/kids.css",
-			"assets/css/academy.css"
+			"assets/css/academy.css",
+			"assets/css/speakerinfo.css"
 		]
 	};
 

@@ -7,7 +7,7 @@
 		'partners': jz.partners,
 		'tickets': jz.tickets,
 		'contact': jz.contact,
-		'info': [jz.info.initializeMap, jz.partners],
+		'^/info': [jz.info.initializeMap, jz.partners],
 		'^/program': jz.program,
         'details': jz.details,
         'workshops': jz.workshops,
