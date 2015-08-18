@@ -1,0 +1,16 @@
+<div class="print-program"></div>
+
+<script type="text/template" class="program-template">
+    {{#each this}}
+        {{date}}. september<br /><br />
+
+        {{#each presentations}}
+            {{slot}}-{{ends}}<br />
+            {{#each talks}}
+                {{roomNumber}} {{foredragsholdere}}: {{tittel}}<br />
+            {{/each}}
+            <br />
+        {{/each}}
+        <br />
+    {{/each}}
+</script>
