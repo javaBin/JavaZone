@@ -173,7 +173,7 @@
         switch (status) {
             case 'FREE_SPOTS': return {className: 'free-spots', no: 'Ledige plasser', en: 'Free spots'};
             case 'FEW_SPOTS': return {className: 'few-spots', no: 'Få plasser', en: 'Few spots'};
-            case 'FULL': return {className: 'waiting-list', no: 'Venteliste', en: 'Venteliste'};
+            case 'FULL': return {className: 'waiting-list', no: 'Venteliste', en: 'Waiting list'};
             case 'VERY_FULL': return {className: 'full', no: 'Ingen ledige plasser', en: 'No free spots'};
             case 'CLOSED': return {className: 'closed', no: 'Stengt', en: 'Closed'};
             default: return {className: 'not-opened', no: 'Ikke åpnet', en: 'Not opened'};
