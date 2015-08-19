@@ -46,6 +46,16 @@
 <script type="text/tempate" class="program-day-template">
     <div class="section container cf">
     {{#if presentations}}
+        <div class="sub-section cf">
+            <h1 class="section-header">08:00</h1>
+            <div class="section-content">
+                {{#if firstDay}}
+                    <p>The doors are opened, and JavaZone 2015 begins! Get in early to get a good spot for the morning show, which starts 08:30. You don't want to miss this.</p>
+                {{else}}
+                    <p>The doors are opened.</p>
+                {{/if}}
+            </div>
+        </div>
         {{#each presentations}}
             {{#if talks}}
                 <div class="sub-section cf">
@@ -73,6 +83,14 @@
                 </div>
             {{/if}}
         {{/each}}
+        {{#if firstDay}}
+            <div class="sub-section cf">
+                <h1 class="section-header">19:20</h1>
+                <div class="section-content">
+                    <p>Todays presentations ends, but the night is by no means over yet. This is when the lights are dimmed and the music starts – geat ready for AweZone!</p>
+                </div>
+            </div>
+        {{/if}}
     {{else}}
         <div class="sub-section cf">
             <h1 class="section-header centered">No results</h1>

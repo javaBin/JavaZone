@@ -325,6 +325,8 @@
 
     function renderSuccess(data) {
         program = transformToDays(data);
+        program[0].firstDay = true;
+        console.log(program);
         dates = extractDates(data);
         dateFilter = findInitialDate(dates);
         categories = extractCategories(data);
