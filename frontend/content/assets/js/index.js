@@ -1,4 +1,9 @@
-(function(jz) {
+(function(jz, Handlebars) {
+
+    var movies = {
+        movie1: 'V8BY9jdrCh0',
+        movie2: 'V8BY9jdrCh0'
+    };
 
     jz.index = function() {
         var movie2 = document.querySelector('.movie-2 .timer');
@@ -6,7 +11,10 @@
         var release2 = new Date(2015, 7, 21, 12, 0, 0).getTime();
         var release3 = new Date(2015, 7, 28, 12, 0, 0).getTime();
 
-        countdown(movie2, release2);
+        if (Date.now() > release2)
+            attachMovie2ClickListener();
+        else
+            countdown(movie2, release2);
         countdown(movie3, release3);
 
         attachClickListeners();
@@ -24,8 +32,10 @@
             el.innerHTML = d.minutes + ' minutes';
         else if (d.seconds > 0)
             el.innerHTML = d.seconds + ' seconds';
-        else
-            el.innerHTML = 'Is here!';
+        else {
+            attachMovie2ClickListener();
+            return
+        }
 
         setTimeout(function() {
             countdown(el, goal);
@@ -52,12 +62,30 @@
             Velocity(movieContainer, 'slideDown', {
                 display: 'inline-block',
                 duration: 250,
-                complete: startMovie
+                complete: function() { startMovie(movies.movie1); }
             });
         });
     }
 
-    function startMovie() {
+    function attachMovie2ClickListener() {
+        var container = document.querySelector('.movie-2');
+        container.classList.add('released');
+        container.innerHTML = Handlebars.compile(document.querySelector('.play-template').innerHTML)();
+        var movie = document.querySelector('.movie-2 .play');
+        movie.addEventListener('click', function() {
+            var size = getSize();
+            var movieContainer = document.querySelector('.movie-container');
+            movieContainer.style.width = size.width + 'px';
+            movieContainer.style.height = size.height + 'px';
+            Velocity(movieContainer, 'slideDown', {
+                display: 'inline-block',
+                duration: 250,
+                complete: function() { startMovie(movies.movie2); }
+            }); 
+        })
+    }
+
+    function startMovie(movie) {
         var tag = document.createElement('script');
         tag.src = 'http://www.youtube.com/player_api';
         var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -65,11 +93,10 @@
 
         window.onYouTubePlayerAPIReady = function() {
             var size = getSize();
-            console.log(size);
             var player = new YT.Player('movie', {
                 height: size.height,
                 width: size.width,
-                videoId: 'V8BY9jdrCh0',
+                videoId: movie,
                 events: {
                     'onReady': function(event) {
                         event.target.playVideo();
@@ -86,4 +113,4 @@
         return {width: width, height: height};
     }
 
-})(window.jz = window.jz || {});
+})(window.jz = window.jz || {}, window.Handlebars);
