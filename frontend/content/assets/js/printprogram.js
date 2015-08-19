@@ -57,7 +57,12 @@
                     return slot.timestamp <= timestamp;
                 })
                 .last();
-            slot.talks.push(current);
+                console.log(slot);
+            var lightningTalk = _.find(slot.talks, {format: 'lightning-talk'});
+            if (lightningTalk)
+                lightningTalk.tittel += ', ' + current.foredragsholdere;
+            else
+                slot.talks.push({roomNumber: current.roomNumber, foredragsholdere: 'Lightning Speakers', tittel: current.foredragsholdere, format: 'lightning-talk'});
         }
 
         return memo;
