@@ -209,6 +209,57 @@
 	color: #efbc3b;
 }
 
+.info-page .party .concert {
+    margin-top: 2.5em;
+}
+
+.info-page .party .bands {
+    list-style: none;
+    margin-top: 2em;
+    padding: 0;
+}
+
+.info-page .party .bands li {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+}
+
+.info-page .party .bands .band {
+    background-size: contain;
+    border-radius: 100%;
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+}
+
+.band.sondre-justad {
+    background-image: url('/assets/img/awezone/sondre_justad.png');
+}
+
+.band.datarock {
+    background-image: url('/assets/img/awezone/datarock.png');
+}
+
+.band.kvelertak {
+    background-image: url('/assets/img/awezone/kvelertak.png');
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+
+    .band.sondre-justad { background-image: url('/assets/img/awezone/sondre_justad@2x.png'); }
+
+    .band.datarock { background-image: url('/assets/img/awezone/datarock@2x.png'); }
+
+    .band.kvelertak { background-image: url('/assets/img/awezone/kvelertak@2x.png'); }
+}
+
+.info-page .party .bands:before {
+    display: none;
+}
+
 
 @media (min-width: 768px) {
 
