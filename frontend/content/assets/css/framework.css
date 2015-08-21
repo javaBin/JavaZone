@@ -60,6 +60,10 @@
 	margin-top: .3em;
 }
 
+.section-content ul:first-child {
+    margin-top:  1em;
+}
+
 .section-content li {
 	margin-bottom: 20px;
 	text-align: justify;
@@ -71,6 +75,43 @@
 
 .jumbotron {
 	text-align: center;
+}
+
+
+.section-content dl {
+    margin-top: .3em;
+    padding-left: 30px;
+    position: relative;
+}
+
+.section-content dl:first-child {
+    margin-top: 1em;
+}
+
+.section-content dl:before {
+    background: #101010;
+    bottom: 5px;
+    content: '';
+    display: block;
+    top: 7px;
+    left: 1px;
+    position: absolute;
+    width: 3px;
+}
+
+.section-content dt {
+    display: block;
+    font-weight: 600;
+}
+
+.section-content dd {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+}
+
+.section-content dd:last-child {
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
