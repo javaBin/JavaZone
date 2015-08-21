@@ -2,7 +2,7 @@
 
     var movies = {
         movie1: 'V8BY9jdrCh0',
-        movie2: 'V8BY9jdrCh0'
+        movie2: '2ftPLCpUsts'
     };
 
     jz.index = function() {
