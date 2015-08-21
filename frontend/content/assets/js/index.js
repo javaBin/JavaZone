@@ -9,6 +9,7 @@
         var movie2 = document.querySelector('.movie-2 .timer');
         var movie3 = document.querySelector('.movie-3 .timer');
         var release2 = new Date(2015, 7, 21, 10, 0, 0).getTime();
+        release2 = new Date(2015,7,21,9,0,0);
         var release3 = new Date(2015, 7, 28, 10, 0, 0).getTime();
 
         if (Date.now() > release2)
@@ -55,6 +56,9 @@
     function attachClickListeners() {
         var movie1 = document.querySelector('.movie-1 .play');
         movie1.addEventListener('click', function() {
+            var movieContainer = document.querySelector('.youtube-container');
+            movieContainer.innerHTML = Handlebars.compile(document.querySelector('.movie-template').innerHTML)();
+            $('.youtube-script').remove();
             var size = getSize();
             var movieContainer = document.querySelector('.movie-container');
             movieContainer.style.width = size.width + 'px';
@@ -73,6 +77,9 @@
         container.innerHTML = Handlebars.compile(document.querySelector('.play-template').innerHTML)();
         var movie = document.querySelector('.movie-2 .play');
         movie.addEventListener('click', function() {
+            var movieContainer = document.querySelector('.youtube-container');
+            movieContainer.innerHTML = Handlebars.compile(document.querySelector('.movie-template').innerHTML)();
+            $('.youtube-script').remove();
             var size = getSize();
             var movieContainer = document.querySelector('.movie-container');
             movieContainer.style.width = size.width + 'px';
@@ -87,11 +94,12 @@
 
     function startMovie(movie) {
         var tag = document.createElement('script');
+        tag.classList.add('youtube-script');
         tag.src = 'http://www.youtube.com/player_api';
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        window.onYouTubePlayerAPIReady = function() {
+        var play = function() {
             var size = getSize();
             var player = new YT.Player('movie', {
                 height: size.height,
@@ -99,11 +107,18 @@
                 videoId: movie,
                 events: {
                     'onReady': function(event) {
+                        console.log(event.target);
                         event.target.playVideo();
                     }
                 }
-            })
+            });
         }
+
+        if (window.YT && window.YT.Player)
+            play();
+        else
+            window.onYouTubePlayerAPIReady = play;
+
     }
 
     function getSize() {
