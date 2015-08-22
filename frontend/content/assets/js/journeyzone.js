@@ -57,7 +57,7 @@
         var nav = document.querySelector('.nav')
         document.addEventListener('scroll', _.throttle(function() {
             var height = document.querySelector('.mood').clientHeight;
-            var scrolled = document.body.scrollTop;
+            var scrolled = window.scrollY;
             if (scrolled > height && !nav.classList.contains('bg')) {
                 nav.classList.add('bg');
             } else if (scrolled < height) {
