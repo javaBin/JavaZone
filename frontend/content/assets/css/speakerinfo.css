@@ -1,3 +1,41 @@
+.speaker-info-page .nav {
+    background: transparent;
+}
+
+.speaker-info-page .nav.bg {
+    background: rgba(254, 254, 254, .95);
+}
+
+.speaker-info-page .nav a {
+    color: #fff;
+}
+
+.speaker-info-page .nav.bg a {
+    color: #101010;
+}
+
+.speaker-info-page .mood {
+    margin-top: -210px;
+    min-height: 400px;
+    position: relative;
+}
+
+.speaker-info-page .mood:before {
+    content: '';
+    display: block;
+    padding-top: 45%;
+}
+
+.speaker-info-page .mood .mood-background {
+    background-image: url('/assets/img/heros/speaker_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 .speaker-info-page .room-list {
     list-style: none;
     margin: 0;
