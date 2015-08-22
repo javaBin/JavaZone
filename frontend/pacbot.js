@@ -33,6 +33,7 @@ exports.config = function(pacbot) {
 			"assets/js/academy.js",
 			"assets/js/index.js",
 			"assets/js/printprogram.js",
+			"assets/js/speakerinfo.js",
 			"assets/js/main.js"
 		]
 	}

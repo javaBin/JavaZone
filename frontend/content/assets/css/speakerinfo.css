@@ -1,3 +1,45 @@
+.speaker-info-page .room-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.speaker-info-page .room-list:before {
+    display: none;
+}
+
+.speaker-info-page .room-list li {
+    display: inline-block;
+}
+
+.speaker-info-page .room-list button {
+    background: transparent;
+    border: 0;
+    font-size: 2em;
+    margin: 0;
+    outline: 0;
+}
+
+.speaker-info-page .room-list button.active {
+    color: #ff8641;
+}
+
+.speaker-info-page .rooms {
+    min-height: 500px;
+}
+
+.speaker-info-page .room {
+    display: none;
+}
+
+.speaker-info-page .room-illustration {
+    margin-bottom: 2.5em;
+}
+
+.speaker-info-page .room-illustration + h2 {
+    margin-top: .55em;
+}
+
 .speaker-info-page .first-info h1 {
     font-size: 1.8em;
 }
