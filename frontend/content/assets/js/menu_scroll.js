@@ -35,7 +35,7 @@
 		);
 
 		var opacity = Math.max(1 - (window.scrollY / 100) * 2, 0);
-		var height = scaleFactor * 98;
+		var height = scaleFactor * 98 + 'px';
 		var translationX = 30 - (scaleFactor * 30);
 		var translationY = 46 - (scaleFactor * 46);
 
