@@ -1,4 +1,8 @@
-(function(_, jz) {
+(function(_, jz) {;
+
+    function mdate(d) {
+        return moment(d).utcOffset(120);
+    }
 
     var mapping = {
         "010f79f10ad3698c72c5920f4e667ff06f611feb1e571eee59a9abd8b01a65ad": "docker_for_java_developers",
@@ -33,8 +37,8 @@
     }
 
     function timestamp(workshop) {
-        var date = new Date(workshop.starter);
-        workshop.timestamp = date.getTime();
+        var date = mdate(workshop.starter).unix();
+        workshop.timestamp = date;
         return workshop;
     }
 
@@ -61,25 +65,10 @@
     }
 
     function formatDate(start, end) {
-        var d = new Date(start);
-        var day = jz.data.days[d.getDay()];
-        var date = d.getDate();
-        var start = formatTime(d);
-        var end = formatTime(new Date(end));
-
-        return day + ', September ' + date + 'th 2015 at ' + start + '-' + end;
-    }
-
-    function formatTime(t) {
-        var hours = t.getHours() + '';
-        if (hours.length === 1)
-            hours = 0 + hours;
-
-        var minutes = t.getMinutes() + '';
-        if (minutes.length === 1)
-            minutes = 0 + minutes;
-
-        return hours + ':' + minutes;
+        start = mdate(start);
+        console.log(start);
+        end = mdate(end);
+        return start.format('dddd, MMMM Do YYYY') + ' at ' + start.format('HH:mm') + '-' + end.format('HH:mm');
     }
 
     function renderSuccess(workshops) {
