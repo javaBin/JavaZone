@@ -25,13 +25,20 @@
         'no': '/assets/img/NO.png'
     };
 
+    function mdate(d) {
+        return moment(d).utcOffset(120);
+    }
+
+    function munix(d) {
+        return moment.unix(d).utcOffset(120);
+    }
+
     var program = {};
     var categories = {};
     var dates = [];
 
     var categoriesFilter = [];
     var difficultiesFilter = [];
-    var dateFilter = '';
 
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
@@ -55,36 +62,8 @@
         .fail(renderError);
     }
 
-    function findInitialDate(dates) {
-        var hash = window.location.hash.substr(1);
-        if (hash !== '') {
-            var date = _.find(dates, function(date) { return date.getDate() == hash; });
-            if (_.isDate(date))
-                return date;
-        }
-
-        var today = new Date();
-        if (today.getMonth() !== 8)
-            return _.first(dates);
-
-        var date = _.find(dates, function(date) {
-            return date.getDate() === today.getDate();
-        });
-
-        return _.isDate(date) ? date : _.first(dates);
-    }
-
     function format(timestamp) {
-        var d = new Date(timestamp);
-        var hours = d.getHours() + '';
-        if (hours.length === 1)
-            hours = '0' + hours;
-
-        var minutes = d.getMinutes() + '';
-        if (minutes.length === 1)
-            minutes = '0' + minutes;
-
-        return hours + ':' + minutes;
+        return munix(timestamp).format('HH:mm');
     }
 
     var transformTalk = _.compose(_.compose(room, flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
@@ -152,16 +131,12 @@
                 return talk.starter && talk.format !== 'workshop';
             })
             .map(function(talk) {
-                var date = new Date(talk.starter).getDate();
-                if (date < 10)
-                    date = '0' + date;
-
-                return new Date('2015-09-' + date);
+                return moment(munix(talk.starter).format('YYYY-MM-DD'));
             }).uniq(function(date) {
-                return date.getTime();
+                return date.unix();
             })
             .sortBy(function(date) {
-                return date.getTime();
+                return date.unix();
             })
             .value();
     }
@@ -235,7 +210,7 @@
     }
 
     function transformStarter(talk) {
-        talk.starter = new Date(talk.starter).getTime();
+        talk.starter = mdate(talk.starter).unix();
         return talk;
     }
 
@@ -253,38 +228,34 @@
         if (!difficultiesFilter.length && !categoriesFilter.length)
             return prog;
 
-        prog.presentations = _(prog.presentations)
-            .map(function(p) {
-                p.talks = _.filter(p.talks, function(talk) {
-                    var isActive = true;
+        _.each(prog, function(p) {
+            p.presentations = _(p.presentations)
+                .map(function(p) {
+                    p.talks = _.filter(p.talks, function(talk) {
+                        var isActive = true;
 
-                    if (difficultiesFilter.length)
-                        isActive = isActive && difficultiesFilter.indexOf(_.capitalize(talk.niva)) >= 0;
+                        if (difficultiesFilter.length)
+                            isActive = isActive && difficultiesFilter.indexOf(_.capitalize(talk.niva)) >= 0;
 
-                    if (categoriesFilter.length)
-                        isActive = isActive && hasCategory(talk, categoriesFilter);
+                        if (categoriesFilter.length)
+                            isActive = isActive && hasCategory(talk, categoriesFilter);
 
-                    return isActive;
-                });
+                        return isActive;
+                    });
 
-                return p;
-            })
-            .filter(function(p) {
-                return p.talks.length > 0;
-            })
-            .value();
+                    return p;
+                })
+                .filter(function(p) {
+                    return p.talks.length > 0;
+                })
+                .value();
+        });
 
         return prog;
     }
 
     function hasCategory(talk, categories) {
         return _.intersection(_.pluck(talk.nokkelord, 'l'), categories).length > 0;
-    }
-
-    function filterDate(date) {
-        return _.find(program, function(p) {
-            return p.date == date.getDate();
-        });
     }
 
     function attachListeners(container) {
@@ -326,20 +297,21 @@
     function renderSuccess(data) {
         program = transformToDays(data);
         program[0].firstDay = true;
+        program[0].className = 'date-9';
+        program[1].className = 'date-10';
         console.log(program);
         dates = extractDates(data);
-        dateFilter = findInitialDate(dates);
         categories = extractCategories(data);
         renderDates();
         renderFilter();
-        listenForHashChange();
+        renderProgram();
     }
 
     function renderDates() {
         var template = Handlebars.compile(document.querySelector('.program-days-template').innerHTML);
         var container = document.querySelector('.program-days');
         container.innerHTML = template(dates.map(function(date) {
-            return {url: date.getDate(), text: jz.data.days[date.getDay()] + ' ' + date.getDate() + 'th'};
+            return {url: date.date(), text: jz.data.days[date.day()] + ' ' + date.date() + 'th'};
         }));
     }
 
@@ -351,31 +323,10 @@
     }
 
     function renderProgram() {
-        var programForDate = filterDate(dateFilter);
-        filteredProgram = filterProgram(_.cloneDeep(programForDate));
+        filteredProgram = filterProgram(_.cloneDeep(program));
         var template = Handlebars.compile(document.querySelector('.program-day-template').innerHTML);
         var container = document.querySelector('.javazone-program');
         container.innerHTML = template(filteredProgram);
-    }
-
-    function listenForHashChange() {
-        window.addEventListener('hashchange', function() {
-            $('.active-day').removeClass('active-day');
-            var hash = window.location.hash.substr(1);
-            $('a[href="#' + hash + '"]').addClass('active-day');
-            var d = _.find(dates, function(date) {
-                return date.getDate() == hash;
-            });
-            dateFilter = d;
-            renderProgram();
-        });
-
-        if (window.location.hash === '')
-            window.location.hash = dateFilter.getDate();
-        else {
-            renderProgram();
-            $('a[href="' + window.location.hash + '"]').addClass('active-day');
-        }
     }
 
     function renderError(err) {
@@ -386,9 +337,8 @@
     function day(talk) {
         if (!talk.starter)
             return "-1";
-        
-        var d = new Date(talk.starter).getDate();
-        return d;
+
+        return munix(talk.starter).format('dddd Do');
     }
 
 	jz.program = getProgram;

@@ -34,6 +34,10 @@
     border-bottom: 1px solid black;
 }
 
+.javazone-program h1.section-header.centered {
+    font-weight: 400;
+}
+
 .javazone-program .section-content h2:first-child {
     margin-top: .85em;
 }
