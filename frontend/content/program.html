@@ -66,22 +66,85 @@
                             <h1 class="section-header">{{slot}}</h1>
                             <div class="section-content">
                             {{#each talks}}
-                                <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
-                                    <a href="{{detaljer}}">{{tittel}}</a>
+                                <div class="talk">
                                     {{#if icon}}<i class="submission-icon {{icon}}" title="{{format}}"></i>{{/if}}
-                                    <img src="{{flag}}" alt="{{sprak}}" class="submission-flag" />
-                                    <span class="room-number" title="{{rom}}">{{roomNumber}}</span>
-                                </h2>
-                                <ul class="submission-keywords" style="display: none;">
-                                {{#each nokkelord}}
-                                    <li class="submission-keyword {{c}}">{{l}}</li>
-                                {{/each}}
-                                </ul>
-                                <p class="submission-speakers">
-                                {{#each foredragsholdere}}
-                                    <span class="submission-speaker"><img src="{{bildeUri}}" />{{navn}}</span>
-                                {{/each}}
-                                </p>
+                                    <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
+                                        <span class="room-number" title="{{rom}}">{{roomNumber}}</span>
+                                        <a href="{{detaljer}}">{{tittel}}</a>
+                                    </h2>
+                                    <ul class="submission-keywords" style="display: none;">
+                                    {{#each nokkelord}}
+                                        <li class="submission-keyword {{c}}">{{l}}</li>
+                                    {{/each}}
+                                    </ul>
+                                    <p class="submission-speakers">
+                                    {{#each foredragsholdere}}
+                                        <span class="submission-speaker">{{navn}}</span>
+                                    {{/each}}
+                                    </p>
+                                </div>
+                            {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/each}}
+                {{#if firstDay}}
+                    <div class="sub-section cf">
+                        <h1 class="section-header">19:20</h1>
+                        <div class="section-content">
+                            <p>Todays presentations ends, but the night is by no means over yet. This is when the lights are dimmed and the music starts – get ready for AweZone!<br /><a href="/info.html#awezone">Read more</a></p>
+                        </div>
+                    </div>
+                {{/if}}
+            {{else}}
+                <div class="sub-section cf">
+                    <h1 class="section-header centered">No results</h1>
+                </div>
+            {{/if}}
+        </div>
+    {{/each}}
+</script>
+
+<script type="text/tempate" class="program-day-template-old">
+    {{#each this}}
+        <div class="section container cf" id="{{className}}">
+            <div class="sub-section cf">
+                <h1 class="section-header centered">{{date}}</h1>
+            </div>
+            {{#if presentations}}
+                <div class="sub-section cf">
+                    <h1 class="section-header">08:00</h1>
+                    <div class="section-content">
+                        {{#if firstDay}}
+                            <p>The doors are opened, and JavaZone 2015 begins! Get in early to get a good spot for the morning show, which starts 08:30. You don't want to miss this.</p>
+                        {{else}}
+                            <p>The doors are opened.</p>
+                        {{/if}}
+                    </div>
+                </div>
+                {{#each presentations}}
+                    {{#if talks}}
+                        <div class="sub-section cf">
+                            <h1 class="section-header">{{slot}}</h1>
+                            <div class="section-content">
+                            {{#each talks}}
+                                <div class="talk">
+                                    <h2 class="submission submission-difficulty submission-difficulty-{{niva}}">
+                                        <span class="room-number" title="{{rom}}">{{roomNumber}}</span>
+                                        <a href="{{detaljer}}">{{tittel}}</a>
+                                        {{#if icon}}<i class="submission-icon {{icon}}" title="{{format}}"></i>{{/if}}
+                                    </h2>
+                                    <ul class="submission-keywords" style="display: none;">
+                                    {{#each nokkelord}}
+                                        <li class="submission-keyword {{c}}">{{l}}</li>
+                                    {{/each}}
+                                    </ul>
+                                    <p class="submission-speakers">
+                                    {{#each foredragsholdere}}
+                                        <span class="submission-speaker"><img src="{{bildeUri}}" />{{navn}}</span>
+                                    {{/each}}
+                                    </p>
+                                </div>
                             {{/each}}
                             </div>
                         </div>

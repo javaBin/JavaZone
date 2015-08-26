@@ -1,3 +1,13 @@
+.javazone-program .sub-section .section-header {
+    float: none;
+    text-align: left;
+}
+
+.javazone-program .sub-section .section-content {
+    float: none;
+    width: 100%;
+}
+
 .program-days ul {
     padding-left: 0;
 }
@@ -34,26 +44,47 @@
     border-bottom: 1px solid black;
 }
 
-.javazone-program h1.section-header.centered {
-    font-weight: 400;
+.javazone-program .section-header {
+    margin-bottom: 0;
 }
 
-.javazone-program .section-content h2:first-child {
-    margin-top: .85em;
+.javazone-program .talk {
+    position: relative;
+}
+
+.javazone-program h1.section-header.centered {
+    font-weight: 400;
 }
 
 .javazone-program .section-content h2 {
     display: inline-block;
     font-size: 1.1em;
-    margin-bottom: 0.15em;
+    margin: 0;
+    overflow: hidden;
     position: relative;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+@media (min-width: 882px) {
+    .javazone-program .section-content h2 {
+        max-width: 64%;
+        width: 64%;
+    }
 }
 
 .javazone-program .section-content h2 a {
     background-position: 0 16px;
 }
 
-.javazone-program .submission .submission-icon {
+@media (max-width: 768px) {
+    .javazone-program .section-content h2 a {
+        font-size: .8em;
+    }
+}
+
+.javazone-program .submission-icon {
     font-size: .7em;
     opacity: .75;
     position: relative;
@@ -76,21 +107,26 @@
     font-size: .7em;
     font-weight: 400;
     height: 20px;
-    margin-left: 7px;
+    margin-right: 4px;
     position: relative;
     text-align: center;
-    top: -2px;
+    top: -1px;
     width: 20px;
 }
 
+.javazone-program .submission-icon {
+    left: -20px;
+    position: absolute;
+    top: 6px;
+}
+
 @media (min-width: 768px) {
-    .javazone-program .submission .submission-icon {
+
+    .javazone-program .submission-icon {
         left: -30px;
-        position: absolute;
-        top: 6px;
     }
 
-    .javazone-program .submission .submission-flag {
+    .javazone-program .submission-flag {
         margin-left: 7px;
     }
 }
@@ -105,6 +141,8 @@
 .javazone-program .section-content ul + p {
     margin-bottom: .5em;
     margin-top: 0;
+    text-align: right;
+    width: 35%;
 }
 
 .javazone-program ul {
@@ -133,10 +171,19 @@
     opacity: .5;
 }
 
+.javazone-program .submission-speakers {
+    display: none;
+}
+
+@media (min-width: 882px) {
+    .javazone-program .submission-speakers {
+        display: inline-block;
+    }
+}
+
 .javazone-program .submission-speaker:not(:last-child):after {
-    content: '&';
-    margin-left: 10px;
-    margin-right: 10px;
+    content: ',';
+    margin-right: 5px;
 }
 
 .javazone-program .submission-speaker {
@@ -151,10 +198,6 @@
     margin-right: 5px;
     width: 24px;
 }
-
-/*.javazone-program li:hover {
-    opacity: 1;
-}*/
 
 .topics, .topic-submissions {
     list-style: none;
