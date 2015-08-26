@@ -259,6 +259,11 @@
     padding: 0;
 }
 
+.javazone-program-filter .filter-languages {
+    margin: 15px auto;
+    padding: 0;
+}
+
 .javazone-program-filter .filter-difficulty,
 .javazone-program-filter .filter-category,
 .javazone-program-filter .filter-language {
