@@ -39,6 +39,7 @@
 
     var categoriesFilter = [];
     var difficultiesFilter = [];
+    var languageFilter = [];
 
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
@@ -225,7 +226,7 @@
     }
 
     function filterProgram(prog) {
-        if (!difficultiesFilter.length && !categoriesFilter.length)
+        if (!difficultiesFilter.length && !categoriesFilter.length && !languageFilter.length)
             return prog;
 
         _.each(prog, function(p) {
@@ -239,6 +240,10 @@
 
                         if (categoriesFilter.length)
                             isActive = isActive && hasCategory(talk, categoriesFilter);
+
+                        if (languageFilter.length) {
+                            isActive = isActive && languageFilter.indexOf(talk.sprak) >= 0;
+                        }
 
                         return isActive;
                     });
@@ -262,6 +267,7 @@
         var $container = $(container);
         $container.find('.filter-difficulty').on('click', filterDifficulty);
         $container.find('.filter-category').on('click', filterCategory);
+        $container.find('.filter-language').on('click', filterLanguage);
     }
 
     function filterDifficulty(ev) {
@@ -290,6 +296,21 @@
             categoriesFilter = _.reject(categoriesFilter, _.matches(category));
         else
             categoriesFilter.push(category);
+
+        renderProgram();
+    }
+
+    function filterLanguage(ev) {
+        var $el = $(this);
+        if (!$el.is('li'))
+            return;
+
+        $el.toggleClass('active');
+        var language = $el.attr('data-lang');
+        if (_.includes(languageFilter, language))
+            languageFilter = _.reject(languageFilter, _.matches(language));
+        else
+            languageFilter.push(language);
 
         renderProgram();
     }

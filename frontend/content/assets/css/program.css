@@ -154,11 +154,11 @@
     display: none;
 }
 
-.javazone-program .submission-keyword, .filter-difficulty, .filter-category {
-    -webkit-transition: opacity .2s ease-in-out;
-    -moz-transition: opacity: .2s ease-in-out;
-    -o-transition: opacity: .2s ease-in-out;
-    transition: opacity .2s ease-in-out;
+.javazone-program .submission-keyword, .filter-difficulty, .filter-category, .filter-language {
+    -webkit-transition: opacity .1s ease-in-out;
+    -moz-transition: opacity: .1s ease-in-out;
+    -o-transition: opacity: .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
     border-radius: 3px;
     color: white;
     display: inline-block;
@@ -224,7 +224,7 @@
 
 /* keyword colors */
 
-.submission-keyword, .filter-category {
+.submission-keyword, .filter-category, .filter-language {
     background-color: #777;
 }
 
@@ -260,13 +260,15 @@
 }
 
 .javazone-program-filter .filter-difficulty,
-.javazone-program-filter .filter-category {
+.javazone-program-filter .filter-category,
+.javazone-program-filter .filter-language {
     cursor: pointer;
     opacity: .3;
 }
 
 .javazone-program-filter .filter-difficulty:hover,
-.javazone-program-filter .filter-category:hover {
+.javazone-program-filter .filter-category:hover,
+.javazone-program-filter .filter-language:hover {
     opacity: 1;
 }
 
