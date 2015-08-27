@@ -38,6 +38,11 @@
     background-size: cover;
 }
 
+.movie-3.released {
+    background-image: url('/assets/img/movies/movie_2@2x.jpg');
+    background-size: cover;
+}
+
 .play {
     -webkit-transition: background-color .4s ease;
     -moz-transition: background-color .4s ease;
