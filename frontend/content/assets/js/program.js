@@ -283,6 +283,7 @@
             difficultiesFilter.push(difficulty);
 
         renderProgram();
+        $el.blur();
     }
 
     function filterCategory(ev) {
@@ -298,6 +299,7 @@
             categoriesFilter.push(category);
 
         renderProgram();
+        $el.blur();
     }
 
     function filterLanguage(ev) {
@@ -313,6 +315,7 @@
             languageFilter.push(language);
 
         renderProgram();
+        $el.blur();
     }
 
     function renderSuccess(data) {
