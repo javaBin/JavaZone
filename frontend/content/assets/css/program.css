@@ -31,7 +31,7 @@
 }
 
 .program-days h2 {
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .program-days a.active-day {
@@ -249,6 +249,12 @@
 }
 
 /* filter */
+.javazone-program-filter h2 {
+    font-size: .8em;
+    margin-top: 5em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
 .javazone-program-filter {
     text-align: center;
 }

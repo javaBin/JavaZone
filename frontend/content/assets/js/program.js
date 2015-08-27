@@ -341,7 +341,7 @@
 
     function renderFilter() {
         var template = Handlebars.compile(document.querySelector('.program-filter').innerHTML);
-        var container = document.querySelector('.javazone-program-filter');
+        var container = document.querySelector('.javazone-program-filter .filters');
         container.innerHTML = template(categories);
         attachListeners(container);
     }
