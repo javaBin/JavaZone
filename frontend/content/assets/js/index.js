@@ -10,7 +10,7 @@
         var movie2 = document.querySelector('.movie-2 .timer');
         var movie3 = document.querySelector('.movie-3 .timer');
         var release2 = new Date(2015, 7, 21, 10, 0, 0).getTime();
-        var release3 = new Date(2015, 7, 27, 10, 0, 0).getTime();
+        var release3 = new Date(2015, 7, 28, 10, 0, 0).getTime();
 
         if (Date.now() > release2)
             attachMovie2ClickListener();
