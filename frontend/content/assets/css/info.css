@@ -220,17 +220,15 @@
 }
 
 .info-page .party .bands li {
-    display: inline-block;
     text-align: center;
-    width: 33%;
 }
 
 .info-page .party .bands .band {
     background-size: contain;
     border-radius: 100%;
     display: inline-block;
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
 }
 
 .band.sondre-justad {
@@ -254,6 +252,26 @@
     .band.datarock { background-image: url('/assets/img/awezone/datarock@2x.png'); }
 
     .band.kvelertak { background-image: url('/assets/img/awezone/kvelertak@2x.png'); }
+}
+
+@media (min-width: 768px) {
+    .info-page .party .bands li {
+        display: inline-block;
+        width: 33%;
+    }
+
+    .info-page .party .bands .band {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 850px) {
+
+    .info-page .party .bands .band {
+        height: 250px;
+        width: 250px;
+    }
 }
 
 .info-page .party .bands:before {
