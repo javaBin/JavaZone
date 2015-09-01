@@ -15,6 +15,7 @@
             {{speakers}}
         </div>
         <h1>{{tittel}}</h1>
+        <div class="rating-container"></div>
         <div class="sub-section cf">
             <h2 class="section-header">About</h2>
             <div class="section-content">
@@ -68,6 +69,130 @@
             <h2 class="section-header">Format</h2>
             <div class="section-content">
                 <p>{{format}}</p>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" class="rating-template">
+    <div class="section container cf">
+        <div class="sub-section cf">
+            <h1 class="section-header centered">Feedback</h1>
+            <div class="section-content">
+                <form class="talk-rating">
+                    <div class="rating-category rating-relevance">
+                        <h2>Relevance</h2>
+                        <label>
+                            <input type="radio" name="relevance" value="1" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="relevance" value="2" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="relevance" value="3" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="relevance" value="4" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="relevance" value="5" />
+                            <span class="rating-label"></span>
+                        </label>
+                    </div>
+                    <div class="rating-category rating-content">
+                        <h2>Content</h2>
+                        <label>
+                            <input type="radio" name="content" value="1" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="content" value="2" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="content" value="3" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="content" value="4" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="content" value="5" />
+                            <span class="rating-label"></span>
+                        </label>
+                    </div>
+                    <div class="rating-category rating-quality">
+                        <h2>Quality</h2>
+                        <label>
+                            <input type="radio" name="quality" value="1" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="quality" value="2" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="quality" value="3" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="quality" value="4" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="quality" value="5" />
+                            <span class="rating-label"></span>
+                        </label>
+                    </div>
+                    <div class="rating-category rating-overall">
+                        <h2>Overall</h2>
+                        <label>
+                            <input type="radio" name="overall" value="1" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="overall" value="2" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="overall" value="3" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="overall" value="4" />
+                            <span class="rating-label"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="overall" value="5" />
+                            <span class="rating-label"></span>
+                        </label>
+                    </div>
+                    <button class="button submit" type="button" disabled>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" class="feedback-success-template">
+    <div class="section container cf">
+        <div class="sub-section cf">
+            <h2 class="section-header centered">Thank you for your feedback!</h2>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" class="feedback-failed-template">
+    <div class="section container cf">
+        <div class="sub-section cf">
+            <h2 class="section-header centered">Something went wrong while submitting feedback.</h2>
+            <div class="section-content">
+                <a href="javascript:location.reload();" class="button">Try again</a>
             </div>
         </div>
     </div>

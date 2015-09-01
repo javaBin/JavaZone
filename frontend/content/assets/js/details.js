@@ -1,5 +1,7 @@
 (function(_, request, Handlebars, jz) {
 
+    var id;
+
     var languageMapping = {
         'en': 'English',
         'no': 'Norwegian'
@@ -14,6 +16,16 @@
     function mdate(d) {
         return moment(d).utcOffset(120);
     }
+
+    function generateUUID(){
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (d + Math.random()*16)%16 | 0;
+        d = Math.floor(d/16);
+        return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+}
 
     var matcher = function(type) {
         return _.ary(_.partial(_.startsWith, _, type), 1);
@@ -39,13 +51,6 @@
             return {c: _.kebabCase(n), l: n};
         }));
         return submission;
-    }
-
-    function getTalk() {
-        var id = decodeURIComponent(location.search.substr(1).split('=')[1]);
-        jz.data.talk(id)
-        .then(renderSuccess)
-        .fail(renderError);
     }
 
     function imageUrl(url) {
@@ -76,14 +81,104 @@
         return start.format('dddd, MMMM Do 2015') + ' at ' + start.format('HH:mm') + '-' + end.format('HH:mm');
     }
 
-    function renderSuccess(submission) {
-        console.log(submission);
+    function getTalk() {
+        id = decodeURIComponent(location.search.substr(1).split('=')[1]);
+        jz.data.talk(id)
+        .then(renderSuccess)
+        .fail(renderError);
+    }
 
+    function renderSuccess(submission) {
         submission = transform(submission);
+        console.log(submission);
 
         var template = Handlebars.compile(document.querySelector('.submission-details-template').innerHTML);
         var container = document.querySelector('.javazone-submission-details');
         container.innerHTML = template(submission);
+
+        var stopper = "2015-09-09T07:55:00Z";
+        var now = mdate(stopper);
+        var end = mdate(submission.stopper);
+        var diff = end.diff(now, 'ms');
+        var ratingActive = diff <= Math.max(300000, 0);
+        var voterId = Cookies.get('voterId');
+
+        if (true && !voterId) {
+            renderRating(submission);
+        } else if (voterId) {
+            renderFeedbackSuccess();
+        }
+    }
+
+    function renderRating() {
+        var template = Handlebars.compile(document.querySelector('.rating-template').innerHTML);
+        var container = document.querySelector('.rating-container');
+        container.innerHTML = template();
+
+        var submit = $('.button.submit');
+
+        $('input[type=radio]').on('click', function() {
+            var relevance = parseInt($('.rating-relevance input:checked').val(), 10);
+            var content = parseInt($('.rating-content input:checked').val(), 10);
+            var quality = parseInt($('.rating-quality input:checked').val(), 10);
+            var overall = parseInt($('.rating-overall input:checked').val(), 10);
+
+            var allDone = _.compact([relevance, content, quality, overall]);
+            console.log(allDone);
+            if (allDone.length >= 4) {
+                submit.attr('disabled', false);
+            }
+
+        });
+
+        $('.button.submit').on('click', function(ev) {
+            var relevance = parseInt($('.rating-relevance input:checked').val(), 10);
+            var content = parseInt($('.rating-content input:checked').val(), 10);
+            var quality = parseInt($('.rating-quality input:checked').val(), 10);
+            var overall = parseInt($('.rating-overall input:checked').val(), 10);
+
+            var allDone = _.compact([relevance, content, quality, overall]);
+            if (allDone.length !== 4) {
+                return;
+            }
+
+            var data = {
+                template: {
+                    data: [
+                        {name: 'overall', value: overall},
+                        {name: 'relevance', value: relevance},
+                        {name: 'content', value: content},
+                        {name: 'quality', value: quality}
+                    ]
+                }
+            }
+            var voterId = generateUUID();
+            console.log(JSON.stringify(data));
+            console.log(voterId);
+
+            submit.attr('disabled', true);
+            jz.data.feedback(id, voterId, data)
+            .fail(function() {
+                renderFeedbackFailed();
+            })
+            .then(function() {
+                console.log(Cookies);
+                Cookies.set('voterId', voterId);
+                renderFeedbackSuccess();
+            });
+        });
+    }
+
+    function renderFeedbackSuccess() {
+        var template = Handlebars.compile(document.querySelector('.feedback-success-template').innerHTML);
+        var container = document.querySelector('.rating-container');
+        container.innerHTML = template();
+    }
+
+    function renderFeedbackFailed() {
+        var template = Handlebars.compile(document.querySelector('.feedback-failed-template').innerHTML);
+        var container = document.querySelector('.rating-container');
+        container.innerHTML = template();
     }
 
     function renderError(err) {

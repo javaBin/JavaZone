@@ -14,6 +14,7 @@ exports.config = function(pacbot) {
 		all: [
 			"assets/js/lodash.min.js",
 			"node_modules/velocity-animate/velocity.min.js",
+			"node_modules/js-cookie/src/js.cookie.js",
 			"node_modules/jquery/dist/jquery.min.js",
 			"node_modules/handlebars/dist/handlebars.min.js",
 			"node_modules/moment/min/moment.min.js",

@@ -112,7 +112,7 @@
         ["Hans Ove Ringstad", "/assets/img/javabin/hans_ove_ringstad.jpg", "#"]
     ];
 
-    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions';
+    var baseUrl = 'http://test.javazone.no/javazone-web-api/events/javazone_2015/sessions';
     //var baseUrl = 'http://dev.javazone.no/resources/program.json';
 
     jz.data.program = function() {
@@ -178,6 +178,33 @@
             case 'CLOSED': return {className: 'closed', no: 'Stengt', en: 'Closed'};
             default: return {className: 'not-opened', no: 'Ikke åpnet', en: 'Not opened'};
         }
+    }
+
+    jz.data.feedback = function(id, voterId, data) {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            console.log(err);
+            console.log(res);
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(res);
+        }
+
+        request
+        .post('http://test.javazone.no/devnull/server/events/0e6d98e9-5b06-42e7-b275-6abadb498c81/sessions/' + id + '/feedbacks')
+        .set('Content-Type', 'application/json')
+        .set('Voter-ID', voterId)
+        .set('User-Agent', navigator.userAgent)
+        .send(data)
+        .end(parse);
+        setTimeout(function() {
+            def.resolve();
+        }, 3000);
+        return def;
     }
 
 })(window.superagent, window.$, window.jz = window.jz || {});

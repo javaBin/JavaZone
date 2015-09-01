@@ -4,6 +4,7 @@
 	-o-transition: color .4s ease, border-color .4s ease;
 	transition: color .4s ease, border-color .4s ease;
 	background-image: none !important;
+    background-color: transparent;
 	border: 1px solid #286a65;
 	color: #286a65;
 	display: inline-block;
@@ -11,6 +12,7 @@
 	padding: 10px 20px;
 	text-transform: uppercase;
 	text-decoration: none;
+    outline: 0;
 }
 
 .button.button-red {
@@ -26,6 +28,16 @@
 .button.button-black {
 	border-color: #101010;
 	color: #101010;
+}
+
+.button:disabled {
+    border-color: #ddd;
+    color: #ddd;
+}
+
+.button:disabled:hover {
+    border-color: #ddd;
+    color: #ddd;
 }
 
 .button.button-wide {
