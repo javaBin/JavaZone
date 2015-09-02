@@ -114,10 +114,10 @@
 }
 
 .details-page label:nth-of-type(2) .rating-label:before {
-    border-radius: 100%;
-    border: 0;
-    border-top: 1px solid #ddd;
-    height: 15px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom: 0;
+    height: 12px;
     top: 20px;
     width: 28px;
 }
@@ -131,11 +131,11 @@
 }
 
 .details-page label:nth-of-type(4) .rating-label:before {
-    border-radius: 100%;
-    border: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-top: 0;
     height: 15px;
-    top: 17px;
+    top: 20px;
     width: 28px;
 }
 
