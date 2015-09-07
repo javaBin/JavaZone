@@ -195,7 +195,7 @@
         }
 
         request
-        .post('http://test.javazone.no/devnull/server/events/0e6d98e9-5b06-42e7-b275-6abadb498c81/sessions/' + id + '/feedbacks')
+        .post('http://test.javazone.no/devnull/server/events/e213acd2-ad9e-4bba-a5aa-87d47fed5d08/sessions/' + id + '/feedbacks')
         .set('Content-Type', 'application/vnd.collection+json')
         .set('Voter-ID', voterId)
         .set('User-Agent', navigator.userAgent)
