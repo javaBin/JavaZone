@@ -9,7 +9,7 @@
         ["Microsoft", "Microsoft.jpg", "http://www.microsoft.no/"],
         ["Jetbrains", "Jetbrains.jpg", "http://www.jetbrains.com"],
         ["Greenbird", "greenbird_2014.png", "http://www.greenbird.com"],
-        ["Itera", "stolt_partner_itera.jpg", "http://www.iteraconsulting.no/"],
+        ["Itera", "stolt_partner_itera.jpg", "http://www.itera.no/"],
         ["Miles", "miles_2014.png", "http://www.miles.no/"],
         ["Kantega", "kantega_2012.jpg", "http://www.kantega.no/"],
         ["Webstep", "webstep_2012.jpg", "http://www.webstep.no/"],
