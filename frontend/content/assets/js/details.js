@@ -101,7 +101,8 @@
         var end = mdate(submission.stopper);
         var diff = end.diff(now, 'ms');
         var ratingActive = diff <= Math.max(300000, 0);
-        var voterId = Cookies.get('voterId');
+        var voteKey = 'voterId-' + id;
+        var voterId = Cookies.get(voteKey);
 
         if (ratingActive && !voterId) {
             renderRating(submission);
