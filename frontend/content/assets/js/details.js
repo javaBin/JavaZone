@@ -96,8 +96,8 @@
         var container = document.querySelector('.javazone-submission-details');
         container.innerHTML = template(submission);
 
-        var stopper = "2015-09-09T07:55:00Z";
-        var now = mdate(stopper);
+        var stopper = submission.stopper;
+        var now = mdate();
         var end = mdate(submission.stopper);
         var diff = end.diff(now, 'ms');
         var ratingActive = diff <= Math.max(300000, 0);
