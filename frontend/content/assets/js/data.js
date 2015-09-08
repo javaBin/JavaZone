@@ -199,7 +199,7 @@
         .set('Content-Type', 'application/vnd.collection+json')
         .set('Voter-ID', voterId)
         .set('User-Agent', navigator.userAgent)
-        .send(data)
+        .send(JSON.stringify(data))
         .end(parse);
         setTimeout(function() {
             def.resolve();
