@@ -180,7 +180,7 @@
         }
     }
 
-    jz.data.feedback = function(id, voterId, data) {
+    jz.data.feedback = function(link, voterId, data) {
         var def = $.Deferred();
 
         function parse(err, res) {
@@ -195,7 +195,7 @@
         }
 
         request
-        .post('http://test.javazone.no/devnull/server/events/e213acd2-ad9e-4bba-a5aa-87d47fed5d08/sessions/' + id + '/feedbacks')
+        .post(link)
         .set('Content-Type', 'application/vnd.collection+json')
         .set('Voter-ID', voterId)
         .set('User-Agent', navigator.userAgent)

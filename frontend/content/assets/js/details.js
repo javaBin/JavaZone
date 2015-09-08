@@ -110,7 +110,14 @@
         }
     }
 
-    function renderRating() {
+    function renderRating(submission) {
+        console.log(submission);
+        var feedbackLink = _.find(submission.links, function(link) {
+            return link.rel === 'feedback';
+        });
+        if (!feedbackLink)
+            console.log('Error: could not find feedback link');
+
         var template = Handlebars.compile(document.querySelector('.rating-template').innerHTML);
         var container = document.querySelector('.rating-container');
         container.innerHTML = template();
@@ -157,7 +164,7 @@
             console.log(voterId);
 
             submit.attr('disabled', true);
-            jz.data.feedback(id, voterId, data)
+            jz.data.feedback(feedbackLink, voterId, data)
             .fail(function() {
                 renderFeedbackFailed();
             })
