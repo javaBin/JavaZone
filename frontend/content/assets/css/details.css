@@ -76,7 +76,7 @@
     -moz-transition: border-color .2s ease;
     -o-transition: border-color .2s ease;
     transition: border-color .2s ease;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 100%;
     cursor: pointer;
     display: inline-block;
@@ -109,7 +109,7 @@
     border-top-right-radius: 17px;
     border-bottom: 1px solid #ddd;
     height: 15px;
-    top: 20px;
+    top: 17px;
     width: 28px;
 }
 
@@ -118,7 +118,7 @@
     border-top-right-radius: 17px;
     border-bottom: 0;
     height: 12px;
-    top: 20px;
+    top: 18px;
     width: 28px;
 }
 
