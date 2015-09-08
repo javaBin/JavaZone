@@ -103,7 +103,7 @@
         var ratingActive = diff <= Math.max(300000, 0);
         var voterId = Cookies.get('voterId');
 
-        if (true && !voterId) {
+        if (ratingActive && !voterId) {
             renderRating(submission);
         } else if (voterId) {
             renderFeedbackSuccess();
