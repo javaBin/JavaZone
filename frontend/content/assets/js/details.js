@@ -170,8 +170,9 @@
                 renderFeedbackFailed();
             })
             .then(function() {
-                console.log(Cookies);
-                Cookies.set('voterId', voterId);
+                var voteKey = 'voterId-' + id;
+                var voterId = Cookies.get(voteKey);
+                Cookies.set(voteKey, voterId);
                 renderFeedbackSuccess();
             });
         });
