@@ -115,7 +115,7 @@
         var feedbackLink = _.find(submission.links, function(link) {
             return link.rel === 'feedback';
         });
-        if (!feedbackLink)
+        if (!feedbackLink || !feedbackLink.href)
             console.log('Error: could not find feedback link');
 
         var template = Handlebars.compile(document.querySelector('.rating-template').innerHTML);
@@ -164,7 +164,7 @@
             console.log(voterId);
 
             submit.attr('disabled', true);
-            jz.data.feedback(feedbackLink, voterId, data)
+            jz.data.feedback(feedbackLink.href, voterId, data)
             .fail(function() {
                 renderFeedbackFailed();
             })
