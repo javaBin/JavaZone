@@ -77,6 +77,10 @@
 	text-align: center;
 }
 
+.jumbotron-spacing {
+	margin-bottom: 3em;
+}
+
 
 .section-content dl {
     margin-top: .3em;
