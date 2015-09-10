@@ -11,4 +11,18 @@
 	font-weight: 300;
 	max-width: 860px;
 	margin: 0 auto 2em auto;
+	font-size: 1em;
+	padding: 1em;
 }
+
+@media (min-width: 768px) {
+	.memories-page .memories h2 {
+		font-size: 1.5em;
+	}
+	.goodbye {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+}
+
+
