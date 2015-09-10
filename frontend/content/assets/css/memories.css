@@ -1,0 +1,14 @@
+.memories-page .memories {
+	margin: 3em 0;
+}
+
+.memories-page .memories h1 {
+	text-align: center;
+}
+
+.memories-page .memories h2 {
+	text-align: center;
+	font-weight: 300;
+	max-width: 860px;
+	margin: 0 auto 2em auto;
+}
