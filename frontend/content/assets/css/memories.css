@@ -14,6 +14,11 @@
 	font-size: 1em;
 	padding: 1em;
 }
+.memories-page .credit {
+	font-size: .8em;
+	text-transform: uppercase;
+	margin-top: 3em;
+}
 
 @media (min-width: 768px) {
 	.memories-page .memories h2 {
