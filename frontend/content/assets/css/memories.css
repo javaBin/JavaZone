@@ -20,6 +20,10 @@
 	margin-top: 3em;
 }
 
+.memories-page .centerbutton {
+	text-align: center;
+}
+
 @media (min-width: 768px) {
 	.memories-page .memories h2 {
 		font-size: 1.5em;
@@ -31,3 +35,12 @@
 }
 
 
+.memories-page .buttons {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin-bottom: 3em;
+}
+.memories-page h2.tighter {
+	margin-bottom: 0;
+}
