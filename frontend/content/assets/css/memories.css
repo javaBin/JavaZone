@@ -44,3 +44,7 @@
 .memories-page h2.tighter {
 	margin-bottom: 0;
 }
+
+.memories-page h2.muchsmaller {
+	font-size: .8em;
+}
