@@ -1,7 +1,7 @@
 <% set('page', 'tickets-page') %>
 
 <div class="jumbotron container">
-	<h1>Tickets to JavaZone 2015 are now available</h1>
+	<h1>Come back soon for your JavaZone 2016 ticket!</h1>
 	<p>JavaZone takes place in Oslo, Norway, on September 9th-10th 2015. <br>Join more than 2.500 developers at one of Europe's largest developer conferences.</p>
 </div>
 
@@ -12,21 +12,19 @@
 			<div class="section-content">
 				<ul class="ticket-types cf">
 					<li class="ticket-type">
-						<a href="<%= settings.tickets_buy_url %>">
+						<a href="#">
 							<!-- <img src="/assets/img/illustrations/ticket_buyer_2.png" /> -->
 							<%= partial('assets/svg/illustrations/regular_ticket.svg') %>
 							<div>Regular Ticket</div>
-							<div class="price">NOK 6.390,–</div>
-							<div class="vatinfo">ex. VAT</div>
+							<div class="price">not for sale anymore</div>
 						</a>
 					</li>
 					<li class="ticket-type">
-						<a href="<%= settings.tickets_buy_url %>">
+						<a href="#">
 							<!-- <img src="/assets/img/illustrations/ticket_buyer_1.png" /> -->
 							<%= partial('assets/svg/illustrations/javabin_ticket.svg') %>
 							<div>javaBin Ticket</div>
-							<div class="price">NOK 5.390,–</div>
-							<div class="vatinfo">ex. VAT</div>
+							<div class="price">not for sale anymore–</div>
 						</a>
 					</li>
 				</ul>
@@ -40,18 +38,12 @@
 </div>
 
 <div class="section container cf">
-	<div class="buybutton">
-		<a href="<%= settings.tickets_buy_url %>" class="button">Buy your ticket today</a>
-	</div>
-</div>
-
-<div class="section container cf">
 	<div class="sub-section cf">
 		<h1 class="section-header">Special ticket types</h1>
 		<div class="section-content">
 			<p><strong>Partners</strong> may buy tickets at reduced prices. Read more about <a href="/partners.html">partnerships of JavaZone</a> and contact us at <a href="mailto:<%= settings.partner_mail %>">partner@java.no</a> to buy tickets.</p>
 			<p><strong>Multiple tickets</strong> might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into <a href="<%= settings.tickets_manage_url %>">our webshop</a>.</p>
-			<p><strong>Paying by invoice</strong> can be accommodated if you need that, but please consider buying the tickets using <a href="<%= settings.tickets_buy_url %>">the webshop</a> if you can. Please <a href="https://docs.google.com/forms/d/1lazSWOuPt1KoY5cNAvJh3KcHp1VF7l6FnqBArpm7a8E/viewform" target="_blank">use this form to give us your order</a> if you need to buy tickets and get an invoice.</p>
+			<p><strong>Paying by invoice</strong> can be accommodated if you need that, but please consider buying the tickets using <a href="<%= settings.tickets_buy_url %>">the webshop</a> if you can.</p>
 		</div>
 	</div>
 </div>
