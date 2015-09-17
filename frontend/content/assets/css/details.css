@@ -67,6 +67,11 @@
     display: none;
 }
 
+.details-page #video iframe {
+    height: 27em;
+    width: 100%;
+}
+
 .details-page .rating-category {
     margin-bottom: 1.5em;
 }

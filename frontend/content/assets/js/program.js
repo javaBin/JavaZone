@@ -67,7 +67,7 @@
         return munix(timestamp).format('HH:mm');
     }
 
-    var transformTalk = _.compose(_.compose(room, flag, speaker, icon, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
+    var transformTalk = _.compose(_.compose(room, flag, speaker, icon, extractVideoLink, extractDetailsLink, transformNokkelord, transformStarter, extract('topic', hasTopic), extract('type', hasType)));
 
     function createSlots(memo, current) {
         var timestamp = current.starter;
@@ -181,6 +181,15 @@
     function icon(submission) {
         submission.icon = formatMapping[submission.format];
         submission.format = _.capitalize(submission.format);
+        return submission;
+    }
+
+    function extractVideoLink(submission) {
+        var video = _.find(submission.links, {rel: 'video'});
+        if (!video)
+            return video;
+
+        submission.video = video.href;
         return submission;
     }
 

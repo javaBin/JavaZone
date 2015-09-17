@@ -72,7 +72,16 @@
         submission.format = _.capitalize(submission.format);
         submission.sprak = languageMapping[submission.sprak];
         submission.starter = formatDate(submission.starter, submission.stopper);
+        submission.video = getVideo(submission);
         return submission;
+    }
+
+    function getVideo(submission) {
+        var video = _.find(submission.links, {rel: 'video'});
+        if (!video)
+            return undefined;
+        
+        return video.href.split('/')[3];
     }
 
     function formatDate(start, end) {

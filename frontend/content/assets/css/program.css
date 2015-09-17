@@ -102,6 +102,43 @@
     width: 24px;
 }
 
+.javazone-program .submission .watch-video {
+    background: none;
+    border: 2px solid #286a65;
+    border-radius: 100%;
+    display: inline-block;
+    height: 25px;
+    margin-right: 10px;
+    padding-left: 8px;
+    position: relative;
+    top: 5px;
+    width: 25px;
+}
+
+.javazone-program .submission .watch-video:before {
+    border-width: 7px;
+    border-color: transparent;
+    border-left-color: #286a65;
+    border-style: solid;
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+
+@media (max-width: 768px) {
+    .javazone-program .submission .watch-video {
+        padding-left: 6px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .javazone-program .submission .watch-video:before {
+        border-width: 5px;
+        top: -5px;
+    }
+}
+
 .javazone-program .submission .room-number {
     background: rgba(0, 0, 0, .3);
     border-radius: 100%;
