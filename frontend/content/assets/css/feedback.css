@@ -1,0 +1,12 @@
+.feedback-page .section-header + .section-content p:first-child {
+    margin-top: .45em;
+}
+
+.stats-button {
+    background: #345;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 10px;
+}

@@ -36,6 +36,7 @@ exports.config = function(pacbot) {
 			"assets/js/index.js",
 			"assets/js/printprogram.js",
 			"assets/js/speakerinfo.js",
+			"assets/js/feedback.js",
 			"assets/js/main.js"
 		]
 	}
@@ -68,7 +69,8 @@ exports.config = function(pacbot) {
 			"assets/css/kids.css",
 			"assets/css/academy.css",
 			"assets/css/speakerinfo.css",
-			"assets/css/memories.css"
+			"assets/css/memories.css",
+			"assets/css/feedback.css"
 		]
 	};
 
