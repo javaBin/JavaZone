@@ -10,3 +10,36 @@
     font-weight: bold;
     padding: 0 10px;
 }
+
+.feedback-page .papers:before {
+    display: none;
+}
+
+.feedback-page .papers {
+    list-style: none;
+    padding: 0;
+}
+
+.feedback-page .paper {
+    background: #ccc;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 20px;
+    text-align: center;
+    width: 90px;
+}
+
+.feedback-page .paper.paper-green {
+    background: #149089;
+}
+
+.feedback-page .paper.paper-yellow {
+    background: #fcaf17;
+}
+
+.feedback-page .paper.paper-red {
+    background: #ff4f4c;
+}

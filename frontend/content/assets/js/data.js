@@ -132,7 +132,7 @@
         .end(parse);
 
         return def;
-    }
+    };
 
     jz.data.talk = function(id) {
         var def = $.Deferred();
@@ -150,7 +150,25 @@
         .end(parse);
 
         return def;
-    }
+    };
+
+    jz.data.getFeedback = function(url) {
+        var def = $.Deferred();
+
+        function parse(err, res) {
+            if (err) {
+                def.rejectWith(err);
+                return;
+            }
+
+            def.resolve(res.body);
+        }
+
+        request(url)
+        .end(parse);
+
+        return def;
+    };
 
     jz.data.workshops = function() {
         var def = $.Deferred();
@@ -168,7 +186,7 @@
         .end(parse);
 
         return def;
-    }
+    };
 
     jz.data.workshopStatus = function(status) {
         switch (status) {
@@ -179,7 +197,7 @@
             case 'CLOSED': return {className: 'closed', no: 'Stengt', en: 'Closed'};
             default: return {className: 'not-opened', no: 'Ikke åpnet', en: 'Not opened'};
         }
-    }
+    };
 
     jz.data.feedback = function(link, voterId, data) {
         var def = $.Deferred();
@@ -206,6 +224,6 @@
             def.resolve();
         }, 3000);
         return def;
-    }
+    };
 
 })(window.superagent, window.$, window.jz = window.jz || {});

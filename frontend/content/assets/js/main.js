@@ -15,7 +15,8 @@
         'kids': jz.kids,
         'academy': jz.academy,
         'printprogram': jz.printprogram,
-        'speakerinfo': jz.speakerinfo
+        'speakerinfo': jz.speakerinfo,
+        'feedback': jz.feedback
 	};
 
 	_(Object.keys(routes)).each(function(route) {

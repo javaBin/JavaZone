@@ -1,8 +1,11 @@
 <% set('page', 'feedback-page') %>
 
+<div class="feedback-container"></div>
+
+<script type="text/template" class="feedback-template">
 <div class="jumbotron container">
-    <h1>My fancy talk title</h1>
-    <h2>Bendik Solheim</h2>
+    <h1>{{title}}</h1>
+    <h2>{{speaker}}</h2>
 </div>
 
 <div class="section container cf">
@@ -10,7 +13,7 @@
         <h1 class="section-header">Feedback, baby!</h1>
         <div class="section-content">
             <p>
-                Everybody loves feedback. And statistics. During the conference, we collected feedback both physically in form of post-its after your talk, and online, in form of ratings on a few different areas: relevance, content, quality and overall.
+                Everybody loves feedback. And statistics. During the conference, we collected feedback both physically in form of post its after your talk, and online, in form of ratings on a few different areas: relevance, content, quality and overall.
                 We have compiled this feedback and tried to present it to you in a more structured manner, which hopefully will give you some input on how others saw your performance.
             </p>
             <p>
@@ -33,3 +36,37 @@
         </div>
     </div>
 </div>
+
+<div class="section container cf">
+    <div class="sub-section cf">
+        <h2 class="section-header">Online feedback</h2>
+        <div class="section-content">
+            <p>
+                JavaZone is a conference arranged by volunteers, and we believe in sharing of knowledge and making information available to everyone. This is why we release videos of each talk just after (or, during, actually) the conference, completely for free.
+            </p>
+            <p>
+                Your talk is at {your talk} – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see total plays, likes, and comments among others.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section container cf">
+    <div class="sub-section cf">
+        <h2 class="section-header">Post its</h2>
+        <div class="section-content">
+            <ul class="papers papers-session">
+                <li class="paper paper-green">{{paper.session.green}}</li>
+                <li class="paper paper-yellow">{{paper.session.yellow}}</li>
+                <li class="paper paper-red">{{paper.session.red}}</li>
+            </ul>
+            <p>
+                JavaZone is a conference arranged by volunteers, and we believe in sharing of knowledge and making information available to everyone. This is why we release videos of each talk just after (or, during, actually) the conference, completely for free.
+            </p>
+            <p>
+                Your talk is at {your talk} – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see total plays, likes, and comments among others.
+            </p>
+        </div>
+    </div>
+</div>
+</script>
