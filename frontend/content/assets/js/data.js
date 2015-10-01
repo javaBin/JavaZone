@@ -112,8 +112,8 @@
         ["Hans Ove Ringstad", "/assets/img/javabin/hans_ove_ringstad.jpg", "#"]
     ];
 
-    //var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions';
-    var baseUrl = 'http://test.javazone.no/javazone-web-api/events/javazone_2015/sessions';
+    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions';
+    //var baseUrl = 'http://test.javazone.no/javazone-web-api/events/javazone_2015/sessions';
     //var baseUrl = 'http://dev.javazone.no/resources/program.json';
 
     jz.data.program = function() {
