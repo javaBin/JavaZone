@@ -31,40 +31,67 @@
                 JavaZone is a conference arranged by volunteers, and we believe in sharing of knowledge and making information available to everyone. This is why we release videos of each talk just after (or, during, actually) the conference, completely for free.
             </p>
             <p>
-                Your talk is at {your talk} – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see total plays, likes, and comments among others.
+                Your talk can be seen at <a href="{{video}}">{{video}}</a> – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see total plays, likes, and comments among others.
             </p>
         </div>
     </div>
 </div>
-
+{{#if hasParticipants}}
 <div class="section container cf">
     <div class="sub-section cf">
-        <h2 class="section-header">Online feedback</h2>
+        <h2 class="section-header">Your audience</h2>
         <div class="section-content">
             <p>
-                JavaZone is a conference arranged by volunteers, and we believe in sharing of knowledge and making information available to everyone. This is why we release videos of each talk just after (or, during, actually) the conference, completely for free.
+                Our volunteers counted {{participants}} people listening to you speak. Keep in mind that this is an estimate, and not an exact number. The real number should not be very far away, though.
             </p>
             <p>
-                Your talk is at {your talk} – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see total plays, likes, and comments among others.
+                The average number of people across all rooms and sessions was {{averageParticipants}}.
             </p>
         </div>
     </div>
 </div>
-
+{{/if}}
 <div class="section container cf">
     <div class="sub-section cf">
-        <h2 class="section-header">Post its</h2>
+        <h2 class="section-header">Your feedback – analog</h2>
         <div class="section-content">
+            <p>
+            Just after your talk, people were asked to put either a green, yellow or red post it in a bowl, representing what their general feeling of your performance. These were your results.
+            </p>
             <ul class="papers papers-session">
                 <li class="paper paper-green">{{paper.session.green}}</li>
                 <li class="paper paper-yellow">{{paper.session.yellow}}</li>
                 <li class="paper paper-red">{{paper.session.red}}</li>
             </ul>
             <p>
-                JavaZone is a conference arranged by volunteers, and we believe in sharing of knowledge and making information available to everyone. This is why we release videos of each talk just after (or, during, actually) the conference, completely for free.
+                In average, across all talks, the post its were spread as follows 
             </p>
+            <ul class="papers papers-session">
+                <li class="paper paper-green">{{paper.conference.green}}</li>
+                <li class="paper paper-yellow">{{paper.conference.yellow}}</li>
+                <li class="paper paper-red">{{paper.conference.red}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section container cf">
+    <div class="sub-section cf">
+        <h2 class="section-header">Your feedback – digital</h2>
+        <div class="section-content">
             <p>
-                Your talk is at {your talk} – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see total plays, likes, and comments among others.
+                This year, we decided to try something new – digital feedback during the conference. People were asked to rate your talk on four different topics: relevance, content, quality and overall. Your result
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section container cf">
+    <div class="sub-section cf">
+        <h2 class="section-header">Help us improve</h2>
+        <div class="section-content">
+            <p>
+                We always strive to give you as good feedback as possible, and are constantly trying to improve on how we collect feedback. How can we do better? If you have any suggestions, don't hesitate to <a href="/contact.html">let us know</a>.
             </p>
         </div>
     </div>
