@@ -38,6 +38,10 @@
         };
     }
 
+    function sum(paper) {
+        return sum.green + sum.yellow + sum.red;
+    }
+
     function getTalk() {
         id = decodeURIComponent(location.search.substr(1).split('=')[1]);
         jz.data.talk(id)
@@ -73,6 +77,7 @@
                 conference: fixOnline(feedback.conference.online)
             },
             hasParticipants: (feedback.session.participants > 0 && feedback.session.participants < 1000),
+            hasPaperFeedback: sum(feedback.session.paper) > 0,
             participants: feedback.session.participants,
             averageParticipants: feedback.conference.participants,
             video: getLink(submission, 'video')

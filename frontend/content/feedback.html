@@ -31,7 +31,7 @@
                 JavaZone is a conference arranged by volunteers, and we believe in sharing of knowledge and making information available to everyone. This is why we release videos of each talk just after (or, during, actually) the conference, completely for free.
             </p>
             <p>
-                Your talk can be seen at <a href="{{video}}">{{video}}</a> – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see freshly updated total plays, likes, and comments among others.
+                Your talk can be seen at <a href="{{video}}">{{video}}</a> – feel free to share it as much as you'd like. You'll also find some statistics on this page: click the <span class="stats-button">Stats</span> button just below the description, and you will see freshly updated total plays, likes, and comments among others.<br /><strong>Note:</strong> you need to be logged in to see statistics. Don't worry, registering for a basic account is free.
             </p>
         </div>
     </div>
@@ -53,6 +53,7 @@
     </div>
 </div>
 {{/if}}
+{{#if hasPaperFeedback}}
 <div class="section container cf">
     <div class="sub-section cf">
         <h2 class="section-header">Your feedback – analog</h2>
@@ -66,7 +67,7 @@
                 <li class="paper paper-red">{{paper.session.red}}</li>
             </ul>
             <p>
-                In average, across all talks, the notes were spread as follows 
+                On average, across all talks, the notes were spread as follows 
             </p>
             <ul class="papers papers-session">
                 <li class="paper paper-green">{{paper.conference.green}}</li>
@@ -76,7 +77,18 @@
         </div>
     </div>
 </div>
-
+{{else}}
+<div class="section container cf">
+    <div class="sub-section cf">
+        <h2 class="section-header">Your feedback – analog</h2>
+        <div class="section-content">
+            <p>
+                Sadly, we do not have feedback in form of paper notes for your talk. If you had a lightning talk, this is the reason.
+            </p>
+        </div>
+    </div>
+</div>
+{{/if}}
 <div class="section container cf">
     <div class="sub-section cf">
         <h2 class="section-header">Your feedback – digital</h2>
