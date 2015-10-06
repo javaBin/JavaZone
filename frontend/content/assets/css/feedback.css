@@ -58,8 +58,10 @@
 }
 
 .feedback-bars {
-    height: 200px;
     border-bottom: 1px solid black;
+    display: table-cell;
+    height: 200px;
+    vertical-align: bottom;
     width: 471px;
 }
 
