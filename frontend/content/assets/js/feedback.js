@@ -39,7 +39,7 @@
     }
 
     function sum(paper) {
-        return sum.green + sum.yellow + sum.red;
+        return paper.green + paper.yellow + paper.red;
     }
 
     function getTalk() {
@@ -57,8 +57,8 @@
     }
 
     function renderSuccess(submission, feedback) {
-        console.log(submission);
-        console.log(feedback);
+        //console.log(submission);
+        //console.log(feedback);
 
         var data = {
             title: submission.tittel,
@@ -82,7 +82,7 @@
             averageParticipants: feedback.conference.participants,
             video: getLink(submission, 'video')
         };
-        console.log(data);
+        //console.log(data);
 
         var template = Handlebars.compile(document.querySelector('.feedback-template').innerHTML);
         var container = document.querySelector('.feedback-container');
