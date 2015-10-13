@@ -14,13 +14,13 @@
 .feedback-page .participants {
     background: #DFF2BF;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
-    height: 70px;
-    line-height: 70px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     padding: 0 20px;
-    min-width: 90px;
+    min-width: 50px;
 }
 
 .feedback-page .papers:before {
@@ -35,14 +35,14 @@
 .feedback-page .paper {
     background: #ccc;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
-    height: 70px;
-    line-height: 70px;
+    height: 50px;
+    line-height: 50px;
     margin-right: 20px;
     text-align: center;
     padding: 0 20px;
-    min-width: 90px;
+    min-width: 50px;
 }
 
 .feedback-page .paper.paper-green {
@@ -62,17 +62,17 @@
     display: table-cell;
     height: 200px;
     vertical-align: bottom;
-    width: 471px;
+    width: 272px;
 }
 
 .feedback-online-bar {
     background: #DFF2BF;
     display: inline-block;
-    font-size: 2em;
     font-weight: bold;
     text-align: center;
     vertical-align: bottom;
-    width: 100px;
+    font-size: 1.5em;
+    width:50px;
 }
 
 .feedback-online-bar:nth-child(n+2) {
@@ -89,7 +89,7 @@
     display: inline-block;
     text-transform: uppercase;
     text-align: center;
-    width: 100px;
+    width: 40px;
 }
 
 .feedback-label:nth-child(n+2) {
@@ -104,4 +104,33 @@
     transform: rotate(-90deg);
     display: inline-block;
     margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .feedback-page .participants {
+        font-size: 2em;
+        height: 70px;
+        line-height: 70px;
+        min-width: 90px;
+    }
+
+    .feedback-page .paper {
+        font-size: 2em;
+        height: 70px;
+        line-height: 70px;
+        min-width: 90px;
+    }
+
+    .feedback-bars {
+        width: 391px;
+    }
+
+    .feedback-online-bar {
+        width: 80px;
+        font-size: 2em;
+    }
+
+    .feedback-label {
+        width: 80px;
+    }
 }
