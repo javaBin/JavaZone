@@ -79,8 +79,8 @@ exports.config = function(pacbot) {
 			general_mail: 'javazone@java.no',
 			partner_mail: 'partner@java.no',
 			program_mail: 'program@java.no',
-			submitit_url: 'http://javazone.no/submitit/',
-			javabin_membership_url: 'http://java.no/index.html?page=medlemskap',
+			submitit_url: 'https://javazone.no/submitit/',
+			javabin_membership_url: 'https://java.no/index.html?page=medlemskap',
 			tickets_buy_url: 'https://www.eventsystems.no/es/event/javazone2015/',
 			tickets_manage_url: 'https://www.eventsystems.no/es/event/javazone2015/'
 		}

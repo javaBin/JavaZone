@@ -112,7 +112,7 @@
         ["Hans Ove Ringstad", "/assets/img/javabin/hans_ove_ringstad.jpg", "#"]
     ];
 
-    var baseUrl = 'http://javazone.no/javazone-web-api/events/javazone_2015/sessions';
+    var baseUrl = 'https://javazone.no/javazone-web-api/events/javazone_2015/sessions';
     //var baseUrl = 'http://test.javazone.no/javazone-web-api/events/javazone_2015/sessions';
     //var baseUrl = 'http://dev.javazone.no/resources/program.json';
 
@@ -182,7 +182,7 @@
             def.resolve(JSON.parse(res.text));
         }
 
-        request('http://javazone.no/moosehead/data/workshopList')
+        request('https://javazone.no/moosehead/data/workshopList')
         .end(parse);
 
         return def;
